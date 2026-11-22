@@ -1,0 +1,862 @@
+{
+  "nodes": [
+    {
+      "id": "document:.github/pull_request_template.md",
+      "type": "document",
+      "name": "pull_request_template.md",
+      "filePath": ".github/pull_request_template.md",
+      "summary": "提供提交拉取请求时的变更说明和验证清单。",
+      "tags": [
+        "项目维护",
+        "文档"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:.ua/config.json",
+      "type": "config",
+      "name": "config.json",
+      "filePath": ".ua/config.json",
+      "summary": "记录当前知识图谱的简体中文输出偏好。",
+      "tags": [
+        "项目维护",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:conformance/server/expected-failures.yml",
+      "type": "config",
+      "name": "expected-failures.yml",
+      "filePath": "conformance/server/expected-failures.yml",
+      "summary": "登记协议一致性测试中预期失败的服务端场景。",
+      "tags": [
+        "协议一致性",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:examples/everything/id.go",
+      "type": "file",
+      "name": "id.go",
+      "filePath": "examples/everything/id.go",
+      "summary": "为综合示例提供标识生成逻辑。",
+      "tags": [
+        "使用示例",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:examples/everything/id.go:pow",
+      "type": "function",
+      "name": "pow",
+      "filePath": "examples/everything/id.go",
+      "lineRange": [
+        5,
+        15
+      ],
+      "summary": "执行 pow。",
+      "tags": [
+        "使用示例",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:examples/inprocess_sampling/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "examples/inprocess_sampling/README.md",
+      "summary": "说明如何在进程内传输的示例中执行服务端发起的采样。",
+      "tags": [
+        "使用示例",
+        "文档"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:examples/oauth_client/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "examples/oauth_client/README.md",
+      "summary": "说明 OAuth 客户端示例的配置和运行方式。",
+      "tags": [
+        "使用示例",
+        "文档"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:examples/sampling_client/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "examples/sampling_client/README.md",
+      "summary": "说明使用标准输入输出传输的采样客户端示例。",
+      "tags": [
+        "使用示例",
+        "文档"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:examples/sampling_http_client/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "examples/sampling_http_client/README.md",
+      "summary": "说明通过 Streamable HTTP 执行采样请求的客户端示例。",
+      "tags": [
+        "使用示例",
+        "文档"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:examples/sampling_http_server/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "examples/sampling_http_server/README.md",
+      "summary": "说明通过 Streamable HTTP 请求客户端采样的服务端示例。",
+      "tags": [
+        "使用示例",
+        "文档"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:examples/sampling_server/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "examples/sampling_server/README.md",
+      "summary": "说明如何启动会向客户端发起采样请求的服务端示例。",
+      "tags": [
+        "使用示例",
+        "文档"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:examples/structured_input_and_output/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "examples/structured_input_and_output/README.md",
+      "summary": "说明如何使用工具声明和处理结构化输入及输出。",
+      "tags": [
+        "使用示例",
+        "文档"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:otel/example/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "otel/example/README.md",
+      "summary": "说明 OpenTelemetry 示例的启动方法及如何查看追踪和日志。",
+      "tags": [
+        "可观测性",
+        "文档"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scripts/check_conformance.py",
+      "type": "file",
+      "name": "check_conformance.py",
+      "filePath": "scripts/check_conformance.py",
+      "summary": "检查一致性测试报告，将观测结果与配置的预期失败列表比对。",
+      "tags": [
+        "协议一致性",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:scripts/check_conformance.py:ConformanceRunnerError",
+      "type": "class",
+      "name": "ConformanceRunnerError",
+      "filePath": "scripts/check_conformance.py",
+      "lineRange": [
+        18,
+        19
+      ],
+      "summary": "定义 ConformanceRunnerError 类型。",
+      "tags": [
+        "协议一致性",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/check_conformance.py:read_server_baseline",
+      "type": "function",
+      "name": "read_server_baseline",
+      "filePath": "scripts/check_conformance.py",
+      "lineRange": [
+        22,
+        30
+      ],
+      "summary": "读取 read_server_baseline，调用 path.read_text(encoding=\"utf-8\").splitlines、path.read_text、line[0].isspace。",
+      "tags": [
+        "协议一致性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/check_conformance.py:run_cli",
+      "type": "function",
+      "name": "run_cli",
+      "filePath": "scripts/check_conformance.py",
+      "lineRange": [
+        33,
+        58
+      ],
+      "summary": "执行 run_cli，调用 str、command.extend、subprocess.run。",
+      "tags": [
+        "协议一致性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/check_conformance.py:read_suite_results",
+      "type": "function",
+      "name": "read_suite_results",
+      "filePath": "scripts/check_conformance.py",
+      "lineRange": [
+        61,
+        70
+      ],
+      "summary": "读取 read_suite_results，调用 output_dir.glob、json.loads、checks_file.read_text。",
+      "tags": [
+        "协议一致性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/check_conformance.py:scenario_from_result_dir",
+      "type": "function",
+      "name": "scenario_from_result_dir",
+      "filePath": "scripts/check_conformance.py",
+      "lineRange": [
+        73,
+        81
+      ],
+      "summary": "执行 scenario_from_result_dir，调用 result_dir.name.removeprefix、re.fullmatch、ValueError。",
+      "tags": [
+        "协议一致性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/check_conformance.py:read_active_scenarios",
+      "type": "function",
+      "name": "read_active_scenarios",
+      "filePath": "scripts/check_conformance.py",
+      "lineRange": [
+        84,
+        87
+      ],
+      "summary": "读取 read_active_scenarios，调用 re.search、re.findall、count_match.group。",
+      "tags": [
+        "协议一致性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/check_conformance.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/check_conformance.py",
+      "lineRange": [
+        90,
+        191
+      ],
+      "summary": "执行 main，调用 argparse.ArgumentParser、parser.add_argument、parser.parse_args。",
+      "tags": [
+        "协议一致性",
+        "函数"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scripts/test_check_conformance.py",
+      "type": "file",
+      "name": "test_check_conformance.py",
+      "filePath": "scripts/test_check_conformance.py",
+      "summary": "验证一致性结果检查脚本的报告读取和分类行为。",
+      "tags": [
+        "协议一致性",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:scripts/test_check_conformance.py:CheckConformanceTests",
+      "type": "class",
+      "name": "CheckConformanceTests",
+      "filePath": "scripts/test_check_conformance.py",
+      "lineRange": [
+        10,
+        89
+      ],
+      "summary": "定义 CheckConformanceTests 的接口或方法集合，包括 test_scenario_result_timestamp_is_not_tied_to_a_specific_year、test_active_scenarios_are_counted_from_cli_output、test_runner_error_is_not_treated_as_a_scenario_failure、test_failed_assertion_is_not_a_runner_error、test_baseline_without_server_scenarios_is_empty。",
+      "tags": [
+        "协议一致性",
+        "类型"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:server/internal/gen/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "server/internal/gen/README.md",
+      "summary": "说明服务端钩子与请求处理器的代码生成流程。",
+      "tags": [
+        "代码生成",
+        "文档"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/internal/gen/data.go",
+      "type": "file",
+      "name": "data.go",
+      "filePath": "server/internal/gen/data.go",
+      "summary": "保存代码生成所需的 MCP 请求、通知和钩子描述。",
+      "tags": [
+        "代码生成",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:server/internal/gen/data.go:MCPRequestType",
+      "type": "class",
+      "name": "MCPRequestType",
+      "filePath": "server/internal/gen/data.go",
+      "lineRange": [
+        3,
+        22
+      ],
+      "summary": "定义 MCPRequestType 的数据结构，包含 MethodName、ParamType、ResultType、HookName、Group 等字段。",
+      "tags": [
+        "代码生成",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/internal/gen/hooks.go.tmpl",
+      "type": "file",
+      "name": "hooks.go.tmpl",
+      "filePath": "server/internal/gen/hooks.go.tmpl",
+      "summary": "定义生成服务端钩子声明、注册及执行逻辑的 Go 模板。",
+      "tags": [
+        "代码生成",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:server/internal/gen/main.go",
+      "type": "file",
+      "name": "main.go",
+      "filePath": "server/internal/gen/main.go",
+      "summary": "读取生成器定义并渲染服务端钩子和请求处理器源码。",
+      "tags": [
+        "代码生成",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:server/internal/gen/main.go:RenderTemplateToFile",
+      "type": "function",
+      "name": "RenderTemplateToFile",
+      "filePath": "server/internal/gen/main.go",
+      "lineRange": [
+        23,
+        72
+      ],
+      "summary": "执行 RenderTemplateToFile，调用 os.CreateTemp、tempFile.Name、os.Remove。",
+      "tags": [
+        "代码生成",
+        "函数"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:server/internal/gen/main.go:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "server/internal/gen/main.go",
+      "lineRange": [
+        74,
+        87
+      ],
+      "summary": "执行 main，调用 log.Fatal、RenderTemplateToFile。",
+      "tags": [
+        "代码生成",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/internal/gen/request_handler.go.tmpl",
+      "type": "file",
+      "name": "request_handler.go.tmpl",
+      "filePath": "server/internal/gen/request_handler.go.tmpl",
+      "summary": "定义服务端请求分发和处理器包装的 Go 代码生成模板。",
+      "tags": [
+        "代码生成",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:server/testdata/conformance/cacheable_results.txtar",
+      "type": "file",
+      "name": "cacheable_results.txtar",
+      "filePath": "server/testdata/conformance/cacheable_results.txtar",
+      "summary": "保存可缓存结果的一致性测试交互和预期响应。",
+      "tags": [
+        "协议一致性",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:server/testdata/conformance/discover.txtar",
+      "type": "file",
+      "name": "discover.txtar",
+      "filePath": "server/testdata/conformance/discover.txtar",
+      "summary": "保存新版发现方法的一致性测试交互和预期响应。",
+      "tags": [
+        "协议一致性",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:server/testdata/conformance/legacy_unchanged.txtar",
+      "type": "file",
+      "name": "legacy_unchanged.txtar",
+      "filePath": "server/testdata/conformance/legacy_unchanged.txtar",
+      "summary": "保存旧版协议兼容性的一致性测试样本。",
+      "tags": [
+        "协议一致性",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:server/testdata/conformance/missing_capabilities.txtar",
+      "type": "file",
+      "name": "missing_capabilities.txtar",
+      "filePath": "server/testdata/conformance/missing_capabilities.txtar",
+      "summary": "保存客户端缺少必需能力时的一致性测试样本。",
+      "tags": [
+        "协议一致性",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:server/testdata/conformance/mrtr.txtar",
+      "type": "file",
+      "name": "mrtr.txtar",
+      "filePath": "server/testdata/conformance/mrtr.txtar",
+      "summary": "保存多轮交互协议的一致性测试交互和预期响应。",
+      "tags": [
+        "协议一致性",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:server/testdata/conformance/removed_methods.txtar",
+      "type": "file",
+      "name": "removed_methods.txtar",
+      "filePath": "server/testdata/conformance/removed_methods.txtar",
+      "summary": "保存新版协议对已移除方法处理的一致性测试样本。",
+      "tags": [
+        "协议一致性",
+        "实现"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:examples/everything/id.go",
+      "target": "function:examples/everything/id.go:pow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "document:examples/inprocess_sampling/README.md",
+      "target": "file:examples/inprocess_sampling/main.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:examples/oauth_client/README.md",
+      "target": "file:examples/oauth_client/main.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:examples/sampling_client/README.md",
+      "target": "file:examples/sampling_client/main.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:examples/sampling_http_client/README.md",
+      "target": "file:examples/sampling_http_client/main.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:examples/sampling_http_server/README.md",
+      "target": "file:examples/sampling_http_server/main.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:examples/sampling_server/README.md",
+      "target": "file:examples/sampling_server/main.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:examples/structured_input_and_output/README.md",
+      "target": "file:examples/structured_input_and_output/main.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:otel/example/README.md",
+      "target": "file:otel/example/main.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:scripts/check_conformance.py",
+      "target": "class:scripts/check_conformance.py:ConformanceRunnerError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/check_conformance.py",
+      "target": "class:scripts/check_conformance.py:ConformanceRunnerError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/check_conformance.py",
+      "target": "function:scripts/check_conformance.py:read_server_baseline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/check_conformance.py",
+      "target": "function:scripts/check_conformance.py:read_server_baseline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/check_conformance.py",
+      "target": "function:scripts/check_conformance.py:run_cli",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/check_conformance.py",
+      "target": "function:scripts/check_conformance.py:run_cli",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/check_conformance.py",
+      "target": "function:scripts/check_conformance.py:read_suite_results",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/check_conformance.py",
+      "target": "function:scripts/check_conformance.py:read_suite_results",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/check_conformance.py",
+      "target": "function:scripts/check_conformance.py:scenario_from_result_dir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/check_conformance.py",
+      "target": "function:scripts/check_conformance.py:scenario_from_result_dir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/check_conformance.py",
+      "target": "function:scripts/check_conformance.py:read_active_scenarios",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/check_conformance.py",
+      "target": "function:scripts/check_conformance.py:read_active_scenarios",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/check_conformance.py",
+      "target": "function:scripts/check_conformance.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/check_conformance.py",
+      "target": "function:scripts/check_conformance.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/check_conformance.py:read_suite_results",
+      "target": "function:scripts/check_conformance.py:scenario_from_result_dir",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/check_conformance.py:main",
+      "target": "function:scripts/check_conformance.py:read_server_baseline",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/check_conformance.py:main",
+      "target": "function:scripts/check_conformance.py:run_cli",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/check_conformance.py:main",
+      "target": "function:scripts/check_conformance.py:read_suite_results",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/check_conformance.py:main",
+      "target": "function:scripts/check_conformance.py:read_active_scenarios",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/check_conformance.py",
+      "target": "config:conformance/server/expected-failures.yml",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:scripts/test_check_conformance.py",
+      "target": "class:scripts/test_check_conformance.py:CheckConformanceTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/test_check_conformance.py",
+      "target": "file:scripts/check_conformance.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:scripts/test_check_conformance.py",
+      "target": "file:scripts/check_conformance.py",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:scripts/check_conformance.py",
+      "target": "file:scripts/test_check_conformance.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:server/internal/gen/README.md",
+      "target": "file:server/internal/gen/main.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:server/internal/gen/README.md",
+      "target": "file:server/internal/gen/data.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:server/internal/gen/data.go",
+      "target": "class:server/internal/gen/data.go:MCPRequestType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server/internal/gen/data.go",
+      "target": "class:server/internal/gen/data.go:MCPRequestType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:server/internal/gen/hooks.go.tmpl",
+      "target": "file:server/hooks.go",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:server/internal/gen/main.go",
+      "target": "function:server/internal/gen/main.go:RenderTemplateToFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server/internal/gen/main.go",
+      "target": "function:server/internal/gen/main.go:RenderTemplateToFile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:server/internal/gen/main.go",
+      "target": "function:server/internal/gen/main.go:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:server/internal/gen/main.go:main",
+      "target": "function:server/internal/gen/main.go:RenderTemplateToFile",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:server/internal/gen/main.go",
+      "target": "file:server/internal/gen/data.go",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:server/internal/gen/main.go",
+      "target": "file:server/internal/gen/hooks.go.tmpl",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:server/internal/gen/main.go",
+      "target": "file:server/internal/gen/request_handler.go.tmpl",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:server/internal/gen/request_handler.go.tmpl",
+      "target": "file:server/request_handler.go",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:server/conformance_test.go",
+      "target": "file:server/testdata/conformance/cacheable_results.txtar",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:server/conformance_test.go",
+      "target": "file:server/testdata/conformance/discover.txtar",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:server/conformance_test.go",
+      "target": "file:server/testdata/conformance/legacy_unchanged.txtar",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:server/conformance_test.go",
+      "target": "file:server/testdata/conformance/missing_capabilities.txtar",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:server/conformance_test.go",
+      "target": "file:server/testdata/conformance/mrtr.txtar",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:server/conformance_test.go",
+      "target": "file:server/testdata/conformance/removed_methods.txtar",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

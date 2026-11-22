@@ -1,0 +1,60 @@
+.github/workflows/ci.yml|在 GitHub Actions 中分别运行核心 Go 模块和 OpenTelemetry 适配器的竞态检测测试，并验证代码生成产物已提交。|持续集成,竞态检测,代码生成|configures:go.mod,configures:otel/go.mod
+.github/workflows/conformance.yml|编排 MCP 协议一致性检查及配套脚本的单元测试，在变更影响相关文件时运行。|持续集成,协议一致性,端到端测试|
+.github/workflows/golangci-lint.yml|按模块运行 golangci-lint，使用声明的 Go 工具链和仓库的静态检查配置。|持续集成,静态检查,Go|depends_on:.golangci.yml
+.github/workflows/pages.yml|使用 Bun 安装并构建 Vocs 文档站点，将静态产物发布到 GitHub Pages。|持续集成,文档站,部署|depends_on:www/package.json,deploys:www/docs/pages/index.mdx
+.github/workflows/release.yml|监听版本标签推送，在 GitHub 创建相应的发布记录并执行发布后步骤。|自动发布,版本标签,持续集成|
+.github/ISSUE_TEMPLATE/bug_report.md|规范缺陷反馈，收集问题描述、最小 Go 代码示例、错误日志和运行环境。|缺陷反馈,问题模板,项目维护|
+.github/ISSUE_TEMPLATE/config.yml|配置 GitHub Issues 的入口链接与空白问题开关。|项目配置,问题模板,项目维护|
+.github/ISSUE_TEMPLATE/documentation-improvement.md|引导贡献者说明文档问题并指出受影响的页面或位置。|文档维护,问题模板,项目维护|
+.github/ISSUE_TEMPLATE/feature-request.md|收集功能需求、解决方案、MCP 规范引用、示例和替代做法。|功能需求,问题模板,项目维护|
+.golangci.yml|集中声明 Go 项目的静态检查规则，供本地开发和持续集成调用。|静态检查,Go,项目配置|
+AGENTS.md|记录仓库的测试、静态检查和代码生成命令，以及 Go 接口、错误、测试和并发约定。|贡献指南,Go,项目维护|
+CODE_OF_CONDUCT.md|规定社区成员的行为标准、适用范围和违规处理流程。|社区治理,贡献指南,行为准则|
+CONTRIBUTING.md|介绍开发环境准备、贡献工作流和版本发布要求。|贡献指南,项目维护,版本发布|
+README.md|介绍 mcp-go 的核心能力和安装方法，从示例演示服务端、客户端、工具、资源和提示词的用法。|项目导览,Go,MCP|documents:server/server.go,documents:client/client.go,documents:mcp/tools.go,documents:mcp/resources.go,documents:mcp/prompts.go
+SECURITY.md|说明如何向项目团队报告安全问题。|安全治理,问题反馈,项目维护|
+go.mod|声明核心 Go 模块、最低 Go 工具链版本以及 JSON Schema、URI 模板和测试等依赖。|Go模块,依赖管理,构建|
+go.sum|记录核心 Go 模块依赖及其清单的校验和，用于下载时的完整性验证。|Go模块,依赖管理,完整性|related:go.mod
+.kit/prompts/code-audit.md|描述代码审计的范围、审阅步骤和结果记录格式。|维护模板,代码审查,静态检查|
+.kit/prompts/commit-push.md|描述核对变更、编写提交消息和推送分支的维护流程。|维护模板,版本控制,Git|
+.kit/prompts/create-pr.md|列出创建拉取请求前的分支检查和描述编写步骤。|维护模板,代码评审,GitHub|
+.kit/prompts/feature-request.md|将功能需求整理为问题陈述、建议的接口及使用示例。|维护模板,功能需求,GitHub|
+.kit/prompts/file-issue.md|说明如何选择缺陷、功能或文档模板，并为 GitHub 问题补齐所需字段。|维护模板,问题跟踪,GitHub|
+.kit/prompts/fix-issue.md|概述从定位问题、实现修复和验证到准备提交的工作流程。|维护模板,缺陷修复,测试|
+.kit/prompts/new-prompt.md|说明维护模板的文件结构和占位符替换规则，包括 Markdown 代码区的特殊行为。|维护模板,文档规范,Markdown|
+.kit/prompts/release-tagger.md|描述版本发布前的变更检查、版本号选择和 Git 标签格式。|维护模板,版本发布,Git|
+.kit/prompts/resolve-reviews.md|说明如何核实拉取请求的评审意见、验证修复并跟进复审结果。|维护模板,代码评审,GitHub|
+.kit/prompts/review-pr.md|定义拉取请求的审阅流程，包括差异检查、Go 构建与测试以及评审结果整理。|维护模板,代码评审,Go|
+.kit/prompts/update-docs.md|描述根据代码变化识别需要更新的文档和用例，并检查文档示例。|维护模板,文档维护,代码示例|
+otel/README.md|说明如何用独立 OpenTelemetry 模块为客户端和服务端启用追踪，覆盖上下文传播和 span 约定。|可观测性,追踪,OpenTelemetry|documents:otel/options.go,documents:otel/tracer.go
+otel/go.mod|声明独立的 OpenTelemetry 适配器模块，将遥测 SDK 和日志桥接依赖留在核心模块之外。|Go模块,依赖管理,OpenTelemetry|configures:otel/options.go
+otel/go.sum|记录 OpenTelemetry 适配器及传递依赖的校验和，用于依赖完整性验证。|Go模块,依赖管理,完整性|related:otel/go.mod
+www/README.md|说明文档站点由 Vocs CLI 初始化。|文档站,项目导览,Vocs|related:www/package.json
+www/package.json|定义文档站点的开发、构建和预览脚本，以及 React、Vocs 和 TypeScript 依赖。|文档站,构建,Vocs|configures:www/vocs.config.ts
+www/tsconfig.json|配置文档站点的 TypeScript 严格检查、React JSX 和打包器模块解析，仅做类型检查而不发射文件。|文档站,类型检查,TypeScript|configures:www/vocs.config.ts
+www/docs/pages/clients/advanced-sampling.mdx|演示客户端如何配置采样处理器、接入模型和声明采样能力，并解释支持工具的采样请求。|客户端,采样,能力声明|documents:client/sampling.go
+www/docs/pages/clients/basics.mdx|讲解不同传输对应的客户端构造方法，以及启动、初始化、超时、重试和关闭的生命周期。|客户端,连接管理,生命周期|documents:client/client.go,documents:client/stdio.go,documents:client/http.go,documents:client/sse.go
+www/docs/pages/clients/index.mdx|介绍 MCP 客户端的构建入口，给出不同传输、连接管理及集成多个服务端的示例。|客户端,项目导览,传输|documents:client/client.go
+www/docs/pages/clients/operations.mdx|演示客户端如何列出和读取资源、管理提示词及调用工具，并解释请求与结果结构。|客户端,资源,工具|documents:client/client.go,documents:mcp/resources.go,documents:mcp/prompts.go,documents:mcp/tools.go
+www/docs/pages/clients/transports.mdx|比较 stdio、Streamable HTTP、SSE 和进程内客户端，覆盖传输配置、身份验证、连接管理与 JSON-RPC 日志。|客户端,传输,连接管理|documents:client/transport/stdio.go,documents:client/transport/streamable_http.go,documents:client/transport/sse.go,documents:client/transport/inprocess.go,documents:client/transport/logging.go
+www/docs/pages/core-concepts.mdx|解释 MCP 的资源、工具、提示词、传输及能力协商，说明客户端与服务端的职责划分。|协议概念,MCP,项目导览|documents:mcp/types.go,documents:server/server.go,documents:client/client.go
+www/docs/pages/getting-started.mdx|从安装 Go 库开始，带读者编写并启动第一个 MCP 服务端，再通过客户端与其交互。|入门,服务端,代码示例|documents:server/server.go,documents:server/stdio.go,documents:client/client.go
+www/docs/pages/index.mdx|文档站首页，使用 Vocs 组件介绍 mcp-go 的用途并提供入门文档和 GitHub 入口。|文档站,项目导览,Vocs|related:www/docs/pages/getting-started.mdx
+www/docs/pages/protocol-2026-07-28.mdx|解释 2026-07-28 协议修订在版本选择、缓存提示、多轮请求与订阅等方面的变化，以及客户端和服务端的迁移方法。|协议版本,兼容性,迁移指南|documents:mcp/version.go,documents:mcp/discover.go,documents:client/protocol.go,documents:server/mrtr.go
+www/docs/pages/quick-start.mdx|通过 Hello World 工具演示创建服务端与两种客户端，并介绍用 MCP Inspector 检查连接和工具调用。|入门,工具,代码示例|documents:server/server.go,documents:client/client.go,documents:client/http.go
+www/docs/pages/servers/advanced-sampling.mdx|说明服务端如何向客户端发起采样，处理参数、内容类型、能力校验、超时和传输限制。|服务端,采样,能力校验|documents:server/sampling.go
+www/docs/pages/servers/advanced.mdx|汇总服务端进阶配置，覆盖图标、类型化工具、会话状态、中间件、钩子和能力过滤。|服务端,会话管理,中间件|documents:server/server.go,documents:server/hooks.go,documents:mcp/typed_tools.go
+www/docs/pages/servers/basics.mdx|介绍创建和配置服务端、声明能力、选择传输及管理生命周期的常用方法。|服务端,能力声明,生命周期|documents:server/server.go,documents:server/stdio.go,documents:server/streamable_http.go,documents:server/sse.go
+www/docs/pages/servers/completions.mdx|演示为提示词参数与资源模板注册自动补全提供者，并说明补全请求和结果类型。|服务端,自动补全,资源|documents:server/completion.go
+www/docs/pages/servers/elicitation.mdx|介绍表单和 URL 两种用户征询模式，覆盖请求参数、客户端响应、能力声明和超时。|服务端,用户征询,能力声明|documents:server/elicitation.go,documents:client/elicitation.go
+www/docs/pages/servers/index.mdx|服务端开发章节的起点，通过完整的注册工具示例串联基础、工具和资源等后续主题。|服务端,项目导览,代码示例|documents:server/server.go,documents:mcp/tools.go
+www/docs/pages/servers/middleware.mdx|说明中间件注册、执行顺序、任务工具适配和并发约束。|服务端,中间件,并发|documents:server/server.go
+www/docs/pages/servers/prompts.mdx|说明提示词的注册、参数、模板和消息类型，以及过滤与处理器中间件。|服务端,提示词,模板|documents:mcp/prompts.go,documents:server/server.go
+www/docs/pages/servers/resources.mdx|介绍静态资源、URI 模板、资源读取与订阅，并讨论内容类型、缓存和错误处理。|服务端,资源,订阅|documents:mcp/resources.go,documents:server/server.go
+www/docs/pages/servers/tasks.mdx|介绍任务工具的声明、注册和状态生命周期，包括任务钩子、并发限制与状态通知。|服务端,异步任务,生命周期|documents:mcp/tasks.go,documents:server/task_hooks.go
+www/docs/pages/servers/tools.mdx|讲解工具定义、通过 Go 结构体生成 Schema、处理器参数校验、结果构建和注解。|服务端,工具,参数校验|documents:mcp/tools.go,documents:mcp/struct_schema.go,documents:server/input_validation.go,documents:server/server.go
+www/docs/pages/transports/http.mdx|介绍 Streamable HTTP 的端点、会话管理、采样支持以及嵌入其他 Web 框架的方法。|传输,HTTP,会话管理|documents:server/streamable_http.go,documents:client/transport/streamable_http.go
+www/docs/pages/transports/index.mdx|对比 MCP 传输方式的适用场景、配置、性能与安全取舍。|传输,选型,项目导览|documents:client/transport/interface.go,related:www/docs/pages/transports/http.mdx,related:www/docs/pages/transports/stdio.mdx,related:www/docs/pages/transports/inprocess.mdx
+www/docs/pages/transports/inprocess.mdx|演示同一 Go 进程内连接客户端与服务端的方式，包括测试场景和反向采样。|传输,进程内通信,采样|documents:client/transport/inprocess.go,documents:server/inprocess_session.go
+www/docs/pages/transports/sse.mdx|解释旧版 SSE 传输的服务端和客户端配置，以及如何处理实时通知。|传输,SSE,通知|documents:server/sse.go,documents:client/transport/sse.go
+www/docs/pages/transports/stdio.mdx|说明使用标准输入输出交换 MCP 消息，覆盖客户端启动子进程、调试、错误处理和性能优化。|传输,标准输入输出,进程管理|documents:server/stdio.go,documents:client/transport/stdio.go

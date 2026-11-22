@@ -1,0 +1,66 @@
+{
+  "nodes": [
+    {
+      "id": "document:www/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "www/README.md",
+      "summary": "说明文档站点由 Vocs CLI 初始化。",
+      "tags": [
+        "文档站",
+        "项目导览",
+        "vocs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:www/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "www/package.json",
+      "summary": "定义文档站点的开发、构建和预览脚本，以及 React、Vocs 和 TypeScript 依赖。",
+      "tags": [
+        "文档站",
+        "构建",
+        "vocs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:www/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "www/tsconfig.json",
+      "summary": "配置文档站点的 TypeScript 严格检查、React JSX 和打包器模块解析，仅做类型检查而不发射文件。",
+      "tags": [
+        "文档站",
+        "类型检查",
+        "typescript"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:www/README.md",
+      "target": "config:www/package.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:www/package.json",
+      "target": "file:www/vocs.config.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:www/tsconfig.json",
+      "target": "file:www/vocs.config.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

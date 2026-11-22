@@ -1,0 +1,148 @@
+{
+  "nodes": [
+    {
+      "id": "document:.kit/prompts/code-audit.md",
+      "type": "document",
+      "name": "code-audit.md",
+      "filePath": ".kit/prompts/code-audit.md",
+      "summary": "描述代码审计的范围、审阅步骤和结果记录格式。",
+      "tags": [
+        "维护模板",
+        "代码审查",
+        "静态检查"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:.kit/prompts/commit-push.md",
+      "type": "document",
+      "name": "commit-push.md",
+      "filePath": ".kit/prompts/commit-push.md",
+      "summary": "描述核对变更、编写提交消息和推送分支的维护流程。",
+      "tags": [
+        "维护模板",
+        "版本控制",
+        "git"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.kit/prompts/create-pr.md",
+      "type": "document",
+      "name": "create-pr.md",
+      "filePath": ".kit/prompts/create-pr.md",
+      "summary": "列出创建拉取请求前的分支检查和描述编写步骤。",
+      "tags": [
+        "维护模板",
+        "代码评审",
+        "github"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.kit/prompts/feature-request.md",
+      "type": "document",
+      "name": "feature-request.md",
+      "filePath": ".kit/prompts/feature-request.md",
+      "summary": "将功能需求整理为问题陈述、建议的接口及使用示例。",
+      "tags": [
+        "维护模板",
+        "功能需求",
+        "github"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.kit/prompts/file-issue.md",
+      "type": "document",
+      "name": "file-issue.md",
+      "filePath": ".kit/prompts/file-issue.md",
+      "summary": "说明如何选择缺陷、功能或文档模板，并为 GitHub 问题补齐所需字段。",
+      "tags": [
+        "维护模板",
+        "问题跟踪",
+        "github"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.kit/prompts/fix-issue.md",
+      "type": "document",
+      "name": "fix-issue.md",
+      "filePath": ".kit/prompts/fix-issue.md",
+      "summary": "概述从定位问题、实现修复和验证到准备提交的工作流程。",
+      "tags": [
+        "维护模板",
+        "缺陷修复",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.kit/prompts/new-prompt.md",
+      "type": "document",
+      "name": "new-prompt.md",
+      "filePath": ".kit/prompts/new-prompt.md",
+      "summary": "说明维护模板的文件结构和占位符替换规则，包括 Markdown 代码区的特殊行为。",
+      "tags": [
+        "维护模板",
+        "文档规范",
+        "markdown"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.kit/prompts/release-tagger.md",
+      "type": "document",
+      "name": "release-tagger.md",
+      "filePath": ".kit/prompts/release-tagger.md",
+      "summary": "描述版本发布前的变更检查、版本号选择和 Git 标签格式。",
+      "tags": [
+        "维护模板",
+        "版本发布",
+        "git"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.kit/prompts/resolve-reviews.md",
+      "type": "document",
+      "name": "resolve-reviews.md",
+      "filePath": ".kit/prompts/resolve-reviews.md",
+      "summary": "说明如何核实拉取请求的评审意见、验证修复并跟进复审结果。",
+      "tags": [
+        "维护模板",
+        "代码评审",
+        "github"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.kit/prompts/review-pr.md",
+      "type": "document",
+      "name": "review-pr.md",
+      "filePath": ".kit/prompts/review-pr.md",
+      "summary": "定义拉取请求的审阅流程，包括差异检查、Go 构建与测试以及评审结果整理。",
+      "tags": [
+        "维护模板",
+        "代码评审",
+        "go"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.kit/prompts/update-docs.md",
+      "type": "document",
+      "name": "update-docs.md",
+      "filePath": ".kit/prompts/update-docs.md",
+      "summary": "描述根据代码变化识别需要更新的文档和用例，并检查文档示例。",
+      "tags": [
+        "维护模板",
+        "文档维护",
+        "代码示例"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

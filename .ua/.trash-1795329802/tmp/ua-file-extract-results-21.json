@@ -1,0 +1,1340 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 11,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 11,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 11
+    }
+  },
+  "results": [
+    {
+      "path": "www/docs/pages/servers/advanced-sampling.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 502,
+      "nonEmptyLines": 405,
+      "sections": [
+        {
+          "heading": "Sampling",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Overview",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Enabling Sampling",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "Requesting Sampling",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "Sampling Request Parameters",
+          "level": 2,
+          "line": 130
+        },
+        {
+          "heading": "Capability Gating (2025-11-25)",
+          "level": 2,
+          "line": 174
+        },
+        {
+          "heading": "Message Types",
+          "level": 2,
+          "line": 224
+        },
+        {
+          "heading": "Message Roles",
+          "level": 3,
+          "line": 228
+        },
+        {
+          "heading": "Content Types",
+          "level": 3,
+          "line": 250
+        },
+        {
+          "heading": "Text Content",
+          "level": 4,
+          "line": 252
+        },
+        {
+          "heading": "Image Content",
+          "level": 4,
+          "line": 261
+        },
+        {
+          "heading": "Tool-Use and Tool-Result Content (2025-11-25)",
+          "level": 4,
+          "line": 271
+        },
+        {
+          "heading": "Error Handling",
+          "level": 2,
+          "line": 297
+        },
+        {
+          "heading": "Context and Timeouts",
+          "level": 2,
+          "line": 320
+        },
+        {
+          "heading": "Best Practices",
+          "level": 2,
+          "line": 332
+        },
+        {
+          "heading": "Complete Example",
+          "level": 2,
+          "line": 341
+        },
+        {
+          "heading": "Transport Support",
+          "level": 2,
+          "line": 458
+        },
+        {
+          "heading": "STDIO Transport",
+          "level": 3,
+          "line": 462
+        },
+        {
+          "heading": "In-Process Transport",
+          "level": 3,
+          "line": 473
+        },
+        {
+          "heading": "Unsupported Transports",
+          "level": 3,
+          "line": 489
+        },
+        {
+          "heading": "Next Steps",
+          "level": 2,
+          "line": 497
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 21
+      }
+    },
+    {
+      "path": "www/docs/pages/servers/advanced.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 1082,
+      "nonEmptyLines": 862,
+      "sections": [
+        {
+          "heading": "Advanced Server Features",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Icons",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Security Considerations",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "Example with Data URI",
+          "level": 3,
+          "line": 14
+        },
+        {
+          "heading": "Theme-Specific Icons",
+          "level": 3,
+          "line": 23
+        },
+        {
+          "heading": "Typed Tools",
+          "level": 2,
+          "line": 46
+        },
+        {
+          "heading": "Basic Typed Tool",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "Complex Typed Tool",
+          "level": 3,
+          "line": 127
+        },
+        {
+          "heading": "Custom Validation",
+          "level": 3,
+          "line": 178
+        },
+        {
+          "heading": "Session Management",
+          "level": 2,
+          "line": 219
+        },
+        {
+          "heading": "Per-Session State",
+          "level": 3,
+          "line": 223
+        },
+        {
+          "heading": "Session-Aware Tools",
+          "level": 3,
+          "line": 272
+        },
+        {
+          "heading": "Middleware",
+          "level": 2,
+          "line": 339
+        },
+        {
+          "heading": "Logging Middleware",
+          "level": 3,
+          "line": 343
+        },
+        {
+          "heading": "Rate Limiting Middleware",
+          "level": 3,
+          "line": 399
+        },
+        {
+          "heading": "Authentication Middleware",
+          "level": 3,
+          "line": 446
+        },
+        {
+          "heading": "Hooks",
+          "level": 2,
+          "line": 479
+        },
+        {
+          "heading": "Hook Composability with GetHooks()",
+          "level": 3,
+          "line": 483
+        },
+        {
+          "heading": "Comprehensive Hooks",
+          "level": 3,
+          "line": 502
+        },
+        {
+          "heading": "Custom Business Logic Hooks",
+          "level": 3,
+          "line": 567
+        },
+        {
+          "heading": "Tool Filtering",
+          "level": 2,
+          "line": 611
+        },
+        {
+          "heading": "Permission-Based Filtering",
+          "level": 3,
+          "line": 615
+        },
+        {
+          "heading": "Context-Based Filtering",
+          "level": 3,
+          "line": 668
+        },
+        {
+          "heading": "Notifications",
+          "level": 2,
+          "line": 713
+        },
+        {
+          "heading": "Custom Notifications",
+          "level": 3,
+          "line": 717
+        },
+        {
+          "heading": "Custom Notifications",
+          "level": 3,
+          "line": 742
+        },
+        {
+          "heading": "Production Configuration",
+          "level": 2,
+          "line": 815
+        },
+        {
+          "heading": "Complete Production Server",
+          "level": 3,
+          "line": 817
+        },
+        {
+          "heading": "Client Capability Based Filtering",
+          "level": 2,
+          "line": 884
+        },
+        {
+          "heading": "Sampling (Advanced)",
+          "level": 2,
+          "line": 938
+        },
+        {
+          "heading": "When to Use Sampling",
+          "level": 3,
+          "line": 944
+        },
+        {
+          "heading": "Basic Implementation",
+          "level": 3,
+          "line": 952
+        },
+        {
+          "heading": "Additional Content Types",
+          "level": 2,
+          "line": 1021
+        },
+        {
+          "heading": "AudioContent",
+          "level": 3,
+          "line": 1023
+        },
+        {
+          "heading": "ResourceLink",
+          "level": 3,
+          "line": 1044
+        },
+        {
+          "heading": "Roots Capability",
+          "level": 2,
+          "line": 1062
+        },
+        {
+          "heading": "Next Steps",
+          "level": 2,
+          "line": 1076
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 37
+      }
+    },
+    {
+      "path": "www/docs/pages/servers/basics.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 374,
+      "nonEmptyLines": 292,
+      "sections": [
+        {
+          "heading": "Server Basics",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Creating a Server",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Basic Server Creation",
+          "level": 3,
+          "line": 9
+        },
+        {
+          "heading": "Server with Options",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "Server Configuration",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "Capabilities",
+          "level": 3,
+          "line": 55
+        },
+        {
+          "heading": "Recovery Middleware",
+          "level": 3,
+          "line": 88
+        },
+        {
+          "heading": "Custom Metadata",
+          "level": 3,
+          "line": 102
+        },
+        {
+          "heading": "Implementation Metadata",
+          "level": 3,
+          "line": 114
+        },
+        {
+          "heading": "Extensions vs Experimental Capabilities",
+          "level": 3,
+          "line": 149
+        },
+        {
+          "heading": "Starting Servers",
+          "level": 2,
+          "line": 169
+        },
+        {
+          "heading": "Stdio Transport",
+          "level": 3,
+          "line": 173
+        },
+        {
+          "heading": "HTTP Transport",
+          "level": 3,
+          "line": 194
+        },
+        {
+          "heading": "Server-Sent Events (SSE)",
+          "level": 3,
+          "line": 218
+        },
+        {
+          "heading": "Custom Transport Options",
+          "level": 3,
+          "line": 242
+        },
+        {
+          "heading": "Environment-Based Configuration",
+          "level": 2,
+          "line": 270
+        },
+        {
+          "heading": "Server Lifecycle",
+          "level": 2,
+          "line": 299
+        },
+        {
+          "heading": "Error Handling",
+          "level": 2,
+          "line": 343
+        },
+        {
+          "heading": "Next Steps",
+          "level": 2,
+          "line": 364
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 19
+      }
+    },
+    {
+      "path": "www/docs/pages/servers/completions.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 174,
+      "nonEmptyLines": 138,
+      "sections": [
+        {
+          "heading": "Auto-Completion",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Enabling Completions",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Prompt Completion Provider",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "Example Implementation",
+          "level": 3,
+          "line": 29
+        },
+        {
+          "heading": "Registering the Provider",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "Resource Completion Provider",
+          "level": 2,
+          "line": 75
+        },
+        {
+          "heading": "Example Implementation",
+          "level": 3,
+          "line": 85
+        },
+        {
+          "heading": "Registering the Provider",
+          "level": 3,
+          "line": 114
+        },
+        {
+          "heading": "Default Providers",
+          "level": 2,
+          "line": 123
+        },
+        {
+          "heading": "The Completion Type",
+          "level": 2,
+          "line": 129
+        },
+        {
+          "heading": "Supporting Types",
+          "level": 3,
+          "line": 150
+        },
+        {
+          "heading": "Next Steps",
+          "level": 2,
+          "line": 169
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "www/docs/pages/servers/elicitation.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 412,
+      "nonEmptyLines": 323,
+      "sections": [
+        {
+          "heading": "Elicitation",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Overview",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Enabling Elicitation",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "ElicitationParams",
+          "level": 2,
+          "line": 52
+        },
+        {
+          "heading": "Validation",
+          "level": 3,
+          "line": 71
+        },
+        {
+          "heading": "Response Actions",
+          "level": 2,
+          "line": 80
+        },
+        {
+          "heading": "Form Mode",
+          "level": 2,
+          "line": 106
+        },
+        {
+          "heading": "Requesting Elicitation in a Tool Handler",
+          "level": 3,
+          "line": 110
+        },
+        {
+          "heading": "Conditional Elicitation",
+          "level": 3,
+          "line": 193
+        },
+        {
+          "heading": "URL Mode",
+          "level": 2,
+          "line": 237
+        },
+        {
+          "heading": "Requesting URL Elicitation",
+          "level": 3,
+          "line": 241
+        },
+        {
+          "heading": "Completion Notification",
+          "level": 3,
+          "line": 290
+        },
+        {
+          "heading": "URLElicitationRequiredError",
+          "level": 3,
+          "line": 308
+        },
+        {
+          "heading": "Client-Side Handler",
+          "level": 2,
+          "line": 332
+        },
+        {
+          "heading": "ElicitationCapability",
+          "level": 2,
+          "line": 357
+        },
+        {
+          "heading": "Error Handling",
+          "level": 2,
+          "line": 370
+        },
+        {
+          "heading": "Context and Timeouts",
+          "level": 2,
+          "line": 386
+        },
+        {
+          "heading": "Best Practices",
+          "level": 2,
+          "line": 397
+        },
+        {
+          "heading": "Next Steps",
+          "level": 2,
+          "line": 407
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 19
+      }
+    },
+    {
+      "path": "www/docs/pages/servers/index.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 152,
+      "nonEmptyLines": 126,
+      "sections": [
+        {
+          "heading": "Building MCP Servers",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Overview",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "What You'll Learn",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Quick Example",
+          "level": 2,
+          "line": 20
+        },
+        {
+          "heading": "Next Steps",
+          "level": 2,
+          "line": 150
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "www/docs/pages/servers/middleware.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 194,
+      "nonEmptyLines": 139,
+      "sections": [
+        {
+          "heading": "Middleware",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Overview",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Registering Middleware",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "Using `Use()` (Runtime)",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "Using Server Options (Construction Time)",
+          "level": 3,
+          "line": 33
+        },
+        {
+          "heading": "Writing Middleware",
+          "level": 2,
+          "line": 47
+        },
+        {
+          "heading": "Simple Middleware",
+          "level": 3,
+          "line": 49
+        },
+        {
+          "heading": "Timing Middleware",
+          "level": 3,
+          "line": 73
+        },
+        {
+          "heading": "Authentication Middleware",
+          "level": 3,
+          "line": 88
+        },
+        {
+          "heading": "Rate-Limiting Middleware",
+          "level": 3,
+          "line": 115
+        },
+        {
+          "heading": "Execution Order",
+          "level": 2,
+          "line": 146
+        },
+        {
+          "heading": "Task-Augmented Tools",
+          "level": 2,
+          "line": 159
+        },
+        {
+          "heading": "Built-in Middleware",
+          "level": 2,
+          "line": 176
+        },
+        {
+          "heading": "Concurrency Safety",
+          "level": 2,
+          "line": 186
+        },
+        {
+          "heading": "Next Steps",
+          "level": 2,
+          "line": 190
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 15
+      }
+    },
+    {
+      "path": "www/docs/pages/servers/prompts.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 667,
+      "nonEmptyLines": 559,
+      "sections": [
+        {
+          "heading": "Implementing Prompts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Prompt Fundamentals",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Basic Prompt Structure",
+          "level": 3,
+          "line": 9
+        },
+        {
+          "heading": "Prompt Icons",
+          "level": 3,
+          "line": 26
+        },
+        {
+          "heading": "Display Title",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "Prompt Templates",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "Basic Code Review Prompt",
+          "level": 3,
+          "line": 63
+        },
+        {
+          "heading": "Data Analysis Prompt",
+          "level": 3,
+          "line": 139
+        },
+        {
+          "heading": "Prompt Arguments",
+          "level": 2,
+          "line": 202
+        },
+        {
+          "heading": "Flexible Parameter Handling",
+          "level": 3,
+          "line": 204
+        },
+        {
+          "heading": "Message Types",
+          "level": 2,
+          "line": 264
+        },
+        {
+          "heading": "Multi-Message Conversations",
+          "level": 3,
+          "line": 266
+        },
+        {
+          "heading": "System and User Roles",
+          "level": 3,
+          "line": 316
+        },
+        {
+          "heading": "Embedded Resources",
+          "level": 2,
+          "line": 365
+        },
+        {
+          "heading": "Including Resource Data",
+          "level": 3,
+          "line": 367
+        },
+        {
+          "heading": "Dynamic Resource Integration",
+          "level": 3,
+          "line": 417
+        },
+        {
+          "heading": "Advanced Prompt Patterns",
+          "level": 2,
+          "line": 467
+        },
+        {
+          "heading": "Conditional Prompts",
+          "level": 3,
+          "line": 469
+        },
+        {
+          "heading": "Template-Based Prompts",
+          "level": 3,
+          "line": 517
+        },
+        {
+          "heading": "Prompt Filtering",
+          "level": 2,
+          "line": 595
+        },
+        {
+          "heading": "Permission-Based Prompt Filtering",
+          "level": 3,
+          "line": 599
+        },
+        {
+          "heading": "Prompt Handler Middleware",
+          "level": 2,
+          "line": 632
+        },
+        {
+          "heading": "Next Steps",
+          "level": 2,
+          "line": 663
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 23
+      }
+    },
+    {
+      "path": "www/docs/pages/servers/resources.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 836,
+      "nonEmptyLines": 686,
+      "sections": [
+        {
+          "heading": "Implementing Resources",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Resource Fundamentals",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Basic Resource Structure",
+          "level": 3,
+          "line": 9
+        },
+        {
+          "heading": "Resource Icons",
+          "level": 3,
+          "line": 21
+        },
+        {
+          "heading": "Display Title",
+          "level": 3,
+          "line": 40
+        },
+        {
+          "heading": "Resource Size",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "Static Resources",
+          "level": 2,
+          "line": 80
+        },
+        {
+          "heading": "File-Based Resources",
+          "level": 3,
+          "line": 84
+        },
+        {
+          "heading": "Configuration Resources",
+          "level": 3,
+          "line": 126
+        },
+        {
+          "heading": "Dynamic Resources",
+          "level": 2,
+          "line": 171
+        },
+        {
+          "heading": "URI Templates",
+          "level": 3,
+          "line": 175
+        },
+        {
+          "heading": "Database Resources",
+          "level": 3,
+          "line": 225
+        },
+        {
+          "heading": "API Resources",
+          "level": 3,
+          "line": 292
+        },
+        {
+          "heading": "Content Types",
+          "level": 2,
+          "line": 338
+        },
+        {
+          "heading": "Text Content",
+          "level": 3,
+          "line": 342
+        },
+        {
+          "heading": "JSON Content",
+          "level": 3,
+          "line": 360
+        },
+        {
+          "heading": "Binary Content",
+          "level": 3,
+          "line": 385
+        },
+        {
+          "heading": "Multiple Content Types",
+          "level": 3,
+          "line": 409
+        },
+        {
+          "heading": "Error Handling",
+          "level": 2,
+          "line": 445
+        },
+        {
+          "heading": "Common Error Patterns",
+          "level": 3,
+          "line": 449
+        },
+        {
+          "heading": "Timeout Handling",
+          "level": 3,
+          "line": 489
+        },
+        {
+          "heading": "Resource Listing",
+          "level": 2,
+          "line": 524
+        },
+        {
+          "heading": "Caching Resources",
+          "level": 2,
+          "line": 561
+        },
+        {
+          "heading": "Resource Subscriptions",
+          "level": 2,
+          "line": 605
+        },
+        {
+          "heading": "Tracking subscriptions per session",
+          "level": 3,
+          "line": 620
+        },
+        {
+          "heading": "Pushing `resources/updated` notifications",
+          "level": 3,
+          "line": 666
+        },
+        {
+          "heading": "Subscription hooks",
+          "level": 3,
+          "line": 710
+        },
+        {
+          "heading": "Advanced Resource Patterns",
+          "level": 2,
+          "line": 731
+        },
+        {
+          "heading": "Session-specific Resources",
+          "level": 3,
+          "line": 733
+        },
+        {
+          "heading": "Using Helper Functions (Recommended)",
+          "level": 4,
+          "line": 737
+        },
+        {
+          "heading": "Direct Interface Usage",
+          "level": 4,
+          "line": 794
+        },
+        {
+          "heading": "Important Notes",
+          "level": 4,
+          "line": 824
+        },
+        {
+          "heading": "Next Steps",
+          "level": 2,
+          "line": 832
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 33
+      }
+    },
+    {
+      "path": "www/docs/pages/servers/tasks.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 365,
+      "nonEmptyLines": 282,
+      "sections": [
+        {
+          "heading": "Task-Augmented Tools",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Overview",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Task Support Modes",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Enabling Task Capabilities",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "Registering Task Tools",
+          "level": 2,
+          "line": 46
+        },
+        {
+          "heading": "AddTaskTool",
+          "level": 3,
+          "line": 48
+        },
+        {
+          "heading": "AddTaskTools",
+          "level": 3,
+          "line": 85
+        },
+        {
+          "heading": "Handler Signature",
+          "level": 2,
+          "line": 96
+        },
+        {
+          "heading": "Task Lifecycle",
+          "level": 2,
+          "line": 106
+        },
+        {
+          "heading": "Task Options",
+          "level": 2,
+          "line": 138
+        },
+        {
+          "heading": "Model Immediate Response",
+          "level": 2,
+          "line": 160
+        },
+        {
+          "heading": "Related Task Metadata",
+          "level": 2,
+          "line": 184
+        },
+        {
+          "heading": "Task Hooks",
+          "level": 2,
+          "line": 194
+        },
+        {
+          "heading": "TaskMetrics Fields",
+          "level": 3,
+          "line": 232
+        },
+        {
+          "heading": "Concurrency Limits",
+          "level": 2,
+          "line": 248
+        },
+        {
+          "heading": "Task Status Notifications",
+          "level": 2,
+          "line": 260
+        },
+        {
+          "heading": "Complete Example",
+          "level": 2,
+          "line": 264
+        },
+        {
+          "heading": "Next Steps",
+          "level": 2,
+          "line": 362
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 18
+      }
+    },
+    {
+      "path": "www/docs/pages/servers/tools.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 1329,
+      "nonEmptyLines": 1085,
+      "sections": [
+        {
+          "heading": "Implementing Tools",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Tool Fundamentals",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Basic Tool Structure",
+          "level": 3,
+          "line": 9
+        },
+        {
+          "heading": "Tool Definition",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "Display Title",
+          "level": 3,
+          "line": 27
+        },
+        {
+          "heading": "Tool Icons",
+          "level": 3,
+          "line": 47
+        },
+        {
+          "heading": "Parameter Types",
+          "level": 3,
+          "line": 65
+        },
+        {
+          "heading": "Enums and Constraints",
+          "level": 3,
+          "line": 116
+        },
+        {
+          "heading": "Struct-Based Schema Definition",
+          "level": 2,
+          "line": 142
+        },
+        {
+          "heading": "Input Schema with Go Structs",
+          "level": 3,
+          "line": 146
+        },
+        {
+          "heading": "Output Schema with Go Structs",
+          "level": 3,
+          "line": 166
+        },
+        {
+          "heading": "Structured Tool Handlers",
+          "level": 3,
+          "line": 194
+        },
+        {
+          "heading": "Validating Output Against the Schema",
+          "level": 3,
+          "line": 238
+        },
+        {
+          "heading": "Array Output Schema",
+          "level": 3,
+          "line": 259
+        },
+        {
+          "heading": "Caching Schemas for Stateless / Serverless Deployments",
+          "level": 3,
+          "line": 290
+        },
+        {
+          "heading": "Schema Tags Reference",
+          "level": 3,
+          "line": 353
+        },
+        {
+          "heading": "Manual Structured Results",
+          "level": 3,
+          "line": 382
+        },
+        {
+          "heading": "Complete Example: File Operations with Structured I/O",
+          "level": 3,
+          "line": 411
+        },
+        {
+          "heading": "Tool Handlers",
+          "level": 2,
+          "line": 533
+        },
+        {
+          "heading": "Parameter Extraction Methods",
+          "level": 3,
+          "line": 537
+        },
+        {
+          "heading": "Basic Handler Pattern",
+          "level": 3,
+          "line": 570
+        },
+        {
+          "heading": "File Operations Tool",
+          "level": 3,
+          "line": 613
+        },
+        {
+          "heading": "Database Query Tool",
+          "level": 3,
+          "line": 685
+        },
+        {
+          "heading": "HTTP Request Tool",
+          "level": 3,
+          "line": 745
+        },
+        {
+          "heading": "Argument Validation",
+          "level": 2,
+          "line": 809
+        },
+        {
+          "heading": "Type-Safe Parameter Extraction",
+          "level": 3,
+          "line": 811
+        },
+        {
+          "heading": "Available Helper Methods",
+          "level": 3,
+          "line": 852
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 27
+      }
+    }
+  ]
+}

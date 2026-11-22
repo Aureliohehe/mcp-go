@@ -1,0 +1,52 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 0,
+  "edgesRestored": 10,
+  "crossBatchEdgesAdded": 0,
+  "typesRemapped": 0,
+  "complexityRemapped": 0,
+  "notes": [
+    "447 个扫描文件均有唯一文件节点。",
+    "10 条调用边的原始目标缺少 Go 方法接收者名称。按源码核对调用并将目标改为已有的 MCPServer 或 Client 方法节点。",
+    "Go 包导入在扫描器中会展开为包目录中的所有文件。复核按导入路径、包别名和源码中引用的导出标识符保留直接关联，并排除无法成为导入来源的 Go 测试文件。",
+    "对于无法定位到单个导出声明的 Go 包导入，在扫描数据提供候选文件时保留一个包代表文件。",
+    "非 Go 文件之间的直接导入与文档关系保留。"
+  ],
+  "fileCoverage": {
+    "scanned": 447,
+    "represented": 447
+  },
+  "importReview": {
+    "sourceBackedGoFileLinks": 837,
+    "representativeImports": 0,
+    "filteredTestImports": 18268,
+    "filteredOtherImports": 5648,
+    "missingFromScanner": [
+      "otel/client_test.go → github.com/mark3labs/mcp-go/client",
+      "otel/client_test.go → github.com/mark3labs/mcp-go/client/transport",
+      "otel/client_test.go → github.com/mark3labs/mcp-go/mcp",
+      "otel/client_test.go → github.com/mark3labs/mcp-go/server",
+      "otel/client_test.go → github.com/mark3labs/mcp-go/server/servertest",
+      "otel/example/main.go → github.com/mark3labs/mcp-go/client",
+      "otel/example/main.go → github.com/mark3labs/mcp-go/client/transport",
+      "otel/example/main.go → github.com/mark3labs/mcp-go/mcp",
+      "otel/example/main.go → github.com/mark3labs/mcp-go/server",
+      "otel/logger.go → github.com/mark3labs/mcp-go/server",
+      "otel/meta_carrier.go → github.com/mark3labs/mcp-go/mcp",
+      "otel/meta_carrier.go → github.com/mark3labs/mcp-go/tracing",
+      "otel/meta_carrier_test.go → github.com/mark3labs/mcp-go/client",
+      "otel/meta_carrier_test.go → github.com/mark3labs/mcp-go/client/transport",
+      "otel/meta_carrier_test.go → github.com/mark3labs/mcp-go/mcp",
+      "otel/meta_carrier_test.go → github.com/mark3labs/mcp-go/server",
+      "otel/options.go → github.com/mark3labs/mcp-go/client",
+      "otel/options.go → github.com/mark3labs/mcp-go/server",
+      "otel/server_test.go → github.com/mark3labs/mcp-go/mcp",
+      "otel/server_test.go → github.com/mark3labs/mcp-go/server",
+      "otel/tracer.go → github.com/mark3labs/mcp-go/tracing"
+    ]
+  },
+  "edgeCounts": {
+    "before": 32472,
+    "after": 8566
+  }
+}

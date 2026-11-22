@@ -1,0 +1,317 @@
+{
+  "nodes": [
+    {
+      "id": "document:www/docs/pages/servers/advanced-sampling.mdx",
+      "type": "document",
+      "name": "advanced-sampling.mdx",
+      "filePath": "www/docs/pages/servers/advanced-sampling.mdx",
+      "summary": "说明服务端如何向客户端发起采样，处理参数、内容类型、能力校验、超时和传输限制。",
+      "tags": [
+        "服务端",
+        "采样",
+        "能力校验"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/servers/advanced.mdx",
+      "type": "document",
+      "name": "advanced.mdx",
+      "filePath": "www/docs/pages/servers/advanced.mdx",
+      "summary": "汇总服务端进阶配置，覆盖图标、类型化工具、会话状态、中间件、钩子和能力过滤。",
+      "tags": [
+        "服务端",
+        "会话管理",
+        "中间件"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/servers/basics.mdx",
+      "type": "document",
+      "name": "basics.mdx",
+      "filePath": "www/docs/pages/servers/basics.mdx",
+      "summary": "介绍创建和配置服务端、声明能力、选择传输及管理生命周期的常用方法。",
+      "tags": [
+        "服务端",
+        "能力声明",
+        "生命周期"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/servers/completions.mdx",
+      "type": "document",
+      "name": "completions.mdx",
+      "filePath": "www/docs/pages/servers/completions.mdx",
+      "summary": "演示为提示词参数与资源模板注册自动补全提供者，并说明补全请求和结果类型。",
+      "tags": [
+        "服务端",
+        "自动补全",
+        "资源"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:www/docs/pages/servers/elicitation.mdx",
+      "type": "document",
+      "name": "elicitation.mdx",
+      "filePath": "www/docs/pages/servers/elicitation.mdx",
+      "summary": "介绍表单和 URL 两种用户征询模式，覆盖请求参数、客户端响应、能力声明和超时。",
+      "tags": [
+        "服务端",
+        "用户征询",
+        "能力声明"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/servers/index.mdx",
+      "type": "document",
+      "name": "index.mdx",
+      "filePath": "www/docs/pages/servers/index.mdx",
+      "summary": "服务端开发章节的起点，通过完整的注册工具示例串联基础、工具和资源等后续主题。",
+      "tags": [
+        "服务端",
+        "项目导览",
+        "代码示例"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:www/docs/pages/servers/middleware.mdx",
+      "type": "document",
+      "name": "middleware.mdx",
+      "filePath": "www/docs/pages/servers/middleware.mdx",
+      "summary": "说明中间件注册、执行顺序、任务工具适配和并发约束。",
+      "tags": [
+        "服务端",
+        "中间件",
+        "并发"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:www/docs/pages/servers/prompts.mdx",
+      "type": "document",
+      "name": "prompts.mdx",
+      "filePath": "www/docs/pages/servers/prompts.mdx",
+      "summary": "说明提示词的注册、参数、模板和消息类型，以及过滤与处理器中间件。",
+      "tags": [
+        "服务端",
+        "提示词",
+        "模板"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/servers/resources.mdx",
+      "type": "document",
+      "name": "resources.mdx",
+      "filePath": "www/docs/pages/servers/resources.mdx",
+      "summary": "介绍静态资源、URI 模板、资源读取与订阅，并讨论内容类型、缓存和错误处理。",
+      "tags": [
+        "服务端",
+        "资源",
+        "订阅"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/servers/tasks.mdx",
+      "type": "document",
+      "name": "tasks.mdx",
+      "filePath": "www/docs/pages/servers/tasks.mdx",
+      "summary": "介绍任务工具的声明、注册和状态生命周期，包括任务钩子、并发限制与状态通知。",
+      "tags": [
+        "服务端",
+        "异步任务",
+        "生命周期"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/servers/tools.mdx",
+      "type": "document",
+      "name": "tools.mdx",
+      "filePath": "www/docs/pages/servers/tools.mdx",
+      "summary": "讲解工具定义、通过 Go 结构体生成 Schema、处理器参数校验、结果构建和注解。",
+      "tags": [
+        "服务端",
+        "工具",
+        "参数校验"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:www/docs/pages/servers/advanced-sampling.mdx",
+      "target": "file:server/sampling.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/advanced.mdx",
+      "target": "file:server/server.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/advanced.mdx",
+      "target": "file:server/hooks.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/advanced.mdx",
+      "target": "file:mcp/typed_tools.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/basics.mdx",
+      "target": "file:server/server.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/basics.mdx",
+      "target": "file:server/stdio.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/basics.mdx",
+      "target": "file:server/streamable_http.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/basics.mdx",
+      "target": "file:server/sse.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/completions.mdx",
+      "target": "file:server/completion.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/elicitation.mdx",
+      "target": "file:server/elicitation.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/elicitation.mdx",
+      "target": "file:client/elicitation.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/index.mdx",
+      "target": "file:server/server.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/index.mdx",
+      "target": "file:mcp/tools.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/middleware.mdx",
+      "target": "file:server/server.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/prompts.mdx",
+      "target": "file:mcp/prompts.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/prompts.mdx",
+      "target": "file:server/server.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/resources.mdx",
+      "target": "file:mcp/resources.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/resources.mdx",
+      "target": "file:server/server.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/tasks.mdx",
+      "target": "file:mcp/tasks.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/tasks.mdx",
+      "target": "file:server/task_hooks.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/tools.mdx",
+      "target": "file:mcp/tools.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/tools.mdx",
+      "target": "file:mcp/struct_schema.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/tools.mdx",
+      "target": "file:server/input_validation.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/servers/tools.mdx",
+      "target": "file:server/server.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

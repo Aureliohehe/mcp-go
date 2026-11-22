@@ -1,0 +1,2965 @@
+{
+  "totalFileNodes": 447,
+  "directoryGroups": {
+    "client": [
+      "file:client/cancel_test.go",
+      "file:client/http_test.go",
+      "file:client/inprocess.go",
+      "file:client/inprocess_elicitation_test.go",
+      "file:client/inprocess_options_test.go",
+      "file:client/inprocess_sampling_test.go",
+      "file:client/inprocess_test.go",
+      "file:client/iter_test.go",
+      "file:client/sse_test.go",
+      "file:client/tracing_test.go",
+      "file:client/transport/idempotent_all_transports_test.go",
+      "file:client/transport/inprocess.go",
+      "file:client/transport/inprocess_notification_session_test.go",
+      "file:client/transport/inprocess_registration_hook_close_test.go",
+      "file:client/discovery_validation_test.go",
+      "file:client/elicitation.go",
+      "file:client/interface.go",
+      "file:client/invalid_tool_handler_test.go",
+      "file:client/iter.go",
+      "file:client/mrtr.go",
+      "file:client/notification_handlers_test.go",
+      "file:client/review_regression_test.go",
+      "file:client/roots.go",
+      "file:client/sampling.go",
+      "file:client/schema_type_array_test.go",
+      "file:client/subscriptions.go",
+      "file:client/task_wait.go",
+      "file:client/tracing.go",
+      "file:client/client.go",
+      "file:client/client_edge_cases_test.go",
+      "file:client/elicitation_test.go",
+      "file:client/http.go",
+      "file:client/initial_roundtrip_test.go",
+      "file:client/invalid_header_tools_test.go",
+      "file:client/issue583_test.go",
+      "file:client/list_cursor_test.go",
+      "file:client/listen_error_stop_reentrancy_test.go",
+      "file:client/load_shedding_responses_test.go",
+      "file:client/mrtr_interop_test.go",
+      "file:client/mrtr_manual_test.go",
+      "file:client/null_responses_test.go",
+      "file:client/oauth.go",
+      "file:client/oauth_test.go",
+      "file:client/pending_subscription_test.go",
+      "file:client/protocol.go",
+      "file:client/protocol_negotiation_test.go",
+      "file:client/sampling_test.go",
+      "file:client/sse.go",
+      "file:client/stdio.go",
+      "file:client/stdio_test.go",
+      "file:client/task_list_test.go",
+      "file:client/task_wait_test.go",
+      "file:client/transport/command.go",
+      "file:client/transport/command_test.go",
+      "file:client/transport/constants.go",
+      "file:client/transport/error.go",
+      "file:client/transport/interface.go",
+      "file:client/transport/logging.go",
+      "file:client/transport/logging_test.go",
+      "file:client/transport/message_limit.go",
+      "file:client/transport/message_limit_test.go",
+      "file:client/transport/notification_handler_reentrancy_test.go",
+      "file:client/transport/oauth.go",
+      "file:client/transport/oauth_binding.go",
+      "file:client/transport/oauth_discovery_retry_test.go",
+      "file:client/transport/oauth_fallback_test.go",
+      "file:client/transport/oauth_iss_test.go",
+      "file:client/transport/oauth_issuer_test.go",
+      "file:client/transport/oauth_nil_metadata_test.go",
+      "file:client/transport/oauth_pkce_required_test.go",
+      "file:client/transport/oauth_prm_resource_binding_test.go",
+      "file:client/transport/oauth_refresh_test.go",
+      "file:client/transport/oauth_registration_test.go",
+      "file:client/transport/oauth_server_binding_test.go",
+      "file:client/transport/oauth_test.go",
+      "file:client/transport/oauth_token_auth_test.go",
+      "file:client/transport/oauth_token_response_test.go",
+      "file:client/transport/oauth_token_type_test.go",
+      "file:client/transport/oauth_transaction_binding_test.go",
+      "file:client/transport/oauth_transaction_test.go",
+      "file:client/transport/oauth_utils.go",
+      "file:client/transport/oauth_utils_test.go",
+      "file:client/transport/panic_recovery_test.go",
+      "file:client/transport/redirect.go",
+      "file:client/transport/redirect_test.go",
+      "file:client/transport/sse.go",
+      "file:client/transport/sse_closed_notification_test.go",
+      "file:client/transport/sse_coverage_test.go",
+      "file:client/transport/sse_lifecycle_test.go",
+      "file:client/transport/sse_oauth_test.go",
+      "file:client/transport/sse_test.go",
+      "file:client/transport/stderr_buffer_test.go",
+      "file:client/transport/stdio.go",
+      "file:client/transport/stdio_coverage_test.go",
+      "file:client/transport/stdio_idempotent_test.go",
+      "file:client/transport/stdio_test.go",
+      "file:client/transport/stdio_unix_test.go",
+      "file:client/transport/streamable_http.go",
+      "file:client/transport/streamable_http_bodyclose_test.go",
+      "file:client/transport/streamable_http_get_bodyclose_test.go",
+      "file:client/transport/streamable_http_oauth_test.go",
+      "file:client/transport/streamable_http_resume_test.go",
+      "file:client/transport/streamable_http_retry_interval_test.go",
+      "file:client/transport/streamable_http_sampling_test.go",
+      "file:client/transport/streamable_http_session_end_test.go",
+      "file:client/transport/streamable_http_session_publish_test.go",
+      "file:client/transport/streamable_http_start_after_close_test.go",
+      "file:client/transport/streamable_http_test.go",
+      "file:client/transport/utils.go",
+      "file:client/transport/utils_test.go",
+      "file:client/version_retry_test.go"
+    ],
+    "e2e": [
+      "file:e2e/resumability_http_test.go",
+      "file:e2e/scoped_request_resumability_test.go",
+      "file:e2e/subscription_shutdown_test.go",
+      "file:e2e/protocol_2026_07_28_test.go",
+      "file:e2e/sampling_http_test.go"
+    ],
+    "examples": [
+      "file:examples/conformance/main.go",
+      "file:examples/custom_context/main.go",
+      "file:examples/dynamic_path/main.go",
+      "file:examples/elicitation/main.go",
+      "file:examples/everything/main.go",
+      "file:examples/in_process/main.go",
+      "file:examples/inprocess_sampling/main.go",
+      "file:examples/roots_http_server/main.go",
+      "file:examples/roots_server/main.go",
+      "file:examples/sampling_http_server/main.go",
+      "file:examples/sampling_server/main.go",
+      "file:examples/structured_input_and_output/main.go",
+      "file:examples/task_tool/main.go",
+      "file:examples/typed_tools/main.go",
+      "file:examples/filesystem_stdio_client/main.go",
+      "file:examples/oauth_client/main.go",
+      "file:examples/multi_round_trip/main.go",
+      "file:examples/roots_client/main.go",
+      "file:examples/roots_http_client/main.go",
+      "file:examples/sampling_client/main.go",
+      "file:examples/sampling_http_client/main.go",
+      "file:examples/simple_client/main.go",
+      "file:examples/everything/id.go",
+      "document:examples/inprocess_sampling/README.md",
+      "document:examples/oauth_client/README.md",
+      "document:examples/sampling_client/README.md",
+      "document:examples/sampling_http_client/README.md",
+      "document:examples/sampling_http_server/README.md",
+      "document:examples/sampling_server/README.md",
+      "document:examples/structured_input_and_output/README.md"
+    ],
+    "mcp": [
+      "file:mcp/error_pointer_classification_test.go",
+      "file:mcp/errors_additional_test.go",
+      "file:mcp/headers_test.go",
+      "file:mcp/meta_map_ownership_test.go",
+      "file:mcp/array_fallback_test.go",
+      "file:mcp/elicitation_validation_test.go",
+      "file:mcp/empty_result_arrays_test.go",
+      "file:mcp/error_unmarshal_test.go",
+      "file:mcp/headers.go",
+      "file:mcp/meta.go",
+      "file:mcp/notification_params_reuse_test.go",
+      "file:mcp/output_schema_replacement_test.go",
+      "file:mcp/request_id_number.go",
+      "file:mcp/resources.go",
+      "file:mcp/result.go",
+      "file:mcp/schema_cache_identity_test.go",
+      "file:mcp/schema_cache_test.go",
+      "file:mcp/testdata/schema_cache/first/models.go",
+      "file:mcp/testdata/schema_cache/second/models.go",
+      "file:mcp/mrtr_test.go",
+      "file:mcp/prompts.go",
+      "file:mcp/request_id_precision_test.go",
+      "file:mcp/resources_test.go",
+      "file:mcp/sampling_result_shape_test.go",
+      "file:mcp/schema_cache.go",
+      "file:mcp/schema_type_array_regression_test.go",
+      "file:mcp/struct_schema.go",
+      "file:mcp/struct_schema_test.go",
+      "file:mcp/structured_result_serialization_test.go",
+      "file:mcp/task_result_content_array_test.go",
+      "file:mcp/task_result_structured_precision_test.go",
+      "file:mcp/task_status_parsing_test.go",
+      "file:mcp/tasks.go",
+      "file:mcp/tasks_test.go",
+      "file:mcp/tool_result_reuse_test.go",
+      "file:mcp/tool_schema_keywords_test.go",
+      "file:mcp/tool_schema_roundtrip_regression_test.go",
+      "file:mcp/tools.go",
+      "file:mcp/tools_additional_test.go",
+      "file:mcp/tools_annotations_test.go",
+      "file:mcp/tools_defer_loading_test.go",
+      "file:mcp/tools_int_slice_precision_test.go",
+      "file:mcp/tools_properties_test.go",
+      "file:mcp/tools_property_order_test.go",
+      "file:mcp/tools_raw_arguments_test.go",
+      "file:mcp/tools_schema_additional_fields_test.go",
+      "file:mcp/tools_test.go",
+      "file:mcp/typed_tools.go",
+      "file:mcp/typed_tools_additional_test.go",
+      "file:mcp/typed_tools_test.go",
+      "file:mcp/types.go",
+      "file:mcp/types_test.go",
+      "file:mcp/unique_required_test.go",
+      "file:mcp/utils.go",
+      "file:mcp/utils_additional_test.go",
+      "file:mcp/utils_envelope_test.go",
+      "file:mcp/utils_helpers_test.go",
+      "file:mcp/utils_integer_test.go",
+      "file:mcp/utils_task_result_test.go",
+      "file:mcp/utils_test.go",
+      "file:mcp/version.go",
+      "file:mcp/version_test.go",
+      "file:mcp/base_metadata_test.go",
+      "file:mcp/call_tool_result_parse_test.go",
+      "file:mcp/consts.go",
+      "file:mcp/content_benchmark_test.go",
+      "file:mcp/content_pointers_test.go",
+      "file:mcp/discover.go",
+      "file:mcp/elicitation_test.go",
+      "file:mcp/errors.go",
+      "file:mcp/errors_test.go",
+      "file:mcp/icons_test.go",
+      "file:mcp/mrtr.go",
+      "file:mcp/primitive_item_required_test.go",
+      "file:mcp/prompts_test.go",
+      "file:mcp/quoted_schema_test.go"
+    ],
+    "testdata": [
+      "file:testdata/mockstdio_server.go",
+      "file:testdata/mockstdio_stderr_flood_server.go",
+      "file:testdata/mockstdio_stderr_server.go"
+    ],
+    "tracing": [
+      "file:tracing/tracing.go",
+      "file:tracing/tracing_test.go"
+    ],
+    "mcptest": [
+      "file:mcptest/mcptest_sampling_elicitation_test.go",
+      "file:mcptest/mcptest_test.go",
+      "file:mcptest/mcptest.go"
+    ],
+    "server": [
+      "file:server/atomic_registry_replacement_test.go",
+      "file:server/client_info_store.go",
+      "file:server/client_info_store_test.go",
+      "file:server/completion.go",
+      "file:server/conformance_test.go",
+      "file:server/constants.go",
+      "file:server/ctx.go",
+      "file:server/discover.go",
+      "file:server/elicitation.go",
+      "file:server/elicitation_test.go",
+      "file:server/empty_results_test.go",
+      "file:server/errors.go",
+      "file:server/event_store.go",
+      "file:server/event_store_replay_copy_test.go",
+      "file:server/handle_message_bench_test.go",
+      "file:server/handle_message_parse_test.go",
+      "file:server/handler_errors.go",
+      "file:server/header_params_shapes_test.go",
+      "file:server/helpers_test.go",
+      "file:server/hooks.go",
+      "file:server/http_cors.go",
+      "file:server/http_cors_test.go",
+      "file:server/http_localhost.go",
+      "file:server/http_localhost_test.go",
+      "file:server/http_transport_options.go",
+      "file:server/inflight_request.go",
+      "file:server/inflight_request_test.go",
+      "file:server/inprocess_session.go",
+      "file:server/inprocess_session_test.go",
+      "file:server/input_validation.go",
+      "file:server/input_validation_test.go",
+      "file:server/jsonrpc_error.go",
+      "file:server/jsonrpc_strict.go",
+      "file:server/jsonrpc_strict_test.go",
+      "file:server/logger.go",
+      "file:server/logger_test.go",
+      "file:server/mrtr.go",
+      "file:server/mrtr_test.go",
+      "file:server/nil_result_test.go",
+      "file:server/output_validation.go",
+      "file:server/output_validation_test.go",
+      "file:server/pagination_empty_tiebreak_test.go",
+      "file:server/pagination_legacy_cursor_test.go",
+      "file:server/pagination_positive_overflow_test.go",
+      "file:server/param_headers_bench_test.go",
+      "file:server/param_headers_test.go",
+      "file:server/protected_resource.go",
+      "file:server/protected_resource_escaped_path_test.go",
+      "file:server/protected_resource_test.go",
+      "file:server/protocol.go",
+      "file:server/request_error_test.go",
+      "file:server/request_handler.go",
+      "file:server/request_id_precision_test.go",
+      "file:server/request_id_transport_test.go",
+      "file:server/resource_errors.go",
+      "file:server/resource_subscribe_test.go",
+      "file:server/resource_template_match_test.go",
+      "file:server/resource_test.go",
+      "file:server/response.go",
+      "file:server/roots.go",
+      "file:server/roots_test.go",
+      "file:server/sampling.go",
+      "file:server/sampling_test.go",
+      "file:server/schema_type_array_test.go",
+      "file:server/server.go",
+      "file:server/server_additional_test.go",
+      "file:server/server_race_test.go",
+      "file:server/server_test.go",
+      "file:server/servertest/doc.go",
+      "file:server/servertest/sse.go",
+      "file:server/servertest/streamable.go",
+      "file:server/session.go",
+      "file:server/session_hook_panic_test.go",
+      "file:server/session_resource_helpers_test.go",
+      "file:server/session_resource_templates_test.go",
+      "file:server/session_test.go",
+      "file:server/sse.go",
+      "file:server/sse_body_limit_test.go",
+      "file:server/sse_full_queue_test.go",
+      "file:server/sse_panic_test.go",
+      "file:server/sse_test.go",
+      "file:server/stdio.go",
+      "file:server/stdio_invalid_id_test.go",
+      "file:server/stdio_panic_test.go",
+      "file:server/stdio_test.go",
+      "file:server/streamable_http.go",
+      "file:server/streamable_http_bench_test.go",
+      "file:server/streamable_http_body_limit_test.go",
+      "file:server/streamable_http_client_info_test.go",
+      "file:server/streamable_http_elicitation_test.go",
+      "file:server/streamable_http_envelope_test.go",
+      "file:server/streamable_http_handle.go",
+      "file:server/streamable_http_handle_test.go",
+      "file:server/streamable_http_modern.go",
+      "file:server/streamable_http_modern_test.go",
+      "file:server/streamable_http_notification_drop_test.go",
+      "file:server/streamable_http_overlapping_post_test.go",
+      "file:server/streamable_http_request_scoped_notification_test.go",
+      "file:server/streamable_http_resume.go",
+      "file:server/streamable_http_roots_post_test.go",
+      "file:server/streamable_http_sampling_error_label_test.go",
+      "file:server/streamable_http_sampling_test.go",
+      "file:server/streamable_http_shutdown_test.go",
+      "file:server/streamable_http_test.go",
+      "file:server/streamable_http_touch_test.go",
+      "file:server/strict_input_schema_default_test.go",
+      "file:server/structured_handler_error_test.go",
+      "file:server/subscriptions.go",
+      "file:server/subscriptions_test.go",
+      "file:server/task_cancel_result_test.go",
+      "file:server/task_hook_ordering_test.go",
+      "file:server/task_hook_reentrancy_test.go",
+      "file:server/task_hooks.go",
+      "file:server/task_hooks_test.go",
+      "file:server/task_limit_test.go",
+      "file:server/task_panic_test.go",
+      "file:server/task_raw_structured_test.go",
+      "file:server/task_response_format_test.go",
+      "file:server/task_result_content_array_test.go",
+      "file:server/task_session_tool_test.go",
+      "file:server/task_test.go",
+      "file:server/task_tool_test.go",
+      "file:server/tool_filter_call_test.go",
+      "file:server/tool_middleware_registration_reentrancy_test.go",
+      "file:server/tracing.go",
+      "file:server/tracing_test.go",
+      "file:server/version_test.go",
+      "document:server/internal/gen/README.md",
+      "file:server/internal/gen/data.go",
+      "file:server/internal/gen/hooks.go.tmpl",
+      "file:server/internal/gen/main.go",
+      "file:server/internal/gen/request_handler.go.tmpl",
+      "file:server/testdata/conformance/cacheable_results.txtar",
+      "file:server/testdata/conformance/discover.txtar",
+      "file:server/testdata/conformance/legacy_unchanged.txtar",
+      "file:server/testdata/conformance/missing_capabilities.txtar",
+      "file:server/testdata/conformance/mrtr.txtar",
+      "file:server/testdata/conformance/removed_methods.txtar",
+      "file:server/testdata/conformance/resource_not_found.txtar",
+      "file:server/testdata/conformance/unsupported_version.txtar"
+    ],
+    "otel": [
+      "file:otel/client_test.go",
+      "file:otel/example/main.go",
+      "file:otel/logger.go",
+      "file:otel/logger_test.go",
+      "file:otel/meta_carrier.go",
+      "file:otel/meta_carrier_test.go",
+      "file:otel/options.go",
+      "file:otel/server_test.go",
+      "file:otel/tracer.go",
+      "document:otel/README.md",
+      "config:otel/go.mod",
+      "config:otel/go.sum",
+      "document:otel/example/README.md"
+    ],
+    ".github": [
+      "pipeline:.github/workflows/ci.yml",
+      "pipeline:.github/workflows/conformance.yml",
+      "pipeline:.github/workflows/golangci-lint.yml",
+      "pipeline:.github/workflows/pages.yml",
+      "pipeline:.github/workflows/release.yml",
+      "document:.github/ISSUE_TEMPLATE/bug_report.md",
+      "config:.github/ISSUE_TEMPLATE/config.yml",
+      "document:.github/ISSUE_TEMPLATE/documentation-improvement.md",
+      "document:.github/ISSUE_TEMPLATE/feature-request.md",
+      "document:.github/pull_request_template.md"
+    ],
+    "(root)": [
+      "config:.golangci.yml",
+      "document:AGENTS.md",
+      "document:CODE_OF_CONDUCT.md",
+      "document:CONTRIBUTING.md",
+      "document:README.md",
+      "document:SECURITY.md",
+      "config:go.mod",
+      "config:go.sum"
+    ],
+    ".kit": [
+      "document:.kit/prompts/code-audit.md",
+      "document:.kit/prompts/commit-push.md",
+      "document:.kit/prompts/create-pr.md",
+      "document:.kit/prompts/feature-request.md",
+      "document:.kit/prompts/file-issue.md",
+      "document:.kit/prompts/fix-issue.md",
+      "document:.kit/prompts/new-prompt.md",
+      "document:.kit/prompts/release-tagger.md",
+      "document:.kit/prompts/resolve-reviews.md",
+      "document:.kit/prompts/review-pr.md",
+      "document:.kit/prompts/update-docs.md"
+    ],
+    "www": [
+      "document:www/README.md",
+      "config:www/package.json",
+      "config:www/tsconfig.json",
+      "document:www/docs/pages/clients/advanced-sampling.mdx",
+      "document:www/docs/pages/clients/basics.mdx",
+      "document:www/docs/pages/clients/index.mdx",
+      "document:www/docs/pages/clients/operations.mdx",
+      "document:www/docs/pages/clients/transports.mdx",
+      "document:www/docs/pages/core-concepts.mdx",
+      "document:www/docs/pages/getting-started.mdx",
+      "document:www/docs/pages/index.mdx",
+      "document:www/docs/pages/protocol-2026-07-28.mdx",
+      "document:www/docs/pages/quick-start.mdx",
+      "document:www/docs/pages/servers/advanced-sampling.mdx",
+      "document:www/docs/pages/servers/advanced.mdx",
+      "document:www/docs/pages/servers/basics.mdx",
+      "document:www/docs/pages/servers/completions.mdx",
+      "document:www/docs/pages/servers/elicitation.mdx",
+      "document:www/docs/pages/servers/index.mdx",
+      "document:www/docs/pages/servers/middleware.mdx",
+      "document:www/docs/pages/servers/prompts.mdx",
+      "document:www/docs/pages/servers/resources.mdx",
+      "document:www/docs/pages/servers/tasks.mdx",
+      "document:www/docs/pages/servers/tools.mdx",
+      "document:www/docs/pages/transports/http.mdx",
+      "document:www/docs/pages/transports/index.mdx",
+      "document:www/docs/pages/transports/inprocess.mdx",
+      "document:www/docs/pages/transports/sse.mdx",
+      "document:www/docs/pages/transports/stdio.mdx",
+      "file:www/docs/styles.css",
+      "file:www/vocs.config.ts"
+    ],
+    ".ua": [
+      "config:.ua/config.json"
+    ],
+    "conformance": [
+      "config:conformance/server/expected-failures.yml"
+    ],
+    "scripts": [
+      "file:scripts/check_conformance.py",
+      "file:scripts/test_check_conformance.py"
+    ]
+  },
+  "nodeTypes": {
+    "file": [
+      "file:client/cancel_test.go",
+      "file:client/http_test.go",
+      "file:client/inprocess.go",
+      "file:client/inprocess_elicitation_test.go",
+      "file:client/inprocess_options_test.go",
+      "file:client/inprocess_sampling_test.go",
+      "file:client/inprocess_test.go",
+      "file:client/iter_test.go",
+      "file:client/sse_test.go",
+      "file:client/tracing_test.go",
+      "file:client/transport/idempotent_all_transports_test.go",
+      "file:client/transport/inprocess.go",
+      "file:client/transport/inprocess_notification_session_test.go",
+      "file:client/transport/inprocess_registration_hook_close_test.go",
+      "file:e2e/resumability_http_test.go",
+      "file:e2e/scoped_request_resumability_test.go",
+      "file:e2e/subscription_shutdown_test.go",
+      "file:examples/conformance/main.go",
+      "file:examples/custom_context/main.go",
+      "file:examples/dynamic_path/main.go",
+      "file:examples/elicitation/main.go",
+      "file:examples/everything/main.go",
+      "file:examples/in_process/main.go",
+      "file:examples/inprocess_sampling/main.go",
+      "file:examples/roots_http_server/main.go",
+      "file:examples/roots_server/main.go",
+      "file:examples/sampling_http_server/main.go",
+      "file:examples/sampling_server/main.go",
+      "file:examples/structured_input_and_output/main.go",
+      "file:examples/task_tool/main.go",
+      "file:examples/typed_tools/main.go",
+      "file:mcp/error_pointer_classification_test.go",
+      "file:mcp/errors_additional_test.go",
+      "file:mcp/headers_test.go",
+      "file:mcp/meta_map_ownership_test.go",
+      "file:client/discovery_validation_test.go",
+      "file:client/elicitation.go",
+      "file:client/interface.go",
+      "file:client/invalid_tool_handler_test.go",
+      "file:client/iter.go",
+      "file:client/mrtr.go",
+      "file:client/notification_handlers_test.go",
+      "file:client/review_regression_test.go",
+      "file:client/roots.go",
+      "file:client/sampling.go",
+      "file:client/schema_type_array_test.go",
+      "file:client/subscriptions.go",
+      "file:client/task_wait.go",
+      "file:client/tracing.go",
+      "file:examples/filesystem_stdio_client/main.go",
+      "file:examples/oauth_client/main.go",
+      "file:mcp/array_fallback_test.go",
+      "file:mcp/elicitation_validation_test.go",
+      "file:mcp/empty_result_arrays_test.go",
+      "file:mcp/error_unmarshal_test.go",
+      "file:mcp/headers.go",
+      "file:mcp/meta.go",
+      "file:mcp/notification_params_reuse_test.go",
+      "file:mcp/output_schema_replacement_test.go",
+      "file:mcp/request_id_number.go",
+      "file:mcp/resources.go",
+      "file:mcp/result.go",
+      "file:mcp/schema_cache_identity_test.go",
+      "file:mcp/schema_cache_test.go",
+      "file:mcp/testdata/schema_cache/first/models.go",
+      "file:mcp/testdata/schema_cache/second/models.go",
+      "file:testdata/mockstdio_server.go",
+      "file:testdata/mockstdio_stderr_flood_server.go",
+      "file:testdata/mockstdio_stderr_server.go",
+      "file:tracing/tracing.go",
+      "file:mcp/mrtr_test.go",
+      "file:mcp/prompts.go",
+      "file:mcp/request_id_precision_test.go",
+      "file:mcp/resources_test.go",
+      "file:mcp/sampling_result_shape_test.go",
+      "file:mcp/schema_cache.go",
+      "file:mcp/schema_type_array_regression_test.go",
+      "file:mcp/struct_schema.go",
+      "file:mcp/struct_schema_test.go",
+      "file:mcp/structured_result_serialization_test.go",
+      "file:mcp/task_result_content_array_test.go",
+      "file:mcp/task_result_structured_precision_test.go",
+      "file:mcp/task_status_parsing_test.go",
+      "file:mcp/tasks.go",
+      "file:mcp/tasks_test.go",
+      "file:mcp/tool_result_reuse_test.go",
+      "file:mcp/tool_schema_keywords_test.go",
+      "file:mcp/tool_schema_roundtrip_regression_test.go",
+      "file:mcp/tools.go",
+      "file:mcp/tools_additional_test.go",
+      "file:mcp/tools_annotations_test.go",
+      "file:mcp/tools_defer_loading_test.go",
+      "file:mcp/tools_int_slice_precision_test.go",
+      "file:mcp/tools_properties_test.go",
+      "file:mcp/tools_property_order_test.go",
+      "file:mcp/tools_raw_arguments_test.go",
+      "file:mcp/tools_schema_additional_fields_test.go",
+      "file:mcp/tools_test.go",
+      "file:mcp/typed_tools.go",
+      "file:mcp/typed_tools_additional_test.go",
+      "file:mcp/typed_tools_test.go",
+      "file:mcp/types.go",
+      "file:mcp/types_test.go",
+      "file:mcp/unique_required_test.go",
+      "file:mcp/utils.go",
+      "file:mcp/utils_additional_test.go",
+      "file:mcp/utils_envelope_test.go",
+      "file:mcp/utils_helpers_test.go",
+      "file:mcp/utils_integer_test.go",
+      "file:mcp/utils_task_result_test.go",
+      "file:mcp/utils_test.go",
+      "file:mcp/version.go",
+      "file:mcp/version_test.go",
+      "file:mcptest/mcptest_sampling_elicitation_test.go",
+      "file:mcptest/mcptest_test.go",
+      "file:server/atomic_registry_replacement_test.go",
+      "file:server/client_info_store.go",
+      "file:server/client_info_store_test.go",
+      "file:server/completion.go",
+      "file:server/conformance_test.go",
+      "file:server/constants.go",
+      "file:server/ctx.go",
+      "file:server/discover.go",
+      "file:server/elicitation.go",
+      "file:server/elicitation_test.go",
+      "file:server/empty_results_test.go",
+      "file:server/errors.go",
+      "file:server/event_store.go",
+      "file:server/event_store_replay_copy_test.go",
+      "file:server/handle_message_bench_test.go",
+      "file:server/handle_message_parse_test.go",
+      "file:server/handler_errors.go",
+      "file:server/header_params_shapes_test.go",
+      "file:server/helpers_test.go",
+      "file:server/hooks.go",
+      "file:server/http_cors.go",
+      "file:server/http_cors_test.go",
+      "file:server/http_localhost.go",
+      "file:server/http_localhost_test.go",
+      "file:server/http_transport_options.go",
+      "file:server/inflight_request.go",
+      "file:server/inflight_request_test.go",
+      "file:server/inprocess_session.go",
+      "file:server/inprocess_session_test.go",
+      "file:server/input_validation.go",
+      "file:server/input_validation_test.go",
+      "file:server/jsonrpc_error.go",
+      "file:server/jsonrpc_strict.go",
+      "file:server/jsonrpc_strict_test.go",
+      "file:server/logger.go",
+      "file:server/logger_test.go",
+      "file:server/mrtr.go",
+      "file:server/mrtr_test.go",
+      "file:server/nil_result_test.go",
+      "file:server/output_validation.go",
+      "file:server/output_validation_test.go",
+      "file:server/pagination_empty_tiebreak_test.go",
+      "file:server/pagination_legacy_cursor_test.go",
+      "file:server/pagination_positive_overflow_test.go",
+      "file:server/param_headers_bench_test.go",
+      "file:server/param_headers_test.go",
+      "file:server/protected_resource.go",
+      "file:server/protected_resource_escaped_path_test.go",
+      "file:server/protected_resource_test.go",
+      "file:server/protocol.go",
+      "file:server/request_error_test.go",
+      "file:server/request_handler.go",
+      "file:server/request_id_precision_test.go",
+      "file:server/request_id_transport_test.go",
+      "file:server/resource_errors.go",
+      "file:server/resource_subscribe_test.go",
+      "file:server/resource_template_match_test.go",
+      "file:server/resource_test.go",
+      "file:server/response.go",
+      "file:server/roots.go",
+      "file:server/roots_test.go",
+      "file:server/sampling.go",
+      "file:server/sampling_test.go",
+      "file:server/schema_type_array_test.go",
+      "file:server/server.go",
+      "file:server/server_additional_test.go",
+      "file:server/server_race_test.go",
+      "file:server/server_test.go",
+      "file:server/servertest/doc.go",
+      "file:server/servertest/sse.go",
+      "file:server/servertest/streamable.go",
+      "file:server/session.go",
+      "file:server/session_hook_panic_test.go",
+      "file:server/session_resource_helpers_test.go",
+      "file:server/session_resource_templates_test.go",
+      "file:server/session_test.go",
+      "file:server/sse.go",
+      "file:server/sse_body_limit_test.go",
+      "file:server/sse_full_queue_test.go",
+      "file:server/sse_panic_test.go",
+      "file:server/sse_test.go",
+      "file:server/stdio.go",
+      "file:server/stdio_invalid_id_test.go",
+      "file:server/stdio_panic_test.go",
+      "file:server/stdio_test.go",
+      "file:server/streamable_http.go",
+      "file:server/streamable_http_bench_test.go",
+      "file:server/streamable_http_body_limit_test.go",
+      "file:server/streamable_http_client_info_test.go",
+      "file:server/streamable_http_elicitation_test.go",
+      "file:server/streamable_http_envelope_test.go",
+      "file:server/streamable_http_handle.go",
+      "file:server/streamable_http_handle_test.go",
+      "file:server/streamable_http_modern.go",
+      "file:server/streamable_http_modern_test.go",
+      "file:server/streamable_http_notification_drop_test.go",
+      "file:server/streamable_http_overlapping_post_test.go",
+      "file:server/streamable_http_request_scoped_notification_test.go",
+      "file:server/streamable_http_resume.go",
+      "file:server/streamable_http_roots_post_test.go",
+      "file:server/streamable_http_sampling_error_label_test.go",
+      "file:server/streamable_http_sampling_test.go",
+      "file:server/streamable_http_shutdown_test.go",
+      "file:server/streamable_http_test.go",
+      "file:server/streamable_http_touch_test.go",
+      "file:server/strict_input_schema_default_test.go",
+      "file:server/structured_handler_error_test.go",
+      "file:server/subscriptions.go",
+      "file:server/subscriptions_test.go",
+      "file:server/task_cancel_result_test.go",
+      "file:server/task_hook_ordering_test.go",
+      "file:server/task_hook_reentrancy_test.go",
+      "file:server/task_hooks.go",
+      "file:server/task_hooks_test.go",
+      "file:server/task_limit_test.go",
+      "file:server/task_panic_test.go",
+      "file:server/task_raw_structured_test.go",
+      "file:server/task_response_format_test.go",
+      "file:server/task_result_content_array_test.go",
+      "file:server/task_session_tool_test.go",
+      "file:server/task_test.go",
+      "file:server/task_tool_test.go",
+      "file:server/tool_filter_call_test.go",
+      "file:server/tool_middleware_registration_reentrancy_test.go",
+      "file:server/tracing.go",
+      "file:server/tracing_test.go",
+      "file:server/version_test.go",
+      "file:tracing/tracing_test.go",
+      "file:client/client.go",
+      "file:client/client_edge_cases_test.go",
+      "file:client/elicitation_test.go",
+      "file:client/http.go",
+      "file:client/initial_roundtrip_test.go",
+      "file:client/invalid_header_tools_test.go",
+      "file:client/issue583_test.go",
+      "file:client/list_cursor_test.go",
+      "file:client/listen_error_stop_reentrancy_test.go",
+      "file:client/load_shedding_responses_test.go",
+      "file:client/mrtr_interop_test.go",
+      "file:client/mrtr_manual_test.go",
+      "file:client/null_responses_test.go",
+      "file:client/oauth.go",
+      "file:client/oauth_test.go",
+      "file:client/pending_subscription_test.go",
+      "file:client/protocol.go",
+      "file:client/protocol_negotiation_test.go",
+      "file:client/sampling_test.go",
+      "file:client/sse.go",
+      "file:client/stdio.go",
+      "file:client/stdio_test.go",
+      "file:client/task_list_test.go",
+      "file:client/task_wait_test.go",
+      "file:client/transport/command.go",
+      "file:client/transport/command_test.go",
+      "file:client/transport/constants.go",
+      "file:client/transport/error.go",
+      "file:client/transport/interface.go",
+      "file:client/transport/logging.go",
+      "file:client/transport/logging_test.go",
+      "file:client/transport/message_limit.go",
+      "file:client/transport/message_limit_test.go",
+      "file:client/transport/notification_handler_reentrancy_test.go",
+      "file:client/transport/oauth.go",
+      "file:client/transport/oauth_binding.go",
+      "file:client/transport/oauth_discovery_retry_test.go",
+      "file:client/transport/oauth_fallback_test.go",
+      "file:client/transport/oauth_iss_test.go",
+      "file:client/transport/oauth_issuer_test.go",
+      "file:client/transport/oauth_nil_metadata_test.go",
+      "file:client/transport/oauth_pkce_required_test.go",
+      "file:client/transport/oauth_prm_resource_binding_test.go",
+      "file:client/transport/oauth_refresh_test.go",
+      "file:client/transport/oauth_registration_test.go",
+      "file:client/transport/oauth_server_binding_test.go",
+      "file:client/transport/oauth_test.go",
+      "file:client/transport/oauth_token_auth_test.go",
+      "file:client/transport/oauth_token_response_test.go",
+      "file:client/transport/oauth_token_type_test.go",
+      "file:client/transport/oauth_transaction_binding_test.go",
+      "file:client/transport/oauth_transaction_test.go",
+      "file:client/transport/oauth_utils.go",
+      "file:client/transport/oauth_utils_test.go",
+      "file:client/transport/panic_recovery_test.go",
+      "file:client/transport/redirect.go",
+      "file:client/transport/redirect_test.go",
+      "file:client/transport/sse.go",
+      "file:client/transport/sse_closed_notification_test.go",
+      "file:client/transport/sse_coverage_test.go",
+      "file:client/transport/sse_lifecycle_test.go",
+      "file:client/transport/sse_oauth_test.go",
+      "file:client/transport/sse_test.go",
+      "file:client/transport/stderr_buffer_test.go",
+      "file:client/transport/stdio.go",
+      "file:client/transport/stdio_coverage_test.go",
+      "file:client/transport/stdio_idempotent_test.go",
+      "file:client/transport/stdio_test.go",
+      "file:client/transport/stdio_unix_test.go",
+      "file:client/transport/streamable_http.go",
+      "file:client/transport/streamable_http_bodyclose_test.go",
+      "file:client/transport/streamable_http_get_bodyclose_test.go",
+      "file:client/transport/streamable_http_oauth_test.go",
+      "file:client/transport/streamable_http_resume_test.go",
+      "file:client/transport/streamable_http_retry_interval_test.go",
+      "file:client/transport/streamable_http_sampling_test.go",
+      "file:client/transport/streamable_http_session_end_test.go",
+      "file:client/transport/streamable_http_session_publish_test.go",
+      "file:client/transport/streamable_http_start_after_close_test.go",
+      "file:client/transport/streamable_http_test.go",
+      "file:client/transport/utils.go",
+      "file:client/transport/utils_test.go",
+      "file:client/version_retry_test.go",
+      "file:e2e/protocol_2026_07_28_test.go",
+      "file:e2e/sampling_http_test.go",
+      "file:examples/multi_round_trip/main.go",
+      "file:examples/roots_client/main.go",
+      "file:examples/roots_http_client/main.go",
+      "file:examples/sampling_client/main.go",
+      "file:examples/sampling_http_client/main.go",
+      "file:examples/simple_client/main.go",
+      "file:mcp/base_metadata_test.go",
+      "file:mcp/call_tool_result_parse_test.go",
+      "file:mcp/consts.go",
+      "file:mcp/content_benchmark_test.go",
+      "file:mcp/content_pointers_test.go",
+      "file:mcp/discover.go",
+      "file:mcp/elicitation_test.go",
+      "file:mcp/errors.go",
+      "file:mcp/errors_test.go",
+      "file:mcp/icons_test.go",
+      "file:mcp/mrtr.go",
+      "file:mcp/primitive_item_required_test.go",
+      "file:mcp/prompts_test.go",
+      "file:mcp/quoted_schema_test.go",
+      "file:mcptest/mcptest.go",
+      "file:otel/client_test.go",
+      "file:otel/example/main.go",
+      "file:otel/logger.go",
+      "file:otel/logger_test.go",
+      "file:otel/meta_carrier.go",
+      "file:otel/meta_carrier_test.go",
+      "file:otel/options.go",
+      "file:otel/server_test.go",
+      "file:otel/tracer.go",
+      "file:examples/everything/id.go",
+      "file:scripts/check_conformance.py",
+      "file:scripts/test_check_conformance.py",
+      "file:server/internal/gen/data.go",
+      "file:server/internal/gen/hooks.go.tmpl",
+      "file:server/internal/gen/main.go",
+      "file:server/internal/gen/request_handler.go.tmpl",
+      "file:server/testdata/conformance/cacheable_results.txtar",
+      "file:server/testdata/conformance/discover.txtar",
+      "file:server/testdata/conformance/legacy_unchanged.txtar",
+      "file:server/testdata/conformance/missing_capabilities.txtar",
+      "file:server/testdata/conformance/mrtr.txtar",
+      "file:server/testdata/conformance/removed_methods.txtar",
+      "file:server/testdata/conformance/resource_not_found.txtar",
+      "file:server/testdata/conformance/unsupported_version.txtar",
+      "file:www/docs/styles.css",
+      "file:www/vocs.config.ts"
+    ],
+    "pipeline": [
+      "pipeline:.github/workflows/ci.yml",
+      "pipeline:.github/workflows/conformance.yml",
+      "pipeline:.github/workflows/golangci-lint.yml",
+      "pipeline:.github/workflows/pages.yml",
+      "pipeline:.github/workflows/release.yml"
+    ],
+    "document": [
+      "document:.github/ISSUE_TEMPLATE/bug_report.md",
+      "document:.github/ISSUE_TEMPLATE/documentation-improvement.md",
+      "document:.github/ISSUE_TEMPLATE/feature-request.md",
+      "document:AGENTS.md",
+      "document:CODE_OF_CONDUCT.md",
+      "document:CONTRIBUTING.md",
+      "document:README.md",
+      "document:SECURITY.md",
+      "document:.kit/prompts/code-audit.md",
+      "document:.kit/prompts/commit-push.md",
+      "document:.kit/prompts/create-pr.md",
+      "document:.kit/prompts/feature-request.md",
+      "document:.kit/prompts/file-issue.md",
+      "document:.kit/prompts/fix-issue.md",
+      "document:.kit/prompts/new-prompt.md",
+      "document:.kit/prompts/release-tagger.md",
+      "document:.kit/prompts/resolve-reviews.md",
+      "document:.kit/prompts/review-pr.md",
+      "document:.kit/prompts/update-docs.md",
+      "document:otel/README.md",
+      "document:www/README.md",
+      "document:www/docs/pages/clients/advanced-sampling.mdx",
+      "document:www/docs/pages/clients/basics.mdx",
+      "document:www/docs/pages/clients/index.mdx",
+      "document:www/docs/pages/clients/operations.mdx",
+      "document:www/docs/pages/clients/transports.mdx",
+      "document:www/docs/pages/core-concepts.mdx",
+      "document:www/docs/pages/getting-started.mdx",
+      "document:www/docs/pages/index.mdx",
+      "document:www/docs/pages/protocol-2026-07-28.mdx",
+      "document:www/docs/pages/quick-start.mdx",
+      "document:www/docs/pages/servers/advanced-sampling.mdx",
+      "document:www/docs/pages/servers/advanced.mdx",
+      "document:www/docs/pages/servers/basics.mdx",
+      "document:www/docs/pages/servers/completions.mdx",
+      "document:www/docs/pages/servers/elicitation.mdx",
+      "document:www/docs/pages/servers/index.mdx",
+      "document:www/docs/pages/servers/middleware.mdx",
+      "document:www/docs/pages/servers/prompts.mdx",
+      "document:www/docs/pages/servers/resources.mdx",
+      "document:www/docs/pages/servers/tasks.mdx",
+      "document:www/docs/pages/servers/tools.mdx",
+      "document:www/docs/pages/transports/http.mdx",
+      "document:www/docs/pages/transports/index.mdx",
+      "document:www/docs/pages/transports/inprocess.mdx",
+      "document:www/docs/pages/transports/sse.mdx",
+      "document:www/docs/pages/transports/stdio.mdx",
+      "document:.github/pull_request_template.md",
+      "document:examples/inprocess_sampling/README.md",
+      "document:examples/oauth_client/README.md",
+      "document:examples/sampling_client/README.md",
+      "document:examples/sampling_http_client/README.md",
+      "document:examples/sampling_http_server/README.md",
+      "document:examples/sampling_server/README.md",
+      "document:examples/structured_input_and_output/README.md",
+      "document:otel/example/README.md",
+      "document:server/internal/gen/README.md"
+    ],
+    "config": [
+      "config:.github/ISSUE_TEMPLATE/config.yml",
+      "config:.golangci.yml",
+      "config:go.mod",
+      "config:go.sum",
+      "config:otel/go.mod",
+      "config:otel/go.sum",
+      "config:www/package.json",
+      "config:www/tsconfig.json",
+      "config:.ua/config.json",
+      "config:conformance/server/expected-failures.yml"
+    ]
+  },
+  "fileStats": {
+    "file:client/cancel_test.go": {
+      "imports": 260,
+      "importedBy": 14
+    },
+    "file:client/http_test.go": {
+      "imports": 263,
+      "importedBy": 14
+    },
+    "file:client/inprocess.go": {
+      "imports": 260,
+      "importedBy": 14
+    },
+    "file:client/inprocess_elicitation_test.go": {
+      "imports": 260,
+      "importedBy": 14
+    },
+    "file:client/inprocess_options_test.go": {
+      "imports": 198,
+      "importedBy": 14
+    },
+    "file:client/inprocess_sampling_test.go": {
+      "imports": 198,
+      "importedBy": 14
+    },
+    "file:client/inprocess_test.go": {
+      "imports": 260,
+      "importedBy": 14
+    },
+    "file:client/iter_test.go": {
+      "imports": 198,
+      "importedBy": 14
+    },
+    "file:client/sse_test.go": {
+      "imports": 263,
+      "importedBy": 14
+    },
+    "file:client/tracing_test.go": {
+      "imports": 262,
+      "importedBy": 14
+    },
+    "file:client/transport/idempotent_all_transports_test.go": {
+      "imports": 124,
+      "importedBy": 42
+    },
+    "file:client/transport/inprocess.go": {
+      "imports": 198,
+      "importedBy": 42
+    },
+    "file:client/transport/inprocess_notification_session_test.go": {
+      "imports": 198,
+      "importedBy": 42
+    },
+    "file:client/transport/inprocess_registration_hook_close_test.go": {
+      "imports": 124,
+      "importedBy": 42
+    },
+    "file:e2e/resumability_http_test.go": {
+      "imports": 201,
+      "importedBy": 0
+    },
+    "file:e2e/scoped_request_resumability_test.go": {
+      "imports": 201,
+      "importedBy": 0
+    },
+    "file:e2e/subscription_shutdown_test.go": {
+      "imports": 198,
+      "importedBy": 0
+    },
+    "file:examples/conformance/main.go": {
+      "imports": 198,
+      "importedBy": 0
+    },
+    "file:examples/custom_context/main.go": {
+      "imports": 198,
+      "importedBy": 0
+    },
+    "file:examples/dynamic_path/main.go": {
+      "imports": 198,
+      "importedBy": 0
+    },
+    "file:examples/elicitation/main.go": {
+      "imports": 198,
+      "importedBy": 0
+    },
+    "file:examples/everything/main.go": {
+      "imports": 198,
+      "importedBy": 0
+    },
+    "file:examples/in_process/main.go": {
+      "imports": 247,
+      "importedBy": 0
+    },
+    "file:examples/inprocess_sampling/main.go": {
+      "imports": 247,
+      "importedBy": 0
+    },
+    "file:examples/roots_http_server/main.go": {
+      "imports": 198,
+      "importedBy": 0
+    },
+    "file:examples/roots_server/main.go": {
+      "imports": 198,
+      "importedBy": 0
+    },
+    "file:examples/sampling_http_server/main.go": {
+      "imports": 198,
+      "importedBy": 0
+    },
+    "file:examples/sampling_server/main.go": {
+      "imports": 198,
+      "importedBy": 0
+    },
+    "file:examples/structured_input_and_output/main.go": {
+      "imports": 198,
+      "importedBy": 0
+    },
+    "file:examples/task_tool/main.go": {
+      "imports": 198,
+      "importedBy": 0
+    },
+    "file:examples/typed_tools/main.go": {
+      "imports": 198,
+      "importedBy": 0
+    },
+    "file:mcp/error_pointer_classification_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/errors_additional_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/headers_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/meta_map_ownership_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:client/discovery_validation_test.go": {
+      "imports": 74,
+      "importedBy": 14
+    },
+    "file:client/elicitation.go": {
+      "imports": 74,
+      "importedBy": 14
+    },
+    "file:client/interface.go": {
+      "imports": 74,
+      "importedBy": 14
+    },
+    "file:client/invalid_tool_handler_test.go": {
+      "imports": 74,
+      "importedBy": 14
+    },
+    "file:client/iter.go": {
+      "imports": 74,
+      "importedBy": 14
+    },
+    "file:client/mrtr.go": {
+      "imports": 74,
+      "importedBy": 14
+    },
+    "file:client/notification_handlers_test.go": {
+      "imports": 74,
+      "importedBy": 14
+    },
+    "file:client/review_regression_test.go": {
+      "imports": 74,
+      "importedBy": 14
+    },
+    "file:client/roots.go": {
+      "imports": 74,
+      "importedBy": 14
+    },
+    "file:client/sampling.go": {
+      "imports": 74,
+      "importedBy": 14
+    },
+    "file:client/schema_type_array_test.go": {
+      "imports": 74,
+      "importedBy": 14
+    },
+    "file:client/subscriptions.go": {
+      "imports": 74,
+      "importedBy": 14
+    },
+    "file:client/task_wait.go": {
+      "imports": 74,
+      "importedBy": 14
+    },
+    "file:client/tracing.go": {
+      "imports": 76,
+      "importedBy": 14
+    },
+    "file:examples/filesystem_stdio_client/main.go": {
+      "imports": 123,
+      "importedBy": 0
+    },
+    "file:examples/oauth_client/main.go": {
+      "imports": 123,
+      "importedBy": 0
+    },
+    "file:mcp/array_fallback_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/elicitation_validation_test.go": {
+      "imports": 74,
+      "importedBy": 217
+    },
+    "file:mcp/empty_result_arrays_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/error_unmarshal_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/headers.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/meta.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/notification_params_reuse_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/output_schema_replacement_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/request_id_number.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/resources.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/result.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/schema_cache_identity_test.go": {
+      "imports": 2,
+      "importedBy": 217
+    },
+    "file:mcp/schema_cache_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/testdata/schema_cache/first/models.go": {
+      "imports": 0,
+      "importedBy": 1
+    },
+    "file:mcp/testdata/schema_cache/second/models.go": {
+      "imports": 0,
+      "importedBy": 1
+    },
+    "file:testdata/mockstdio_server.go": {
+      "imports": 74,
+      "importedBy": 0
+    },
+    "file:testdata/mockstdio_stderr_flood_server.go": {
+      "imports": 74,
+      "importedBy": 0
+    },
+    "file:testdata/mockstdio_stderr_server.go": {
+      "imports": 74,
+      "importedBy": 0
+    },
+    "file:tracing/tracing.go": {
+      "imports": 74,
+      "importedBy": 6
+    },
+    "file:mcp/mrtr_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/prompts.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/request_id_precision_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/resources_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/sampling_result_shape_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/schema_cache.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/schema_type_array_regression_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/struct_schema.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/struct_schema_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/structured_result_serialization_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/task_result_content_array_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/task_result_structured_precision_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/task_status_parsing_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/tasks.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/tasks_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/tool_result_reuse_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/tool_schema_keywords_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/tool_schema_roundtrip_regression_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/tools.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/tools_additional_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/tools_annotations_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/tools_defer_loading_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/tools_int_slice_precision_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/tools_properties_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/tools_property_order_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/tools_raw_arguments_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/tools_schema_additional_fields_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/tools_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/typed_tools.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/typed_tools_additional_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/typed_tools_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/types.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/types_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/unique_required_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/utils.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/utils_additional_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/utils_envelope_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/utils_helpers_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/utils_integer_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/utils_task_result_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/utils_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/version.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/version_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcptest/mcptest_sampling_elicitation_test.go": {
+      "imports": 201,
+      "importedBy": 2
+    },
+    "file:mcptest/mcptest_test.go": {
+      "imports": 253,
+      "importedBy": 2
+    },
+    "file:server/atomic_registry_replacement_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/client_info_store.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/client_info_store_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/completion.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/conformance_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/constants.go": {
+      "imports": 0,
+      "importedBy": 43
+    },
+    "file:server/ctx.go": {
+      "imports": 0,
+      "importedBy": 43
+    },
+    "file:server/discover.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/elicitation.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/elicitation_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/empty_results_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/errors.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/event_store.go": {
+      "imports": 0,
+      "importedBy": 43
+    },
+    "file:server/event_store_replay_copy_test.go": {
+      "imports": 0,
+      "importedBy": 43
+    },
+    "file:server/handle_message_bench_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/handle_message_parse_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/handler_errors.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/header_params_shapes_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/helpers_test.go": {
+      "imports": 0,
+      "importedBy": 43
+    },
+    "file:server/hooks.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/http_cors.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/http_cors_test.go": {
+      "imports": 0,
+      "importedBy": 43
+    },
+    "file:server/http_localhost.go": {
+      "imports": 0,
+      "importedBy": 43
+    },
+    "file:server/http_localhost_test.go": {
+      "imports": 0,
+      "importedBy": 43
+    },
+    "file:server/http_transport_options.go": {
+      "imports": 0,
+      "importedBy": 43
+    },
+    "file:server/inflight_request.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/inflight_request_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/inprocess_session.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/inprocess_session_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/input_validation.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/input_validation_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/jsonrpc_error.go": {
+      "imports": 0,
+      "importedBy": 43
+    },
+    "file:server/jsonrpc_strict.go": {
+      "imports": 0,
+      "importedBy": 43
+    },
+    "file:server/jsonrpc_strict_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/logger.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/logger_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/mrtr.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/mrtr_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/nil_result_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/output_validation.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/output_validation_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/pagination_empty_tiebreak_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/pagination_legacy_cursor_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/pagination_positive_overflow_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/param_headers_bench_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/param_headers_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/protected_resource.go": {
+      "imports": 0,
+      "importedBy": 43
+    },
+    "file:server/protected_resource_escaped_path_test.go": {
+      "imports": 124,
+      "importedBy": 43
+    },
+    "file:server/protected_resource_test.go": {
+      "imports": 127,
+      "importedBy": 43
+    },
+    "file:server/protocol.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/request_error_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/request_handler.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/request_id_precision_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/request_id_transport_test.go": {
+      "imports": 0,
+      "importedBy": 43
+    },
+    "file:server/resource_errors.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/resource_subscribe_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/resource_template_match_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/resource_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/response.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/roots.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/roots_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/sampling.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/sampling_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/schema_type_array_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/server.go": {
+      "imports": 76,
+      "importedBy": 43
+    },
+    "file:server/server_additional_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/server_race_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/server_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/servertest/doc.go": {
+      "imports": 0,
+      "importedBy": 6
+    },
+    "file:server/servertest/sse.go": {
+      "imports": 124,
+      "importedBy": 6
+    },
+    "file:server/servertest/streamable.go": {
+      "imports": 124,
+      "importedBy": 6
+    },
+    "file:server/session.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/session_hook_panic_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/session_resource_helpers_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/session_resource_templates_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/session_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/sse.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/sse_body_limit_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/sse_full_queue_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/sse_panic_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/sse_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/stdio.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/stdio_invalid_id_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/stdio_panic_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/stdio_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_bench_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_body_limit_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_client_info_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_elicitation_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_envelope_test.go": {
+      "imports": 0,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_handle.go": {
+      "imports": 0,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_handle_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_modern.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_modern_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_notification_drop_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_overlapping_post_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_request_scoped_notification_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_resume.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_roots_post_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_sampling_error_label_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_sampling_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_shutdown_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/streamable_http_touch_test.go": {
+      "imports": 0,
+      "importedBy": 43
+    },
+    "file:server/strict_input_schema_default_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/structured_handler_error_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/subscriptions.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/subscriptions_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/task_cancel_result_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/task_hook_ordering_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/task_hook_reentrancy_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/task_hooks.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/task_hooks_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/task_limit_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/task_panic_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/task_raw_structured_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/task_response_format_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/task_result_content_array_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/task_session_tool_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/task_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/task_tool_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/tool_filter_call_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/tool_middleware_registration_reentrancy_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:server/tracing.go": {
+      "imports": 76,
+      "importedBy": 43
+    },
+    "file:server/tracing_test.go": {
+      "imports": 76,
+      "importedBy": 43
+    },
+    "file:server/version_test.go": {
+      "imports": 74,
+      "importedBy": 43
+    },
+    "file:tracing/tracing_test.go": {
+      "imports": 0,
+      "importedBy": 6
+    },
+    "file:client/client.go": {
+      "imports": 138,
+      "importedBy": 14
+    },
+    "file:client/client_edge_cases_test.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:client/elicitation_test.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:client/http.go": {
+      "imports": 62,
+      "importedBy": 14
+    },
+    "file:client/initial_roundtrip_test.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:client/invalid_header_tools_test.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:client/issue583_test.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:client/list_cursor_test.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:client/listen_error_stop_reentrancy_test.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:client/load_shedding_responses_test.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:client/mrtr_interop_test.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:client/mrtr_manual_test.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:client/null_responses_test.go": {
+      "imports": 260,
+      "importedBy": 14
+    },
+    "file:client/oauth.go": {
+      "imports": 62,
+      "importedBy": 14
+    },
+    "file:client/oauth_test.go": {
+      "imports": 62,
+      "importedBy": 14
+    },
+    "file:client/pending_subscription_test.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:client/protocol.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:client/protocol_negotiation_test.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:client/sampling_test.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:client/sse.go": {
+      "imports": 62,
+      "importedBy": 14
+    },
+    "file:client/stdio.go": {
+      "imports": 62,
+      "importedBy": 14
+    },
+    "file:client/stdio_test.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:client/task_list_test.go": {
+      "imports": 260,
+      "importedBy": 14
+    },
+    "file:client/task_wait_test.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:client/transport/command.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/command_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/constants.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/error.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/interface.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/logging.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/logging_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/message_limit.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/message_limit_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/notification_handler_reentrancy_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_binding.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_discovery_retry_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_fallback_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_iss_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_issuer_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_nil_metadata_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_pkce_required_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_prm_resource_binding_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_refresh_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_registration_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_server_binding_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_token_auth_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_token_response_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_token_type_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_transaction_binding_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_transaction_test.go": {
+      "imports": 61,
+      "importedBy": 41
+    },
+    "file:client/transport/oauth_utils.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/oauth_utils_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/panic_recovery_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/redirect.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/redirect_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/sse.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/sse_closed_notification_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/sse_coverage_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/sse_lifecycle_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/sse_oauth_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/sse_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/stderr_buffer_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/stdio.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/stdio_coverage_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/stdio_idempotent_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/stdio_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/stdio_unix_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/streamable_http.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/streamable_http_bodyclose_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/streamable_http_get_bodyclose_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/streamable_http_oauth_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/streamable_http_resume_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/streamable_http_retry_interval_test.go": {
+      "imports": 0,
+      "importedBy": 42
+    },
+    "file:client/transport/streamable_http_sampling_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/streamable_http_session_end_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/streamable_http_session_publish_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/streamable_http_start_after_close_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/streamable_http_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/utils.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/transport/utils_test.go": {
+      "imports": 74,
+      "importedBy": 42
+    },
+    "file:client/version_retry_test.go": {
+      "imports": 136,
+      "importedBy": 14
+    },
+    "file:e2e/protocol_2026_07_28_test.go": {
+      "imports": 309,
+      "importedBy": 0
+    },
+    "file:e2e/sampling_http_test.go": {
+      "imports": 309,
+      "importedBy": 0
+    },
+    "file:examples/multi_round_trip/main.go": {
+      "imports": 309,
+      "importedBy": 0
+    },
+    "file:examples/roots_client/main.go": {
+      "imports": 185,
+      "importedBy": 0
+    },
+    "file:examples/roots_http_client/main.go": {
+      "imports": 185,
+      "importedBy": 0
+    },
+    "file:examples/sampling_client/main.go": {
+      "imports": 185,
+      "importedBy": 0
+    },
+    "file:examples/sampling_http_client/main.go": {
+      "imports": 185,
+      "importedBy": 0
+    },
+    "file:examples/simple_client/main.go": {
+      "imports": 185,
+      "importedBy": 0
+    },
+    "file:mcp/base_metadata_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/call_tool_result_parse_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/consts.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/content_benchmark_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/content_pointers_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/discover.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/elicitation_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/errors.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/errors_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/icons_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/mrtr.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/primitive_item_required_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/prompts_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcp/quoted_schema_test.go": {
+      "imports": 0,
+      "importedBy": 217
+    },
+    "file:mcptest/mcptest.go": {
+      "imports": 309,
+      "importedBy": 2
+    },
+    "file:otel/client_test.go": {
+      "imports": 7,
+      "importedBy": 4
+    },
+    "file:otel/example/main.go": {
+      "imports": 8,
+      "importedBy": 0
+    },
+    "file:otel/logger.go": {
+      "imports": 0,
+      "importedBy": 5
+    },
+    "file:otel/logger_test.go": {
+      "imports": 7,
+      "importedBy": 4
+    },
+    "file:otel/meta_carrier.go": {
+      "imports": 0,
+      "importedBy": 5
+    },
+    "file:otel/meta_carrier_test.go": {
+      "imports": 7,
+      "importedBy": 4
+    },
+    "file:otel/options.go": {
+      "imports": 0,
+      "importedBy": 5
+    },
+    "file:otel/server_test.go": {
+      "imports": 7,
+      "importedBy": 4
+    },
+    "file:otel/tracer.go": {
+      "imports": 0,
+      "importedBy": 5
+    },
+    "pipeline:.github/workflows/ci.yml": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "pipeline:.github/workflows/conformance.yml": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "pipeline:.github/workflows/golangci-lint.yml": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "pipeline:.github/workflows/pages.yml": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "pipeline:.github/workflows/release.yml": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:.github/ISSUE_TEMPLATE/bug_report.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "config:.github/ISSUE_TEMPLATE/config.yml": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:.github/ISSUE_TEMPLATE/documentation-improvement.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:.github/ISSUE_TEMPLATE/feature-request.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "config:.golangci.yml": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:AGENTS.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:CODE_OF_CONDUCT.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:CONTRIBUTING.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:README.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:SECURITY.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "config:go.mod": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "config:go.sum": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:.kit/prompts/code-audit.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:.kit/prompts/commit-push.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:.kit/prompts/create-pr.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:.kit/prompts/feature-request.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:.kit/prompts/file-issue.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:.kit/prompts/fix-issue.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:.kit/prompts/new-prompt.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:.kit/prompts/release-tagger.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:.kit/prompts/resolve-reviews.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:.kit/prompts/review-pr.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:.kit/prompts/update-docs.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:otel/README.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "config:otel/go.mod": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "config:otel/go.sum": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/README.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "config:www/package.json": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "config:www/tsconfig.json": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/clients/advanced-sampling.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/clients/basics.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/clients/index.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/clients/operations.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/clients/transports.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/core-concepts.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/getting-started.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/index.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/protocol-2026-07-28.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/quick-start.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/servers/advanced-sampling.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/servers/advanced.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/servers/basics.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/servers/completions.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/servers/elicitation.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/servers/index.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/servers/middleware.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/servers/prompts.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/servers/resources.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/servers/tasks.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/servers/tools.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/transports/http.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/transports/index.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/transports/inprocess.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/transports/sse.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:www/docs/pages/transports/stdio.mdx": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:.github/pull_request_template.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "config:.ua/config.json": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "config:conformance/server/expected-failures.yml": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "file:examples/everything/id.go": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:examples/inprocess_sampling/README.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:examples/oauth_client/README.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:examples/sampling_client/README.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:examples/sampling_http_client/README.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:examples/sampling_http_server/README.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:examples/sampling_server/README.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:examples/structured_input_and_output/README.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "document:otel/example/README.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "file:scripts/check_conformance.py": {
+      "imports": 0,
+      "importedBy": 1
+    },
+    "file:scripts/test_check_conformance.py": {
+      "imports": 1,
+      "importedBy": 0
+    },
+    "document:server/internal/gen/README.md": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "file:server/internal/gen/data.go": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "file:server/internal/gen/hooks.go.tmpl": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "file:server/internal/gen/main.go": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "file:server/internal/gen/request_handler.go.tmpl": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "file:server/testdata/conformance/cacheable_results.txtar": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "file:server/testdata/conformance/discover.txtar": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "file:server/testdata/conformance/legacy_unchanged.txtar": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "file:server/testdata/conformance/missing_capabilities.txtar": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "file:server/testdata/conformance/mrtr.txtar": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "file:server/testdata/conformance/removed_methods.txtar": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "file:server/testdata/conformance/resource_not_found.txtar": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "file:server/testdata/conformance/unsupported_version.txtar": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "file:www/docs/styles.css": {
+      "imports": 0,
+      "importedBy": 0
+    },
+    "file:www/vocs.config.ts": {
+      "imports": 0,
+      "importedBy": 0
+    }
+  },
+  "directoryImports": {
+    "client": [
+      "client",
+      "mcp",
+      "server",
+      "tracing"
+    ],
+    "e2e": [
+      "mcp",
+      "server",
+      "client"
+    ],
+    "examples": [
+      "mcp",
+      "server",
+      "client"
+    ],
+    "mcp": [
+      "mcp"
+    ],
+    "testdata": [
+      "mcp"
+    ],
+    "tracing": [
+      "mcp"
+    ],
+    "mcptest": [
+      "mcp",
+      "mcptest",
+      "server",
+      "client"
+    ],
+    "server": [
+      "mcp",
+      "server",
+      "tracing"
+    ],
+    "otel": [
+      "otel"
+    ],
+    "scripts": [
+      "scripts"
+    ]
+  },
+  "directoryImportedBy": {
+    "client": [
+      "client",
+      "examples",
+      "mcptest",
+      "e2e"
+    ],
+    "mcp": [
+      "client",
+      "e2e",
+      "examples",
+      "mcp",
+      "testdata",
+      "tracing",
+      "mcptest",
+      "server"
+    ],
+    "server": [
+      "client",
+      "e2e",
+      "examples",
+      "mcptest",
+      "server"
+    ],
+    "tracing": [
+      "client",
+      "server"
+    ],
+    "mcptest": [
+      "mcptest"
+    ],
+    "otel": [
+      "otel"
+    ],
+    "scripts": [
+      "scripts"
+    ]
+  },
+  "directoryImportFrequency": {
+    "client → client": 2045,
+    "client → mcp": 5624,
+    "client → server": 1990,
+    "client → tracing": 6,
+    "e2e → mcp": 370,
+    "e2e → server": 626,
+    "examples → mcp": 1628,
+    "examples → server": 1860,
+    "examples → client": 862,
+    "mcp → mcp": 76,
+    "testdata → mcp": 222,
+    "tracing → mcp": 74,
+    "mcptest → mcp": 222,
+    "mcptest → mcptest": 6,
+    "mcptest → server": 375,
+    "mcptest → client": 160,
+    "server → mcp": 7844,
+    "server → server": 499,
+    "server → tracing": 6,
+    "e2e → client": 222,
+    "otel → otel": 36,
+    "scripts → scripts": 1
+  },
+  "intraGroupDensity": {
+    "client": {
+      "own": 2045,
+      "total": 10909,
+      "density": 0.18745989549912917
+    },
+    "e2e": {
+      "own": 0,
+      "total": 1218,
+      "density": 0
+    },
+    "examples": {
+      "own": 0,
+      "total": 4350,
+      "density": 0
+    },
+    "mcp": {
+      "own": 76,
+      "total": 16060,
+      "density": 0.004732254047322541
+    },
+    "testdata": {
+      "own": 0,
+      "total": 222,
+      "density": 0
+    },
+    "tracing": {
+      "own": 0,
+      "total": 86,
+      "density": 0
+    },
+    "mcptest": {
+      "own": 6,
+      "total": 763,
+      "density": 0.007863695937090432
+    },
+    "server": {
+      "own": 499,
+      "total": 13200,
+      "density": 0.037803030303030304
+    },
+    "otel": {
+      "own": 36,
+      "total": 36,
+      "density": 1
+    },
+    ".github": {
+      "own": 0,
+      "total": 0,
+      "density": 0
+    },
+    "(root)": {
+      "own": 0,
+      "total": 0,
+      "density": 0
+    },
+    ".kit": {
+      "own": 0,
+      "total": 0,
+      "density": 0
+    },
+    "www": {
+      "own": 0,
+      "total": 0,
+      "density": 0
+    },
+    ".ua": {
+      "own": 0,
+      "total": 0,
+      "density": 0
+    },
+    "conformance": {
+      "own": 0,
+      "total": 0,
+      "density": 0
+    },
+    "scripts": {
+      "own": 1,
+      "total": 1,
+      "density": 1
+    }
+  },
+  "edgeTypes": {
+    "file → file (imports)": 24754,
+    "file → file (tested_by)": 62,
+    "pipeline → config (configures)": 2,
+    "pipeline → config (depends_on)": 2,
+    "pipeline → document (deploys)": 1,
+    "document → file (documents)": 78,
+    "config → config (related)": 2,
+    "config → file (configures)": 3,
+    "document → config (related)": 1,
+    "document → document (related)": 4,
+    "file → config (depends_on)": 1,
+    "file → file (depends_on)": 7,
+    "file → file (reads_from)": 8
+  },
+  "groupPatterns": {
+    ".github": "ci-cd",
+    ".kit": "documentation",
+    ".ua": "config",
+    "client": "api",
+    "conformance": "test",
+    "e2e": "test",
+    "examples": "entry",
+    "mcp": "types",
+    "mcptest": "test",
+    "otel": "hooks",
+    "scripts": "config",
+    "server": "service",
+    "testdata": "test",
+    "tracing": "hooks",
+    "www": "documentation",
+    "(root)": "config"
+  },
+  "deploymentTopology": {
+    "hasDockerfile": false,
+    "hasCompose": false,
+    "hasK8s": false,
+    "hasTerraform": false,
+    "ciPipelines": [
+      ".github/workflows/ci.yml",
+      ".github/workflows/conformance.yml",
+      ".github/workflows/golangci-lint.yml",
+      ".github/workflows/pages.yml",
+      ".github/workflows/release.yml"
+    ]
+  }
+}

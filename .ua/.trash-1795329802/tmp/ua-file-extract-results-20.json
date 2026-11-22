@@ -1,0 +1,352 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 5,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 5
+    }
+  },
+  "results": [
+    {
+      "path": "www/docs/pages/core-concepts.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 264,
+      "nonEmptyLines": 211,
+      "sections": [
+        {
+          "heading": "Core Concepts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "MCP Protocol Fundamentals",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Resources",
+          "level": 3,
+          "line": 9
+        },
+        {
+          "heading": "Tools",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "Prompts",
+          "level": 3,
+          "line": 80
+        },
+        {
+          "heading": "Transports",
+          "level": 3,
+          "line": 119
+        },
+        {
+          "heading": "SDK Architecture",
+          "level": 2,
+          "line": 151
+        },
+        {
+          "heading": "Server vs Client",
+          "level": 3,
+          "line": 155
+        },
+        {
+          "heading": "Transport Layer",
+          "level": 3,
+          "line": 192
+        },
+        {
+          "heading": "Session Management",
+          "level": 3,
+          "line": 217
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "www/docs/pages/getting-started.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 161,
+      "nonEmptyLines": 120,
+      "sections": [
+        {
+          "heading": "Getting Started",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Introduction",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "What is MCP?",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "Why MCP Go?",
+          "level": 3,
+          "line": 9
+        },
+        {
+          "heading": "Key Features",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "Installation",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "Your First MCP Server",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "Running Your Server",
+          "level": 2,
+          "line": 87
+        },
+        {
+          "heading": "What's Next?",
+          "level": 2,
+          "line": 97
+        },
+        {
+          "heading": "Key Concepts",
+          "level": 2,
+          "line": 106
+        },
+        {
+          "heading": "Tools",
+          "level": 3,
+          "line": 108
+        },
+        {
+          "heading": "Resources",
+          "level": 3,
+          "line": 123
+        },
+        {
+          "heading": "Server Options",
+          "level": 3,
+          "line": 135
+        },
+        {
+          "heading": "Transport Options",
+          "level": 2,
+          "line": 148
+        },
+        {
+          "heading": "Need Help?",
+          "level": 2,
+          "line": 157
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 15
+      }
+    },
+    {
+      "path": "www/docs/pages/index.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 17,
+      "nonEmptyLines": 15,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    },
+    {
+      "path": "www/docs/pages/protocol-2026-07-28.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 281,
+      "nonEmptyLines": 220,
+      "sections": [
+        {
+          "heading": "Protocol Version 2026-07-28",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "What changed",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Servers",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "Pinning to earlier revisions",
+          "level": 3,
+          "line": 42
+        },
+        {
+          "heading": "Cache hints",
+          "level": 3,
+          "line": 61
+        },
+        {
+          "heading": "Multi round-trip requests",
+          "level": 3,
+          "line": 77
+        },
+        {
+          "heading": "Subscriptions",
+          "level": 3,
+          "line": 124
+        },
+        {
+          "heading": "Logging",
+          "level": 3,
+          "line": 140
+        },
+        {
+          "heading": "Clients",
+          "level": 2,
+          "line": 146
+        },
+        {
+          "heading": "Multi round-trip requests",
+          "level": 3,
+          "line": 169
+        },
+        {
+          "heading": "Subscriptions",
+          "level": 3,
+          "line": 231
+        },
+        {
+          "heading": "Pinning to an earlier revision",
+          "level": 3,
+          "line": 245
+        },
+        {
+          "heading": "Migrating",
+          "level": 2,
+          "line": 257
+        },
+        {
+          "heading": "Reference",
+          "level": 2,
+          "line": 276
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    },
+    {
+      "path": "www/docs/pages/quick-start.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 301,
+      "nonEmptyLines": 236,
+      "sections": [
+        {
+          "heading": "Quick Start",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Hello World Server",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Running Your First Server",
+          "level": 2,
+          "line": 82
+        },
+        {
+          "heading": "Testing with Claude Desktop",
+          "level": 3,
+          "line": 84
+        },
+        {
+          "heading": "Testing with MCP Inspector",
+          "level": 3,
+          "line": 108
+        },
+        {
+          "heading": "Basic Client Example",
+          "level": 2,
+          "line": 122
+        },
+        {
+          "heading": "StreamableHTTP Client Example",
+          "level": 3,
+          "line": 209
+        },
+        {
+          "heading": "What's Next?",
+          "level": 2,
+          "line": 277
+        },
+        {
+          "heading": "Common Issues",
+          "level": 2,
+          "line": 286
+        },
+        {
+          "heading": "Server Won't Start",
+          "level": 3,
+          "line": 288
+        },
+        {
+          "heading": "Client Connection Failed",
+          "level": 3,
+          "line": 293
+        },
+        {
+          "heading": "Tool Calls Failing",
+          "level": 3,
+          "line": 298
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    }
+  ]
+}

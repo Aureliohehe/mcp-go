@@ -1,0 +1,158 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 4,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 4
+    }
+  },
+  "results": [
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 38,
+      "nonEmptyLines": 26,
+      "sections": [
+        {
+          "heading": "Description",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Code Sample",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Logs or Error Messages",
+          "level": 2,
+          "line": 20
+        },
+        {
+          "heading": "Environment",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "Additional Context",
+          "level": 2,
+          "line": 32
+        },
+        {
+          "heading": "Possible Solution",
+          "level": 2,
+          "line": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 8,
+      "nonEmptyLines": 8,
+      "sections": [
+        {
+          "heading": "blank_issues_enabled",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "contact_links",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/documentation-improvement.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 15,
+      "nonEmptyLines": 11,
+      "sections": [
+        {
+          "heading": "Documentation Issue",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Location",
+          "level": 2,
+          "line": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature-request.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 32,
+      "nonEmptyLines": 21,
+      "sections": [
+        {
+          "heading": "Problem Statement",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Proposed Solution",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "MCP Spec Reference",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "Example Usage",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "Alternatives/Workarounds Considered",
+          "level": 2,
+          "line": 30
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    }
+  ]
+}

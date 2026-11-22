@@ -1,0 +1,155 @@
+{
+  "nodes": [
+    {
+      "id": "document:www/docs/pages/transports/http.mdx",
+      "type": "document",
+      "name": "http.mdx",
+      "filePath": "www/docs/pages/transports/http.mdx",
+      "summary": "介绍 Streamable HTTP 的端点、会话管理、采样支持以及嵌入其他 Web 框架的方法。",
+      "tags": [
+        "传输",
+        "http",
+        "会话管理"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/transports/index.mdx",
+      "type": "document",
+      "name": "index.mdx",
+      "filePath": "www/docs/pages/transports/index.mdx",
+      "summary": "对比 MCP 传输方式的适用场景、配置、性能与安全取舍。",
+      "tags": [
+        "传输",
+        "选型",
+        "项目导览"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/transports/inprocess.mdx",
+      "type": "document",
+      "name": "inprocess.mdx",
+      "filePath": "www/docs/pages/transports/inprocess.mdx",
+      "summary": "演示同一 Go 进程内连接客户端与服务端的方式，包括测试场景和反向采样。",
+      "tags": [
+        "传输",
+        "进程内通信",
+        "采样"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/transports/sse.mdx",
+      "type": "document",
+      "name": "sse.mdx",
+      "filePath": "www/docs/pages/transports/sse.mdx",
+      "summary": "解释旧版 SSE 传输的服务端和客户端配置，以及如何处理实时通知。",
+      "tags": [
+        "传输",
+        "sse",
+        "通知"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/transports/stdio.mdx",
+      "type": "document",
+      "name": "stdio.mdx",
+      "filePath": "www/docs/pages/transports/stdio.mdx",
+      "summary": "说明使用标准输入输出交换 MCP 消息，覆盖客户端启动子进程、调试、错误处理和性能优化。",
+      "tags": [
+        "传输",
+        "标准输入输出",
+        "进程管理"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:www/docs/pages/transports/http.mdx",
+      "target": "file:server/streamable_http.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/transports/http.mdx",
+      "target": "file:client/transport/streamable_http.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/transports/index.mdx",
+      "target": "file:client/transport/interface.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/transports/index.mdx",
+      "target": "document:www/docs/pages/transports/http.mdx",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/transports/index.mdx",
+      "target": "document:www/docs/pages/transports/stdio.mdx",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/transports/index.mdx",
+      "target": "document:www/docs/pages/transports/inprocess.mdx",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/transports/inprocess.mdx",
+      "target": "file:client/transport/inprocess.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/transports/inprocess.mdx",
+      "target": "file:server/inprocess_session.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/transports/sse.mdx",
+      "target": "file:server/sse.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/transports/sse.mdx",
+      "target": "file:client/transport/sse.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/transports/stdio.mdx",
+      "target": "file:server/stdio.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/transports/stdio.mdx",
+      "target": "file:client/transport/stdio.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

@@ -1,0 +1,1699 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 17,
+  "filesSkipped": [
+    "server/internal/gen/hooks.go.tmpl",
+    "server/internal/gen/request_handler.go.tmpl",
+    "server/testdata/conformance/cacheable_results.txtar",
+    "server/testdata/conformance/discover.txtar",
+    "server/testdata/conformance/legacy_unchanged.txtar",
+    "server/testdata/conformance/missing_capabilities.txtar",
+    "server/testdata/conformance/mrtr.txtar",
+    "server/testdata/conformance/removed_methods.txtar"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 17,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 5,
+      "failed": 0,
+      "skipped": 12
+    }
+  },
+  "results": [
+    {
+      "path": ".github/pull_request_template.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 37,
+      "nonEmptyLines": 29,
+      "sections": [
+        {
+          "heading": "Description",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "Type of Change",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "Checklist",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "MCP Spec Compliance",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "Additional Information",
+          "level": 2,
+          "line": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": ".ua/config.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 3,
+      "nonEmptyLines": 3,
+      "sections": [
+        {
+          "heading": "outputLanguage",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "conformance/server/expected-failures.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 3,
+      "nonEmptyLines": 3,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    },
+    {
+      "path": "examples/everything/id.go",
+      "language": "go",
+      "fileCategory": "code",
+      "totalLines": 42,
+      "nonEmptyLines": 35,
+      "functions": [
+        {
+          "name": "pow",
+          "startLine": 5,
+          "endLine": 15,
+          "params": [
+            "n",
+            "p"
+          ]
+        },
+        {
+          "name": "isIdInRange",
+          "startLine": 21,
+          "endLine": 23,
+          "params": [
+            "num"
+          ]
+        },
+        {
+          "name": "getIdSuggestions",
+          "startLine": 27,
+          "endLine": 33,
+          "params": [
+            "num"
+          ]
+        },
+        {
+          "name": "getTotalIds",
+          "startLine": 35,
+          "endLine": 38,
+          "params": [
+            "digits"
+          ]
+        },
+        {
+          "name": "hasMoreIds",
+          "startLine": 40,
+          "endLine": 42,
+          "params": [
+            "digits"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getIdSuggestions",
+          "callee": "make",
+          "lineNumber": 28
+        },
+        {
+          "caller": "getIdSuggestions",
+          "callee": "append",
+          "lineNumber": 30
+        },
+        {
+          "caller": "getIdSuggestions",
+          "callee": "strconv.Itoa",
+          "lineNumber": 30
+        },
+        {
+          "caller": "getTotalIds",
+          "callee": "pow",
+          "lineNumber": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "examples/inprocess_sampling/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 39,
+      "nonEmptyLines": 27,
+      "sections": [
+        {
+          "heading": "InProcess Sampling Example",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Overview",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Key Components",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Server Side",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "Client Side",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "Running the Example",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "Expected Output",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "Real LLM Integration",
+          "level": 2,
+          "line": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "examples/oauth_client/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 59,
+      "nonEmptyLines": 44,
+      "sections": [
+        {
+          "heading": "OAuth Client Example",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Features",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Usage",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "How it Works",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "Configuration",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "OAuth Scopes",
+          "level": 2,
+          "line": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "examples/sampling_client/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 87,
+      "nonEmptyLines": 64,
+      "sections": [
+        {
+          "heading": "MCP Sampling Example Client",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Features",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Mock LLM Handler",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "Usage",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "Implementation Details",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "Sample Output",
+          "level": 2,
+          "line": 52
+        },
+        {
+          "heading": "Real LLM Integration",
+          "level": 2,
+          "line": 71
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "examples/sampling_http_client/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 95,
+      "nonEmptyLines": 72,
+      "sections": [
+        {
+          "heading": "HTTP Sampling Client Example",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Overview",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Usage",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Key Features",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "HTTP Transport with Sampling",
+          "level": 3,
+          "line": 31
+        },
+        {
+          "heading": "Sampling Handler",
+          "level": 3,
+          "line": 39
+        },
+        {
+          "heading": "Client Configuration",
+          "level": 3,
+          "line": 51
+        },
+        {
+          "heading": "Real Implementation",
+          "level": 2,
+          "line": 62
+        },
+        {
+          "heading": "HTTP-Specific Features",
+          "level": 2,
+          "line": 79
+        },
+        {
+          "heading": "Testing",
+          "level": 2,
+          "line": 89
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "examples/sampling_http_server/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 138,
+      "nonEmptyLines": 106,
+      "sections": [
+        {
+          "heading": "HTTP Sampling Server Example",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Overview",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Usage",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "Tools Available",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "`ask_llm`",
+          "level": 3,
+          "line": 27
+        },
+        {
+          "heading": "`echo`",
+          "level": 3,
+          "line": 33
+        },
+        {
+          "heading": "How Sampling Works",
+          "level": 2,
+          "line": 38
+        },
+        {
+          "heading": "Server → Client Flow",
+          "level": 3,
+          "line": 40
+        },
+        {
+          "heading": "Communication Architecture",
+          "level": 3,
+          "line": 48
+        },
+        {
+          "heading": "Key Features",
+          "level": 2,
+          "line": 64
+        },
+        {
+          "heading": "Bidirectional Communication",
+          "level": 3,
+          "line": 66
+        },
+        {
+          "heading": "Session Management",
+          "level": 3,
+          "line": 70
+        },
+        {
+          "heading": "Error Handling",
+          "level": 3,
+          "line": 75
+        },
+        {
+          "heading": "HTTP-Specific Features",
+          "level": 3,
+          "line": 80
+        },
+        {
+          "heading": "Testing",
+          "level": 2,
+          "line": 86
+        },
+        {
+          "heading": "Production Considerations",
+          "level": 2,
+          "line": 102
+        },
+        {
+          "heading": "Security",
+          "level": 3,
+          "line": 104
+        },
+        {
+          "heading": "Scalability",
+          "level": 3,
+          "line": 110
+        },
+        {
+          "heading": "Reliability",
+          "level": 3,
+          "line": 116
+        },
+        {
+          "heading": "Integration",
+          "level": 2,
+          "line": 122
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 20
+      }
+    },
+    {
+      "path": "examples/sampling_server/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 52,
+      "nonEmptyLines": 35,
+      "sections": [
+        {
+          "heading": "MCP Sampling Example Server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Features",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Tools",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "`ask_llm`",
+          "level": 3,
+          "line": 13
+        },
+        {
+          "heading": "`greet`",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "Usage",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "Implementation Details",
+          "level": 2,
+          "line": 37
+        },
+        {
+          "heading": "Testing",
+          "level": 2,
+          "line": 44
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "examples/structured_input_and_output/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 75,
+      "nonEmptyLines": 57,
+      "sections": [
+        {
+          "heading": "Structured Content Example",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Usage",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Struct tag reference",
+          "level": 2,
+          "line": 59
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "otel/example/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 59,
+      "nonEmptyLines": 45,
+      "sections": [
+        {
+          "heading": "OpenTelemetry Tracing",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "What this demonstrates",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "Running",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "Span attributes",
+          "level": 2,
+          "line": 40
+        },
+        {
+          "heading": "Custom propagator",
+          "level": 2,
+          "line": 49
+        },
+        {
+          "heading": "Limitations",
+          "level": 2,
+          "line": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "scripts/check_conformance.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 195,
+      "nonEmptyLines": 173,
+      "functions": [
+        {
+          "name": "read_server_baseline",
+          "startLine": 22,
+          "endLine": 30,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "run_cli",
+          "startLine": 33,
+          "endLine": 58,
+          "params": [
+            "url",
+            "output_dir",
+            "scenario"
+          ]
+        },
+        {
+          "name": "read_suite_results",
+          "startLine": 61,
+          "endLine": 70,
+          "params": [
+            "output_dir"
+          ]
+        },
+        {
+          "name": "scenario_from_result_dir",
+          "startLine": 73,
+          "endLine": 81,
+          "params": [
+            "result_dir"
+          ]
+        },
+        {
+          "name": "read_active_scenarios",
+          "startLine": 84,
+          "endLine": 87,
+          "params": [
+            "output"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 90,
+          "endLine": 191,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ConformanceRunnerError",
+          "startLine": 18,
+          "endLine": 19,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ConformanceRunnerError",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "read_server_baseline",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "run_cli",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "read_suite_results",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "scenario_from_result_dir",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "read_active_scenarios",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 90,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "read_server_baseline",
+          "callee": "path.read_text(encoding=\"utf-8\").splitlines",
+          "lineNumber": 25
+        },
+        {
+          "caller": "read_server_baseline",
+          "callee": "path.read_text",
+          "lineNumber": 25
+        },
+        {
+          "caller": "read_server_baseline",
+          "callee": "line[0].isspace",
+          "lineNumber": 26
+        },
+        {
+          "caller": "read_server_baseline",
+          "callee": "line.strip",
+          "lineNumber": 27
+        },
+        {
+          "caller": "read_server_baseline",
+          "callee": "line.strip().startswith",
+          "lineNumber": 28
+        },
+        {
+          "caller": "read_server_baseline",
+          "callee": "line.strip",
+          "lineNumber": 28
+        },
+        {
+          "caller": "read_server_baseline",
+          "callee": "scenarios.append",
+          "lineNumber": 29
+        },
+        {
+          "caller": "read_server_baseline",
+          "callee": "line.strip",
+          "lineNumber": 29
+        },
+        {
+          "caller": "run_cli",
+          "callee": "str",
+          "lineNumber": 42
+        },
+        {
+          "caller": "run_cli",
+          "callee": "command.extend",
+          "lineNumber": 45
+        },
+        {
+          "caller": "run_cli",
+          "callee": "subprocess.run",
+          "lineNumber": 47
+        },
+        {
+          "caller": "run_cli",
+          "callee": "ConformanceRunnerError",
+          "lineNumber": 55
+        },
+        {
+          "caller": "read_suite_results",
+          "callee": "output_dir.glob",
+          "lineNumber": 64
+        },
+        {
+          "caller": "read_suite_results",
+          "callee": "json.loads",
+          "lineNumber": 65
+        },
+        {
+          "caller": "read_suite_results",
+          "callee": "checks_file.read_text",
+          "lineNumber": 65
+        },
+        {
+          "caller": "read_suite_results",
+          "callee": "scenario_from_result_dir",
+          "lineNumber": 66
+        },
+        {
+          "caller": "read_suite_results",
+          "callee": "bool",
+          "lineNumber": 67
+        },
+        {
+          "caller": "read_suite_results",
+          "callee": "all",
+          "lineNumber": 67
+        },
+        {
+          "caller": "read_suite_results",
+          "callee": "check.get",
+          "lineNumber": 67
+        },
+        {
+          "caller": "read_suite_results",
+          "callee": "any",
+          "lineNumber": 68
+        },
+        {
+          "caller": "read_suite_results",
+          "callee": "check.get",
+          "lineNumber": 68
+        },
+        {
+          "caller": "scenario_from_result_dir",
+          "callee": "result_dir.name.removeprefix",
+          "lineNumber": 74
+        },
+        {
+          "caller": "scenario_from_result_dir",
+          "callee": "re.fullmatch",
+          "lineNumber": 75
+        },
+        {
+          "caller": "scenario_from_result_dir",
+          "callee": "ValueError",
+          "lineNumber": 80
+        },
+        {
+          "caller": "scenario_from_result_dir",
+          "callee": "match.group",
+          "lineNumber": 81
+        },
+        {
+          "caller": "read_active_scenarios",
+          "callee": "re.search",
+          "lineNumber": 85
+        },
+        {
+          "caller": "read_active_scenarios",
+          "callee": "re.findall",
+          "lineNumber": 86
+        },
+        {
+          "caller": "read_active_scenarios",
+          "callee": "int",
+          "lineNumber": 87
+        },
+        {
+          "caller": "read_active_scenarios",
+          "callee": "count_match.group",
+          "lineNumber": 87
+        },
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 91
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 92
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 93
+        },
+        {
+          "caller": "main",
+          "callee": "parser.parse_args",
+          "lineNumber": 94
+        },
+        {
+          "caller": "main",
+          "callee": "set",
+          "lineNumber": 95
+        },
+        {
+          "caller": "main",
+          "callee": "read_server_baseline",
+          "lineNumber": 95
+        },
+        {
+          "caller": "main",
+          "callee": "tempfile.TemporaryDirectory",
+          "lineNumber": 97
+        },
+        {
+          "caller": "main",
+          "callee": "Path",
+          "lineNumber": 98
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 99
+        },
+        {
+          "caller": "main",
+          "callee": "run_cli",
+          "lineNumber": 101
+        },
+        {
+          "caller": "main",
+          "callee": "read_suite_results",
+          "lineNumber": 102
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 104
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 107
+        },
+        {
+          "caller": "main",
+          "callee": "read_active_scenarios",
+          "lineNumber": 109
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 110
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 110
+        },
+        {
+          "caller": "main",
+          "callee": "set",
+          "lineNumber": 110
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 111
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 112
+        },
+        {
+          "caller": "main",
+          "callee": "sorted",
+          "lineNumber": 114
+        },
+        {
+          "caller": "main",
+          "callee": "set",
+          "lineNumber": 114
+        },
+        {
+          "caller": "main",
+          "callee": "suite_results.keys",
+          "lineNumber": 114
+        },
+        {
+          "caller": "main",
+          "callee": "sorted",
+          "lineNumber": 115
+        },
+        {
+          "caller": "main",
+          "callee": "suite_results.keys",
+          "lineNumber": 115
+        },
+        {
+          "caller": "main",
+          "callee": "set",
+          "lineNumber": 115
+        },
+        {
+          "caller": "main",
+          "callee": "sorted",
+          "lineNumber": 116
+        },
+        {
+          "caller": "main",
+          "callee": "suite_results.items",
+          "lineNumber": 116
+        },
+        {
+          "caller": "main",
+          "callee": "sorted",
+          "lineNumber": 117
+        },
+        {
+          "caller": "main",
+          "callee": "suite_results.items",
+          "lineNumber": 118
+        },
+        {
+          "caller": "main",
+          "callee": "sorted",
+          "lineNumber": 120
+        },
+        {
+          "caller": "main",
+          "callee": "suite_results.keys",
+          "lineNumber": 120
+        },
+        {
+          "caller": "main",
+          "callee": "sum",
+          "lineNumber": 121
+        },
+        {
+          "caller": "main",
+          "callee": "suite_results.values",
+          "lineNumber": 121
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 122
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 125
+        },
+        {
+          "caller": "main",
+          "callee": "', '.join",
+          "lineNumber": 125
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 127
+        },
+        {
+          "caller": "main",
+          "callee": "', '.join",
+          "lineNumber": 127
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 129
+        },
+        {
+          "caller": "main",
+          "callee": "', '.join",
+          "lineNumber": 129
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 131
+        },
+        {
+          "caller": "main",
+          "callee": "', '.join",
+          "lineNumber": 131
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 133
+        },
+        {
+          "caller": "main",
+          "callee": "', '.join",
+          "lineNumber": 133
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 134
+        },
+        {
+          "caller": "main",
+          "callee": "any",
+          "lineNumber": 136
+        },
+        {
+          "caller": "main",
+          "callee": "suite_results.values",
+          "lineNumber": 136
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 138
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 139
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 142
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 143
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 147
+        },
+        {
+          "caller": "main",
+          "callee": "sorted",
+          "lineNumber": 149
+        },
+        {
+          "caller": "main",
+          "callee": "range",
+          "lineNumber": 151
+        },
+        {
+          "caller": "main",
+          "callee": "tempfile.TemporaryDirectory",
+          "lineNumber": 152
+        },
+        {
+          "caller": "main",
+          "callee": "Path",
+          "lineNumber": 153
+        },
+        {
+          "caller": "main",
+          "callee": "run_cli",
+          "lineNumber": 155
+        },
+        {
+          "caller": "main",
+          "callee": "read_suite_results",
+          "lineNumber": 156
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 158
+        },
+        {
+          "caller": "main",
+          "callee": "results.get",
+          "lineNumber": 160
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 162
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 163
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 167
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 168
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 171
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 172
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 175
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 176
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 180
+        },
+        {
+          "caller": "main",
+          "callee": "stale.append",
+          "lineNumber": 182
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 184
+        },
+        {
+          "caller": "main",
+          "callee": "', '.join",
+          "lineNumber": 184
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 188
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 190
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "scripts/test_check_conformance.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 93,
+      "nonEmptyLines": 78,
+      "classes": [
+        {
+          "name": "CheckConformanceTests",
+          "startLine": 10,
+          "endLine": 89,
+          "methods": [
+            "test_scenario_result_timestamp_is_not_tied_to_a_specific_year",
+            "test_active_scenarios_are_counted_from_cli_output",
+            "test_runner_error_is_not_treated_as_a_scenario_failure",
+            "test_failed_assertion_is_not_a_runner_error",
+            "test_baseline_without_server_scenarios_is_empty",
+            "test_cli_timeout_is_a_runner_error"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CheckConformanceTests",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_scenario_result_timestamp_is_not_tied_to_a_specific_year",
+          "callee": "self.assertEqual",
+          "lineNumber": 12
+        },
+        {
+          "caller": "test_scenario_result_timestamp_is_not_tied_to_a_specific_year",
+          "callee": "check_conformance.scenario_from_result_dir",
+          "lineNumber": 13
+        },
+        {
+          "caller": "test_scenario_result_timestamp_is_not_tied_to_a_specific_year",
+          "callee": "Path",
+          "lineNumber": 14
+        },
+        {
+          "caller": "test_scenario_result_timestamp_is_not_tied_to_a_specific_year",
+          "callee": "self.assertEqual",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_scenario_result_timestamp_is_not_tied_to_a_specific_year",
+          "callee": "check_conformance.scenario_from_result_dir",
+          "lineNumber": 19
+        },
+        {
+          "caller": "test_scenario_result_timestamp_is_not_tied_to_a_specific_year",
+          "callee": "Path",
+          "lineNumber": 20
+        },
+        {
+          "caller": "test_active_scenarios_are_counted_from_cli_output",
+          "callee": "self.assertEqual",
+          "lineNumber": 28
+        },
+        {
+          "caller": "test_active_scenarios_are_counted_from_cli_output",
+          "callee": "check_conformance.read_active_scenarios",
+          "lineNumber": 29
+        },
+        {
+          "caller": "test_runner_error_is_not_treated_as_a_scenario_failure",
+          "callee": "tempfile.TemporaryDirectory",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_runner_error_is_not_treated_as_a_scenario_failure",
+          "callee": "Path",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_runner_error_is_not_treated_as_a_scenario_failure",
+          "callee": "result_dir.mkdir",
+          "lineNumber": 36
+        },
+        {
+          "caller": "test_runner_error_is_not_treated_as_a_scenario_failure",
+          "callee": "(result_dir / \"checks.json\").write_text",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_runner_error_is_not_treated_as_a_scenario_failure",
+          "callee": "json.dumps",
+          "lineNumber": 38
+        },
+        {
+          "caller": "test_runner_error_is_not_treated_as_a_scenario_failure",
+          "callee": "self.assertEqual",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_runner_error_is_not_treated_as_a_scenario_failure",
+          "callee": "check_conformance.read_suite_results",
+          "lineNumber": 51
+        },
+        {
+          "caller": "test_runner_error_is_not_treated_as_a_scenario_failure",
+          "callee": "Path",
+          "lineNumber": 51
+        },
+        {
+          "caller": "test_failed_assertion_is_not_a_runner_error",
+          "callee": "tempfile.TemporaryDirectory",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_failed_assertion_is_not_a_runner_error",
+          "callee": "Path",
+          "lineNumber": 57
+        },
+        {
+          "caller": "test_failed_assertion_is_not_a_runner_error",
+          "callee": "result_dir.mkdir",
+          "lineNumber": 58
+        },
+        {
+          "caller": "test_failed_assertion_is_not_a_runner_error",
+          "callee": "(result_dir / \"checks.json\").write_text",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_failed_assertion_is_not_a_runner_error",
+          "callee": "json.dumps",
+          "lineNumber": 60
+        },
+        {
+          "caller": "test_failed_assertion_is_not_a_runner_error",
+          "callee": "self.assertEqual",
+          "lineNumber": 72
+        },
+        {
+          "caller": "test_failed_assertion_is_not_a_runner_error",
+          "callee": "check_conformance.read_suite_results",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_failed_assertion_is_not_a_runner_error",
+          "callee": "Path",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_baseline_without_server_scenarios_is_empty",
+          "callee": "tempfile.TemporaryDirectory",
+          "lineNumber": 78
+        },
+        {
+          "caller": "test_baseline_without_server_scenarios_is_empty",
+          "callee": "Path",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_baseline_without_server_scenarios_is_empty",
+          "callee": "baseline.write_text",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_baseline_without_server_scenarios_is_empty",
+          "callee": "self.assertEqual",
+          "lineNumber": 82
+        },
+        {
+          "caller": "test_baseline_without_server_scenarios_is_empty",
+          "callee": "check_conformance.read_server_baseline",
+          "lineNumber": 82
+        },
+        {
+          "caller": "test_cli_timeout_is_a_runner_error",
+          "callee": "self.assertRaisesRegex",
+          "lineNumber": 86
+        },
+        {
+          "caller": "test_cli_timeout_is_a_runner_error",
+          "callee": "check_conformance.run_cli",
+          "lineNumber": 87
+        },
+        {
+          "caller": "test_cli_timeout_is_a_runner_error",
+          "callee": "Path",
+          "lineNumber": 87
+        },
+        {
+          "caller": "test_cli_timeout_is_a_runner_error",
+          "callee": "self.assertEqual",
+          "lineNumber": 89
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "server/internal/gen/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 24,
+      "nonEmptyLines": 15,
+      "sections": [
+        {
+          "heading": "Readme for Codegen",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Development",
+          "level": 2,
+          "line": 15
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "server/internal/gen/data.go",
+      "language": "go",
+      "fileCategory": "code",
+      "totalLines": 221,
+      "nonEmptyLines": 219,
+      "classes": [
+        {
+          "name": "MCPRequestType",
+          "startLine": 3,
+          "endLine": 22,
+          "methods": [],
+          "properties": [
+            "MethodName",
+            "ParamType",
+            "ResultType",
+            "HookName",
+            "Group",
+            "GroupName",
+            "GroupHookName",
+            "UnmarshalError",
+            "HandlerFunc",
+            "ResultIsAny",
+            "HasMeta",
+            "RemovedInModern",
+            "RequiresModern"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "MCPRequestType",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "server/internal/gen/main.go",
+      "language": "go",
+      "fileCategory": "code",
+      "totalLines": 87,
+      "nonEmptyLines": 73,
+      "functions": [
+        {
+          "name": "RenderTemplateToFile",
+          "startLine": 23,
+          "endLine": 72,
+          "params": [
+            "templateContent",
+            "destPath",
+            "fileName",
+            "data"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 74,
+          "endLine": 87,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RenderTemplateToFile",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "RenderTemplateToFile",
+          "callee": "os.CreateTemp",
+          "lineNumber": 25
+        },
+        {
+          "caller": "RenderTemplateToFile",
+          "callee": "tempFile.Name",
+          "lineNumber": 29
+        },
+        {
+          "caller": "RenderTemplateToFile",
+          "callee": "os.Remove",
+          "lineNumber": 30
+        },
+        {
+          "caller": "RenderTemplateToFile",
+          "callee": "tempFile.Close",
+          "lineNumber": 31
+        },
+        {
+          "caller": "RenderTemplateToFile",
+          "callee": "template.New(fileName).Funcs(template.FuncMap{\n\t\t\"toLower\": strings.ToLower,\n\t}).Parse",
+          "lineNumber": 34
+        },
+        {
+          "caller": "RenderTemplateToFile",
+          "callee": "template.New(fileName).Funcs",
+          "lineNumber": 34
+        },
+        {
+          "caller": "RenderTemplateToFile",
+          "callee": "template.New",
+          "lineNumber": 34
+        },
+        {
+          "caller": "RenderTemplateToFile",
+          "callee": "tmpl.Execute",
+          "lineNumber": 41
+        },
+        {
+          "caller": "RenderTemplateToFile",
+          "callee": "exec.Command",
+          "lineNumber": 46
+        },
+        {
+          "caller": "RenderTemplateToFile",
+          "callee": "cmd.CombinedOutput",
+          "lineNumber": 47
+        },
+        {
+          "caller": "RenderTemplateToFile",
+          "callee": "fmt.Errorf",
+          "lineNumber": 48
+        },
+        {
+          "caller": "RenderTemplateToFile",
+          "callee": "os.ReadFile",
+          "lineNumber": 52
+        },
+        {
+          "caller": "RenderTemplateToFile",
+          "callee": "os.Create",
+          "lineNumber": 62
+        },
+        {
+          "caller": "RenderTemplateToFile",
+          "callee": "filepath.Join",
+          "lineNumber": 62
+        },
+        {
+          "caller": "RenderTemplateToFile",
+          "callee": "destFile.Close",
+          "lineNumber": 66
+        },
+        {
+          "caller": "RenderTemplateToFile",
+          "callee": "destWriter.Write",
+          "lineNumber": 70
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 75
+        },
+        {
+          "caller": "main",
+          "callee": "log.Fatal",
+          "lineNumber": 76
+        },
+        {
+          "caller": "main",
+          "callee": "RenderTemplateToFile",
+          "lineNumber": 80
+        },
+        {
+          "caller": "main",
+          "callee": "log.Fatal",
+          "lineNumber": 81
+        },
+        {
+          "caller": "main",
+          "callee": "RenderTemplateToFile",
+          "lineNumber": 84
+        },
+        {
+          "caller": "main",
+          "callee": "log.Fatal",
+          "lineNumber": 85
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    }
+  ]
+}

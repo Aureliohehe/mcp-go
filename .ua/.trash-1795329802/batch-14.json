@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "document:.github/ISSUE_TEMPLATE/bug_report.md",
+      "type": "document",
+      "name": "bug_report.md",
+      "filePath": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "summary": "规范缺陷反馈，收集问题描述、最小 Go 代码示例、错误日志和运行环境。",
+      "tags": [
+        "缺陷反馈",
+        "问题模板",
+        "项目维护"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.github/ISSUE_TEMPLATE/config.yml",
+      "type": "config",
+      "name": "config.yml",
+      "filePath": ".github/ISSUE_TEMPLATE/config.yml",
+      "summary": "配置 GitHub Issues 的入口链接与空白问题开关。",
+      "tags": [
+        "项目配置",
+        "问题模板",
+        "项目维护"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.github/ISSUE_TEMPLATE/documentation-improvement.md",
+      "type": "document",
+      "name": "documentation-improvement.md",
+      "filePath": ".github/ISSUE_TEMPLATE/documentation-improvement.md",
+      "summary": "引导贡献者说明文档问题并指出受影响的页面或位置。",
+      "tags": [
+        "文档维护",
+        "问题模板",
+        "项目维护"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.github/ISSUE_TEMPLATE/feature-request.md",
+      "type": "document",
+      "name": "feature-request.md",
+      "filePath": ".github/ISSUE_TEMPLATE/feature-request.md",
+      "summary": "收集功能需求、解决方案、MCP 规范引用、示例和替代做法。",
+      "tags": [
+        "功能需求",
+        "问题模板",
+        "项目维护"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

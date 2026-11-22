@@ -1,0 +1,50 @@
+Found 24 batch files (24 logical batches, 0 multi-part):
+  batch-1.json: 244 nodes, 7326 edges
+  batch-2.json: 236 nodes, 2079 edges
+  batch-3.json: 630 nodes, 1260 edges
+  batch-4.json: 273 nodes, 2194 edges
+  batch-5.json: 272 nodes, 3061 edges
+  batch-6.json: 677 nodes, 3879 edges
+  batch-7.json: 290 nodes, 2937 edges
+  batch-8.json: 259 nodes, 3757 edges
+  batch-9.json: 280 nodes, 404 edges
+  batch-10.json: 399 nodes, 540 edges
+  batch-11.json: 193 nodes, 353 edges
+  batch-12.json: 75 nodes, 95 edges
+  batch-13.json: 5 nodes, 5 edges
+  batch-14.json: 4 nodes, 0 edges
+  batch-15.json: 8 nodes, 6 edges
+  batch-16.json: 11 nodes, 0 edges
+  batch-17.json: 3 nodes, 4 edges
+  batch-18.json: 3 nodes, 3 edges
+  batch-19.json: 5 nodes, 15 edges
+  batch-20.json: 5 nodes, 14 edges
+  batch-21.json: 11 nodes, 24 edges
+  batch-22.json: 5 nodes, 12 edges
+  batch-23.json: 37 nodes, 52 edges
+  batch-24.json: 4 nodes, 3 edges
+
+Input: 3929 nodes, 28023 edges
+
+Tested-by linker:
+    48 × tested_by edges produced (path-convention supplement, production → test)
+    62 × production nodes tagged "tested"
+
+Could not fix (10 issues — needs agent review):
+  - Edge function:client/http_test.go:TestHTTPClient → function:server/session.go:SendNotificationToClient (calls): dropped, missing target 'function:server/session.go:SendNotificationToClient'
+  - Edge function:client/http_test.go:TestHTTPClient → function:server/session.go:SendNotificationToAllClients (calls): dropped, missing target 'function:server/session.go:SendNotificationToAllClients'
+  - Edge function:examples/everything/main.go:handleSendNotification → function:server/session.go:SendNotificationToClient (calls): dropped, missing target 'function:server/session.go:SendNotificationToClient'
+  - Edge function:examples/everything/main.go:handleLongRunningOperationTool → function:server/session.go:SendNotificationToClient (calls): dropped, missing target 'function:server/session.go:SendNotificationToClient'
+  - Edge function:examples/in_process/main.go:NewMCPClient → function:client/client.go:Initialize (calls): dropped, missing target 'function:client/client.go:Initialize'
+  - Edge function:mcptest/mcptest_test.go:TestServerWithTool → function:client/client.go:CallTool (calls): dropped, missing target 'function:client/client.go:CallTool'
+  - Edge function:mcptest/mcptest_test.go:TestServerWithToolStructuredContent → function:client/client.go:CallTool (calls): dropped, missing target 'function:client/client.go:CallTool'
+  - Edge function:mcptest/mcptest_test.go:TestListToolsWithHeader → function:client/client.go:Initialize (calls): dropped, missing target 'function:client/client.go:Initialize'
+  - Edge function:mcptest/mcptest_test.go:TestListToolsWithHeader → function:client/client.go:ListToolsByPage (calls): dropped, missing target 'function:client/client.go:ListToolsByPage'
+  - Edge function:mcptest/mcptest_test.go:TestSimulateClientInfo → function:client/client.go:CallTool (calls): dropped, missing target 'function:client/client.go:CallTool'
+
+Output: 3929 nodes, 28061 edges
+
+Imports edge recovery:
+  Recovered 4411 `imports` edges from importMap (447 entries scanned)
+
+Written to /root/infra/mcp-go/.ua/intermediate/assembled-graph.json (8284 KB)

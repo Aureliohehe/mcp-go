@@ -1,0 +1,176 @@
+{
+  "nodes": [
+    {
+      "id": "document:www/docs/pages/clients/advanced-sampling.mdx",
+      "type": "document",
+      "name": "advanced-sampling.mdx",
+      "filePath": "www/docs/pages/clients/advanced-sampling.mdx",
+      "summary": "演示客户端如何配置采样处理器、接入模型和声明采样能力，并解释支持工具的采样请求。",
+      "tags": [
+        "客户端",
+        "采样",
+        "能力声明"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/clients/basics.mdx",
+      "type": "document",
+      "name": "basics.mdx",
+      "filePath": "www/docs/pages/clients/basics.mdx",
+      "summary": "讲解不同传输对应的客户端构造方法，以及启动、初始化、超时、重试和关闭的生命周期。",
+      "tags": [
+        "客户端",
+        "连接管理",
+        "生命周期"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/clients/index.mdx",
+      "type": "document",
+      "name": "index.mdx",
+      "filePath": "www/docs/pages/clients/index.mdx",
+      "summary": "介绍 MCP 客户端的构建入口，给出不同传输、连接管理及集成多个服务端的示例。",
+      "tags": [
+        "客户端",
+        "项目导览",
+        "传输"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/clients/operations.mdx",
+      "type": "document",
+      "name": "operations.mdx",
+      "filePath": "www/docs/pages/clients/operations.mdx",
+      "summary": "演示客户端如何列出和读取资源、管理提示词及调用工具，并解释请求与结果结构。",
+      "tags": [
+        "客户端",
+        "资源",
+        "工具"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/clients/transports.mdx",
+      "type": "document",
+      "name": "transports.mdx",
+      "filePath": "www/docs/pages/clients/transports.mdx",
+      "summary": "比较 stdio、Streamable HTTP、SSE 和进程内客户端，覆盖传输配置、身份验证、连接管理与 JSON-RPC 日志。",
+      "tags": [
+        "客户端",
+        "传输",
+        "连接管理"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:www/docs/pages/clients/advanced-sampling.mdx",
+      "target": "file:client/sampling.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/clients/basics.mdx",
+      "target": "file:client/client.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/clients/basics.mdx",
+      "target": "file:client/stdio.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/clients/basics.mdx",
+      "target": "file:client/http.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/clients/basics.mdx",
+      "target": "file:client/sse.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/clients/index.mdx",
+      "target": "file:client/client.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/clients/operations.mdx",
+      "target": "file:client/client.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/clients/operations.mdx",
+      "target": "file:mcp/resources.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/clients/operations.mdx",
+      "target": "file:mcp/prompts.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/clients/operations.mdx",
+      "target": "file:mcp/tools.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/clients/transports.mdx",
+      "target": "file:client/transport/stdio.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/clients/transports.mdx",
+      "target": "file:client/transport/streamable_http.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/clients/transports.mdx",
+      "target": "file:client/transport/sse.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/clients/transports.mdx",
+      "target": "file:client/transport/inprocess.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/clients/transports.mdx",
+      "target": "file:client/transport/logging.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

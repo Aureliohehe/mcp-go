@@ -1,0 +1,4046 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 9,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 9,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 9,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "otel/client_test.go",
+      "language": "go",
+      "fileCategory": "code",
+      "totalLines": 177,
+      "nonEmptyLines": 140,
+      "functions": [
+        {
+          "name": "SendRequest",
+          "startLine": 28,
+          "endLine": 31,
+          "params": [
+            "ctx",
+            "request"
+          ]
+        },
+        {
+          "name": "newTracedInProcessClient",
+          "startLine": 33,
+          "endLine": 40,
+          "params": [
+            "t",
+            "mcpSrv",
+            "tracer"
+          ]
+        },
+        {
+          "name": "TestClientTracing_EmitsClientSpan",
+          "startLine": 42,
+          "endLine": 69,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestClientTracing_InjectsTraceparent",
+          "startLine": 71,
+          "endLine": 85,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestClientTracing_ErrorResponseMarksSpanErrored",
+          "startLine": 87,
+          "endLine": 107,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestClientTracing_NoOptionDoesNotInjectTraceparent",
+          "startLine": 109,
+          "endLine": 123,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "startLine": 125,
+          "endLine": 177,
+          "params": [
+            "t"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "headerCapturingTransport",
+          "startLine": 23,
+          "endLine": 26,
+          "methods": [
+            "SendRequest"
+          ],
+          "properties": [
+            "last"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SendRequest",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "TestClientTracing_EmitsClientSpan",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "TestClientTracing_InjectsTraceparent",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "TestClientTracing_ErrorResponseMarksSpanErrored",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "TestClientTracing_NoOptionDoesNotInjectTraceparent",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "line": 125,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SendRequest",
+          "callee": "request.Header.Clone",
+          "lineNumber": 29
+        },
+        {
+          "caller": "SendRequest",
+          "callee": "h.Interface.SendRequest",
+          "lineNumber": 30
+        },
+        {
+          "caller": "newTracedInProcessClient",
+          "callee": "t.Helper",
+          "lineNumber": 34
+        },
+        {
+          "caller": "newTracedInProcessClient",
+          "callee": "transport.NewInProcessTransport",
+          "lineNumber": 35
+        },
+        {
+          "caller": "newTracedInProcessClient",
+          "callee": "client.NewClient",
+          "lineNumber": 36
+        },
+        {
+          "caller": "newTracedInProcessClient",
+          "callee": "otelmcp.WithClientTracing",
+          "lineNumber": 36
+        },
+        {
+          "caller": "newTracedInProcessClient",
+          "callee": "require.NoError",
+          "lineNumber": 37
+        },
+        {
+          "caller": "newTracedInProcessClient",
+          "callee": "c.Start",
+          "lineNumber": 37
+        },
+        {
+          "caller": "newTracedInProcessClient",
+          "callee": "t.Context",
+          "lineNumber": 37
+        },
+        {
+          "caller": "newTracedInProcessClient",
+          "callee": "t.Cleanup",
+          "lineNumber": 38
+        },
+        {
+          "caller": "newTracedInProcessClient",
+          "callee": "c.Close",
+          "lineNumber": 38
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "newTestTracer",
+          "lineNumber": 43
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "server.NewMCPServer",
+          "lineNumber": 45
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "srv.AddTool",
+          "lineNumber": 46
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "mcp.NewToolResultText",
+          "lineNumber": 47
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "newTracedInProcessClient",
+          "lineNumber": 50
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "c.Initialize",
+          "lineNumber": 55
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "t.Context",
+          "lineNumber": 55
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "require.NoError",
+          "lineNumber": 56
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "spansSince",
+          "lineNumber": 58
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "c.CallTool",
+          "lineNumber": 62
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "t.Context",
+          "lineNumber": 62
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "require.NoError",
+          "lineNumber": 63
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "since",
+          "lineNumber": 65
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "require.Len",
+          "lineNumber": 66
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "assert.Equal",
+          "lineNumber": 67
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "spans[0].Name",
+          "lineNumber": 67
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "assert.Equal",
+          "lineNumber": 68
+        },
+        {
+          "caller": "TestClientTracing_EmitsClientSpan",
+          "callee": "spans[0].SpanKind",
+          "lineNumber": 68
+        },
+        {
+          "caller": "TestClientTracing_InjectsTraceparent",
+          "callee": "newTestTracer",
+          "lineNumber": 72
+        },
+        {
+          "caller": "TestClientTracing_InjectsTraceparent",
+          "callee": "server.NewMCPServer",
+          "lineNumber": 74
+        },
+        {
+          "caller": "TestClientTracing_InjectsTraceparent",
+          "callee": "newTracedInProcessClient",
+          "lineNumber": 75
+        },
+        {
+          "caller": "TestClientTracing_InjectsTraceparent",
+          "callee": "c.Initialize",
+          "lineNumber": 80
+        },
+        {
+          "caller": "TestClientTracing_InjectsTraceparent",
+          "callee": "t.Context",
+          "lineNumber": 80
+        },
+        {
+          "caller": "TestClientTracing_InjectsTraceparent",
+          "callee": "require.NoError",
+          "lineNumber": 81
+        },
+        {
+          "caller": "TestClientTracing_InjectsTraceparent",
+          "callee": "require.NotNil",
+          "lineNumber": 83
+        },
+        {
+          "caller": "TestClientTracing_InjectsTraceparent",
+          "callee": "assert.NotEmpty",
+          "lineNumber": 84
+        },
+        {
+          "caller": "TestClientTracing_InjectsTraceparent",
+          "callee": "captured.last.Get",
+          "lineNumber": 84
+        },
+        {
+          "caller": "TestClientTracing_ErrorResponseMarksSpanErrored",
+          "callee": "newTestTracer",
+          "lineNumber": 88
+        },
+        {
+          "caller": "TestClientTracing_ErrorResponseMarksSpanErrored",
+          "callee": "server.NewMCPServer",
+          "lineNumber": 90
+        },
+        {
+          "caller": "TestClientTracing_ErrorResponseMarksSpanErrored",
+          "callee": "newTracedInProcessClient",
+          "lineNumber": 91
+        },
+        {
+          "caller": "TestClientTracing_ErrorResponseMarksSpanErrored",
+          "callee": "c.Initialize",
+          "lineNumber": 96
+        },
+        {
+          "caller": "TestClientTracing_ErrorResponseMarksSpanErrored",
+          "callee": "t.Context",
+          "lineNumber": 96
+        },
+        {
+          "caller": "TestClientTracing_ErrorResponseMarksSpanErrored",
+          "callee": "require.NoError",
+          "lineNumber": 97
+        },
+        {
+          "caller": "TestClientTracing_ErrorResponseMarksSpanErrored",
+          "callee": "spansSince",
+          "lineNumber": 98
+        },
+        {
+          "caller": "TestClientTracing_ErrorResponseMarksSpanErrored",
+          "callee": "c.ListTools",
+          "lineNumber": 101
+        },
+        {
+          "caller": "TestClientTracing_ErrorResponseMarksSpanErrored",
+          "callee": "t.Context",
+          "lineNumber": 101
+        },
+        {
+          "caller": "TestClientTracing_ErrorResponseMarksSpanErrored",
+          "callee": "require.Error",
+          "lineNumber": 102
+        },
+        {
+          "caller": "TestClientTracing_ErrorResponseMarksSpanErrored",
+          "callee": "since",
+          "lineNumber": 104
+        },
+        {
+          "caller": "TestClientTracing_ErrorResponseMarksSpanErrored",
+          "callee": "require.Len",
+          "lineNumber": 105
+        },
+        {
+          "caller": "TestClientTracing_ErrorResponseMarksSpanErrored",
+          "callee": "assert.Equal",
+          "lineNumber": 106
+        },
+        {
+          "caller": "TestClientTracing_ErrorResponseMarksSpanErrored",
+          "callee": "spans[0].Status",
+          "lineNumber": 106
+        },
+        {
+          "caller": "TestClientTracing_NoOptionDoesNotInjectTraceparent",
+          "callee": "server.NewMCPServer",
+          "lineNumber": 110
+        },
+        {
+          "caller": "TestClientTracing_NoOptionDoesNotInjectTraceparent",
+          "callee": "transport.NewInProcessTransport",
+          "lineNumber": 111
+        },
+        {
+          "caller": "TestClientTracing_NoOptionDoesNotInjectTraceparent",
+          "callee": "client.NewClient",
+          "lineNumber": 112
+        },
+        {
+          "caller": "TestClientTracing_NoOptionDoesNotInjectTraceparent",
+          "callee": "require.NoError",
+          "lineNumber": 113
+        },
+        {
+          "caller": "TestClientTracing_NoOptionDoesNotInjectTraceparent",
+          "callee": "c.Start",
+          "lineNumber": 113
+        },
+        {
+          "caller": "TestClientTracing_NoOptionDoesNotInjectTraceparent",
+          "callee": "t.Context",
+          "lineNumber": 113
+        },
+        {
+          "caller": "TestClientTracing_NoOptionDoesNotInjectTraceparent",
+          "callee": "t.Cleanup",
+          "lineNumber": 114
+        },
+        {
+          "caller": "TestClientTracing_NoOptionDoesNotInjectTraceparent",
+          "callee": "c.Close",
+          "lineNumber": 114
+        },
+        {
+          "caller": "TestClientTracing_NoOptionDoesNotInjectTraceparent",
+          "callee": "c.Initialize",
+          "lineNumber": 119
+        },
+        {
+          "caller": "TestClientTracing_NoOptionDoesNotInjectTraceparent",
+          "callee": "t.Context",
+          "lineNumber": 119
+        },
+        {
+          "caller": "TestClientTracing_NoOptionDoesNotInjectTraceparent",
+          "callee": "require.NoError",
+          "lineNumber": 120
+        },
+        {
+          "caller": "TestClientTracing_NoOptionDoesNotInjectTraceparent",
+          "callee": "assert.Empty",
+          "lineNumber": 122
+        },
+        {
+          "caller": "TestClientTracing_NoOptionDoesNotInjectTraceparent",
+          "callee": "wrapped.last.Get",
+          "lineNumber": 122
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "newTestTracer",
+          "lineNumber": 126
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "newTestTracer",
+          "lineNumber": 127
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "server.NewMCPServer",
+          "lineNumber": 129
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "otelmcp.WithServerTracing",
+          "lineNumber": 129
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "srv.AddTool",
+          "lineNumber": 130
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "mcp.NewToolResultText",
+          "lineNumber": 131
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "servertest.NewTestStreamableHTTPServer",
+          "lineNumber": 134
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "t.Cleanup",
+          "lineNumber": 135
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "transport.NewStreamableHTTP",
+          "lineNumber": 137
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "require.NoError",
+          "lineNumber": 138
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "client.NewClient",
+          "lineNumber": 139
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "otelmcp.WithClientTracing",
+          "lineNumber": 139
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "require.NoError",
+          "lineNumber": 140
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "c.Start",
+          "lineNumber": 140
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "t.Context",
+          "lineNumber": 140
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "t.Cleanup",
+          "lineNumber": 141
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "c.Close",
+          "lineNumber": 141
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "c.Initialize",
+          "lineNumber": 146
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "t.Context",
+          "lineNumber": 146
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "require.NoError",
+          "lineNumber": 147
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "spansSince",
+          "lineNumber": 149
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "spansSince",
+          "lineNumber": 150
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "c.CallTool",
+          "lineNumber": 154
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "t.Context",
+          "lineNumber": 154
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "require.NoError",
+          "lineNumber": 155
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "clientSince",
+          "lineNumber": 157
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "require.Len",
+          "lineNumber": 158
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "assert.Equal",
+          "lineNumber": 160
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "clientSpan.Name",
+          "lineNumber": 160
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "assert.Equal",
+          "lineNumber": 161
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "clientSpan.SpanKind",
+          "lineNumber": 161
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "serverSince",
+          "lineNumber": 163
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "findSpan",
+          "lineNumber": 164
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "require.NotNil",
+          "lineNumber": 165
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "findSpan",
+          "lineNumber": 166
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "require.NotNil",
+          "lineNumber": 167
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "assert.Equal",
+          "lineNumber": 169
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "clientSpan.SpanContext().TraceID",
+          "lineNumber": 169
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "clientSpan.SpanContext",
+          "lineNumber": 169
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "parentMcp.SpanContext().TraceID",
+          "lineNumber": 169
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "parentMcp.SpanContext",
+          "lineNumber": 169
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "assert.Equal",
+          "lineNumber": 171
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "clientSpan.SpanContext().SpanID",
+          "lineNumber": 171
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "clientSpan.SpanContext",
+          "lineNumber": 171
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "parentMcp.Parent().SpanID",
+          "lineNumber": 171
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "parentMcp.Parent",
+          "lineNumber": 171
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "attrValue",
+          "lineNumber": 174
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "assert.True",
+          "lineNumber": 174
+        },
+        {
+          "caller": "TestRoundTrip_TraceparentSpansClientAndServer",
+          "callee": "assert.Equal",
+          "lineNumber": 175
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 6,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "otel/example/main.go",
+      "language": "go",
+      "fileCategory": "code",
+      "totalLines": 93,
+      "nonEmptyLines": 79,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 23,
+          "endLine": 79,
+          "params": []
+        },
+        {
+          "name": "OnStart",
+          "startLine": 83,
+          "endLine": 83,
+          "params": []
+        },
+        {
+          "name": "OnEnd",
+          "startLine": 85,
+          "endLine": 90,
+          "params": [
+            "s"
+          ]
+        },
+        {
+          "name": "Shutdown",
+          "startLine": 92,
+          "endLine": 92,
+          "params": []
+        },
+        {
+          "name": "ForceFlush",
+          "startLine": 93,
+          "endLine": 93,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "stderrPrinter",
+          "startLine": 81,
+          "endLine": 81,
+          "methods": [
+            "OnStart",
+            "OnEnd",
+            "Shutdown",
+            "ForceFlush"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "OnStart",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "OnEnd",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "Shutdown",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "ForceFlush",
+          "line": 93,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "sdktrace.NewTracerProvider",
+          "lineNumber": 24
+        },
+        {
+          "caller": "main",
+          "callee": "sdktrace.WithSpanProcessor",
+          "lineNumber": 24
+        },
+        {
+          "caller": "main",
+          "callee": "otel.SetTracerProvider",
+          "lineNumber": 25
+        },
+        {
+          "caller": "main",
+          "callee": "func() {\n\t\tshutdownCtx, cancel := context.WithTimeout(context.Background(), 5*time.Second)\n\t\tdefer cancel()\n\t\t_ = tp.Shutdown(shutdownCtx)\n\t}",
+          "lineNumber": 26
+        },
+        {
+          "caller": "main",
+          "callee": "context.WithTimeout",
+          "lineNumber": 27
+        },
+        {
+          "caller": "main",
+          "callee": "context.Background",
+          "lineNumber": 27
+        },
+        {
+          "caller": "main",
+          "callee": "cancel",
+          "lineNumber": 28
+        },
+        {
+          "caller": "main",
+          "callee": "tp.Shutdown",
+          "lineNumber": 29
+        },
+        {
+          "caller": "main",
+          "callee": "otel.Tracer",
+          "lineNumber": 32
+        },
+        {
+          "caller": "main",
+          "callee": "server.NewMCPServer",
+          "lineNumber": 34
+        },
+        {
+          "caller": "main",
+          "callee": "server.WithToolCapabilities",
+          "lineNumber": 36
+        },
+        {
+          "caller": "main",
+          "callee": "otelmcp.WithServerTracing",
+          "lineNumber": 37
+        },
+        {
+          "caller": "main",
+          "callee": "mcpServer.AddTool",
+          "lineNumber": 39
+        },
+        {
+          "caller": "main",
+          "callee": "mcp.NewTool",
+          "lineNumber": 39
+        },
+        {
+          "caller": "main",
+          "callee": "mcp.WithDescription",
+          "lineNumber": 40
+        },
+        {
+          "caller": "main",
+          "callee": "mcp.WithString",
+          "lineNumber": 41
+        },
+        {
+          "caller": "main",
+          "callee": "mcp.Required",
+          "lineNumber": 41
+        },
+        {
+          "caller": "main",
+          "callee": "req.RequireString",
+          "lineNumber": 43
+        },
+        {
+          "caller": "main",
+          "callee": "mcp.NewToolResultText",
+          "lineNumber": 44
+        },
+        {
+          "caller": "main",
+          "callee": "fmt.Sprintf",
+          "lineNumber": 44
+        },
+        {
+          "caller": "main",
+          "callee": "httptest.NewServer",
+          "lineNumber": 47
+        },
+        {
+          "caller": "main",
+          "callee": "server.NewStreamableHTTPServer",
+          "lineNumber": 47
+        },
+        {
+          "caller": "main",
+          "callee": "httpSrv.Close",
+          "lineNumber": 48
+        },
+        {
+          "caller": "main",
+          "callee": "transport.NewStreamableHTTP",
+          "lineNumber": 50
+        },
+        {
+          "caller": "main",
+          "callee": "log.Fatalf",
+          "lineNumber": 52
+        },
+        {
+          "caller": "main",
+          "callee": "client.NewClient",
+          "lineNumber": 54
+        },
+        {
+          "caller": "main",
+          "callee": "otelmcp.WithClientTracing",
+          "lineNumber": 54
+        },
+        {
+          "caller": "main",
+          "callee": "mcpClient.Start",
+          "lineNumber": 55
+        },
+        {
+          "caller": "main",
+          "callee": "context.Background",
+          "lineNumber": 55
+        },
+        {
+          "caller": "main",
+          "callee": "log.Fatalf",
+          "lineNumber": 56
+        },
+        {
+          "caller": "main",
+          "callee": "mcpClient.Close",
+          "lineNumber": 58
+        },
+        {
+          "caller": "main",
+          "callee": "mcpClient.Initialize",
+          "lineNumber": 63
+        },
+        {
+          "caller": "main",
+          "callee": "context.Background",
+          "lineNumber": 63
+        },
+        {
+          "caller": "main",
+          "callee": "log.Fatalf",
+          "lineNumber": 64
+        },
+        {
+          "caller": "main",
+          "callee": "mcpClient.CallTool",
+          "lineNumber": 70
+        },
+        {
+          "caller": "main",
+          "callee": "context.Background",
+          "lineNumber": 70
+        },
+        {
+          "caller": "main",
+          "callee": "log.Fatalf",
+          "lineNumber": 72
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 74
+        },
+        {
+          "caller": "main",
+          "callee": "fmt.Fprintf",
+          "lineNumber": 76
+        },
+        {
+          "caller": "OnEnd",
+          "callee": "s.SpanContext",
+          "lineNumber": 86
+        },
+        {
+          "caller": "OnEnd",
+          "callee": "s.Parent().SpanID().String",
+          "lineNumber": 87
+        },
+        {
+          "caller": "OnEnd",
+          "callee": "s.Parent().SpanID",
+          "lineNumber": 87
+        },
+        {
+          "caller": "OnEnd",
+          "callee": "s.Parent",
+          "lineNumber": 87
+        },
+        {
+          "caller": "OnEnd",
+          "callee": "fmt.Fprintf",
+          "lineNumber": 88
+        },
+        {
+          "caller": "OnEnd",
+          "callee": "s.Name",
+          "lineNumber": 89
+        },
+        {
+          "caller": "OnEnd",
+          "callee": "s.SpanKind",
+          "lineNumber": 89
+        },
+        {
+          "caller": "OnEnd",
+          "callee": "sc.TraceID",
+          "lineNumber": 89
+        },
+        {
+          "caller": "OnEnd",
+          "callee": "sc.SpanID",
+          "lineNumber": 89
+        },
+        {
+          "caller": "OnEnd",
+          "callee": "s.EndTime().Sub",
+          "lineNumber": 89
+        },
+        {
+          "caller": "OnEnd",
+          "callee": "s.EndTime",
+          "lineNumber": 89
+        },
+        {
+          "caller": "OnEnd",
+          "callee": "s.StartTime",
+          "lineNumber": 89
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 4,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "otel/logger.go",
+      "language": "go",
+      "fileCategory": "code",
+      "totalLines": 55,
+      "nonEmptyLines": 50,
+      "functions": [
+        {
+          "name": "NewSlogLogger",
+          "startLine": 21,
+          "endLine": 27,
+          "params": [
+            "provider",
+            "scope"
+          ]
+        },
+        {
+          "name": "WithServerLogging",
+          "startLine": 53,
+          "endLine": 55,
+          "params": [
+            "provider",
+            "scope"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "NewSlogLogger",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "WithServerLogging",
+          "line": 53,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "NewSlogLogger",
+          "callee": "append",
+          "lineNumber": 24
+        },
+        {
+          "caller": "NewSlogLogger",
+          "callee": "otelslog.WithLoggerProvider",
+          "lineNumber": 24
+        },
+        {
+          "caller": "NewSlogLogger",
+          "callee": "slog.New",
+          "lineNumber": 26
+        },
+        {
+          "caller": "NewSlogLogger",
+          "callee": "otelslog.NewHandler",
+          "lineNumber": 26
+        },
+        {
+          "caller": "WithServerLogging",
+          "callee": "server.WithLogger",
+          "lineNumber": 54
+        },
+        {
+          "caller": "WithServerLogging",
+          "callee": "NewSlogLogger",
+          "lineNumber": 54
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "otel/logger_test.go",
+      "language": "go",
+      "fileCategory": "code",
+      "totalLines": 94,
+      "nonEmptyLines": 77,
+      "functions": [
+        {
+          "name": "Export",
+          "startLine": 24,
+          "endLine": 31,
+          "params": [
+            "_",
+            "records"
+          ]
+        },
+        {
+          "name": "Shutdown",
+          "startLine": 33,
+          "endLine": 33,
+          "params": []
+        },
+        {
+          "name": "ForceFlush",
+          "startLine": 34,
+          "endLine": 34,
+          "params": []
+        },
+        {
+          "name": "snapshot",
+          "startLine": 36,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "newTestLoggerProvider",
+          "startLine": 44,
+          "endLine": 51,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestNewSlogLogger_NilProviderUsesGlobal",
+          "startLine": 53,
+          "endLine": 66,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "startLine": 68,
+          "endLine": 94,
+          "params": [
+            "t"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "captureExporter",
+          "startLine": 19,
+          "endLine": 22,
+          "methods": [
+            "Export",
+            "Shutdown",
+            "ForceFlush",
+            "snapshot"
+          ],
+          "properties": [
+            "mu",
+            "records"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Export",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "Shutdown",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "ForceFlush",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "TestNewSlogLogger_NilProviderUsesGlobal",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "line": 68,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Export",
+          "callee": "e.mu.Lock",
+          "lineNumber": 25
+        },
+        {
+          "caller": "Export",
+          "callee": "e.mu.Unlock",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Export",
+          "callee": "append",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Export",
+          "callee": "r.Clone",
+          "lineNumber": 28
+        },
+        {
+          "caller": "snapshot",
+          "callee": "e.mu.Lock",
+          "lineNumber": 37
+        },
+        {
+          "caller": "snapshot",
+          "callee": "e.mu.Unlock",
+          "lineNumber": 38
+        },
+        {
+          "caller": "snapshot",
+          "callee": "make",
+          "lineNumber": 39
+        },
+        {
+          "caller": "snapshot",
+          "callee": "len",
+          "lineNumber": 39
+        },
+        {
+          "caller": "snapshot",
+          "callee": "copy",
+          "lineNumber": 40
+        },
+        {
+          "caller": "newTestLoggerProvider",
+          "callee": "t.Helper",
+          "lineNumber": 45
+        },
+        {
+          "caller": "newTestLoggerProvider",
+          "callee": "sdklog.NewLoggerProvider",
+          "lineNumber": 47
+        },
+        {
+          "caller": "newTestLoggerProvider",
+          "callee": "sdklog.WithProcessor",
+          "lineNumber": 47
+        },
+        {
+          "caller": "newTestLoggerProvider",
+          "callee": "sdklog.NewSimpleProcessor",
+          "lineNumber": 47
+        },
+        {
+          "caller": "newTestLoggerProvider",
+          "callee": "t.Cleanup",
+          "lineNumber": 49
+        },
+        {
+          "caller": "newTestLoggerProvider",
+          "callee": "lp.Shutdown",
+          "lineNumber": 49
+        },
+        {
+          "caller": "newTestLoggerProvider",
+          "callee": "context.Background",
+          "lineNumber": 49
+        },
+        {
+          "caller": "TestNewSlogLogger_NilProviderUsesGlobal",
+          "callee": "newTestLoggerProvider",
+          "lineNumber": 54
+        },
+        {
+          "caller": "TestNewSlogLogger_NilProviderUsesGlobal",
+          "callee": "global.GetLoggerProvider",
+          "lineNumber": 56
+        },
+        {
+          "caller": "TestNewSlogLogger_NilProviderUsesGlobal",
+          "callee": "global.SetLoggerProvider",
+          "lineNumber": 57
+        },
+        {
+          "caller": "TestNewSlogLogger_NilProviderUsesGlobal",
+          "callee": "t.Cleanup",
+          "lineNumber": 58
+        },
+        {
+          "caller": "TestNewSlogLogger_NilProviderUsesGlobal",
+          "callee": "global.SetLoggerProvider",
+          "lineNumber": 58
+        },
+        {
+          "caller": "TestNewSlogLogger_NilProviderUsesGlobal",
+          "callee": "otelmcp.NewSlogLogger",
+          "lineNumber": 60
+        },
+        {
+          "caller": "TestNewSlogLogger_NilProviderUsesGlobal",
+          "callee": "require.NotNil",
+          "lineNumber": 61
+        },
+        {
+          "caller": "TestNewSlogLogger_NilProviderUsesGlobal",
+          "callee": "logger.LogAttrs",
+          "lineNumber": 63
+        },
+        {
+          "caller": "TestNewSlogLogger_NilProviderUsesGlobal",
+          "callee": "t.Context",
+          "lineNumber": 63
+        },
+        {
+          "caller": "TestNewSlogLogger_NilProviderUsesGlobal",
+          "callee": "require.Len",
+          "lineNumber": 65
+        },
+        {
+          "caller": "TestNewSlogLogger_NilProviderUsesGlobal",
+          "callee": "exp.snapshot",
+          "lineNumber": 65
+        },
+        {
+          "caller": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "callee": "newTestLoggerProvider",
+          "lineNumber": 69
+        },
+        {
+          "caller": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "callee": "otelmcp.NewSlogLogger",
+          "lineNumber": 70
+        },
+        {
+          "caller": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "callee": "logger.LogAttrs",
+          "lineNumber": 72
+        },
+        {
+          "caller": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "callee": "t.Context",
+          "lineNumber": 72
+        },
+        {
+          "caller": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "callee": "slog.String",
+          "lineNumber": 73
+        },
+        {
+          "caller": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "callee": "slog.Float64",
+          "lineNumber": 74
+        },
+        {
+          "caller": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "callee": "exp.snapshot",
+          "lineNumber": 77
+        },
+        {
+          "caller": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "callee": "require.Len",
+          "lineNumber": 78
+        },
+        {
+          "caller": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "callee": "require.Equal",
+          "lineNumber": 79
+        },
+        {
+          "caller": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "callee": "records[0].Body().AsString",
+          "lineNumber": 79
+        },
+        {
+          "caller": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "callee": "records[0].Body",
+          "lineNumber": 79
+        },
+        {
+          "caller": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "callee": "records[0].WalkAttributes",
+          "lineNumber": 83
+        },
+        {
+          "caller": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "callee": "kv.Value.AsString",
+          "lineNumber": 86
+        },
+        {
+          "caller": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "callee": "kv.Value.AsFloat64",
+          "lineNumber": 88
+        },
+        {
+          "caller": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "callee": "require.Equal",
+          "lineNumber": 92
+        },
+        {
+          "caller": "TestNewSlogLogger_RoutesRecordsToProvider",
+          "callee": "require.InDelta",
+          "lineNumber": 93
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 5,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "otel/meta_carrier.go",
+      "language": "go",
+      "fileCategory": "code",
+      "totalLines": 82,
+      "nonEmptyLines": 70,
+      "functions": [
+        {
+          "name": "NewMetaPropagator",
+          "startLine": 14,
+          "endLine": 16,
+          "params": []
+        },
+        {
+          "name": "WrapMetaPropagator",
+          "startLine": 20,
+          "endLine": 25,
+          "params": [
+            "p"
+          ]
+        },
+        {
+          "name": "InjectMeta",
+          "startLine": 31,
+          "endLine": 43,
+          "params": [
+            "ctx",
+            "meta"
+          ]
+        },
+        {
+          "name": "ExtractMeta",
+          "startLine": 45,
+          "endLine": 50,
+          "params": [
+            "ctx",
+            "meta"
+          ]
+        },
+        {
+          "name": "Get",
+          "startLine": 57,
+          "endLine": 67,
+          "params": [
+            "key"
+          ]
+        },
+        {
+          "name": "Set",
+          "startLine": 69,
+          "endLine": 74,
+          "params": [
+            "key",
+            "value"
+          ]
+        },
+        {
+          "name": "Keys",
+          "startLine": 76,
+          "endLine": 82,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "otelMetaPropagator",
+          "startLine": 27,
+          "endLine": 29,
+          "methods": [
+            "InjectMeta",
+            "ExtractMeta"
+          ],
+          "properties": [
+            "p"
+          ]
+        },
+        {
+          "name": "metaCarrier",
+          "startLine": 53,
+          "endLine": 55,
+          "methods": [
+            "Get",
+            "Set",
+            "Keys"
+          ],
+          "properties": [
+            "meta"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "NewMetaPropagator",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "WrapMetaPropagator",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "InjectMeta",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "ExtractMeta",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "Get",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "Set",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "Keys",
+          "line": 76,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "NewMetaPropagator",
+          "callee": "WrapMetaPropagator",
+          "lineNumber": 15
+        },
+        {
+          "caller": "WrapMetaPropagator",
+          "callee": "tracing.NoopMetaPropagator",
+          "lineNumber": 22
+        },
+        {
+          "caller": "InjectMeta",
+          "callee": "o.p.Inject",
+          "lineNumber": 36
+        },
+        {
+          "caller": "InjectMeta",
+          "callee": "len",
+          "lineNumber": 37
+        },
+        {
+          "caller": "ExtractMeta",
+          "callee": "o.p.Extract",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Set",
+          "callee": "make",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Keys",
+          "callee": "make",
+          "lineNumber": 77
+        },
+        {
+          "caller": "Keys",
+          "callee": "len",
+          "lineNumber": 77
+        },
+        {
+          "caller": "Keys",
+          "callee": "append",
+          "lineNumber": 79
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "otel/meta_carrier_test.go",
+      "language": "go",
+      "fileCategory": "code",
+      "totalLines": 300,
+      "nonEmptyLines": 253,
+      "functions": [
+        {
+          "name": "SendRequest",
+          "startLine": 27,
+          "endLine": 33,
+          "params": [
+            "ctx",
+            "req"
+          ]
+        },
+        {
+          "name": "startTracedClient",
+          "startLine": 37,
+          "endLine": 51,
+          "params": [
+            "t",
+            "srv"
+          ]
+        },
+        {
+          "name": "TestMetaPropagator_InjectCreatesTraceparent",
+          "startLine": 55,
+          "endLine": 70,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestMetaPropagator_ExtractPopulatesContext",
+          "startLine": 74,
+          "endLine": 99,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestMetaPropagator_NilEdgeCases",
+          "startLine": 102,
+          "endLine": 133,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "startLine": 137,
+          "endLine": 168,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+          "startLine": 172,
+          "endLine": 196,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "startLine": 200,
+          "endLine": 234,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestServerMetaPropagator_RoundTrip",
+          "startLine": 238,
+          "endLine": 264,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "traceIDFromTraceparent",
+          "startLine": 267,
+          "endLine": 273,
+          "params": [
+            "t",
+            "tp"
+          ]
+        },
+        {
+          "name": "splitTraceparent",
+          "startLine": 275,
+          "endLine": 286,
+          "params": [
+            "s"
+          ]
+        },
+        {
+          "name": "TestMetaPropagator_InjectWithoutSpanLeavesNilMeta",
+          "startLine": 292,
+          "endLine": 300,
+          "params": [
+            "t"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "paramsCapturingTransport",
+          "startLine": 22,
+          "endLine": 25,
+          "methods": [
+            "SendRequest"
+          ],
+          "properties": [
+            "last"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SendRequest",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "TestMetaPropagator_InjectCreatesTraceparent",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "TestMetaPropagator_ExtractPopulatesContext",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "TestMetaPropagator_NilEdgeCases",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+          "line": 172,
+          "isDefault": false
+        },
+        {
+          "name": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "line": 200,
+          "isDefault": false
+        },
+        {
+          "name": "TestServerMetaPropagator_RoundTrip",
+          "line": 238,
+          "isDefault": false
+        },
+        {
+          "name": "TestMetaPropagator_InjectWithoutSpanLeavesNilMeta",
+          "line": 292,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SendRequest",
+          "callee": "json.Marshal",
+          "lineNumber": 29
+        },
+        {
+          "caller": "SendRequest",
+          "callee": "p.Interface.SendRequest",
+          "lineNumber": 32
+        },
+        {
+          "caller": "startTracedClient",
+          "callee": "t.Helper",
+          "lineNumber": 38
+        },
+        {
+          "caller": "startTracedClient",
+          "callee": "transport.NewInProcessTransport",
+          "lineNumber": 39
+        },
+        {
+          "caller": "startTracedClient",
+          "callee": "client.NewClient",
+          "lineNumber": 41
+        },
+        {
+          "caller": "startTracedClient",
+          "callee": "require.NoError",
+          "lineNumber": 42
+        },
+        {
+          "caller": "startTracedClient",
+          "callee": "c.Start",
+          "lineNumber": 42
+        },
+        {
+          "caller": "startTracedClient",
+          "callee": "t.Context",
+          "lineNumber": 42
+        },
+        {
+          "caller": "startTracedClient",
+          "callee": "t.Cleanup",
+          "lineNumber": 43
+        },
+        {
+          "caller": "startTracedClient",
+          "callee": "c.Close",
+          "lineNumber": 43
+        },
+        {
+          "caller": "startTracedClient",
+          "callee": "c.Initialize",
+          "lineNumber": 48
+        },
+        {
+          "caller": "startTracedClient",
+          "callee": "t.Context",
+          "lineNumber": 48
+        },
+        {
+          "caller": "startTracedClient",
+          "callee": "require.NoError",
+          "lineNumber": 49
+        },
+        {
+          "caller": "TestMetaPropagator_InjectCreatesTraceparent",
+          "callee": "otelmcp.WrapMetaPropagator",
+          "lineNumber": 56
+        },
+        {
+          "caller": "TestMetaPropagator_InjectCreatesTraceparent",
+          "callee": "newTestTracer",
+          "lineNumber": 58
+        },
+        {
+          "caller": "TestMetaPropagator_InjectCreatesTraceparent",
+          "callee": "tracer.Start",
+          "lineNumber": 59
+        },
+        {
+          "caller": "TestMetaPropagator_InjectCreatesTraceparent",
+          "callee": "t.Context",
+          "lineNumber": 59
+        },
+        {
+          "caller": "TestMetaPropagator_InjectCreatesTraceparent",
+          "callee": "trace.WithSpanKind",
+          "lineNumber": 59
+        },
+        {
+          "caller": "TestMetaPropagator_InjectCreatesTraceparent",
+          "callee": "span.End",
+          "lineNumber": 60
+        },
+        {
+          "caller": "TestMetaPropagator_InjectCreatesTraceparent",
+          "callee": "p.InjectMeta",
+          "lineNumber": 62
+        },
+        {
+          "caller": "TestMetaPropagator_InjectCreatesTraceparent",
+          "callee": "require.NotNil",
+          "lineNumber": 63
+        },
+        {
+          "caller": "TestMetaPropagator_InjectCreatesTraceparent",
+          "callee": "require.NotNil",
+          "lineNumber": 64
+        },
+        {
+          "caller": "TestMetaPropagator_InjectCreatesTraceparent",
+          "callee": "require.True",
+          "lineNumber": 66
+        },
+        {
+          "caller": "TestMetaPropagator_InjectCreatesTraceparent",
+          "callee": "assert.NotEmpty",
+          "lineNumber": 68
+        },
+        {
+          "caller": "TestMetaPropagator_InjectCreatesTraceparent",
+          "callee": "assert.Equal",
+          "lineNumber": 69
+        },
+        {
+          "caller": "TestMetaPropagator_InjectCreatesTraceparent",
+          "callee": "span.SpanContext().TraceID().String",
+          "lineNumber": 69
+        },
+        {
+          "caller": "TestMetaPropagator_InjectCreatesTraceparent",
+          "callee": "span.SpanContext().TraceID",
+          "lineNumber": 69
+        },
+        {
+          "caller": "TestMetaPropagator_InjectCreatesTraceparent",
+          "callee": "span.SpanContext",
+          "lineNumber": 69
+        },
+        {
+          "caller": "TestMetaPropagator_InjectCreatesTraceparent",
+          "callee": "traceIDFromTraceparent",
+          "lineNumber": 69
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "newTestTracer",
+          "lineNumber": 75
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "tracer.Start",
+          "lineNumber": 76
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "t.Context",
+          "lineNumber": 76
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "root.End",
+          "lineNumber": 77
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "otelmcp.WrapMetaPropagator",
+          "lineNumber": 80
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "p.InjectMeta",
+          "lineNumber": 81
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "root.End",
+          "lineNumber": 82
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "spansSince",
+          "lineNumber": 83
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "p.ExtractMeta",
+          "lineNumber": 86
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "t.Context",
+          "lineNumber": 86
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "tracer.Start",
+          "lineNumber": 89
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "child.End",
+          "lineNumber": 90
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "since",
+          "lineNumber": 92
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "findSpan",
+          "lineNumber": 93
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "require.NotNil",
+          "lineNumber": 94
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "assert.Equal",
+          "lineNumber": 95
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "root.SpanContext().TraceID",
+          "lineNumber": 95
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "root.SpanContext",
+          "lineNumber": 95
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "childSpan.SpanContext().TraceID",
+          "lineNumber": 95
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "childSpan.SpanContext",
+          "lineNumber": 95
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "assert.Equal",
+          "lineNumber": 97
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "root.SpanContext().SpanID",
+          "lineNumber": 97
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "root.SpanContext",
+          "lineNumber": 97
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "childSpan.Parent().SpanID",
+          "lineNumber": 97
+        },
+        {
+          "caller": "TestMetaPropagator_ExtractPopulatesContext",
+          "callee": "childSpan.Parent",
+          "lineNumber": 97
+        },
+        {
+          "caller": "TestMetaPropagator_NilEdgeCases",
+          "callee": "t.Run",
+          "lineNumber": 121
+        },
+        {
+          "caller": "TestMetaPropagator_NilEdgeCases",
+          "callee": "otelmcp.WrapMetaPropagator",
+          "lineNumber": 122
+        },
+        {
+          "caller": "TestMetaPropagator_NilEdgeCases",
+          "callee": "p.ExtractMeta",
+          "lineNumber": 124
+        },
+        {
+          "caller": "TestMetaPropagator_NilEdgeCases",
+          "callee": "t.Context",
+          "lineNumber": 124
+        },
+        {
+          "caller": "TestMetaPropagator_NilEdgeCases",
+          "callee": "assert.NotNil",
+          "lineNumber": 125
+        },
+        {
+          "caller": "TestMetaPropagator_NilEdgeCases",
+          "callee": "p.InjectMeta",
+          "lineNumber": 128
+        },
+        {
+          "caller": "TestMetaPropagator_NilEdgeCases",
+          "callee": "t.Context",
+          "lineNumber": 128
+        },
+        {
+          "caller": "TestMetaPropagator_NilEdgeCases",
+          "callee": "assert.Nil",
+          "lineNumber": 129
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "newTestTracer",
+          "lineNumber": 138
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "server.NewMCPServer",
+          "lineNumber": 140
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "srv.AddTool",
+          "lineNumber": 141
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "mcp.NewToolResultText",
+          "lineNumber": 142
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "startTracedClient",
+          "lineNumber": 145
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "otelmcp.WithClientTracing",
+          "lineNumber": 145
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "tracer.Start",
+          "lineNumber": 147
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "t.Context",
+          "lineNumber": 147
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "parentSpan.End",
+          "lineNumber": 148
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "c.CallTool",
+          "lineNumber": 152
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "require.NoError",
+          "lineNumber": 153
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "require.NotNil",
+          "lineNumber": 155
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "require.NoError",
+          "lineNumber": 157
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "json.Unmarshal",
+          "lineNumber": 157
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "require.True",
+          "lineNumber": 160
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "require.NoError",
+          "lineNumber": 162
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "json.Unmarshal",
+          "lineNumber": 162
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "require.True",
+          "lineNumber": 164
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "assert.NotEmpty",
+          "lineNumber": 166
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "assert.Equal",
+          "lineNumber": 167
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "parentSpan.SpanContext().TraceID().String",
+          "lineNumber": 167
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "parentSpan.SpanContext().TraceID",
+          "lineNumber": 167
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "parentSpan.SpanContext",
+          "lineNumber": 167
+        },
+        {
+          "caller": "TestClientMetaPropagator_CallToolInjectsMeta",
+          "callee": "traceIDFromTraceparent",
+          "lineNumber": 167
+        },
+        {
+          "caller": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+          "callee": "newTestTracer",
+          "lineNumber": 173
+        },
+        {
+          "caller": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+          "callee": "server.NewMCPServer",
+          "lineNumber": 174
+        },
+        {
+          "caller": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+          "callee": "srv.AddTool",
+          "lineNumber": 175
+        },
+        {
+          "caller": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+          "callee": "mcp.NewToolResultText",
+          "lineNumber": 176
+        },
+        {
+          "caller": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+          "callee": "startTracedClient",
+          "lineNumber": 180
+        },
+        {
+          "caller": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+          "callee": "otelmcp.WithClientTracing",
+          "lineNumber": 180
+        },
+        {
+          "caller": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+          "callee": "c.CallTool",
+          "lineNumber": 184
+        },
+        {
+          "caller": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+          "callee": "t.Context",
+          "lineNumber": 184
+        },
+        {
+          "caller": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+          "callee": "require.NoError",
+          "lineNumber": 185
+        },
+        {
+          "caller": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+          "callee": "require.NoError",
+          "lineNumber": 189
+        },
+        {
+          "caller": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+          "callee": "json.Unmarshal",
+          "lineNumber": 189
+        },
+        {
+          "caller": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+          "callee": "require.NoError",
+          "lineNumber": 192
+        },
+        {
+          "caller": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+          "callee": "json.Unmarshal",
+          "lineNumber": 192
+        },
+        {
+          "caller": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+          "callee": "assert.Empty",
+          "lineNumber": 193
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "newTestTracer",
+          "lineNumber": 201
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "newTestTracer",
+          "lineNumber": 202
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "server.NewMCPServer",
+          "lineNumber": 204
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "otelmcp.WithServerTracing",
+          "lineNumber": 204
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "srv.AddTool",
+          "lineNumber": 205
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "mcp.NewToolResultText",
+          "lineNumber": 206
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "dispatchInitialized",
+          "lineNumber": 208
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "clientTracer.Start",
+          "lineNumber": 211
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "t.Context",
+          "lineNumber": 211
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "clientSpan.End",
+          "lineNumber": 212
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "otelmcp.WrapMetaPropagator",
+          "lineNumber": 214
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "p.InjectMeta",
+          "lineNumber": 215
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "require.NotEmpty",
+          "lineNumber": 217
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "spansSince",
+          "lineNumber": 219
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "fmt.Appendf",
+          "lineNumber": 221
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "srv.HandleMessage",
+          "lineNumber": 225
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "t.Context",
+          "lineNumber": 225
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "require.NotNil",
+          "lineNumber": 226
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "since",
+          "lineNumber": 228
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "findSpan",
+          "lineNumber": 229
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "require.NotNil",
+          "lineNumber": 230
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "assert.Equal",
+          "lineNumber": 232
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "clientSpan.SpanContext().TraceID",
+          "lineNumber": 232
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "clientSpan.SpanContext",
+          "lineNumber": 232
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "serverSpan.SpanContext().TraceID",
+          "lineNumber": 232
+        },
+        {
+          "caller": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+          "callee": "serverSpan.SpanContext",
+          "lineNumber": 232
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "newTestTracer",
+          "lineNumber": 239
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "newTestTracer",
+          "lineNumber": 240
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "server.NewMCPServer",
+          "lineNumber": 242
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "otelmcp.WithServerTracing",
+          "lineNumber": 242
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "srv.AddTool",
+          "lineNumber": 243
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "mcp.NewToolResultText",
+          "lineNumber": 244
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "startTracedClient",
+          "lineNumber": 247
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "otelmcp.WithClientTracing",
+          "lineNumber": 247
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "spansSince",
+          "lineNumber": 248
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "clientTracer.Start",
+          "lineNumber": 250
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "t.Context",
+          "lineNumber": 250
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "trace.WithSpanKind",
+          "lineNumber": 250
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "parentSpan.End",
+          "lineNumber": 251
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "c.CallTool",
+          "lineNumber": 255
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "require.NoError",
+          "lineNumber": 256
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "since",
+          "lineNumber": 258
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "findSpan",
+          "lineNumber": 259
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "require.NotNil",
+          "lineNumber": 260
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "assert.Equal",
+          "lineNumber": 262
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "parentSpan.SpanContext().TraceID",
+          "lineNumber": 262
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "parentSpan.SpanContext",
+          "lineNumber": 262
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "serverSpan.SpanContext().TraceID",
+          "lineNumber": 262
+        },
+        {
+          "caller": "TestServerMetaPropagator_RoundTrip",
+          "callee": "serverSpan.SpanContext",
+          "lineNumber": 262
+        },
+        {
+          "caller": "traceIDFromTraceparent",
+          "callee": "t.Helper",
+          "lineNumber": 268
+        },
+        {
+          "caller": "traceIDFromTraceparent",
+          "callee": "splitTraceparent",
+          "lineNumber": 270
+        },
+        {
+          "caller": "traceIDFromTraceparent",
+          "callee": "require.Len",
+          "lineNumber": 271
+        },
+        {
+          "caller": "splitTraceparent",
+          "callee": "len",
+          "lineNumber": 278
+        },
+        {
+          "caller": "splitTraceparent",
+          "callee": "append",
+          "lineNumber": 280
+        },
+        {
+          "caller": "splitTraceparent",
+          "callee": "append",
+          "lineNumber": 284
+        },
+        {
+          "caller": "TestMetaPropagator_InjectWithoutSpanLeavesNilMeta",
+          "callee": "otelmcp.WrapMetaPropagator",
+          "lineNumber": 293
+        },
+        {
+          "caller": "TestMetaPropagator_InjectWithoutSpanLeavesNilMeta",
+          "callee": "assert.Nil",
+          "lineNumber": 295
+        },
+        {
+          "caller": "TestMetaPropagator_InjectWithoutSpanLeavesNilMeta",
+          "callee": "p.InjectMeta",
+          "lineNumber": 295
+        },
+        {
+          "caller": "TestMetaPropagator_InjectWithoutSpanLeavesNilMeta",
+          "callee": "t.Context",
+          "lineNumber": 295
+        },
+        {
+          "caller": "TestMetaPropagator_InjectWithoutSpanLeavesNilMeta",
+          "callee": "assert.Same",
+          "lineNumber": 299
+        },
+        {
+          "caller": "TestMetaPropagator_InjectWithoutSpanLeavesNilMeta",
+          "callee": "p.InjectMeta",
+          "lineNumber": 299
+        },
+        {
+          "caller": "TestMetaPropagator_InjectWithoutSpanLeavesNilMeta",
+          "callee": "t.Context",
+          "lineNumber": 299
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 9,
+        "functionCount": 12,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "otel/options.go",
+      "language": "go",
+      "fileCategory": "code",
+      "totalLines": 75,
+      "nonEmptyLines": 67,
+      "functions": [
+        {
+          "name": "WithServerTracing",
+          "startLine": 13,
+          "endLine": 22,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "WithServerTracingPropagator",
+          "startLine": 26,
+          "endLine": 35,
+          "params": [
+            "t",
+            "p"
+          ]
+        },
+        {
+          "name": "WithServerMetaPropagator",
+          "startLine": 39,
+          "endLine": 42,
+          "params": [
+            "p"
+          ]
+        },
+        {
+          "name": "WithClientTracing",
+          "startLine": 46,
+          "endLine": 55,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "WithClientTracingPropagator",
+          "startLine": 59,
+          "endLine": 68,
+          "params": [
+            "t",
+            "p"
+          ]
+        },
+        {
+          "name": "WithClientMetaPropagator",
+          "startLine": 72,
+          "endLine": 75,
+          "params": [
+            "p"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "WithServerTracing",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "WithServerTracingPropagator",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "WithServerMetaPropagator",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "WithClientTracing",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "WithClientTracingPropagator",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "WithClientMetaPropagator",
+          "line": 72,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "WithServerTracing",
+          "callee": "NewTracer",
+          "lineNumber": 14
+        },
+        {
+          "caller": "WithServerTracing",
+          "callee": "NewPropagator",
+          "lineNumber": 15
+        },
+        {
+          "caller": "WithServerTracing",
+          "callee": "NewMetaPropagator",
+          "lineNumber": 16
+        },
+        {
+          "caller": "WithServerTracing",
+          "callee": "server.WithTracer(tracer)",
+          "lineNumber": 18
+        },
+        {
+          "caller": "WithServerTracing",
+          "callee": "server.WithTracer",
+          "lineNumber": 18
+        },
+        {
+          "caller": "WithServerTracing",
+          "callee": "server.WithPropagator(propagator)",
+          "lineNumber": 19
+        },
+        {
+          "caller": "WithServerTracing",
+          "callee": "server.WithPropagator",
+          "lineNumber": 19
+        },
+        {
+          "caller": "WithServerTracing",
+          "callee": "server.WithMetaPropagator(metaPropagator)",
+          "lineNumber": 20
+        },
+        {
+          "caller": "WithServerTracing",
+          "callee": "server.WithMetaPropagator",
+          "lineNumber": 20
+        },
+        {
+          "caller": "WithServerTracingPropagator",
+          "callee": "NewTracer",
+          "lineNumber": 27
+        },
+        {
+          "caller": "WithServerTracingPropagator",
+          "callee": "WrapPropagator",
+          "lineNumber": 28
+        },
+        {
+          "caller": "WithServerTracingPropagator",
+          "callee": "WrapMetaPropagator",
+          "lineNumber": 29
+        },
+        {
+          "caller": "WithServerTracingPropagator",
+          "callee": "server.WithTracer(tracer)",
+          "lineNumber": 31
+        },
+        {
+          "caller": "WithServerTracingPropagator",
+          "callee": "server.WithTracer",
+          "lineNumber": 31
+        },
+        {
+          "caller": "WithServerTracingPropagator",
+          "callee": "server.WithPropagator(propagator)",
+          "lineNumber": 32
+        },
+        {
+          "caller": "WithServerTracingPropagator",
+          "callee": "server.WithPropagator",
+          "lineNumber": 32
+        },
+        {
+          "caller": "WithServerTracingPropagator",
+          "callee": "server.WithMetaPropagator(metaPropagator)",
+          "lineNumber": 33
+        },
+        {
+          "caller": "WithServerTracingPropagator",
+          "callee": "server.WithMetaPropagator",
+          "lineNumber": 33
+        },
+        {
+          "caller": "WithServerMetaPropagator",
+          "callee": "WrapMetaPropagator",
+          "lineNumber": 40
+        },
+        {
+          "caller": "WithServerMetaPropagator",
+          "callee": "server.WithMetaPropagator",
+          "lineNumber": 41
+        },
+        {
+          "caller": "WithClientTracing",
+          "callee": "NewTracer",
+          "lineNumber": 47
+        },
+        {
+          "caller": "WithClientTracing",
+          "callee": "NewPropagator",
+          "lineNumber": 48
+        },
+        {
+          "caller": "WithClientTracing",
+          "callee": "NewMetaPropagator",
+          "lineNumber": 49
+        },
+        {
+          "caller": "WithClientTracing",
+          "callee": "client.WithTracer(tracer)",
+          "lineNumber": 51
+        },
+        {
+          "caller": "WithClientTracing",
+          "callee": "client.WithTracer",
+          "lineNumber": 51
+        },
+        {
+          "caller": "WithClientTracing",
+          "callee": "client.WithPropagator(propagator)",
+          "lineNumber": 52
+        },
+        {
+          "caller": "WithClientTracing",
+          "callee": "client.WithPropagator",
+          "lineNumber": 52
+        },
+        {
+          "caller": "WithClientTracing",
+          "callee": "client.WithMetaPropagator(metaPropagator)",
+          "lineNumber": 53
+        },
+        {
+          "caller": "WithClientTracing",
+          "callee": "client.WithMetaPropagator",
+          "lineNumber": 53
+        },
+        {
+          "caller": "WithClientTracingPropagator",
+          "callee": "NewTracer",
+          "lineNumber": 60
+        },
+        {
+          "caller": "WithClientTracingPropagator",
+          "callee": "WrapPropagator",
+          "lineNumber": 61
+        },
+        {
+          "caller": "WithClientTracingPropagator",
+          "callee": "WrapMetaPropagator",
+          "lineNumber": 62
+        },
+        {
+          "caller": "WithClientTracingPropagator",
+          "callee": "client.WithTracer(tracer)",
+          "lineNumber": 64
+        },
+        {
+          "caller": "WithClientTracingPropagator",
+          "callee": "client.WithTracer",
+          "lineNumber": 64
+        },
+        {
+          "caller": "WithClientTracingPropagator",
+          "callee": "client.WithPropagator(propagator)",
+          "lineNumber": 65
+        },
+        {
+          "caller": "WithClientTracingPropagator",
+          "callee": "client.WithPropagator",
+          "lineNumber": 65
+        },
+        {
+          "caller": "WithClientTracingPropagator",
+          "callee": "client.WithMetaPropagator(metaPropagator)",
+          "lineNumber": 66
+        },
+        {
+          "caller": "WithClientTracingPropagator",
+          "callee": "client.WithMetaPropagator",
+          "lineNumber": 66
+        },
+        {
+          "caller": "WithClientMetaPropagator",
+          "callee": "WrapMetaPropagator",
+          "lineNumber": 73
+        },
+        {
+          "caller": "WithClientMetaPropagator",
+          "callee": "client.WithMetaPropagator",
+          "lineNumber": 74
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "otel/server_test.go",
+      "language": "go",
+      "fileCategory": "code",
+      "totalLines": 207,
+      "nonEmptyLines": 170,
+      "functions": [
+        {
+          "name": "newTestTracer",
+          "startLine": 26,
+          "endLine": 32,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "spansSince",
+          "startLine": 34,
+          "endLine": 40,
+          "params": [
+            "rec"
+          ]
+        },
+        {
+          "name": "attrValue",
+          "startLine": 42,
+          "endLine": 49,
+          "params": [
+            "span",
+            "key"
+          ]
+        },
+        {
+          "name": "findSpan",
+          "startLine": 51,
+          "endLine": 58,
+          "params": [
+            "spans",
+            "name"
+          ]
+        },
+        {
+          "name": "dispatchInitialized",
+          "startLine": 60,
+          "endLine": 68,
+          "params": [
+            "t",
+            "s"
+          ]
+        },
+        {
+          "name": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "startLine": 70,
+          "endLine": 104,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestServerTracing_ToolsListEmitsServerSpan",
+          "startLine": 106,
+          "endLine": 127,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestServerTracing_InitializeEmitsServerSpan",
+          "startLine": 129,
+          "endLine": 140,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "startLine": 142,
+          "endLine": 165,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "startLine": 167,
+          "endLine": 190,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "TestServerTracing_UnknownMethodMarksParentErrored",
+          "startLine": 192,
+          "endLine": 207,
+          "params": [
+            "t"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "TestServerTracing_ToolsListEmitsServerSpan",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "TestServerTracing_InitializeEmitsServerSpan",
+          "line": 129,
+          "isDefault": false
+        },
+        {
+          "name": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "line": 142,
+          "isDefault": false
+        },
+        {
+          "name": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "line": 167,
+          "isDefault": false
+        },
+        {
+          "name": "TestServerTracing_UnknownMethodMarksParentErrored",
+          "line": 192,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "newTestTracer",
+          "callee": "t.Helper",
+          "lineNumber": 27
+        },
+        {
+          "caller": "newTestTracer",
+          "callee": "tracetest.NewSpanRecorder",
+          "lineNumber": 28
+        },
+        {
+          "caller": "newTestTracer",
+          "callee": "sdktrace.NewTracerProvider",
+          "lineNumber": 29
+        },
+        {
+          "caller": "newTestTracer",
+          "callee": "sdktrace.WithSpanProcessor",
+          "lineNumber": 29
+        },
+        {
+          "caller": "newTestTracer",
+          "callee": "t.Cleanup",
+          "lineNumber": 30
+        },
+        {
+          "caller": "newTestTracer",
+          "callee": "tp.Shutdown",
+          "lineNumber": 30
+        },
+        {
+          "caller": "newTestTracer",
+          "callee": "t.Context",
+          "lineNumber": 30
+        },
+        {
+          "caller": "newTestTracer",
+          "callee": "tp.Tracer",
+          "lineNumber": 31
+        },
+        {
+          "caller": "spansSince",
+          "callee": "len",
+          "lineNumber": 35
+        },
+        {
+          "caller": "spansSince",
+          "callee": "rec.Ended",
+          "lineNumber": 35
+        },
+        {
+          "caller": "spansSince",
+          "callee": "rec.Ended",
+          "lineNumber": 37
+        },
+        {
+          "caller": "attrValue",
+          "callee": "span.Attributes",
+          "lineNumber": 43
+        },
+        {
+          "caller": "attrValue",
+          "callee": "string",
+          "lineNumber": 44
+        },
+        {
+          "caller": "attrValue",
+          "callee": "kv.Value.AsString",
+          "lineNumber": 45
+        },
+        {
+          "caller": "findSpan",
+          "callee": "s.Name",
+          "lineNumber": 53
+        },
+        {
+          "caller": "dispatchInitialized",
+          "callee": "t.Helper",
+          "lineNumber": 61
+        },
+        {
+          "caller": "dispatchInitialized",
+          "callee": "fmt.Appendf",
+          "lineNumber": 62
+        },
+        {
+          "caller": "dispatchInitialized",
+          "callee": "s.HandleMessage",
+          "lineNumber": 66
+        },
+        {
+          "caller": "dispatchInitialized",
+          "callee": "t.Context",
+          "lineNumber": 66
+        },
+        {
+          "caller": "dispatchInitialized",
+          "callee": "require.NotNil",
+          "lineNumber": 67
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "newTestTracer",
+          "lineNumber": 71
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "server.NewMCPServer",
+          "lineNumber": 73
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "otelmcp.WithServerTracing",
+          "lineNumber": 73
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "s.AddTool",
+          "lineNumber": 74
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "mcp.NewToolResultText",
+          "lineNumber": 75
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "dispatchInitialized",
+          "lineNumber": 77
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "spansSince",
+          "lineNumber": 78
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "s.HandleMessage",
+          "lineNumber": 81
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "t.Context",
+          "lineNumber": 81
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "require.NotNil",
+          "lineNumber": 82
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "since",
+          "lineNumber": 84
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "require.Len",
+          "lineNumber": 85
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "findSpan",
+          "lineNumber": 87
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "require.NotNil",
+          "lineNumber": 88
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "assert.Equal",
+          "lineNumber": 89
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "parent.SpanKind",
+          "lineNumber": 89
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "attrValue",
+          "lineNumber": 90
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "assert.True",
+          "lineNumber": 90
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "assert.Equal",
+          "lineNumber": 91
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "attrValue",
+          "lineNumber": 93
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "assert.True",
+          "lineNumber": 93
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "assert.Equal",
+          "lineNumber": 94
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "findSpan",
+          "lineNumber": 97
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "require.NotNil",
+          "lineNumber": 98
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "assert.Equal",
+          "lineNumber": 99
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "child.SpanKind",
+          "lineNumber": 99
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "assert.Equal",
+          "lineNumber": 100
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "parent.SpanContext().SpanID",
+          "lineNumber": 100
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "parent.SpanContext",
+          "lineNumber": 100
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "child.Parent().SpanID",
+          "lineNumber": 100
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "child.Parent",
+          "lineNumber": 100
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "attrValue",
+          "lineNumber": 101
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "assert.True",
+          "lineNumber": 101
+        },
+        {
+          "caller": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+          "callee": "assert.Equal",
+          "lineNumber": 102
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "newTestTracer",
+          "lineNumber": 107
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "server.NewMCPServer",
+          "lineNumber": 109
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "otelmcp.WithServerTracing",
+          "lineNumber": 110
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "server.WithToolCapabilities",
+          "lineNumber": 111
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "s.AddTool",
+          "lineNumber": 113
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "mcp.NewToolResultText",
+          "lineNumber": 114
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "dispatchInitialized",
+          "lineNumber": 116
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "spansSince",
+          "lineNumber": 117
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "s.HandleMessage",
+          "lineNumber": 120
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "t.Context",
+          "lineNumber": 120
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "require.NotNil",
+          "lineNumber": 121
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "since",
+          "lineNumber": 123
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "require.Len",
+          "lineNumber": 124
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "assert.Equal",
+          "lineNumber": 125
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "spans[0].Name",
+          "lineNumber": 125
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "assert.Equal",
+          "lineNumber": 126
+        },
+        {
+          "caller": "TestServerTracing_ToolsListEmitsServerSpan",
+          "callee": "spans[0].SpanKind",
+          "lineNumber": 126
+        },
+        {
+          "caller": "TestServerTracing_InitializeEmitsServerSpan",
+          "callee": "newTestTracer",
+          "lineNumber": 130
+        },
+        {
+          "caller": "TestServerTracing_InitializeEmitsServerSpan",
+          "callee": "server.NewMCPServer",
+          "lineNumber": 132
+        },
+        {
+          "caller": "TestServerTracing_InitializeEmitsServerSpan",
+          "callee": "otelmcp.WithServerTracing",
+          "lineNumber": 132
+        },
+        {
+          "caller": "TestServerTracing_InitializeEmitsServerSpan",
+          "callee": "dispatchInitialized",
+          "lineNumber": 134
+        },
+        {
+          "caller": "TestServerTracing_InitializeEmitsServerSpan",
+          "callee": "rec.Ended",
+          "lineNumber": 136
+        },
+        {
+          "caller": "TestServerTracing_InitializeEmitsServerSpan",
+          "callee": "require.Len",
+          "lineNumber": 137
+        },
+        {
+          "caller": "TestServerTracing_InitializeEmitsServerSpan",
+          "callee": "assert.Equal",
+          "lineNumber": 138
+        },
+        {
+          "caller": "TestServerTracing_InitializeEmitsServerSpan",
+          "callee": "spans[0].Name",
+          "lineNumber": 138
+        },
+        {
+          "caller": "TestServerTracing_InitializeEmitsServerSpan",
+          "callee": "assert.Equal",
+          "lineNumber": 139
+        },
+        {
+          "caller": "TestServerTracing_InitializeEmitsServerSpan",
+          "callee": "spans[0].SpanKind",
+          "lineNumber": 139
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "newTestTracer",
+          "lineNumber": 143
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "server.NewMCPServer",
+          "lineNumber": 145
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "otelmcp.WithServerTracing",
+          "lineNumber": 145
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "s.AddTool",
+          "lineNumber": 146
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "errors.New",
+          "lineNumber": 147
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "dispatchInitialized",
+          "lineNumber": 149
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "spansSince",
+          "lineNumber": 150
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "s.HandleMessage",
+          "lineNumber": 153
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "t.Context",
+          "lineNumber": 153
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "since",
+          "lineNumber": 155
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "findSpan",
+          "lineNumber": 156
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "require.NotNil",
+          "lineNumber": 157
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "assert.Equal",
+          "lineNumber": 158
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "child.Status",
+          "lineNumber": 158
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "findSpan",
+          "lineNumber": 161
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "require.NotNil",
+          "lineNumber": 162
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "assert.Equal",
+          "lineNumber": 163
+        },
+        {
+          "caller": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+          "callee": "parent.Status",
+          "lineNumber": 163
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "newTestTracer",
+          "lineNumber": 168
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "server.NewMCPServer",
+          "lineNumber": 170
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "otelmcp.WithServerTracing",
+          "lineNumber": 170
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "s.AddTool",
+          "lineNumber": 171
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "mcp.NewToolResultError",
+          "lineNumber": 172
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "dispatchInitialized",
+          "lineNumber": 174
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "spansSince",
+          "lineNumber": 175
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "s.HandleMessage",
+          "lineNumber": 178
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "t.Context",
+          "lineNumber": 178
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "since",
+          "lineNumber": 180
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "findSpan",
+          "lineNumber": 181
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "require.NotNil",
+          "lineNumber": 182
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "assert.Equal",
+          "lineNumber": 183
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "child.Status",
+          "lineNumber": 183
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "findSpan",
+          "lineNumber": 186
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "require.NotNil",
+          "lineNumber": 187
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "assert.Equal",
+          "lineNumber": 188
+        },
+        {
+          "caller": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+          "callee": "parent.Status",
+          "lineNumber": 188
+        },
+        {
+          "caller": "TestServerTracing_UnknownMethodMarksParentErrored",
+          "callee": "newTestTracer",
+          "lineNumber": 193
+        },
+        {
+          "caller": "TestServerTracing_UnknownMethodMarksParentErrored",
+          "callee": "server.NewMCPServer",
+          "lineNumber": 195
+        },
+        {
+          "caller": "TestServerTracing_UnknownMethodMarksParentErrored",
+          "callee": "otelmcp.WithServerTracing",
+          "lineNumber": 195
+        },
+        {
+          "caller": "TestServerTracing_UnknownMethodMarksParentErrored",
+          "callee": "dispatchInitialized",
+          "lineNumber": 196
+        },
+        {
+          "caller": "TestServerTracing_UnknownMethodMarksParentErrored",
+          "callee": "spansSince",
+          "lineNumber": 197
+        },
+        {
+          "caller": "TestServerTracing_UnknownMethodMarksParentErrored",
+          "callee": "s.HandleMessage",
+          "lineNumber": 200
+        },
+        {
+          "caller": "TestServerTracing_UnknownMethodMarksParentErrored",
+          "callee": "t.Context",
+          "lineNumber": 200
+        },
+        {
+          "caller": "TestServerTracing_UnknownMethodMarksParentErrored",
+          "callee": "require.NotNil",
+          "lineNumber": 201
+        },
+        {
+          "caller": "TestServerTracing_UnknownMethodMarksParentErrored",
+          "callee": "since",
+          "lineNumber": 203
+        },
+        {
+          "caller": "TestServerTracing_UnknownMethodMarksParentErrored",
+          "callee": "require.Len",
+          "lineNumber": 204
+        },
+        {
+          "caller": "TestServerTracing_UnknownMethodMarksParentErrored",
+          "callee": "assert.Equal",
+          "lineNumber": 205
+        },
+        {
+          "caller": "TestServerTracing_UnknownMethodMarksParentErrored",
+          "callee": "spans[0].Name",
+          "lineNumber": 205
+        },
+        {
+          "caller": "TestServerTracing_UnknownMethodMarksParentErrored",
+          "callee": "assert.Equal",
+          "lineNumber": 206
+        },
+        {
+          "caller": "TestServerTracing_UnknownMethodMarksParentErrored",
+          "callee": "spans[0].Status",
+          "lineNumber": 206
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 6,
+        "functionCount": 11,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "otel/tracer.go",
+      "language": "go",
+      "fileCategory": "code",
+      "totalLines": 113,
+      "nonEmptyLines": 94,
+      "functions": [
+        {
+          "name": "NewTracer",
+          "startLine": 21,
+          "endLine": 26,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "NewPropagator",
+          "startLine": 29,
+          "endLine": 31,
+          "params": []
+        },
+        {
+          "name": "WrapPropagator",
+          "startLine": 34,
+          "endLine": 39,
+          "params": [
+            "p"
+          ]
+        },
+        {
+          "name": "Start",
+          "startLine": 45,
+          "endLine": 53,
+          "params": [
+            "ctx",
+            "name",
+            "kind"
+          ]
+        },
+        {
+          "name": "SetAttributes",
+          "startLine": 59,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "RecordError",
+          "startLine": 63,
+          "endLine": 63,
+          "params": [
+            "err"
+          ]
+        },
+        {
+          "name": "SetStatus",
+          "startLine": 65,
+          "endLine": 67,
+          "params": [
+            "code",
+            "description"
+          ]
+        },
+        {
+          "name": "End",
+          "startLine": 69,
+          "endLine": 69,
+          "params": []
+        },
+        {
+          "name": "Inject",
+          "startLine": 75,
+          "endLine": 77,
+          "params": [
+            "ctx",
+            "headers"
+          ]
+        },
+        {
+          "name": "Extract",
+          "startLine": 79,
+          "endLine": 81,
+          "params": [
+            "ctx",
+            "headers"
+          ]
+        },
+        {
+          "name": "toOTelKind",
+          "startLine": 83,
+          "endLine": 94,
+          "params": [
+            "k"
+          ]
+        },
+        {
+          "name": "toOTelStatus",
+          "startLine": 96,
+          "endLine": 105,
+          "params": [
+            "s"
+          ]
+        },
+        {
+          "name": "toOTelAttrs",
+          "startLine": 107,
+          "endLine": 113,
+          "params": [
+            "attrs"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "otelTracer",
+          "startLine": 41,
+          "endLine": 43,
+          "methods": [
+            "Start"
+          ],
+          "properties": [
+            "tracer"
+          ]
+        },
+        {
+          "name": "otelSpan",
+          "startLine": 55,
+          "endLine": 57,
+          "methods": [
+            "SetAttributes",
+            "RecordError",
+            "SetStatus",
+            "End"
+          ],
+          "properties": [
+            "span"
+          ]
+        },
+        {
+          "name": "otelPropagator",
+          "startLine": 71,
+          "endLine": 73,
+          "methods": [
+            "Inject",
+            "Extract"
+          ],
+          "properties": [
+            "p"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "NewTracer",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "NewPropagator",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "WrapPropagator",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "Start",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "SetAttributes",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "RecordError",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "SetStatus",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "End",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "Inject",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "Extract",
+          "line": 79,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "NewTracer",
+          "callee": "tracing.NoopTracer",
+          "lineNumber": 23
+        },
+        {
+          "caller": "NewPropagator",
+          "callee": "WrapPropagator",
+          "lineNumber": 30
+        },
+        {
+          "caller": "WrapPropagator",
+          "callee": "tracing.NoopPropagator",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Start",
+          "callee": "trace.WithSpanKind",
+          "lineNumber": 46
+        },
+        {
+          "caller": "Start",
+          "callee": "toOTelKind",
+          "lineNumber": 46
+        },
+        {
+          "caller": "Start",
+          "callee": "len",
+          "lineNumber": 47
+        },
+        {
+          "caller": "Start",
+          "callee": "append",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Start",
+          "callee": "trace.WithAttributes",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Start",
+          "callee": "toOTelAttrs",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Start",
+          "callee": "o.tracer.Start",
+          "lineNumber": 50
+        },
+        {
+          "caller": "Start",
+          "callee": "tracing.ContextWithSpan",
+          "lineNumber": 52
+        },
+        {
+          "caller": "SetAttributes",
+          "callee": "s.span.SetAttributes",
+          "lineNumber": 60
+        },
+        {
+          "caller": "SetAttributes",
+          "callee": "toOTelAttrs",
+          "lineNumber": 60
+        },
+        {
+          "caller": "RecordError",
+          "callee": "s.span.RecordError",
+          "lineNumber": 63
+        },
+        {
+          "caller": "SetStatus",
+          "callee": "s.span.SetStatus",
+          "lineNumber": 66
+        },
+        {
+          "caller": "SetStatus",
+          "callee": "toOTelStatus",
+          "lineNumber": 66
+        },
+        {
+          "caller": "End",
+          "callee": "s.span.End",
+          "lineNumber": 69
+        },
+        {
+          "caller": "Inject",
+          "callee": "o.p.Inject",
+          "lineNumber": 76
+        },
+        {
+          "caller": "Inject",
+          "callee": "propagation.HeaderCarrier",
+          "lineNumber": 76
+        },
+        {
+          "caller": "Extract",
+          "callee": "o.p.Extract",
+          "lineNumber": 80
+        },
+        {
+          "caller": "Extract",
+          "callee": "propagation.HeaderCarrier",
+          "lineNumber": 80
+        },
+        {
+          "caller": "toOTelAttrs",
+          "callee": "make",
+          "lineNumber": 108
+        },
+        {
+          "caller": "toOTelAttrs",
+          "callee": "len",
+          "lineNumber": 108
+        },
+        {
+          "caller": "toOTelAttrs",
+          "callee": "attribute.String",
+          "lineNumber": 110
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 13,
+        "classCount": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "nodes": [
+    {
+      "id": "config:.golangci.yml",
+      "type": "config",
+      "name": ".golangci.yml",
+      "filePath": ".golangci.yml",
+      "summary": "集中声明 Go 项目的静态检查规则，供本地开发和持续集成调用。",
+      "tags": [
+        "静态检查",
+        "go",
+        "项目配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "AGENTS.md",
+      "summary": "记录仓库的测试、静态检查和代码生成命令，以及 Go 接口、错误、测试和并发约定。",
+      "tags": [
+        "贡献指南",
+        "go",
+        "项目维护"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:CODE_OF_CONDUCT.md",
+      "type": "document",
+      "name": "CODE_OF_CONDUCT.md",
+      "filePath": "CODE_OF_CONDUCT.md",
+      "summary": "规定社区成员的行为标准、适用范围和违规处理流程。",
+      "tags": [
+        "社区治理",
+        "贡献指南",
+        "行为准则"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:CONTRIBUTING.md",
+      "type": "document",
+      "name": "CONTRIBUTING.md",
+      "filePath": "CONTRIBUTING.md",
+      "summary": "介绍开发环境准备、贡献工作流和版本发布要求。",
+      "tags": [
+        "贡献指南",
+        "项目维护",
+        "版本发布"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "介绍 mcp-go 的核心能力和安装方法，从示例演示服务端、客户端、工具、资源和提示词的用法。",
+      "tags": [
+        "项目导览",
+        "go",
+        "mcp"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:SECURITY.md",
+      "type": "document",
+      "name": "SECURITY.md",
+      "filePath": "SECURITY.md",
+      "summary": "说明如何向项目团队报告安全问题。",
+      "tags": [
+        "安全治理",
+        "问题反馈",
+        "项目维护"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:go.mod",
+      "type": "config",
+      "name": "go.mod",
+      "filePath": "go.mod",
+      "summary": "声明核心 Go 模块、最低 Go 工具链版本以及 JSON Schema、URI 模板和测试等依赖。",
+      "tags": [
+        "go模块",
+        "依赖管理",
+        "构建"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:go.sum",
+      "type": "config",
+      "name": "go.sum",
+      "filePath": "go.sum",
+      "summary": "记录核心 Go 模块依赖及其清单的校验和，用于下载时的完整性验证。",
+      "tags": [
+        "go模块",
+        "依赖管理",
+        "完整性"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:README.md",
+      "target": "file:server/server.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:client/client.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:mcp/tools.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:mcp/resources.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:mcp/prompts.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:go.sum",
+      "target": "config:go.mod",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

@@ -1,0 +1,2218 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-22T06:42:30.325Z",
+  "files": {
+    "client/cancel_test.go": {
+      "overview": "验证取消相关行为。覆盖 Client_CancelsAbandonedRequestOverStdio、Client_CancellationNotificationOnTheWire、Client_CancellationDoesNotBlockTheCaller 等用例。",
+      "sections": []
+    },
+    "client/http_test.go": {
+      "overview": "验证HTTP相关行为。覆盖 HTTPClient、HTTPClientDoesNotForwardServerReceivedHeaders、StreamableHTTP_ReinitializeOnTheModernProtocol 等用例。",
+      "sections": []
+    },
+    "client/inprocess.go": {
+      "overview": "创建连接本地 MCPServer 的客户端，并将选项传给进程内传输。",
+      "sections": []
+    },
+    "client/inprocess_elicitation_test.go": {
+      "overview": "验证进程内 用户采集相关行为。覆盖 InProcessURLElicitationRequiredError、InProcessElicitation 等用例。",
+      "sections": []
+    },
+    "client/inprocess_options_test.go": {
+      "overview": "验证进程内 选项相关行为。覆盖 NewInProcessClientWithOptions_WiresAllHostHandlers 等用例。",
+      "sections": []
+    },
+    "client/inprocess_sampling_test.go": {
+      "overview": "验证进程内 采样相关行为。覆盖 InProcessSampling 等用例。",
+      "sections": []
+    },
+    "client/inprocess_test.go": {
+      "overview": "验证进程内相关行为。覆盖 InProcessMCPClient、InProcessMCPClient_Notifications、InProcessMCPClient_SubscriptionFilter 等用例。",
+      "sections": []
+    },
+    "client/iter_test.go": {
+      "overview": "验证iter相关行为。覆盖 Client_IterTools、Client_IterResources、Client_IterResourceTemplates 等用例。",
+      "sections": []
+    },
+    "client/sse_test.go": {
+      "overview": "验证SSE相关行为。覆盖 SSEMCPClient 等用例。",
+      "sections": []
+    },
+    "client/tracing_test.go": {
+      "overview": "验证追踪相关行为。覆盖 WithTracer_NilFallsBackToNoop、WithPropagator_NilFallsBackToNoop、WithMetaPropagator_NilFallsBackToNoop 等用例。",
+      "sections": []
+    },
+    "client/transport/idempotent_all_transports_test.go": {
+      "overview": "验证idempotent all transports相关行为。覆盖 SSE_StartIdempotency、StreamableHTTP_StartIdempotency、InProcessTransport_StartIdempotency 等用例。",
+      "sections": []
+    },
+    "client/transport/inprocess.go": {
+      "overview": "在同一进程内连接客户端与服务器，实现请求、通知及会话生命周期。",
+      "sections": []
+    },
+    "client/transport/inprocess_notification_session_test.go": {
+      "overview": "验证进程内 通知 会话相关行为。覆盖 InProcessNotificationsCarryClientSession 等用例。",
+      "sections": []
+    },
+    "client/transport/inprocess_registration_hook_close_test.go": {
+      "overview": "验证进程内 注册 钩子 close相关行为。覆盖 InProcessRegistrationHookCanCloseTransport、ConcurrentInProcessStartsWaitForRegistration 等用例。",
+      "sections": []
+    },
+    "e2e/resumability_http_test.go": {
+      "overview": "验证断线恢复 HTTP相关行为。覆盖 Resumability_NoEventStoreNoIDs、Resumability_ListeningStreamEventIDs、Resumability_ListeningStreamResume 等用例。",
+      "sections": []
+    },
+    "e2e/scoped_request_resumability_test.go": {
+      "overview": "验证请求范围 请求 断线恢复相关行为。覆盖 Resumability_RequestScopedElicitationCaptured 等用例。",
+      "sections": []
+    },
+    "e2e/subscription_shutdown_test.go": {
+      "overview": "验证订阅 关闭相关行为。覆盖 E2E_HTTPSubscriptionGracefulClose 等用例。",
+      "sections": []
+    },
+    "examples/conformance/main.go": {
+      "overview": "演示如何MCP 协议一致性测试服务。",
+      "sections": []
+    },
+    "examples/custom_context/main.go": {
+      "overview": "演示如何在服务器处理器中使用自定义请求上下文。",
+      "sections": []
+    },
+    "examples/dynamic_path/main.go": {
+      "overview": "演示如何动态配置 HTTP 路径。",
+      "sections": []
+    },
+    "examples/elicitation/main.go": {
+      "overview": "演示如何在 MCP 调用中发起用户信息采集。",
+      "sections": []
+    },
+    "examples/everything/main.go": {
+      "overview": "演示如何在同一服务器注册多种 MCP 功能。",
+      "sections": []
+    },
+    "examples/in_process/main.go": {
+      "overview": "这个示例在同一个 Go 进程中运行 MCP 服务端与客户端。它按注册、启动、初始化、列出工具、调用工具的顺序走过一条完整路径。",
+      "sections": [
+        {
+          "title": "注册示例工具",
+          "explanation": "处理器接收上下文和 `CallToolRequest`，返回值为固定文本。构造出的 `Tool` 提供名称和描述，`AddTool` 再把描述与执行函数绑定在同一个注册项中。",
+          "lineRange": [
+            14,
+            35
+          ],
+          "tourOrder": 1
+        },
+        {
+          "title": "启动并初始化客户端",
+          "explanation": "使用 `NewInProcessClient` 直接连接服务端对象，给传输启动设置五秒超时。随后用原始上下文调用 `Initialize`，并保存返回的服务端信息。",
+          "lineRange": [
+            37,
+            76
+          ],
+          "tourOrder": 1
+        },
+        {
+          "title": "列出并执行工具",
+          "explanation": "先通过 `ListTools` 查看已注册的工具，再把 `dummy_tool` 填入调用请求。最终打印的是工具结果的 `Content`，它与构造时声明的工具描述对应不同的阶段。",
+          "lineRange": [
+            78,
+            100
+          ],
+          "tourOrder": 1
+        }
+      ]
+    },
+    "examples/inprocess_sampling/main.go": {
+      "overview": "演示如何通过进程内传输处理模型采样请求。",
+      "sections": []
+    },
+    "examples/roots_http_server/main.go": {
+      "overview": "演示如何通过 HTTP 请求客户端根目录。",
+      "sections": []
+    },
+    "examples/roots_server/main.go": {
+      "overview": "演示如何由服务器查询客户端的根目录。",
+      "sections": []
+    },
+    "examples/sampling_http_server/main.go": {
+      "overview": "演示如何通过 HTTP 由服务端发起模型采样。",
+      "sections": []
+    },
+    "examples/sampling_server/main.go": {
+      "overview": "演示如何在工具处理中调用客户端的采样能力。",
+      "sections": []
+    },
+    "examples/structured_input_and_output/main.go": {
+      "overview": "演示如何校验结构化工具输入与输出。",
+      "sections": []
+    },
+    "examples/task_tool/main.go": {
+      "overview": "演示如何以任务形式执行工具并获取后续结果。",
+      "sections": []
+    },
+    "examples/typed_tools/main.go": {
+      "overview": "演示如何用 Go 类型定义工具输入与输出。",
+      "sections": []
+    },
+    "mcp/error_pointer_classification_test.go": {
+      "overview": "验证错误 指针 分类相关行为。覆盖 ErrorClassificationRecognizesPointers 等用例。",
+      "sections": []
+    },
+    "mcp/errors_additional_test.go": {
+      "overview": "验证错误 补充场景相关行为。覆盖 UnsupportedProtocolVersionError_Is、IsUnsupportedProtocolVersion、JSONRPCErrorDetails_AsError_EmptyMessage 等用例。",
+      "sections": []
+    },
+    "mcp/headers_test.go": {
+      "overview": "验证标头相关行为。覆盖 EncodeDecodeHeaderValue、EncodeHeaderValueRejectsNonPrimitives、DecodeHeaderValueRejectsBadBase64 等用例。",
+      "sections": []
+    },
+    "mcp/meta_map_ownership_test.go": {
+      "overview": "验证元数据 映射 所有权相关行为。覆盖 NewMetaFromMapDoesNotMutateInput 等用例。",
+      "sections": []
+    },
+    "client/discovery_validation_test.go": {
+      "overview": "验证发现协商 校验相关行为。覆盖 DiscoverRejectsMalformedResults、InitializeFallsBackOnMalformedFirstDiscovery、InitializeDoesNotFallBackOnMalformedModernRetry 等用例。",
+      "sections": []
+    },
+    "client/elicitation.go": {
+      "overview": "定义客户端采集请求处理器和处理结果。",
+      "sections": []
+    },
+    "client/interface.go": {
+      "overview": "定义 MCPClient 接口，统一工具、资源、提示词和会话操作。",
+      "sections": []
+    },
+    "client/invalid_tool_handler_test.go": {
+      "overview": "验证无效 工具 处理器相关行为。覆盖 InvalidToolHandlerReportsEveryExcludedTool、InvalidToolHandlerReportsEveryPage、InvalidToolHandlerNotCalledForLegacyConnections 等用例。",
+      "sections": []
+    },
+    "client/iter.go": {
+      "overview": "提供工具、资源、资源模板、提示词和任务的分页迭代接口。",
+      "sections": []
+    },
+    "client/mrtr.go": {
+      "overview": "协调多轮请求，按需处理服务端提供的采集、采样和根目录查询，并回传输入。",
+      "sections": []
+    },
+    "client/notification_handlers_test.go": {
+      "overview": "验证通知 handlers相关行为。覆盖 Client_NotificationHandlerCanRegisterHandler、Client_ConcurrentNotificationRegistrationAndDispatch 等用例。",
+      "sections": []
+    },
+    "client/review_regression_test.go": {
+      "overview": "验证审查 回归相关行为。覆盖 FulfillInputRequestRejectsNilHandlerResult、SetLevelIsSafeForConcurrentUse、ListenCleanupDoesNotClobberASupersedingCall 等用例。",
+      "sections": []
+    },
+    "client/roots.go": {
+      "overview": "约定客户端如何响应服务端发起的根目录列表查询。",
+      "sections": []
+    },
+    "client/sampling.go": {
+      "overview": "约定客户端如何处理服务端发起的模型采样请求。",
+      "sections": []
+    },
+    "client/schema_type_array_test.go": {
+      "overview": "验证模式 类型 数组相关行为。覆盖 ListToolsSchemaTypeArrayHTTP 等用例。",
+      "sections": []
+    },
+    "client/subscriptions.go": {
+      "overview": "跟踪客户端资源订阅与取消订阅并分发资源更新。",
+      "sections": []
+    },
+    "client/task_wait.go": {
+      "overview": "轮询任务状态，等待任务完成或上下文取消。",
+      "sections": []
+    },
+    "client/tracing.go": {
+      "overview": "从客户端请求中创建追踪跨度，并传播上下文。",
+      "sections": []
+    },
+    "examples/filesystem_stdio_client/main.go": {
+      "overview": "演示如何启动文件系统 MCP 子进程并进行工具调用。",
+      "sections": []
+    },
+    "examples/oauth_client/main.go": {
+      "overview": "演示如何通过 OAuth 授权连接 MCP 服务器。",
+      "sections": []
+    },
+    "mcp/array_fallback_test.go": {
+      "overview": "验证数组 回退相关行为。覆盖 SchemaTagFallbackPreservesArrayLength 等用例。",
+      "sections": []
+    },
+    "mcp/elicitation_validation_test.go": {
+      "overview": "验证用户采集 校验相关行为。覆盖 ElicitationParams_Validate 等用例。",
+      "sections": []
+    },
+    "mcp/empty_result_arrays_test.go": {
+      "overview": "验证空集合 结果 数组相关行为。覆盖 ResultParsersPreserveExplicitEmptyArrays 等用例。",
+      "sections": []
+    },
+    "mcp/error_unmarshal_test.go": {
+      "overview": "验证错误 解码相关行为。覆盖 JSONRPCErrorDetails_UnmarshalJSON、JSONRPCResponse_StringError 等用例。",
+      "sections": []
+    },
+    "mcp/headers.go": {
+      "overview": "定义 MCP 标准 HTTP 标头及工具参数到标头的映射与校验。",
+      "sections": []
+    },
+    "mcp/meta.go": {
+      "overview": "表示 MCP 请求和响应中的元数据，支持已知字段与扩展字段。",
+      "sections": []
+    },
+    "mcp/notification_params_reuse_test.go": {
+      "overview": "验证通知 参数 复用相关行为。覆盖 NotificationParamsReuseDropsOmittedFields、NotificationParamsReuseKeepsEarlierMaps、NotificationParamsNullAndMalformedKeepValue 等用例。",
+      "sections": []
+    },
+    "mcp/output_schema_replacement_test.go": {
+      "overview": "验证输出 模式 替换相关行为。覆盖 OutputSchemaOptionsReplacePreviousSchema 等用例。",
+      "sections": []
+    },
+    "mcp/request_id_number.go": {
+      "overview": "以十进制字符串规范化 JSON-RPC 数字请求 ID，避免浮点舍入引发匹配错误。",
+      "sections": []
+    },
+    "mcp/resources.go": {
+      "overview": "定义资源、资源模板和内容，提供 URI 模板及响应构造。",
+      "sections": []
+    },
+    "mcp/result.go": {
+      "overview": "封装结果的公共字段和元数据，支持通用结果解析。",
+      "sections": []
+    },
+    "mcp/schema_cache_identity_test.go": {
+      "overview": "验证模式 缓存 标识相关行为。覆盖 CachedSchemas_DistinguishPackagesWithTheSameName、CachedSchemas_OldKeysAreRegenerated 等用例。",
+      "sections": []
+    },
+    "mcp/schema_cache_test.go": {
+      "overview": "验证模式 缓存相关行为。覆盖 SchemaCache_WarmAndGet、SchemaCache_WarmRaw_CopiesInput、SchemaCache_NilSafe 等用例。",
+      "sections": []
+    },
+    "mcp/testdata/schema_cache/first/models.go": {
+      "overview": "提供用于缓存测试的数据模型，用于检验不同 Go 包的同名类型能否分开缓存。",
+      "sections": []
+    },
+    "mcp/testdata/schema_cache/second/models.go": {
+      "overview": "提供用于缓存测试的数据模型，用于检验不同 Go 包的同名类型能否分开缓存。",
+      "sections": []
+    },
+    "testdata/mockstdio_server.go": {
+      "overview": "提供模拟标准输入输出子进程，供客户端传输测试执行协议请求。",
+      "sections": []
+    },
+    "testdata/mockstdio_stderr_flood_server.go": {
+      "overview": "启动模拟 MCP 子进程，向标准错误持续写入数据，以测试客户端的管道读取与回收行为。",
+      "sections": []
+    },
+    "testdata/mockstdio_stderr_server.go": {
+      "overview": "启动会向标准错误写日志的模拟 MCP 子进程，用于验证日志和协议输出隔离。",
+      "sections": []
+    },
+    "tracing/tracing.go": {
+      "overview": "为 MCP 客户端和服务端提供追踪及上下文传播接口。",
+      "sections": []
+    },
+    "mcp/mrtr_test.go": {
+      "overview": "验证多轮请求相关行为。覆盖 InputRequestRoundTrip、InputRequestRejectsUnknownMethods、InputResponseDecodesAgainstItsRequest 等用例。",
+      "sections": []
+    },
+    "mcp/prompts.go": {
+      "overview": "定义提示词、提示词参数和消息，并提供提示词结果构造选项。",
+      "sections": []
+    },
+    "mcp/request_id_precision_test.go": {
+      "overview": "验证请求 标识 精度相关行为。覆盖 RequestIDIntegerPrecision、RequestIDExtendedIntegerIdentity、RequestIDVeryLongExponentIdentity 等用例。",
+      "sections": []
+    },
+    "mcp/resources_test.go": {
+      "overview": "验证资源相关行为。覆盖 NewResource、NewResourceTemplate、WithResourceDescription 等用例。",
+      "sections": []
+    },
+    "mcp/sampling_result_shape_test.go": {
+      "overview": "验证采样 结果 形态相关行为。覆盖 SamplingResultShape 等用例。",
+      "sections": []
+    },
+    "mcp/schema_cache.go": {
+      "overview": "缓存从 Go 类型生成或编译得到的 JSON Schema，避免重复构造。",
+      "sections": []
+    },
+    "mcp/schema_type_array_regression_test.go": {
+      "overview": "验证模式 类型 数组 回归相关行为。覆盖 ListToolsSchemaTypeArrayRegression、SchemaTypeArrayRepresentation、SchemaTypeArrayInputRoundTrip 等用例。",
+      "sections": []
+    },
+    "mcp/struct_schema.go": {
+      "overview": "根据 Go 结构体字段和标签派生工具输入输出的 JSON Schema。",
+      "sections": []
+    },
+    "mcp/struct_schema_test.go": {
+      "overview": "验证struct 模式相关行为。覆盖 SchemaFor_JSONSchemaEnumTagSpacing、SchemaFor_UnsupportedJSONSchemaOptionReturnsError、SchemaFor_NamedAnonymousStructTags 等用例。",
+      "sections": []
+    },
+    "mcp/structured_result_serialization_test.go": {
+      "overview": "验证结构化 结果 序列化相关行为。覆盖 StructuredOnlySerializationFailureIsToolError 等用例。",
+      "sections": []
+    },
+    "mcp/task_result_content_array_test.go": {
+      "overview": "验证任务 结果 内容 数组相关行为。覆盖 TaskResultContentArray、ParseTaskResultPreservesEmptyContentArray 等用例。",
+      "sections": []
+    },
+    "mcp/task_result_structured_precision_test.go": {
+      "overview": "验证任务 结果 结构化 精度相关行为。覆盖 ParseTaskResultPreservesStructuredJSONPrecision 等用例。",
+      "sections": []
+    },
+    "mcp/task_status_parsing_test.go": {
+      "overview": "验证任务 状态 parsing相关行为。覆盖 TaskStatusParsersPreserveEnvelopeAndIntegerFields 等用例。",
+      "sections": []
+    },
+    "mcp/tasks.go": {
+      "overview": "定义任务状态、任务创建与查询结果，以及任务的序列化形态。",
+      "sections": []
+    },
+    "mcp/tasks_test.go": {
+      "overview": "验证任务相关行为。覆盖 RelatedTaskMeta、WithRelatedTask、RelatedTaskMetaKey 等用例。",
+      "sections": []
+    },
+    "mcp/tool_result_reuse_test.go": {
+      "overview": "验证工具 结果 复用相关行为。覆盖 CallToolResultUnmarshalReusedReceiver、ToolResultContentUnmarshalReusedReceiver 等用例。",
+      "sections": []
+    },
+    "mcp/tool_schema_keywords_test.go": {
+      "overview": "验证工具 模式 keywords相关行为。覆盖 ToolArgumentsSchema_KeepsOtherKeywords、Tool_RoundTripKeepsSchemaKeywords、ToolArgumentsSchema_FieldsWinOverAdditionalFields 等用例。",
+      "sections": []
+    },
+    "mcp/tool_schema_roundtrip_regression_test.go": {
+      "overview": "验证工具 模式 往返 回归相关行为。覆盖 ToolSchemaRoundTrip_DeclaredDialectValidation、ToolSchemaRoundTrip_BothDefinitionContainers、ToolSchemaRoundTrip_UnknownDialectPreservesSyntax 等用例。",
+      "sections": []
+    },
+    "mcp/tools.go": {
+      "overview": "这个文件定义工具的描述、调用载荷、结果与参数模式。导览第二步可从 `NewTool` 向前追到序列化契约，向后追到属性选项如何写入 Schema。",
+      "sections": [
+        {
+          "title": "理解工具请求和结果",
+          "explanation": "请求参数保留普通 `Arguments` 和原始 JSON 字节两种形式，`BindArguments` 优先使用原始字节填充 Go 结构体。结果把多态的 `Content` 与可选的结构化内容分开，并用 `IsError` 标记业务执行错误。",
+          "lineRange": [
+            44,
+            120
+          ],
+          "tourOrder": 2
+        },
+        {
+          "title": "阅读结果编解码",
+          "explanation": "编码显式构造内容数组，并按条件加入结构化内容和多轮交互字段。解码逐条调用 `UnmarshalContent`，同时保留结构化 JSON 原文与解码后的值。",
+          "lineRange": [
+            616,
+            708
+          ],
+          "tourOrder": 2
+        },
+        {
+          "title": "在两种模式表示间选择",
+          "explanation": "工具定义可使用结构化 Schema 或原始 JSON Schema。序列化会检查两种表示是否同时设置，并按照字段类型与是否存在决定是否输出。",
+          "lineRange": [
+            734,
+            827
+          ],
+          "tourOrder": 2
+        },
+        {
+          "title": "使用工具构造选项",
+          "explanation": "构造函数先建立对象形式的输入模式和默认注解，再依次执行调用方传入的选项。由 Go 类型推导输入模式时，选项清空已有的结构化类型标记并设置生成的原始 JSON Schema。",
+          "lineRange": [
+            1195,
+            1288
+          ],
+          "tourOrder": 2
+        },
+        {
+          "title": "声明属性与必填项",
+          "explanation": "整数、布尔值等构造选项先建立各自的属性 Schema，再应用传入的属性约束。最终 `setInputProperty` 把属性内部的临时必填标记移到对象顶层的 `Required` 列表。",
+          "lineRange": [
+            1571,
+            1696
+          ],
+          "tourOrder": 2
+        }
+      ]
+    },
+    "mcp/tools_additional_test.go": {
+      "overview": "验证工具 补充场景相关行为。覆盖 CallToolRequest_GetArgumentsWithNilArguments、CallToolRequest_BindArgumentsWithInvalidTarget、CallToolRequest_TypeConversionEdgeCases 等用例。",
+      "sections": []
+    },
+    "mcp/tools_annotations_test.go": {
+      "overview": "验证工具 注解相关行为。覆盖 ToolMarshalJSON_Annotations、ToolMarshalJSON_AnnotationsRoundTrip 等用例。",
+      "sections": []
+    },
+    "mcp/tools_defer_loading_test.go": {
+      "overview": "验证工具 延迟 加载相关行为。覆盖 ToolWithDeferLoading、ToolWithoutDeferLoading 等用例。",
+      "sections": []
+    },
+    "mcp/tools_int_slice_precision_test.go": {
+      "overview": "验证工具 整数 切片 精度相关行为。覆盖 CallToolRequest_IntegerSlicePrecision、CallToolRequest_IntegerSliceFallback 等用例。",
+      "sections": []
+    },
+    "mcp/tools_properties_test.go": {
+      "overview": "验证工具 属性相关行为。覆盖 DefaultString、Enum、Pattern 等用例。",
+      "sections": []
+    },
+    "mcp/tools_property_order_test.go": {
+      "overview": "验证工具 属性 顺序相关行为。覆盖 ToolArgumentsSchema_PropertyOrderRoundTrip、ToolArgumentsSchema_PropertyOrderAfterMutation、ToolArgumentsSchema_PropertyOrderDraft07Definitions 等用例。",
+      "sections": []
+    },
+    "mcp/tools_raw_arguments_test.go": {
+      "overview": "验证工具 原始数据 参数相关行为。覆盖 CallToolParams_RawArgumentsDoNotAliasInput、CallToolParams_RawArgumentsResetOnReuse 等用例。",
+      "sections": []
+    },
+    "mcp/tools_schema_additional_fields_test.go": {
+      "overview": "验证工具 模式 补充场景 fields相关行为。覆盖 ListToolsAdditionalSchemaKeywords、SchemaAdditionalFieldsRoundTrip、SchemaAdditionalFieldsCollisions 等用例。",
+      "sections": []
+    },
+    "mcp/tools_test.go": {
+      "overview": "验证工具相关行为。覆盖 ToolWithBothSchemasError、ToolWithRawSchema、UnmarshalToolWithRawSchema 等用例。",
+      "sections": []
+    },
+    "mcp/typed_tools.go": {
+      "overview": "从 Go 类型构造工具参数 schema，并将动态调用参数转换为处理函数所需的类型。",
+      "sections": []
+    },
+    "mcp/typed_tools_additional_test.go": {
+      "overview": "验证typed 工具 补充场景相关行为。覆盖 NewTypedToolHandler、NewStructuredToolHandler、TypedToolHandler_ContextPropagation 等用例。",
+      "sections": []
+    },
+    "mcp/typed_tools_test.go": {
+      "overview": "验证typed 工具相关行为。覆盖 TypedToolHandler、TypedToolHandlerWithValidation、TypedToolHandlerWithComplexObjects 等用例。",
+      "sections": []
+    },
+    "mcp/types.go": {
+      "overview": "这个文件定义客户端与服务端共享的协议类型，涵盖 JSON-RPC 消息、能力声明和 MCP 内容类型。导览第二步从消息信封和初始化载荷出发，建立读取两端实现所需的词汇。",
+      "sections": [
+        {
+          "title": "区分请求与通知",
+          "explanation": "通用请求参数可以包含 `_meta`。通知参数的自定义编解码将元数据与其余字段合并到同一 JSON 对象，并在读取时分开保存。",
+          "lineRange": [
+            208,
+            345
+          ],
+          "tourOrder": 2
+        },
+        {
+          "title": "对齐请求与响应",
+          "explanation": "带编号的请求与对应的成功或错误响应都使用 `RequestId`。自定义解码先尝试整数的精确表示，以避免全部经由 `float64` 时丢失大整数的低位。",
+          "lineRange": [
+            361,
+            480
+          ],
+          "tourOrder": 2
+        },
+        {
+          "title": "读取初始化契约",
+          "explanation": "初始化请求说明客户端身份、协议版本与能力，响应给出服务端身份、选定版本和可用能力。能力结构多用可省略的指针字段，这使字段缺失与存在但采用默认值可以区分。",
+          "lineRange": [
+            602,
+            701
+          ],
+          "tourOrder": 2
+        },
+        {
+          "title": "识别分页与资源请求",
+          "explanation": "分页请求用 `Cursor` 表示起点，分页结果用 `NextCursor` 表示后续位置。资源相关结构共享分页约定，并单独声明读取、订阅、退订和更新通知的载荷。",
+          "lineRange": [
+            782,
+            912
+          ],
+          "tourOrder": 2
+        },
+        {
+          "title": "识别采样内容类型",
+          "explanation": "采样请求声明消息和相关参数，内容用 `Content` 接口及具体类型表示。文本、图片、音频和工具交互内容各自拥有结构字段，读返回值时要按具体内容种类处理。",
+          "lineRange": [
+            1183,
+            1452
+          ],
+          "tourOrder": 2
+        }
+      ]
+    },
+    "mcp/types_test.go": {
+      "overview": "验证types相关行为。覆盖 MetaMarshalling、ResourceLinkSerialization、ResourceLinkTitleAndSize 等用例。",
+      "sections": []
+    },
+    "mcp/unique_required_test.go": {
+      "overview": "验证unique required相关行为。覆盖 UniqueRequired 等用例。",
+      "sections": []
+    },
+    "mcp/utils.go": {
+      "overview": "提供协议请求参数和响应结果的提取、转换及构造帮助函数。",
+      "sections": []
+    },
+    "mcp/utils_additional_test.go": {
+      "overview": "验证辅助操作 补充场景相关行为。覆盖 AsTextContent、AsImageContent、AsAudioContent 等用例。",
+      "sections": []
+    },
+    "mcp/utils_envelope_test.go": {
+      "overview": "验证辅助操作 消息封包相关行为。覆盖 ParseGetPromptResultEnvelope、ParseReadResourceResultEnvelope、ParseResultsFromInputRequestBuilderWireForm 等用例。",
+      "sections": []
+    },
+    "mcp/utils_helpers_test.go": {
+      "overview": "验证辅助操作 辅助函数相关行为。覆盖 NewProgressNotification、NewProgressNotification_WithNils、NewLoggingMessageNotification 等用例。",
+      "sections": []
+    },
+    "mcp/utils_integer_test.go": {
+      "overview": "验证辅助操作 整数相关行为。覆盖 ParseIntegerJSONRegression、ParseIntegerWrappers 等用例。",
+      "sections": []
+    },
+    "mcp/utils_task_result_test.go": {
+      "overview": "验证辅助操作 任务 结果相关行为。覆盖 ParseTaskResultResult、ParseTaskResultResultRoundTrip 等用例。",
+      "sections": []
+    },
+    "mcp/utils_test.go": {
+      "overview": "验证辅助操作相关行为。覆盖 ParseAnnotations、ParseContent、ParseSamplingContent 等用例。",
+      "sections": []
+    },
+    "mcp/version.go": {
+      "overview": "维护 MCP 协议版本并区分新版与传统协议。",
+      "sections": []
+    },
+    "mcp/version_test.go": {
+      "overview": "验证版本相关行为。覆盖 IsModernProtocol、NegotiateLegacyVersion、NegotiateMutuallySupportedVersion 等用例。",
+      "sections": []
+    },
+    "mcptest/mcptest_sampling_elicitation_test.go": {
+      "overview": "验证mcptest 采样 用户采集相关行为。覆盖 ServerWithSamplingHandler、ServerWithElicitationHandler、ServerWithRootsHandler 等用例。",
+      "sections": []
+    },
+    "mcptest/mcptest_test.go": {
+      "overview": "验证mcptest相关行为。覆盖 ServerWithTool、ServerWithToolStructuredContent、ServerWithPrompt 等用例。",
+      "sections": []
+    },
+    "server/atomic_registry_replacement_test.go": {
+      "overview": "验证原子更新 注册表 替换相关行为。覆盖 RegistryReplacementDoesNotExposeEmptyIntermediateState 等用例。",
+      "sections": []
+    },
+    "server/client_info_store.go": {
+      "overview": "定义按会话存储的客户端身份与能力信息，供传输层和请求处理复用。",
+      "sections": []
+    },
+    "server/client_info_store_test.go": {
+      "overview": "验证客户端 info 存储相关行为。覆盖 ClientInfoStore_DefaultsToZeroValues、ClientInfoStore_RoundTrip、ClientInfoStore_EmbeddedPromotion 等用例。",
+      "sections": []
+    },
+    "server/completion.go": {
+      "overview": "处理提示词与资源模板参数补全并约定补全处理器。",
+      "sections": []
+    },
+    "server/conformance_test.go": {
+      "overview": "验证一致性相关行为。覆盖 Conformance 等用例。",
+      "sections": []
+    },
+    "server/constants.go": {
+      "overview": "集中定义服务端共享的常量。",
+      "sections": []
+    },
+    "server/ctx.go": {
+      "overview": "为请求上下文附加服务器和会话相关信息，并提供读取接口。",
+      "sections": []
+    },
+    "server/discover.go": {
+      "overview": "响应 discover 请求，过滤传输支持的协议版本并把请求版本应用到会话。",
+      "sections": []
+    },
+    "server/elicitation.go": {
+      "overview": "向客户端发出采集请求，检查能力并解析客户端响应。",
+      "sections": []
+    },
+    "server/elicitation_test.go": {
+      "overview": "验证用户采集相关行为。覆盖 MCPServer_RequestElicitation_NoSession、MCPServer_RequestElicitation_SessionDoesNotSupportElicitation、MCPServer_RequestElicitation_Success 等用例。",
+      "sections": []
+    },
+    "server/empty_results_test.go": {
+      "overview": "验证空集合 结果相关行为。覆盖 EmptyResultsAreSentAsArrays、GetPromptLeavesTheHandlerResultUnchanged、GetPromptLeavesInputRequestsWithoutMessages 等用例。",
+      "sections": []
+    },
+    "server/errors.go": {
+      "overview": "定义服务端共享的错误值。",
+      "sections": []
+    },
+    "server/event_store.go": {
+      "overview": "存储可恢复 SSE 事件，供 HTTP 请求断开后按事件 ID 回放。",
+      "sections": []
+    },
+    "server/event_store_replay_copy_test.go": {
+      "overview": "验证事件 存储 回放 副本相关行为。覆盖 InMemoryEventStore_ReplayCallbackMutationDoesNotCorruptStore 等用例。",
+      "sections": []
+    },
+    "server/handle_message_bench_test.go": {
+      "overview": "对处理 message 性能基准运行性能基准。覆盖 DispatchToolCall、DispatchClientResponse 等用例。",
+      "sections": []
+    },
+    "server/handle_message_parse_test.go": {
+      "overview": "验证处理 message 解析相关行为。覆盖 HandleMessage_ParsesEnvelope 等用例。",
+      "sections": []
+    },
+    "server/handler_errors.go": {
+      "overview": "将处理器错误转换为可暴露的 JSON-RPC 错误并识别 URL 采集需求。",
+      "sections": []
+    },
+    "server/header_params_shapes_test.go": {
+      "overview": "验证标头 参数 形态相关行为。覆盖 ValidateStandardHeaders_ParamsShapes 等用例。",
+      "sections": []
+    },
+    "server/helpers_test.go": {
+      "overview": "验证辅助函数相关行为。",
+      "sections": []
+    },
+    "server/hooks.go": {
+      "overview": "管理协议调用前后、错误及会话钩子的注册与执行。",
+      "sections": []
+    },
+    "server/http_cors.go": {
+      "overview": "定义 HTTP 跨域配置，并处理预检请求与跨域响应标头。",
+      "sections": []
+    },
+    "server/http_cors_test.go": {
+      "overview": "验证HTTP 跨域相关行为。覆盖 CORSConfig_DisabledByDefault、CORSConfig_ResolveOrigin、CORSOptionHelpers 等用例。",
+      "sections": []
+    },
+    "server/http_localhost.go": {
+      "overview": "识别本地 HTTP 连接范围并处理相关主机校验。",
+      "sections": []
+    },
+    "server/http_localhost_test.go": {
+      "overview": "验证HTTP 本地主机相关行为。覆盖 IsLoopbackHost、StreamableHTTP_LocalhostProtection、SSE_LocalhostProtection 等用例。",
+      "sections": []
+    },
+    "server/http_transport_options.go": {
+      "overview": "定义用 HTTP 请求补充服务器请求上下文的回调类型。",
+      "sections": []
+    },
+    "server/inflight_request.go": {
+      "overview": "跟踪在途请求，按会话和请求 ID 管理取消操作。",
+      "sections": []
+    },
+    "server/inflight_request_test.go": {
+      "overview": "验证inflight 请求相关行为。覆盖 DuplicateRequestIDKeepsOriginalCancellable、RequestIDAdmissionIsScopedToSession 等用例。",
+      "sections": []
+    },
+    "server/inprocess_session.go": {
+      "overview": "管理进程内会话注册及通知处理，供本地传输复用。",
+      "sections": []
+    },
+    "server/inprocess_session_test.go": {
+      "overview": "验证进程内 会话相关行为。覆盖 GenerateInProcessSessionIDIsUnique、InProcessSession_SubscriptionFilter、InProcessSession_CanceledSubscriptionCannotReplaceFilter 等用例。",
+      "sections": []
+    },
+    "server/input_validation.go": {
+      "overview": "根据工具输入 JSON Schema 校验调用参数，并控制参数缺失或格式错误的处理。",
+      "sections": []
+    },
+    "server/input_validation_test.go": {
+      "overview": "验证输入 校验相关行为。覆盖 SchemaValidation_QuotedPromotedNestedFields、SchemaValidation_QuotedPrivateEmbeddingFallback、SchemaValidation_QuotedShadowingFallback 等用例。",
+      "sections": []
+    },
+    "server/jsonrpc_error.go": {
+      "overview": "将服务器错误表示为 JSON-RPC 错误响应。",
+      "sections": []
+    },
+    "server/jsonrpc_strict.go": {
+      "overview": "严格解析 JSON-RPC 封包并验证各字段形态。",
+      "sections": []
+    },
+    "server/jsonrpc_strict_test.go": {
+      "overview": "验证JSON-RPC 严格校验相关行为。覆盖 ValidateProtocolMemberNames、HandleMessageRejectsUndefinedMemberNames、ParamsMembersCoverDecodedRequests 等用例。",
+      "sections": []
+    },
+    "server/logger.go": {
+      "overview": "声明服务器日志接口，并提供默认或静默实现。",
+      "sections": []
+    },
+    "server/logger_test.go": {
+      "overview": "验证日志记录器相关行为。覆盖 WithLogger_NilIsNoOp、WithLogger_RequestLine、WithLogger_ToolMiddleware 等用例。",
+      "sections": []
+    },
+    "server/mrtr.go": {
+      "overview": "构建多轮请求的附加输入与状态，并在兼容流程中解析客户端结果后继续执行。",
+      "sections": []
+    },
+    "server/mrtr_test.go": {
+      "overview": "验证多轮请求相关行为。覆盖 MultiRoundTrip_ModernClientReceivesInputRequest、MultiRoundTrip_ModernClientRetriesWithAnswer、MultiRoundTrip_LegacyClientIsBridged 等用例。",
+      "sections": []
+    },
+    "server/nil_result_test.go": {
+      "overview": "验证空值 结果相关行为。覆盖 GetPromptNilResultIsAnError、GetPromptNilResultOnBridgedRetryIsAnError、CallToolNilResultIsAnError 等用例。",
+      "sections": []
+    },
+    "server/output_validation.go": {
+      "overview": "校验工具结构化结果是否符合输出 JSON Schema。",
+      "sections": []
+    },
+    "server/output_validation_test.go": {
+      "overview": "验证输出 校验相关行为。覆盖 OutputSchemaValidation、OutputSchemaValidation_DeleteToolInvalidatesCache、OutputSchemaValidation_TypedHandler 等用例。",
+      "sections": []
+    },
+    "server/pagination_empty_tiebreak_test.go": {
+      "overview": "验证分页 空集合 同值排序相关行为。覆盖 PaginationEmptyResourceTieBreak 等用例。",
+      "sections": []
+    },
+    "server/pagination_legacy_cursor_test.go": {
+      "overview": "验证分页 传统协议 游标相关行为。覆盖 PaginationLegacyNameOnlyCursor 等用例。",
+      "sections": []
+    },
+    "server/pagination_positive_overflow_test.go": {
+      "overview": "验证分页 正数 溢出相关行为。覆盖 PaginationLargePositiveLimitAfterCursor 等用例。",
+      "sections": []
+    },
+    "server/param_headers_bench_test.go": {
+      "overview": "对参数 标头 性能基准运行性能基准。覆盖 ParamHeadersValidation 等用例。",
+      "sections": []
+    },
+    "server/param_headers_test.go": {
+      "overview": "验证参数 标头相关行为。覆盖 ParamHeaders_MirroredValueIsAccepted、ParamHeaders_EmptyValueIsAccepted、ParamHeaders_EmptyValueWithoutHeaderIsRejected 等用例。",
+      "sections": []
+    },
+    "server/protected_resource.go": {
+      "overview": "生成和匹配 OAuth 受保护资源元数据路径，并提供返回元数据的 HTTP 处理器。",
+      "sections": []
+    },
+    "server/protected_resource_escaped_path_test.go": {
+      "overview": "验证受保护的 资源 转义 路径相关行为。覆盖 ProtectedResourceMetadataEscapedPaths 等用例。",
+      "sections": []
+    },
+    "server/protected_resource_test.go": {
+      "overview": "验证受保护的 资源相关行为。覆盖 ProtectedResourceMetadataPath、NewProtectedResourceMetadataHandler_GET、NewProtectedResourceMetadataHandler_HEAD 等用例。",
+      "sections": []
+    },
+    "server/protocol.go": {
+      "overview": "在请求上下文中保存 MCP 协议版本、客户端信息和能力。",
+      "sections": []
+    },
+    "server/request_error_test.go": {
+      "overview": "验证请求 错误相关行为。覆盖 HandlerURLElicitationRequiredError、HandlerURLElicitationRequiredErrorForModernClients、MarkedHandlerJSONRPCError 等用例。",
+      "sections": []
+    },
+    "server/request_handler.go": {
+      "overview": "这是由模板生成的 JSON-RPC 派发器，负责从原始消息进入类型化处理函数。导览第四步借它对照信封检查、协议识别、工具调用钩子和响应构造。",
+      "sections": [
+        {
+          "title": "检查消息信封",
+          "explanation": "入口把服务端实例写入上下文，再读取版本、方法、编号和参数元数据。编号有单独的数值解码逻辑，之后检查标准字段名和 JSON-RPC 版本。",
+          "lineRange": [
+            15,
+            100
+          ],
+          "tourOrder": 4
+        },
+        {
+          "title": "分开通知与普通请求",
+          "explanation": "无编号的消息进入通知处理并且不生成正常响应，具有结果载荷的入站响应同样提前处理。剩余请求根据上下文登记在途编号，再运行初始化钩子并获取请求头。",
+          "lineRange": [
+            102,
+            152
+          ],
+          "tourOrder": 4
+        },
+        {
+          "title": "识别协议并布置观测",
+          "explanation": "请求的 `_meta` 用于识别现代协议，现代路径还会核对版本和标准请求头。随后设立追踪和日志回调，并延迟为返回结果添加协议所需的元数据。",
+          "lineRange": [
+            153,
+            206
+          ],
+          "tourOrder": 4
+        },
+        {
+          "title": "派发工具列表和调用",
+          "explanation": "两条工具分支先检查服务端能力，再反序列化到具体请求结构。成功路径把头部复制给请求、运行前置和后置钩子并构造成功响应，失败路径运行错误钩子并转成 JSON-RPC 错误。",
+          "lineRange": [
+            539,
+            590
+          ],
+          "tourOrder": 4
+        }
+      ]
+    },
+    "server/request_id_precision_test.go": {
+      "overview": "验证请求 标识 精度相关行为。覆盖 ResponsePreservesIntegerRequestID、CancellationPreservesIntegerRequestID 等用例。",
+      "sections": []
+    },
+    "server/request_id_transport_test.go": {
+      "overview": "验证请求 标识 transport相关行为。覆盖 TransportIntegerRequestIDs、HTTPPreDispatchErrorPreservesIntegerID 等用例。",
+      "sections": []
+    },
+    "server/resource_errors.go": {
+      "overview": "为资源读取和查找失败生成相应的协议错误。",
+      "sections": []
+    },
+    "server/resource_subscribe_test.go": {
+      "overview": "验证资源 订阅相关行为。覆盖 MCPServer_SubscribeUnsubscribe_DispatcherWiring、MCPServer_Subscribe_WithoutCapability、MCPServer_Subscribe_MissingURI 等用例。",
+      "sections": []
+    },
+    "server/resource_template_match_test.go": {
+      "overview": "验证资源 template match相关行为。覆盖 ResourceTemplateMatching、ResourceTemplateDispatchPrecedence 等用例。",
+      "sections": []
+    },
+    "server/resource_test.go": {
+      "overview": "验证资源相关行为。覆盖 MCPServer_RemoveResource 等用例。",
+      "sections": []
+    },
+    "server/response.go": {
+      "overview": "为响应添加缓存提示，并按 HTTP 标头和工具参数绑定规则校验请求。",
+      "sections": []
+    },
+    "server/roots.go": {
+      "overview": "从客户端请求根目录列表，根据客户端能力决定是否可发出请求。",
+      "sections": []
+    },
+    "server/roots_test.go": {
+      "overview": "验证根目录相关行为。覆盖 MCPServer_RequestRoots_NoSession、MCPServer_RequestRoots_SessionDoesNotSupportRoots、MCPServer_RequestRoots_Success 等用例。",
+      "sections": []
+    },
+    "server/sampling.go": {
+      "overview": "从服务端向支持采样的客户端请求模型生成。",
+      "sections": []
+    },
+    "server/sampling_test.go": {
+      "overview": "验证采样相关行为。覆盖 MCPServer_RequestSampling_NoSession、MCPServer_RequestSampling_Success、MCPServer_EnableSampling_SetsCapability 等用例。",
+      "sections": []
+    },
+    "server/schema_type_array_test.go": {
+      "overview": "验证模式 类型 数组相关行为。覆盖 SchemaTypeArrayValidation 等用例。",
+      "sections": []
+    },
+    "server/server.go": {
+      "overview": "这是 MCP 服务端的核心注册表与业务处理层。导览第四步可对照这里的工具注册和执行逻辑，以及生成的请求派发入口。",
+      "sections": [
+        {
+          "title": "构造服务端状态",
+          "explanation": "构造函数建立资源、提示词、普通工具与任务工具的独立注册表，并准备默认补全和追踪实现。最后应用传入选项，让调用者声明能力或替换默认实现。",
+          "lineRange": [
+            758,
+            800
+          ],
+          "tourOrder": 4
+        },
+        {
+          "title": "注册工具及其能力",
+          "explanation": "单个工具被转换成包含描述与处理函数的 `ServerTool`，再进入批量注册逻辑。批量注册先检查名称冲突、Schema 默认规则和参数注解，再更新完整批次，最后可能广播工具列表变化。",
+          "lineRange": [
+            1045,
+            1130
+          ],
+          "tourOrder": 4
+        },
+        {
+          "title": "查找工具并选择执行模式",
+          "explanation": "调用优先查找会话工具，再查全局普通工具和任务工具。找到的工具仍需要通过过滤，并根据请求的任务参数和声明的任务支持模式决定是否走异步任务路径。",
+          "lineRange": [
+            2202,
+            2283
+          ],
+          "tourOrder": 4
+        },
+        {
+          "title": "运行处理器并衔接多轮请求",
+          "explanation": "启用输入校验时，先检查原始参数，再以逆序包裹中间件并调用处理器。现代客户端可接收补充输入请求并重试，旧协议的补充输入可由服务端协调并再次调用处理器。`nil` 结果被转成明确的内部错误。",
+          "lineRange": [
+            2285,
+            2348
+          ],
+          "tourOrder": 4
+        }
+      ]
+    },
+    "server/server_additional_test.go": {
+      "overview": "验证服务端 补充场景相关行为。覆盖 MCPServer_MiddlewarePanicRecovery、MCPServer_ConcurrentOperations、MCPServer_PaginationEdgeCases 等用例。",
+      "sections": []
+    },
+    "server/server_race_test.go": {
+      "overview": "验证服务端 并发竞争相关行为。覆盖 RaceConditions、ConcurrentPromptAdd 等用例。",
+      "sections": []
+    },
+    "server/server_test.go": {
+      "overview": "验证服务端相关行为。覆盖 MCPServer_NewMCPServer、MCPServer_ImplementationMetadata、MCPServer_WithIcons_DefensiveCopy 等用例。",
+      "sections": []
+    },
+    "server/servertest/doc.go": {
+      "overview": "描述服务端传输测试的辅助包。",
+      "sections": []
+    },
+    "server/servertest/sse.go": {
+      "overview": "为服务端 SSE 传输提供测试辅助。",
+      "sections": []
+    },
+    "server/servertest/streamable.go": {
+      "overview": "为服务端 流式 传输提供测试辅助。",
+      "sections": []
+    },
+    "server/session.go": {
+      "overview": "定义会话及其可选能力，管理会话注册与按会话资源访问。",
+      "sections": []
+    },
+    "server/session_hook_panic_test.go": {
+      "overview": "验证会话 钩子 异常恢复相关行为。覆盖 SessionHookGoroutine_PanicsWithoutRecovery、SessionHookGoroutine_PanicRecoveryLogged、SendNotificationToSpecificClient_HookPanicRecovery 等用例。",
+      "sections": []
+    },
+    "server/session_resource_helpers_test.go": {
+      "overview": "验证会话 资源 辅助函数相关行为。覆盖 AddSessionResource、AddSessionResources、DeleteSessionResources 等用例。",
+      "sections": []
+    },
+    "server/session_resource_templates_test.go": {
+      "overview": "验证会话 资源 templates相关行为。覆盖 SessionWithResourceTemplates_Integration、MCPServer_ResourceTemplatesWithSessionResourceTemplates、MCPServer_AddSessionResourceTemplates 等用例。",
+      "sections": []
+    },
+    "server/session_test.go": {
+      "overview": "验证会话相关行为。覆盖 SessionWithTools_Integration、SessionWithResources_Integration、MCPServer_ToolsWithSessionTools 等用例。",
+      "sections": []
+    },
+    "server/sse.go": {
+      "overview": "提供传统 HTTP+SSE 服务端传输并维护客户端连接。",
+      "sections": []
+    },
+    "server/sse_body_limit_test.go": {
+      "overview": "验证SSE 请求正文 限制相关行为。覆盖 SSE_RequestBodyIsBounded、SSE_RequestBodyBoundDoesNotTrustContentLength、SSE_RequestBodyOverDeclaredBoundIsRefusedUnread 等用例。",
+      "sections": []
+    },
+    "server/sse_full_queue_test.go": {
+      "overview": "验证SSE full 队列相关行为。覆盖 SSEServer_DeliversResponseDespiteFullQueue、SSEServer_PanickingStreamReleasesWaitingResponses 等用例。",
+      "sections": []
+    },
+    "server/sse_panic_test.go": {
+      "overview": "验证SSE 异常恢复相关行为。覆盖 SSEServer_MessageHandlerPanicRecovery、SSEServer_NotificationHandlerPanicGetsNoReply 等用例。",
+      "sections": []
+    },
+    "server/sse_test.go": {
+      "overview": "验证SSE相关行为。覆盖 SSERejectsDuplicateRequestIDBeforeInitializationHook、SSEServer、SSEServer_CloseSessions 等用例。",
+      "sections": []
+    },
+    "server/stdio.go": {
+      "overview": "从标准输入逐行读取 JSON-RPC 消息，并将响应与通知写回标准输出。",
+      "sections": []
+    },
+    "server/stdio_invalid_id_test.go": {
+      "overview": "验证标准输入输出 无效 标识相关行为。覆盖 StdioServerRejectsInvalidToolCallIDBeforeHandling 等用例。",
+      "sections": []
+    },
+    "server/stdio_panic_test.go": {
+      "overview": "验证标准输入输出 异常恢复相关行为。覆盖 StdioServer_ToolCallWorkerPanicRecovery、StdioServer_NotificationHandlerPanicRecovery、StdioServer_SynchronousToolCallPanicRecovery 等用例。",
+      "sections": []
+    },
+    "server/stdio_test.go": {
+      "overview": "验证标准输入输出相关行为。覆盖 StdioServer、StdioServeRequestsDuringSubscriptionsListen、StdioJoinsRequestHandlersOnEOF 等用例。",
+      "sections": []
+    },
+    "server/streamable_http.go": {
+      "overview": "这个文件把 MCP 核心派发器接入 HTTP，同时为不同协议版本组织会话和 SSE。与导览中的客户端传输对照，可以看出 HTTP 响应状态、连接状态和 JSON-RPC 结果之间的关系。",
+      "sections": [
+        {
+          "title": "从 HTTP 路由到 MCP",
+          "explanation": "入口做主机保护和 CORS 检查，并处理受保护资源元数据端点。读入并限制 POST 内容之后，依据 HTTP 方法选择对应处理函数。",
+          "lineRange": [
+            446,
+            504
+          ],
+          "tourOrder": 5
+        },
+        {
+          "title": "识别 POST 消息与协议版本",
+          "explanation": "POST 要求 JSON 内容并先解析外层消息，以便区分请求和客户端发送的响应。现代协议由请求头和元数据识别，并与旧版需要会话的分支分开处理。",
+          "lineRange": [
+            673,
+            739
+          ],
+          "tourOrder": 5
+        },
+        {
+          "title": "准备流式输出",
+          "explanation": "请求上下文保存头部和订阅有关的状态。只有响应写入器支持流时才能升级到 SSE，有事件存储且协议沿用旧版会话时才允许保存可恢复的事件。",
+          "lineRange": [
+            870,
+            923
+          ],
+          "tourOrder": 5
+        },
+        {
+          "title": "输出最终响应",
+          "explanation": "已经升级到 SSE 的请求继续写事件，其他请求走普通 JSON 响应。现代 JSON 响应会根据 JSON-RPC 错误调整 HTTP 状态码，传统初始化则可在响应头里带回会话编号。",
+          "lineRange": [
+            1163,
+            1213
+          ],
+          "tourOrder": 5
+        },
+        {
+          "title": "接收旧版独立事件流",
+          "explanation": "旧版 GET 可打开通知流，也可凭 `Last-Event-ID` 进入恢复分支。现代协议拒绝独立 GET，改由协议方法 `subscriptions/listen` 建立订阅。",
+          "lineRange": [
+            1232,
+            1284
+          ],
+          "tourOrder": 5
+        },
+        {
+          "title": "终止旧版会话",
+          "explanation": "旧版 DELETE 使用会话管理器终止指定会话，成功后清理会话状态。现代请求在入口被拒绝，因为该协议版本不通过 HTTP 会话编号维持状态。",
+          "lineRange": [
+            1442,
+            1473
+          ],
+          "tourOrder": 5
+        }
+      ]
+    },
+    "server/streamable_http_bench_test.go": {
+      "overview": "对流式 HTTP 性能基准运行性能基准。覆盖 StreamableHTTPModern、StreamableHTTPToolCall 等用例。",
+      "sections": []
+    },
+    "server/streamable_http_body_limit_test.go": {
+      "overview": "验证流式 HTTP 请求正文 限制相关行为。覆盖 StreamableHTTP_RequestBodyIsBounded、StreamableHTTP_RequestBodyBoundDoesNotTrustContentLength、ReadBoundedNeverReadsPastTheBound 等用例。",
+      "sections": []
+    },
+    "server/streamable_http_client_info_test.go": {
+      "overview": "验证流式 HTTP 客户端 info相关行为。覆盖 StreamableHttpSessionImplementsSessionWithClientInfo 等用例。",
+      "sections": []
+    },
+    "server/streamable_http_elicitation_test.go": {
+      "overview": "验证流式 HTTP 用户采集相关行为。覆盖 StreamableHTTPServer_ElicitationOnOriginatingPOSTStream、StreamableHttpSession_ElicitationFallsBackToSessionChannel、StreamableHttpSession_RequestIDsUniqueAcrossInstances 等用例。",
+      "sections": []
+    },
+    "server/streamable_http_envelope_test.go": {
+      "overview": "验证流式 HTTP 消息封包相关行为。覆盖 StreamableHTTP_PostEnvelopeAndEra 等用例。",
+      "sections": []
+    },
+    "server/streamable_http_handle.go": {
+      "overview": "处理 Streamable HTTP 请求的路由、解析与响应分发。",
+      "sections": []
+    },
+    "server/streamable_http_handle_test.go": {
+      "overview": "验证流式 HTTP 处理相关行为。覆盖 StreamableHTTPServer_Handle_InitializeWithoutNetHTTP、StreamableHTTPServer_Handle_GetRejectedWhenWriterCannotStream、StreamableHTTPServer_Handle_PostNotificationsBufferedWhenNotStreamable 等用例。",
+      "sections": []
+    },
+    "server/streamable_http_modern.go": {
+      "overview": "识别新版 HTTP 请求，校验协议版本和元数据，并将 JSON-RPC 错误映射到 HTTP 状态。",
+      "sections": []
+    },
+    "server/streamable_http_modern_test.go": {
+      "overview": "验证流式 HTTP 新版协议相关行为。覆盖 ModernProtocol_Discover、ModernProtocol_NoSessionID、ModernProtocol_ToolsListIsCacheable 等用例。",
+      "sections": []
+    },
+    "server/streamable_http_notification_drop_test.go": {
+      "overview": "验证流式 HTTP 通知 drop相关行为。覆盖 StreamableHTTP_NotificationNotDroppedWithoutEventStore 等用例。",
+      "sections": []
+    },
+    "server/streamable_http_overlapping_post_test.go": {
+      "overview": "验证流式 HTTP overlapping POST相关行为。覆盖 StreamableHTTPServer_OverlappingPOSTsRouteServerRequestResponses、StreamableHTTPServer_POSTFinishingBeforePeerKeepsPeerRoutable、StreamableHTTPServer_ServerRequestResponseConfinedToItsSession 等用例。",
+      "sections": []
+    },
+    "server/streamable_http_request_scoped_notification_test.go": {
+      "overview": "验证流式 HTTP 请求 请求范围 通知相关行为。覆盖 StreamableHTTP_RequestNotificationsStayOnThePOSTStream、RequestScopedSSE_NotificationForAnotherSession、RequestScopedSSE_NoSendLandsAfterClose 等用例。",
+      "sections": []
+    },
+    "server/streamable_http_resume.go": {
+      "overview": "持久化各会话 SSE 流的事件，按 Last-Event-ID 回放并在重连后继续投递。",
+      "sections": []
+    },
+    "server/streamable_http_roots_post_test.go": {
+      "overview": "验证流式 HTTP 根目录 POST相关行为。覆盖 StreamableHTTPServer_ListRootsOnOriginatingPOSTStream、StreamableHTTPServer_SamplingOnOriginatingPOSTStream、StreamableHttpSession_ListRootsAndSamplingFallBackToSessionChannel 等用例。",
+      "sections": []
+    },
+    "server/streamable_http_sampling_error_label_test.go": {
+      "overview": "验证流式 HTTP 采样 错误 标签相关行为。覆盖 StreamableHTTPServer_ClientErrorLabeledByMethod 等用例。",
+      "sections": []
+    },
+    "server/streamable_http_sampling_test.go": {
+      "overview": "验证流式 HTTP 采样相关行为。覆盖 StreamableHTTPServer_SamplingBasic、StreamableHTTPServer_SamplingErrorHandling、StreamableHTTPServer_SamplingInterface 等用例。",
+      "sections": []
+    },
+    "server/streamable_http_shutdown_test.go": {
+      "overview": "验证流式 HTTP 关闭相关行为。覆盖 ModernProtocol_ShutdownClosesListenStreams、ModernProtocol_CloseSessionsClosesListenStreams、ModernProtocol_ShutdownDrainsStartingListenStream 等用例。",
+      "sections": []
+    },
+    "server/streamable_http_test.go": {
+      "overview": "验证流式 HTTP相关行为。覆盖 StreamableHTTPServerBasic、StreamableHTTP_POST_InvalidContent、StreamableHTTP_POST_SendAndReceive 等用例。",
+      "sections": []
+    },
+    "server/streamable_http_touch_test.go": {
+      "overview": "验证流式 HTTP 时间戳刷新相关行为。覆盖 TouchSessionKnownSessionAllocatesNothing、TouchSessionKnown 等用例。",
+      "sections": []
+    },
+    "server/strict_input_schema_default_test.go": {
+      "overview": "验证严格校验 输入 模式 默认行为相关行为。覆盖 StrictInputSchemaDefault_RegistersAdditionalPropertiesFalse、StrictInputSchemaDefault_PreservesExplicitOptIn、StrictInputSchemaDefault_SkipsRawInputSchema 等用例。",
+      "sections": []
+    },
+    "server/structured_handler_error_test.go": {
+      "overview": "验证结构化 处理器 错误相关行为。覆盖 StructuredToolHandlerURLElicitationRequiredError、StructuredToolHandlerURLElicitationRequiredErrorForModernClients 等用例。",
+      "sections": []
+    },
+    "server/subscriptions.go": {
+      "overview": "追踪会话的资源订阅，触发资源更新与关闭订阅时的清理。",
+      "sections": []
+    },
+    "server/subscriptions_test.go": {
+      "overview": "验证订阅相关行为。覆盖 SubscriptionsListen_AcknowledgesAndCloses、SubscriptionsListen_FilterIsIntersectedWithCapabilities、SubscriptionsListen_OnlyOptedInNotificationsAreDelivered 等用例。",
+      "sections": []
+    },
+    "server/task_cancel_result_test.go": {
+      "overview": "验证任务 取消 结果相关行为。覆盖 TaskResultAfterCancellationReturnsError、TaskCancellationKeepsResultError、CancelledTaskResultHTTPEnvelope 等用例。",
+      "sections": []
+    },
+    "server/task_hook_ordering_test.go": {
+      "overview": "验证任务 钩子 顺序相关行为。覆盖 TaskHooksCreatedHookPrecedesCancellation、TaskHooksCreatedHookMayCancelItsOwnTask、TaskHooksPanickingCreatedHookDoesNotLoseCancellation 等用例。",
+      "sections": []
+    },
+    "server/task_hook_reentrancy_test.go": {
+      "overview": "验证任务 钩子 重入相关行为。覆盖 TaskHooksCanReadTaskState、TaskHookMetricsRemainEventSnapshotsDuringConcurrentCompletion 等用例。",
+      "sections": []
+    },
+    "server/task_hooks.go": {
+      "overview": "定义任务状态相关钩子，并在创建、更新及终止时分发事件。",
+      "sections": []
+    },
+    "server/task_hooks_test.go": {
+      "overview": "验证任务 钩子相关行为。覆盖 TaskHooks_TaskCreated、TaskHooks_TaskCompleted、TaskHooks_TaskFailed 等用例。",
+      "sections": []
+    },
+    "server/task_limit_test.go": {
+      "overview": "验证任务 限制相关行为。覆盖 MaxConcurrentTasks 等用例。",
+      "sections": []
+    },
+    "server/task_panic_test.go": {
+      "overview": "验证任务 异常恢复相关行为。覆盖 ExecuteTaskTool_PanicRecovery、ScheduleTaskCleanup_GoroutinesExitAfterTTL、ScheduleTaskCleanup_CleansUpAfterTTL 等用例。",
+      "sections": []
+    },
+    "server/task_raw_structured_test.go": {
+      "overview": "验证任务 原始数据 结构化相关行为。覆盖 TaskResultPreservesRawStructuredContent 等用例。",
+      "sections": []
+    },
+    "server/task_response_format_test.go": {
+      "overview": "验证任务 响应 format相关行为。覆盖 TaskAugmentedToolCall_ResponseFormat、TaskAugmentedToolCall_SpecCompliance 等用例。",
+      "sections": []
+    },
+    "server/task_result_content_array_test.go": {
+      "overview": "验证任务 结果 内容 数组相关行为。覆盖 TaskResultRetainsToolContentArray 等用例。",
+      "sections": []
+    },
+    "server/task_session_tool_test.go": {
+      "overview": "验证任务 会话 工具相关行为。覆盖 TaskAugmentedCallUsesSessionTools 等用例。",
+      "sections": []
+    },
+    "server/task_test.go": {
+      "overview": "验证任务相关行为。覆盖 MCPServer_TaskCapabilities、MCPServer_TaskLifecycle、MCPServer_HandleGetTask 等用例。",
+      "sections": []
+    },
+    "server/task_tool_test.go": {
+      "overview": "验证任务 工具相关行为。覆盖 TaskToolTracerBullet、TaskTool_ModelImmediateResponse、TaskAugmentedToolCall_OutlivesRequest 等用例。",
+      "sections": []
+    },
+    "server/tool_filter_call_test.go": {
+      "overview": "验证工具 筛选 call相关行为。覆盖 ToolFilterCallTimeEnforcement、ToolFilterCallTimeWithMultipleFilters、ToolFilterCallTimeWithSessionTools 等用例。",
+      "sections": []
+    },
+    "server/tool_middleware_registration_reentrancy_test.go": {
+      "overview": "验证工具 中间件 注册 重入相关行为。覆盖 MiddlewareFactoryCanRegisterFutureMiddleware 等用例。",
+      "sections": []
+    },
+    "server/tracing.go": {
+      "overview": "为服务端请求及处理器记录追踪跨度，并从请求中提取传播上下文。",
+      "sections": []
+    },
+    "server/tracing_test.go": {
+      "overview": "验证追踪相关行为。覆盖 WithTracer_NilFallsBackToNoop、WithPropagator_NilFallsBackToNoop、WithMetaPropagator_NilFallsBackToNoop 等用例。",
+      "sections": []
+    },
+    "server/version_test.go": {
+      "overview": "验证版本相关行为。覆盖 MCPServer_VersionNegotiation_Explicit 等用例。",
+      "sections": []
+    },
+    "tracing/tracing_test.go": {
+      "overview": "验证追踪相关行为。覆盖 NoopTracerStart、SpanFromContextWithoutSpanReturnsNoop、ContextWithSpanRoundTrip 等用例。",
+      "sections": []
+    },
+    "client/client.go": {
+      "overview": "这里把类型化 MCP API 转为传输层请求，并维护协议版本、能力和请求编号。导览第三步可用 `Initialize` 与 `CallTool` 串起客户端的主要职责。",
+      "sections": [
+        {
+          "title": "接上传输与回调",
+          "explanation": "构造函数保存传输对象并应用选项，启动时由底层传输建立连接。通知处理器在锁内复制再在锁外调用，支持双向通信的传输还会得到客户端入站请求处理器。",
+          "lineRange": [
+            184,
+            225
+          ],
+          "tourOrder": 3
+        },
+        {
+          "title": "统一构造和发送请求",
+          "explanation": "公共发送路径检查初始化状态、填充协议元数据和请求头、分配编号并记录追踪信息。随后它将传输错误和 JSON-RPC 错误转换为不同的 Go 错误路径，并在上下文取消时根据请求情况尝试通知服务端。",
+          "lineRange": [
+            257,
+            323
+          ],
+          "tourOrder": 3
+        },
+        {
+          "title": "选择协议发现流程",
+          "explanation": "先合并身份与能力并确定首选版本，再按版本和传输配置决定是否尝试现代发现流程。发现成功后，客户端更新状态并将发现结果适配为现有的初始化结果类型。",
+          "lineRange": [
+            399,
+            427
+          ],
+          "tourOrder": 3
+        },
+        {
+          "title": "完成传统握手",
+          "explanation": "传统路径发送 `initialize`，验证并记录响应版本，再发出 `notifications/initialized`。当调用者没有指定旧版版本时，这条路径请求支持握手的最新版本。",
+          "lineRange": [
+            430,
+            502
+          ],
+          "tourOrder": 3
+        },
+        {
+          "title": "从工具列表走向调用",
+          "explanation": "分页列表会过滤带无效头部注解的定义，并缓存剩余定义供之后的工具请求使用。调用入口注入元数据并进入通用多轮循环，每一轮才委托给单次工具调用函数。",
+          "lineRange": [
+            711,
+            770
+          ],
+          "tourOrder": 3
+        }
+      ]
+    },
+    "client/client_edge_cases_test.go": {
+      "overview": "验证客户端 edge cases相关行为。覆盖 Client_UnsupportedProtocolVersionResponse、Client_OperationsBeforeInitialize、Client_NotificationHandlers 等用例。",
+      "sections": []
+    },
+    "client/elicitation_test.go": {
+      "overview": "验证用户采集相关行为。覆盖 Client_HandleElicitationRequest、WithElicitationHandler、Client_Initialize_WithElicitationHandler 等用例。",
+      "sections": []
+    },
+    "client/http.go": {
+      "overview": "构建使用 Streamable HTTP 传输的客户端。",
+      "sections": []
+    },
+    "client/initial_roundtrip_test.go": {
+      "overview": "验证初始化 往返相关行为。覆盖 ClientPreservesInitialRoundTripResponses 等用例。",
+      "sections": []
+    },
+    "client/invalid_header_tools_test.go": {
+      "overview": "验证无效 标头 工具相关行为。覆盖 ListToolsExcludesInvalidHeaderAnnotations、ListToolsExcludesInvalidHeaderAnnotationsThroughLogging、ListToolsForgetsAToolThatTurnsInvalid 等用例。",
+      "sections": []
+    },
+    "client/issue583_test.go": {
+      "overview": "验证issue583相关行为。覆盖 DirectTransportCreation、NewStdioMCPClientWithOptions、MultipleClientStartCalls 等用例。",
+      "sections": []
+    },
+    "client/list_cursor_test.go": {
+      "overview": "验证列表 游标相关行为。覆盖 Client_ListFollowsAdvancingCursor、Client_ListRejectsRepeatedCursor、Iter_RejectsRepeatedCursor 等用例。",
+      "sections": []
+    },
+    "client/listen_error_stop_reentrancy_test.go": {
+      "overview": "验证监听 错误 stop 重入相关行为。覆盖 ListenAsyncErrorHandlerCanStopListener 等用例。",
+      "sections": []
+    },
+    "client/load_shedding_responses_test.go": {
+      "overview": "验证负载 削减 响应相关行为。覆盖 ClientPreservesResponsesAcrossLoadShedding 等用例。",
+      "sections": []
+    },
+    "client/mrtr_interop_test.go": {
+      "overview": "验证多轮请求 互操作相关行为。覆盖 CallToolInputRequiredWithoutContent 等用例。",
+      "sections": []
+    },
+    "client/mrtr_manual_test.go": {
+      "overview": "验证多轮请求 手动模式相关行为。覆盖 ManualInputRoundTrips 等用例。",
+      "sections": []
+    },
+    "client/null_responses_test.go": {
+      "overview": "验证JSON 空值 响应相关行为。覆盖 HandleIncomingRequestRejectsNilHandlerResult、ListRootsWithoutRootsSendsEmptyArray、InProcessClientRejectsNilHandlerResult 等用例。",
+      "sections": []
+    },
+    "client/oauth.go": {
+      "overview": "提供客户端 OAuth 配置与授权流程辅助能力。",
+      "sections": []
+    },
+    "client/oauth_test.go": {
+      "overview": "验证OAuth相关行为。覆盖 NewOAuthStreamableHttpClient、IsOAuthAuthorizationRequiredError、GetResourceMetadataURL 等用例。",
+      "sections": []
+    },
+    "client/pending_subscription_test.go": {
+      "overview": "验证pending 订阅相关行为。覆盖 ListenIncludesPendingResourceSubscriptions、ListenCanNarrowExplicitSubscriptions、ListenAndUnsubscribeDoNotRaceOnFilter 等用例。",
+      "sections": []
+    },
+    "client/protocol.go": {
+      "overview": "尝试发现和协商新版 MCP，组装请求元数据与标准标头并缓存工具信息。",
+      "sections": []
+    },
+    "client/protocol_negotiation_test.go": {
+      "overview": "验证协议 协商相关行为。覆盖 ProtocolVersionNegotiation、ProtocolVersionHeaderSetting、UnsupportedProtocolVersionError_Is 等用例。",
+      "sections": []
+    },
+    "client/sampling_test.go": {
+      "overview": "验证采样相关行为。覆盖 Client_HandleSamplingRequest、Client_HandleSamplingRequestArrayContent、WithSamplingHandler 等用例。",
+      "sections": []
+    },
+    "client/sse.go": {
+      "overview": "构建使用传统 SSE 传输的客户端。",
+      "sections": []
+    },
+    "client/stdio.go": {
+      "overview": "通过子进程标准输入输出构建客户端。",
+      "sections": []
+    },
+    "client/stdio_test.go": {
+      "overview": "验证标准输入输出相关行为。覆盖 StdioMCPClient、Stdio_SendRequestReturnsWhenTransportCloses、Stdio_SendRequestReturnsImmediatelyWhenAlreadyClosed 等用例。",
+      "sections": []
+    },
+    "client/task_list_test.go": {
+      "overview": "验证任务 列表相关行为。覆盖 Client_ListTasksFollowsPagination、Client_ListTasksRejectsRepeatedCursor 等用例。",
+      "sections": []
+    },
+    "client/task_wait_test.go": {
+      "overview": "验证任务 wait相关行为。覆盖 Client_WaitForTask、Client_WaitForTask_UsesServerPollInterval、Client_WaitForTask_ContextCancellationInterruptsPolling 等用例。",
+      "sections": []
+    },
+    "client/transport/command.go": {
+      "overview": "构造传输所需的外部命令并配置进程启动行为。",
+      "sections": []
+    },
+    "client/transport/command_test.go": {
+      "overview": "验证外部命令相关行为。覆盖 CommandTransport_Constructors、CommandTransport_ImplementsInterface、CommandTransport_StderrAccessor 等用例。",
+      "sections": []
+    },
+    "client/transport/constants.go": {
+      "overview": "提供constants相关定义和操作。",
+      "sections": []
+    },
+    "client/transport/error.go": {
+      "overview": "定义传输层错误包装类型，保留底层错误以支持标准库错误链查询。",
+      "sections": []
+    },
+    "client/transport/interface.go": {
+      "overview": "定义客户端传输公共契约，以及支持服务端请求和 HTTP 协议版本设置的可选接口。",
+      "sections": []
+    },
+    "client/transport/logging.go": {
+      "overview": "包装现有传输，记录请求、响应与通知，并用选项控制级别和消息正文。",
+      "sections": []
+    },
+    "client/transport/logging_test.go": {
+      "overview": "验证日志包装器记录请求、响应和通知，并保留底层传输的可选能力。",
+      "sections": []
+    },
+    "client/transport/message_limit.go": {
+      "overview": "限制错误正文、传输消息和单行 SSE 数据的读取大小。",
+      "sections": []
+    },
+    "client/transport/message_limit_test.go": {
+      "overview": "验证 HTTP 正文、SSE 消息和错误正文的读取上限。",
+      "sections": []
+    },
+    "client/transport/notification_handler_reentrancy_test.go": {
+      "overview": "验证通知回调可重入传输接口而不会死锁。",
+      "sections": []
+    },
+    "client/transport/oauth.go": {
+      "overview": "管理 OAuth 客户端配置、授权事务、令牌存储与刷新，并发现服务端元数据。",
+      "sections": []
+    },
+    "client/transport/oauth_binding.go": {
+      "overview": "按授权服务发行者绑定凭据，协调并发注册并保护元数据快照一致性。",
+      "sections": []
+    },
+    "client/transport/oauth_discovery_retry_test.go": {
+      "overview": "验证授权元数据发现失败后可以重试。",
+      "sections": []
+    },
+    "client/transport/oauth_fallback_test.go": {
+      "overview": "验证 OAuth 元数据发现和端点选择的回退路径。",
+      "sections": []
+    },
+    "client/transport/oauth_iss_test.go": {
+      "overview": "验证授权回调中 iss 参数与事务预期发行者一致。",
+      "sections": []
+    },
+    "client/transport/oauth_issuer_test.go": {
+      "overview": "验证发现的授权服务元数据与预期发行者之间的匹配规则。",
+      "sections": []
+    },
+    "client/transport/oauth_nil_metadata_test.go": {
+      "overview": "验证缺少授权元数据时 OAuth 流程的错误处理。",
+      "sections": []
+    },
+    "client/transport/oauth_pkce_required_test.go": {
+      "overview": "验证 PKCE 必需场景下授权请求与令牌交换的行为。",
+      "sections": []
+    },
+    "client/transport/oauth_prm_resource_binding_test.go": {
+      "overview": "验证受保护资源元数据和当前 MCP 资源的绑定关系。",
+      "sections": []
+    },
+    "client/transport/oauth_refresh_test.go": {
+      "overview": "验证令牌刷新流程及刷新后存储的令牌状态。",
+      "sections": []
+    },
+    "client/transport/oauth_registration_test.go": {
+      "overview": "验证动态 OAuth 客户端注册及注册结果处理。",
+      "sections": []
+    },
+    "client/transport/oauth_server_binding_test.go": {
+      "overview": "验证授权服务变更时 OAuth 客户端凭据仍与原发行者正确绑定。",
+      "sections": []
+    },
+    "client/transport/oauth_test.go": {
+      "overview": "覆盖 OAuth 配置、令牌管理、元数据发现、授权和令牌交换等常规路径。",
+      "sections": []
+    },
+    "client/transport/oauth_token_auth_test.go": {
+      "overview": "验证令牌端点使用配置或协商出的客户端身份验证方式。",
+      "sections": []
+    },
+    "client/transport/oauth_token_response_test.go": {
+      "overview": "验证 OAuth 令牌响应字段的解析及错误处理。",
+      "sections": []
+    },
+    "client/transport/oauth_token_type_test.go": {
+      "overview": "验证 HTTP 请求中使用令牌之前的类型检查。",
+      "sections": []
+    },
+    "client/transport/oauth_transaction_binding_test.go": {
+      "overview": "验证授权事务与资源、发行者和客户端凭据的绑定。",
+      "sections": []
+    },
+    "client/transport/oauth_transaction_test.go": {
+      "overview": "验证 OAuth 授权事务的创建、完成和状态生命周期。",
+      "sections": []
+    },
+    "client/transport/oauth_utils.go": {
+      "overview": "提供随机状态、PKCE 校验器与挑战值生成，以及重定向地址校验。",
+      "sections": []
+    },
+    "client/transport/oauth_utils_test.go": {
+      "overview": "验证随机值、PKCE 挑战和重定向地址校验等 OAuth 辅助逻辑。",
+      "sections": []
+    },
+    "client/transport/panic_recovery_test.go": {
+      "overview": "验证传输调用用户回调时能够处理 panic。",
+      "sections": []
+    },
+    "client/transport/redirect.go": {
+      "overview": "为 HTTP 客户端设置重定向策略，检查目标并限制跨源传递敏感头。",
+      "sections": []
+    },
+    "client/transport/redirect_test.go": {
+      "overview": "验证 HTTP 重定向策略及原客户端重定向回调的组合行为。",
+      "sections": []
+    },
+    "client/transport/sse.go": {
+      "overview": "实现旧版 SSE 客户端传输，建立事件流、接收消息端点并按请求 ID 分发响应。",
+      "sections": []
+    },
+    "client/transport/sse_closed_notification_test.go": {
+      "overview": "验证 SSE 连接关闭后的通知行为。",
+      "sections": []
+    },
+    "client/transport/sse_coverage_test.go": {
+      "overview": "补充覆盖 SSE 传输的边界和错误路径。",
+      "sections": []
+    },
+    "client/transport/sse_lifecycle_test.go": {
+      "overview": "验证 SSE 启动、断开和关闭期间的传输生命周期。",
+      "sections": []
+    },
+    "client/transport/sse_oauth_test.go": {
+      "overview": "验证 SSE 请求与 OAuth 处理器的集成。",
+      "sections": []
+    },
+    "client/transport/sse_test.go": {
+      "overview": "覆盖 SSE 客户端连接、请求发送、事件处理及关闭流程。",
+      "sections": []
+    },
+    "client/transport/stderr_buffer_test.go": {
+      "overview": "验证 stdio 子进程标准错误缓冲区的读取和边界行为。",
+      "sections": []
+    },
+    "client/transport/stdio.go": {
+      "overview": "通过子进程标准输入输出收发逐行 JSON-RPC 消息，处理请求分发、退出和标准错误。",
+      "sections": []
+    },
+    "client/transport/stdio_coverage_test.go": {
+      "overview": "补充覆盖 stdio 传输的请求和关闭边界。",
+      "sections": []
+    },
+    "client/transport/stdio_idempotent_test.go": {
+      "overview": "验证 stdio 关闭操作的幂等性。",
+      "sections": []
+    },
+    "client/transport/stdio_test.go": {
+      "overview": "覆盖 stdio 传输的子进程连接、消息收发和错误处理。",
+      "sections": []
+    },
+    "client/transport/stdio_unix_test.go": {
+      "overview": "覆盖基于 Unix 子进程能力的 stdio 传输行为。",
+      "sections": []
+    },
+    "client/transport/streamable_http.go": {
+      "overview": "这个传输用 HTTP POST 发送 JSON-RPC，同时接受 JSON 响应或同一请求内的 SSE 流。导览第五步可对照服务端路由，判断版本、会话与流式读写在哪一层处理。",
+      "sections": [
+        {
+          "title": "发送请求与分类状态",
+          "explanation": "请求首先编码为 JSON，再通过 POST 表明接受 JSON 和事件流两种响应。HTTP 错误按场景保留授权提示、旧版传输兼容信号或可解析的 JSON-RPC 错误体。",
+          "lineRange": [
+            768,
+            854
+          ],
+          "tourOrder": 5
+        },
+        {
+          "title": "处理会话与内容类型",
+          "explanation": "传统初始化可以从响应头保存会话编号。随后按内容类型选择 JSON 解码或 SSE 读取，并在成功的发现或初始化响应后更新连接状态。",
+          "lineRange": [
+            856,
+            911
+          ],
+          "tourOrder": 5
+        },
+        {
+          "title": "从 SSE 事件读出结果",
+          "explanation": "读取协程区分通知、服务端发起的请求和正常响应，前两种分别交给对应回调。调用方等待响应、读取结束或取消，旧协议还可以携最后事件 ID 恢复满足条件的流。",
+          "lineRange": [
+            1041,
+            1141
+          ],
+          "tourOrder": 5
+        }
+      ]
+    },
+    "client/transport/streamable_http_bodyclose_test.go": {
+      "overview": "验证 Streamable HTTP 请求分支会关闭响应正文。",
+      "sections": []
+    },
+    "client/transport/streamable_http_get_bodyclose_test.go": {
+      "overview": "验证 GET 事件流分支会关闭 HTTP 响应正文。",
+      "sections": []
+    },
+    "client/transport/streamable_http_oauth_test.go": {
+      "overview": "验证 Streamable HTTP 请求如何使用 OAuth 授权与令牌。",
+      "sections": []
+    },
+    "client/transport/streamable_http_resume_test.go": {
+      "overview": "验证 Streamable HTTP 根据最近事件 ID 恢复事件流。",
+      "sections": []
+    },
+    "client/transport/streamable_http_retry_interval_test.go": {
+      "overview": "验证 SSE 重连等待时间的处理。",
+      "sections": []
+    },
+    "client/transport/streamable_http_sampling_test.go": {
+      "overview": "验证 Streamable HTTP 传输接收并响应服务端采样请求。",
+      "sections": []
+    },
+    "client/transport/streamable_http_session_end_test.go": {
+      "overview": "验证服务端会话结束后客户端终止或重建连接的行为。",
+      "sections": []
+    },
+    "client/transport/streamable_http_session_publish_test.go": {
+      "overview": "验证 Streamable HTTP 会话标识的更新和发布时机。",
+      "sections": []
+    },
+    "client/transport/streamable_http_start_after_close_test.go": {
+      "overview": "验证已关闭的 Streamable HTTP 传输再次启动时的行为。",
+      "sections": []
+    },
+    "client/transport/streamable_http_test.go": {
+      "overview": "覆盖 Streamable HTTP 的请求、会话头、事件流和错误处理。",
+      "sections": []
+    },
+    "client/transport/utils.go": {
+      "overview": "为传输层构造 JSON-RPC 成功响应或带结构化错误详情的响应。",
+      "sections": []
+    },
+    "client/transport/utils_test.go": {
+      "overview": "验证传输层 JSON-RPC 成功和错误响应构造函数。",
+      "sections": []
+    },
+    "client/version_retry_test.go": {
+      "overview": "验证协议版本不受支持时客户端重试兼容版本的路径。",
+      "sections": []
+    },
+    "e2e/protocol_2026_07_28_test.go": {
+      "overview": "这组测试同时启动客户端与服务端，并从公共 API 验证 2026-07-28 协议行为。导览最后一步用它确认发现、多轮调用、无状态交互和兼容规则如何体现在断言里。",
+      "sections": [
+        {
+          "title": "构造多轮问候工具",
+          "explanation": "测试服务端注册了立即返回的 `echo`，以及需要先取得姓名的 `greet`。模拟征询处理器记录调用次数并返回指定的姓名，便于验证多轮过程。",
+          "lineRange": [
+            19,
+            76
+          ],
+          "tourOrder": 6
+        },
+        {
+          "title": "启动 HTTP 两端并发现能力",
+          "explanation": "借助 `httptest` 将真实服务端处理器挂到测试 HTTP 端点，然后从公共客户端接口完成初始化。断言覆盖最终协议版本、服务端身份、使用说明与工具能力。",
+          "lineRange": [
+            78,
+            111
+          ],
+          "tourOrder": 6
+        },
+        {
+          "title": "确认缓存提示和多轮结果",
+          "explanation": "列表测试检查 TTL、缓存范围与结果类型，再调用 `echo` 验证完整内容。`greet` 测试检查最终文本和征询次数，确认客户端内部完成了补充输入步骤。",
+          "lineRange": [
+            113,
+            162
+          ],
+          "tourOrder": 6
+        },
+        {
+          "title": "验证请求不依赖协议会话",
+          "explanation": "测试检查协商后没有收到会话编号，再反复发出工具列表请求。断言验证同一个 HTTP 传输在未获得协议会话编号的情况下仍能工作。",
+          "lineRange": [
+            164,
+            190
+          ],
+          "tourOrder": 6
+        },
+        {
+          "title": "分辨旧协议兼容行为",
+          "explanation": "固定旧版协议的客户端仍能与兼容服务端握手并执行工具。对于只接受旧版的服务端，现代发现会返回具体的不支持版本错误，显式选择旧版则可正常工作。",
+          "lineRange": [
+            192,
+            274
+          ],
+          "tourOrder": 6
+        },
+        {
+          "title": "跨传输验证同样的工具行为",
+          "explanation": "最后一例改用进程内传输，仍通过公开客户端完成初始化和工具调用。结果断言说明现代多轮交互也可运行在 HTTP 之外。",
+          "lineRange": [
+            276,
+            301
+          ],
+          "tourOrder": 6
+        }
+      ]
+    },
+    "e2e/sampling_http_test.go": {
+      "overview": "端到端验证基于 Streamable HTTP 的服务端采样请求可由客户端处理。",
+      "sections": []
+    },
+    "examples/multi_round_trip/main.go": {
+      "overview": "演示 MCP 工具暂停执行以请求客户端输入，再带上输入结果恢复同一逻辑请求。",
+      "sections": []
+    },
+    "examples/roots_client/main.go": {
+      "overview": "演示客户端向服务端公开根目录并处理根目录列表请求。",
+      "sections": []
+    },
+    "examples/roots_http_client/main.go": {
+      "overview": "演示通过 HTTP 连接使用客户端根目录能力。",
+      "sections": []
+    },
+    "examples/sampling_client/main.go": {
+      "overview": "演示客户端如何为服务端提供模型采样处理器。",
+      "sections": []
+    },
+    "examples/sampling_http_client/main.go": {
+      "overview": "演示 Streamable HTTP 客户端如何处理服务端采样请求。",
+      "sections": []
+    },
+    "examples/simple_client/main.go": {
+      "overview": "演示启动本地 stdio 服务端、初始化客户端并调用工具。",
+      "sections": []
+    },
+    "mcp/base_metadata_test.go": {
+      "overview": "验证 MCP 实体基础元数据的 JSON 表示。",
+      "sections": []
+    },
+    "mcp/call_tool_result_parse_test.go": {
+      "overview": "验证不同工具调用结果形态的解析。",
+      "sections": []
+    },
+    "mcp/consts.go": {
+      "overview": "集中定义 MCP 方法、通知和协议错误码等公共常量。",
+      "sections": []
+    },
+    "mcp/content_benchmark_test.go": {
+      "overview": "测量 MCP 内容对象处理的性能与分配开销。",
+      "sections": []
+    },
+    "mcp/content_pointers_test.go": {
+      "overview": "验证内容接口接受指针具体值并保持 JSON 形态。",
+      "sections": []
+    },
+    "mcp/discover.go": {
+      "overview": "定义统一发现、订阅监听和订阅确认的请求、结果及过滤类型。",
+      "sections": []
+    },
+    "mcp/elicitation_test.go": {
+      "overview": "验证 MCP 用户输入收集请求与结果的类型和 JSON 表达。",
+      "sections": []
+    },
+    "mcp/errors.go": {
+      "overview": "定义协议错误及其类型判断，并将部分错误映射到结构化 JSON-RPC 错误。",
+      "sections": []
+    },
+    "mcp/errors_test.go": {
+      "overview": "验证 MCP 协议错误分类、比较及 JSON-RPC 表达。",
+      "sections": []
+    },
+    "mcp/icons_test.go": {
+      "overview": "验证 MCP 图标字段在各实体上的 JSON 兼容性。",
+      "sections": []
+    },
+    "mcp/mrtr.go": {
+      "overview": "定义多轮交互的输入请求、输入响应和续接状态，并按方法解码不同输入变体。",
+      "sections": []
+    },
+    "mcp/primitive_item_required_test.go": {
+      "overview": "验证基本类型数组元素的工具输入模式生成。",
+      "sections": []
+    },
+    "mcp/prompts_test.go": {
+      "overview": "验证提示词参数、消息和结果的构造与序列化。",
+      "sections": []
+    },
+    "mcp/quoted_schema_test.go": {
+      "overview": "验证带引号或转义的 JSON Schema 处理。",
+      "sections": []
+    },
+    "mcptest/mcptest.go": {
+      "overview": "提供 MCP 测试服务端封装，可注册工具、提示词和资源并启动配对客户端。",
+      "sections": []
+    },
+    "otel/client_test.go": {
+      "overview": "验证客户端请求生成 OpenTelemetry 跨度并传播追踪上下文。",
+      "sections": []
+    },
+    "otel/example/main.go": {
+      "overview": "演示如何配置 OpenTelemetry 提供器并在 MCP 服务中启用追踪和日志。",
+      "sections": []
+    },
+    "otel/logger.go": {
+      "overview": "将 Go slog 日志转发至 OpenTelemetry，并提供 MCP 服务端日志配置选项。",
+      "sections": []
+    },
+    "otel/logger_test.go": {
+      "overview": "验证 MCP 服务端日志与 OpenTelemetry 日志适配器的连接。",
+      "sections": []
+    },
+    "otel/meta_carrier.go": {
+      "overview": "将 MCP 元数据适配为文本映射载体，以注入和提取 OpenTelemetry 追踪上下文。",
+      "sections": []
+    },
+    "otel/meta_carrier_test.go": {
+      "overview": "验证追踪元数据注入、提取和载体字段读写行为。",
+      "sections": []
+    },
+    "otel/options.go": {
+      "overview": "提供客户端和服务端配置选项，用于接入 OpenTelemetry 追踪器及传播器。",
+      "sections": []
+    },
+    "otel/server_test.go": {
+      "overview": "验证服务端跨度、错误记录及 OpenTelemetry 追踪上下文传播。",
+      "sections": []
+    },
+    "otel/tracer.go": {
+      "overview": "将 OpenTelemetry 追踪器、跨度和 HTTP 传播器适配到 MCP 公共追踪接口。",
+      "sections": []
+    },
+    ".github/workflows/ci.yml": {
+      "overview": "在 GitHub Actions 中分别运行核心 Go 模块和 OpenTelemetry 适配器的竞态检测测试，并验证代码生成产物已提交。",
+      "sections": []
+    },
+    ".github/workflows/conformance.yml": {
+      "overview": "编排 MCP 协议一致性检查及配套脚本的单元测试，在变更影响相关文件时运行。",
+      "sections": []
+    },
+    ".github/workflows/golangci-lint.yml": {
+      "overview": "按模块运行 golangci-lint，使用声明的 Go 工具链和仓库的静态检查配置。",
+      "sections": []
+    },
+    ".github/workflows/pages.yml": {
+      "overview": "使用 Bun 安装并构建 Vocs 文档站点，将静态产物发布到 GitHub Pages。",
+      "sections": []
+    },
+    ".github/workflows/release.yml": {
+      "overview": "监听版本标签推送，在 GitHub 创建相应的发布记录并执行发布后步骤。",
+      "sections": []
+    },
+    ".github/ISSUE_TEMPLATE/bug_report.md": {
+      "overview": "规范缺陷反馈，收集问题描述、最小 Go 代码示例、错误日志和运行环境。",
+      "sections": []
+    },
+    ".github/ISSUE_TEMPLATE/config.yml": {
+      "overview": "配置 GitHub Issues 的入口链接与空白问题开关。",
+      "sections": []
+    },
+    ".github/ISSUE_TEMPLATE/documentation-improvement.md": {
+      "overview": "引导贡献者说明文档问题并指出受影响的页面或位置。",
+      "sections": []
+    },
+    ".github/ISSUE_TEMPLATE/feature-request.md": {
+      "overview": "收集功能需求、解决方案、MCP 规范引用、示例和替代做法。",
+      "sections": []
+    },
+    ".golangci.yml": {
+      "overview": "集中声明 Go 项目的静态检查规则，供本地开发和持续集成调用。",
+      "sections": []
+    },
+    "AGENTS.md": {
+      "overview": "记录仓库的测试、静态检查和代码生成命令，以及 Go 接口、错误、测试和并发约定。",
+      "sections": []
+    },
+    "CODE_OF_CONDUCT.md": {
+      "overview": "规定社区成员的行为标准、适用范围和违规处理流程。",
+      "sections": []
+    },
+    "CONTRIBUTING.md": {
+      "overview": "介绍开发环境准备、贡献工作流和版本发布要求。",
+      "sections": []
+    },
+    "README.md": {
+      "overview": "这是 mcp-go 的项目介绍与使用手册。先读安装和最小服务端示例，建立对工具注册与传输启动的认识，再切换到导览第一步的进程内示例。",
+      "sections": [
+        {
+          "title": "认识库的定位",
+          "explanation": "这段列出库的目标，包括通过高层接口减少搭建 MCP 服务端所需的样板代码。后续例子展示哪些能力由库提供，哪些仍由应用编写。",
+          "lineRange": [
+            75,
+            83
+          ],
+          "tourOrder": 1
+        },
+        {
+          "title": "动手写计算工具",
+          "explanation": "安装之后，示例创建服务端、声明计算工具并注册处理函数。对比除以零时返回的工具错误与启动服务失败时返回的 Go 错误，可以看到业务结果和进程错误的区别。最后通过 `ServeStdio` 对外提供服务。",
+          "lineRange": [
+            109,
+            200
+          ],
+          "tourOrder": 1
+        },
+        {
+          "title": "区分三种能力",
+          "explanation": "资源负责暴露数据，工具负责执行操作，提示词负责提供可复用的交互模板。紧接着的服务端章节说明如何用构造选项声明能力。",
+          "lineRange": [
+            201,
+            237
+          ],
+          "tourOrder": 1
+        },
+        {
+          "title": "选择示例与传输",
+          "explanation": "示例索引按主题链接任务工具、类型化参数和上下文等用法，传输章节列出 stdio、SSE 与 Streamable HTTP。导览中的进程内示例另用了库提供的同进程客户端，可直接观察协议调用过程。",
+          "lineRange": [
+            645,
+            660
+          ],
+          "tourOrder": 1
+        },
+        {
+          "title": "寻找扩展点",
+          "explanation": "请求钩子覆盖请求生命周期，处理器中间件只包裹特定类别的处理器。这里还记录了重新生成服务端钩子与请求派发代码的入口，便于从生成产物回查模板。",
+          "lineRange": [
+            983,
+            1018
+          ],
+          "tourOrder": 1
+        }
+      ]
+    },
+    "SECURITY.md": {
+      "overview": "说明如何向项目团队报告安全问题。",
+      "sections": []
+    },
+    "go.mod": {
+      "overview": "声明核心 Go 模块、最低 Go 工具链版本以及 JSON Schema、URI 模板和测试等依赖。",
+      "sections": []
+    },
+    "go.sum": {
+      "overview": "记录核心 Go 模块依赖及其清单的校验和，用于下载时的完整性验证。",
+      "sections": []
+    },
+    ".kit/prompts/code-audit.md": {
+      "overview": "描述代码审计的范围、审阅步骤和结果记录格式。",
+      "sections": []
+    },
+    ".kit/prompts/commit-push.md": {
+      "overview": "描述核对变更、编写提交消息和推送分支的维护流程。",
+      "sections": []
+    },
+    ".kit/prompts/create-pr.md": {
+      "overview": "列出创建拉取请求前的分支检查和描述编写步骤。",
+      "sections": []
+    },
+    ".kit/prompts/feature-request.md": {
+      "overview": "将功能需求整理为问题陈述、建议的接口及使用示例。",
+      "sections": []
+    },
+    ".kit/prompts/file-issue.md": {
+      "overview": "说明如何选择缺陷、功能或文档模板，并为 GitHub 问题补齐所需字段。",
+      "sections": []
+    },
+    ".kit/prompts/fix-issue.md": {
+      "overview": "概述从定位问题、实现修复和验证到准备提交的工作流程。",
+      "sections": []
+    },
+    ".kit/prompts/new-prompt.md": {
+      "overview": "说明维护模板的文件结构和占位符替换规则，包括 Markdown 代码区的特殊行为。",
+      "sections": []
+    },
+    ".kit/prompts/release-tagger.md": {
+      "overview": "描述版本发布前的变更检查、版本号选择和 Git 标签格式。",
+      "sections": []
+    },
+    ".kit/prompts/resolve-reviews.md": {
+      "overview": "说明如何核实拉取请求的评审意见、验证修复并跟进复审结果。",
+      "sections": []
+    },
+    ".kit/prompts/review-pr.md": {
+      "overview": "定义拉取请求的审阅流程，包括差异检查、Go 构建与测试以及评审结果整理。",
+      "sections": []
+    },
+    ".kit/prompts/update-docs.md": {
+      "overview": "描述根据代码变化识别需要更新的文档和用例，并检查文档示例。",
+      "sections": []
+    },
+    "otel/README.md": {
+      "overview": "说明如何用独立 OpenTelemetry 模块为客户端和服务端启用追踪，覆盖上下文传播和 span 约定。",
+      "sections": []
+    },
+    "otel/go.mod": {
+      "overview": "声明独立的 OpenTelemetry 适配器模块，将遥测 SDK 和日志桥接依赖留在核心模块之外。",
+      "sections": []
+    },
+    "otel/go.sum": {
+      "overview": "记录 OpenTelemetry 适配器及传递依赖的校验和，用于依赖完整性验证。",
+      "sections": []
+    },
+    "www/README.md": {
+      "overview": "说明文档站点由 Vocs CLI 初始化。",
+      "sections": []
+    },
+    "www/package.json": {
+      "overview": "定义文档站点的开发、构建和预览脚本，以及 React、Vocs 和 TypeScript 依赖。",
+      "sections": []
+    },
+    "www/tsconfig.json": {
+      "overview": "配置文档站点的 TypeScript 严格检查、React JSX 和打包器模块解析，仅做类型检查而不发射文件。",
+      "sections": []
+    },
+    "www/docs/pages/clients/advanced-sampling.mdx": {
+      "overview": "演示客户端如何配置采样处理器、接入模型和声明采样能力，并解释支持工具的采样请求。",
+      "sections": []
+    },
+    "www/docs/pages/clients/basics.mdx": {
+      "overview": "讲解不同传输对应的客户端构造方法，以及启动、初始化、超时、重试和关闭的生命周期。",
+      "sections": []
+    },
+    "www/docs/pages/clients/index.mdx": {
+      "overview": "介绍 MCP 客户端的构建入口，给出不同传输、连接管理及集成多个服务端的示例。",
+      "sections": []
+    },
+    "www/docs/pages/clients/operations.mdx": {
+      "overview": "演示客户端如何列出和读取资源、管理提示词及调用工具，并解释请求与结果结构。",
+      "sections": []
+    },
+    "www/docs/pages/clients/transports.mdx": {
+      "overview": "比较 stdio、Streamable HTTP、SSE 和进程内客户端，覆盖传输配置、身份验证、连接管理与 JSON-RPC 日志。",
+      "sections": []
+    },
+    "www/docs/pages/core-concepts.mdx": {
+      "overview": "解释 MCP 的资源、工具、提示词、传输及能力协商，说明客户端与服务端的职责划分。",
+      "sections": []
+    },
+    "www/docs/pages/getting-started.mdx": {
+      "overview": "从安装 Go 库开始，带读者编写并启动第一个 MCP 服务端，再通过客户端与其交互。",
+      "sections": []
+    },
+    "www/docs/pages/index.mdx": {
+      "overview": "文档站首页，使用 Vocs 组件介绍 mcp-go 的用途并提供入门文档和 GitHub 入口。",
+      "sections": []
+    },
+    "www/docs/pages/protocol-2026-07-28.mdx": {
+      "overview": "解释 2026-07-28 协议修订在版本选择、缓存提示、多轮请求与订阅等方面的变化，以及客户端和服务端的迁移方法。",
+      "sections": []
+    },
+    "www/docs/pages/quick-start.mdx": {
+      "overview": "通过 Hello World 工具演示创建服务端与两种客户端，并介绍用 MCP Inspector 检查连接和工具调用。",
+      "sections": []
+    },
+    "www/docs/pages/servers/advanced-sampling.mdx": {
+      "overview": "说明服务端如何向客户端发起采样，处理参数、内容类型、能力校验、超时和传输限制。",
+      "sections": []
+    },
+    "www/docs/pages/servers/advanced.mdx": {
+      "overview": "汇总服务端进阶配置，覆盖图标、类型化工具、会话状态、中间件、钩子和能力过滤。",
+      "sections": []
+    },
+    "www/docs/pages/servers/basics.mdx": {
+      "overview": "介绍创建和配置服务端、声明能力、选择传输及管理生命周期的常用方法。",
+      "sections": []
+    },
+    "www/docs/pages/servers/completions.mdx": {
+      "overview": "演示为提示词参数与资源模板注册自动补全提供者，并说明补全请求和结果类型。",
+      "sections": []
+    },
+    "www/docs/pages/servers/elicitation.mdx": {
+      "overview": "介绍表单和 URL 两种用户征询模式，覆盖请求参数、客户端响应、能力声明和超时。",
+      "sections": []
+    },
+    "www/docs/pages/servers/index.mdx": {
+      "overview": "服务端开发章节的起点，通过完整的注册工具示例串联基础、工具和资源等后续主题。",
+      "sections": []
+    },
+    "www/docs/pages/servers/middleware.mdx": {
+      "overview": "说明中间件注册、执行顺序、任务工具适配和并发约束。",
+      "sections": []
+    },
+    "www/docs/pages/servers/prompts.mdx": {
+      "overview": "说明提示词的注册、参数、模板和消息类型，以及过滤与处理器中间件。",
+      "sections": []
+    },
+    "www/docs/pages/servers/resources.mdx": {
+      "overview": "介绍静态资源、URI 模板、资源读取与订阅，并讨论内容类型、缓存和错误处理。",
+      "sections": []
+    },
+    "www/docs/pages/servers/tasks.mdx": {
+      "overview": "介绍任务工具的声明、注册和状态生命周期，包括任务钩子、并发限制与状态通知。",
+      "sections": []
+    },
+    "www/docs/pages/servers/tools.mdx": {
+      "overview": "讲解工具定义、通过 Go 结构体生成 Schema、处理器参数校验、结果构建和注解。",
+      "sections": []
+    },
+    "www/docs/pages/transports/http.mdx": {
+      "overview": "介绍 Streamable HTTP 的端点、会话管理、采样支持以及嵌入其他 Web 框架的方法。",
+      "sections": []
+    },
+    "www/docs/pages/transports/index.mdx": {
+      "overview": "对比 MCP 传输方式的适用场景、配置、性能与安全取舍。",
+      "sections": []
+    },
+    "www/docs/pages/transports/inprocess.mdx": {
+      "overview": "演示同一 Go 进程内连接客户端与服务端的方式，包括测试场景和反向采样。",
+      "sections": []
+    },
+    "www/docs/pages/transports/sse.mdx": {
+      "overview": "解释旧版 SSE 传输的服务端和客户端配置，以及如何处理实时通知。",
+      "sections": []
+    },
+    "www/docs/pages/transports/stdio.mdx": {
+      "overview": "说明使用标准输入输出交换 MCP 消息，覆盖客户端启动子进程、调试、错误处理和性能优化。",
+      "sections": []
+    },
+    ".github/pull_request_template.md": {
+      "overview": "提供提交拉取请求时的变更说明和验证清单。",
+      "sections": []
+    },
+    ".ua/config.json": {
+      "overview": "记录当前知识图谱的简体中文输出偏好。",
+      "sections": []
+    },
+    "conformance/server/expected-failures.yml": {
+      "overview": "登记协议一致性测试中预期失败的服务端场景。",
+      "sections": []
+    },
+    "examples/everything/id.go": {
+      "overview": "为综合示例提供标识生成逻辑。",
+      "sections": []
+    },
+    "examples/inprocess_sampling/README.md": {
+      "overview": "说明如何在进程内传输的示例中执行服务端发起的采样。",
+      "sections": []
+    },
+    "examples/oauth_client/README.md": {
+      "overview": "说明 OAuth 客户端示例的配置和运行方式。",
+      "sections": []
+    },
+    "examples/sampling_client/README.md": {
+      "overview": "说明使用标准输入输出传输的采样客户端示例。",
+      "sections": []
+    },
+    "examples/sampling_http_client/README.md": {
+      "overview": "说明通过 Streamable HTTP 执行采样请求的客户端示例。",
+      "sections": []
+    },
+    "examples/sampling_http_server/README.md": {
+      "overview": "说明通过 Streamable HTTP 请求客户端采样的服务端示例。",
+      "sections": []
+    },
+    "examples/sampling_server/README.md": {
+      "overview": "说明如何启动会向客户端发起采样请求的服务端示例。",
+      "sections": []
+    },
+    "examples/structured_input_and_output/README.md": {
+      "overview": "说明如何使用工具声明和处理结构化输入及输出。",
+      "sections": []
+    },
+    "otel/example/README.md": {
+      "overview": "说明 OpenTelemetry 示例的启动方法及如何查看追踪和日志。",
+      "sections": []
+    },
+    "scripts/check_conformance.py": {
+      "overview": "检查一致性测试报告，将观测结果与配置的预期失败列表比对。",
+      "sections": []
+    },
+    "scripts/test_check_conformance.py": {
+      "overview": "验证一致性结果检查脚本的报告读取和分类行为。",
+      "sections": []
+    },
+    "server/internal/gen/README.md": {
+      "overview": "说明服务端钩子与请求处理器的代码生成流程。",
+      "sections": []
+    },
+    "server/internal/gen/data.go": {
+      "overview": "保存代码生成所需的 MCP 请求、通知和钩子描述。",
+      "sections": []
+    },
+    "server/internal/gen/hooks.go.tmpl": {
+      "overview": "定义生成服务端钩子声明、注册及执行逻辑的 Go 模板。",
+      "sections": []
+    },
+    "server/internal/gen/main.go": {
+      "overview": "读取生成器定义并渲染服务端钩子和请求处理器源码。",
+      "sections": []
+    },
+    "server/internal/gen/request_handler.go.tmpl": {
+      "overview": "定义服务端请求分发和处理器包装的 Go 代码生成模板。",
+      "sections": []
+    },
+    "server/testdata/conformance/cacheable_results.txtar": {
+      "overview": "保存可缓存结果的一致性测试交互和预期响应。",
+      "sections": []
+    },
+    "server/testdata/conformance/discover.txtar": {
+      "overview": "保存新版发现方法的一致性测试交互和预期响应。",
+      "sections": []
+    },
+    "server/testdata/conformance/legacy_unchanged.txtar": {
+      "overview": "保存旧版协议兼容性的一致性测试样本。",
+      "sections": []
+    },
+    "server/testdata/conformance/missing_capabilities.txtar": {
+      "overview": "保存客户端缺少必需能力时的一致性测试样本。",
+      "sections": []
+    },
+    "server/testdata/conformance/mrtr.txtar": {
+      "overview": "保存多轮交互协议的一致性测试交互和预期响应。",
+      "sections": []
+    },
+    "server/testdata/conformance/removed_methods.txtar": {
+      "overview": "保存新版协议对已移除方法处理的一致性测试样本。",
+      "sections": []
+    },
+    "server/testdata/conformance/resource_not_found.txtar": {
+      "overview": "保存资源不存在时的协议一致性测试样本。",
+      "sections": []
+    },
+    "server/testdata/conformance/unsupported_version.txtar": {
+      "overview": "保存协议版本不受支持时的测试交互与预期错误。",
+      "sections": []
+    },
+    "www/docs/styles.css": {
+      "overview": "定义文档网站的自定义样式。",
+      "sections": []
+    },
+    "www/vocs.config.ts": {
+      "overview": "配置 Vocs 文档网站的信息、导航及侧栏结构。",
+      "sections": []
+    }
+  }
+}

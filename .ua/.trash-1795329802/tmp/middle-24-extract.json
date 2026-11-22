@@ -1,0 +1,36 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 1,
+  "filesSkipped": [
+    "server/testdata/conformance/resource_not_found.txtar",
+    "server/testdata/conformance/unsupported_version.txtar",
+    "www/docs/styles.css"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 1,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "www/vocs.config.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 144,
+      "nonEmptyLines": 143,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

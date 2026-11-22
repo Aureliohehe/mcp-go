@@ -1,0 +1,73 @@
+{
+  "nodes": [
+    {
+      "id": "document:otel/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "otel/README.md",
+      "summary": "说明如何用独立 OpenTelemetry 模块为客户端和服务端启用追踪，覆盖上下文传播和 span 约定。",
+      "tags": [
+        "可观测性",
+        "追踪",
+        "opentelemetry"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:otel/go.mod",
+      "type": "config",
+      "name": "go.mod",
+      "filePath": "otel/go.mod",
+      "summary": "声明独立的 OpenTelemetry 适配器模块，将遥测 SDK 和日志桥接依赖留在核心模块之外。",
+      "tags": [
+        "go模块",
+        "依赖管理",
+        "opentelemetry"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:otel/go.sum",
+      "type": "config",
+      "name": "go.sum",
+      "filePath": "otel/go.sum",
+      "summary": "记录 OpenTelemetry 适配器及传递依赖的校验和，用于依赖完整性验证。",
+      "tags": [
+        "go模块",
+        "依赖管理",
+        "完整性"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:otel/README.md",
+      "target": "file:otel/options.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:otel/README.md",
+      "target": "file:otel/tracer.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:otel/go.mod",
+      "target": "file:otel/options.go",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:otel/go.sum",
+      "target": "config:otel/go.mod",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

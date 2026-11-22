@@ -1,0 +1,2715 @@
+{
+  "scriptCompleted": true,
+  "contentDigest": "845b38da62e78878f8a5f45cf3424b4e346b34c0a0eacfa98b0cf26ceeae5f1e",
+  "files": [
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "language": "markdown",
+      "sizeLines": 38,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "language": "yaml",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/documentation-improvement.md",
+      "language": "markdown",
+      "sizeLines": 15,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature-request.md",
+      "language": "markdown",
+      "sizeLines": 32,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "language": "markdown",
+      "sizeLines": 37,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "language": "yaml",
+      "sizeLines": 45,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/conformance.yml",
+      "language": "yaml",
+      "sizeLines": 58,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/golangci-lint.yml",
+      "language": "yaml",
+      "sizeLines": 27,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "language": "yaml",
+      "sizeLines": 37,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "language": "yaml",
+      "sizeLines": 58,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".golangci.yml",
+      "language": "yaml",
+      "sizeLines": 25,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".kit/prompts/code-audit.md",
+      "language": "markdown",
+      "sizeLines": 328,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".kit/prompts/commit-push.md",
+      "language": "markdown",
+      "sizeLines": 30,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".kit/prompts/create-pr.md",
+      "language": "markdown",
+      "sizeLines": 47,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".kit/prompts/feature-request.md",
+      "language": "markdown",
+      "sizeLines": 86,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".kit/prompts/file-issue.md",
+      "language": "markdown",
+      "sizeLines": 100,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".kit/prompts/fix-issue.md",
+      "language": "markdown",
+      "sizeLines": 61,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".kit/prompts/new-prompt.md",
+      "language": "markdown",
+      "sizeLines": 84,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".kit/prompts/release-tagger.md",
+      "language": "markdown",
+      "sizeLines": 70,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".kit/prompts/resolve-reviews.md",
+      "language": "markdown",
+      "sizeLines": 99,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".kit/prompts/review-pr.md",
+      "language": "markdown",
+      "sizeLines": 245,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".kit/prompts/update-docs.md",
+      "language": "markdown",
+      "sizeLines": 52,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".ua/config.json",
+      "language": "json",
+      "sizeLines": 3,
+      "fileCategory": "config"
+    },
+    {
+      "path": "AGENTS.md",
+      "language": "markdown",
+      "sizeLines": 21,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "language": "markdown",
+      "sizeLines": 128,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "language": "markdown",
+      "sizeLines": 76,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 1129,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "SECURITY.md",
+      "language": "markdown",
+      "sizeLines": 7,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "client/cancel_test.go",
+      "language": "go",
+      "sizeLines": 296,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/client.go",
+      "language": "go",
+      "sizeLines": 1146,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/client_edge_cases_test.go",
+      "language": "go",
+      "sizeLines": 187,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/discovery_validation_test.go",
+      "language": "go",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/elicitation.go",
+      "language": "go",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/elicitation_test.go",
+      "language": "go",
+      "sizeLines": 229,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/http.go",
+      "language": "go",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/http_test.go",
+      "language": "go",
+      "sizeLines": 430,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/initial_roundtrip_test.go",
+      "language": "go",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/inprocess.go",
+      "language": "go",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/inprocess_elicitation_test.go",
+      "language": "go",
+      "sizeLines": 245,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/inprocess_options_test.go",
+      "language": "go",
+      "sizeLines": 169,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/inprocess_sampling_test.go",
+      "language": "go",
+      "sizeLines": 148,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/inprocess_test.go",
+      "language": "go",
+      "sizeLines": 780,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/interface.go",
+      "language": "go",
+      "sizeLines": 109,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/invalid_header_tools_test.go",
+      "language": "go",
+      "sizeLines": 191,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/invalid_tool_handler_test.go",
+      "language": "go",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/issue583_test.go",
+      "language": "go",
+      "sizeLines": 165,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/iter.go",
+      "language": "go",
+      "sizeLines": 181,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/iter_test.go",
+      "language": "go",
+      "sizeLines": 246,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/list_cursor_test.go",
+      "language": "go",
+      "sizeLines": 237,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/listen_error_stop_reentrancy_test.go",
+      "language": "go",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/load_shedding_responses_test.go",
+      "language": "go",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/mrtr.go",
+      "language": "go",
+      "sizeLines": 295,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/mrtr_interop_test.go",
+      "language": "go",
+      "sizeLines": 133,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/mrtr_manual_test.go",
+      "language": "go",
+      "sizeLines": 203,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/notification_handlers_test.go",
+      "language": "go",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/null_responses_test.go",
+      "language": "go",
+      "sizeLines": 142,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/oauth.go",
+      "language": "go",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/oauth_test.go",
+      "language": "go",
+      "sizeLines": 217,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/pending_subscription_test.go",
+      "language": "go",
+      "sizeLines": 129,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/protocol.go",
+      "language": "go",
+      "sizeLines": 454,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/protocol_negotiation_test.go",
+      "language": "go",
+      "sizeLines": 284,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/review_regression_test.go",
+      "language": "go",
+      "sizeLines": 154,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/roots.go",
+      "language": "go",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/sampling.go",
+      "language": "go",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/sampling_test.go",
+      "language": "go",
+      "sizeLines": 339,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/schema_type_array_test.go",
+      "language": "go",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/sse.go",
+      "language": "go",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/sse_test.go",
+      "language": "go",
+      "sizeLines": 334,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/stdio.go",
+      "language": "go",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/stdio_test.go",
+      "language": "go",
+      "sizeLines": 742,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/subscriptions.go",
+      "language": "go",
+      "sizeLines": 208,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/task_list_test.go",
+      "language": "go",
+      "sizeLines": 165,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/task_wait.go",
+      "language": "go",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/task_wait_test.go",
+      "language": "go",
+      "sizeLines": 192,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/tracing.go",
+      "language": "go",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/tracing_test.go",
+      "language": "go",
+      "sizeLines": 169,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/command.go",
+      "language": "go",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/command_test.go",
+      "language": "go",
+      "sizeLines": 139,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/constants.go",
+      "language": "go",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/error.go",
+      "language": "go",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/idempotent_all_transports_test.go",
+      "language": "go",
+      "sizeLines": 201,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/inprocess.go",
+      "language": "go",
+      "sizeLines": 216,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/inprocess_notification_session_test.go",
+      "language": "go",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/inprocess_registration_hook_close_test.go",
+      "language": "go",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/interface.go",
+      "language": "go",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/logging.go",
+      "language": "go",
+      "sizeLines": 319,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/logging_test.go",
+      "language": "go",
+      "sizeLines": 612,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/message_limit.go",
+      "language": "go",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/message_limit_test.go",
+      "language": "go",
+      "sizeLines": 286,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/notification_handler_reentrancy_test.go",
+      "language": "go",
+      "sizeLines": 115,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth.go",
+      "language": "go",
+      "sizeLines": 1804,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_binding.go",
+      "language": "go",
+      "sizeLines": 145,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_discovery_retry_test.go",
+      "language": "go",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_fallback_test.go",
+      "language": "go",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_iss_test.go",
+      "language": "go",
+      "sizeLines": 210,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_issuer_test.go",
+      "language": "go",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_nil_metadata_test.go",
+      "language": "go",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_pkce_required_test.go",
+      "language": "go",
+      "sizeLines": 124,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_prm_resource_binding_test.go",
+      "language": "go",
+      "sizeLines": 302,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_refresh_test.go",
+      "language": "go",
+      "sizeLines": 256,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_registration_test.go",
+      "language": "go",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_server_binding_test.go",
+      "language": "go",
+      "sizeLines": 339,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_test.go",
+      "language": "go",
+      "sizeLines": 2610,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_token_auth_test.go",
+      "language": "go",
+      "sizeLines": 242,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_token_response_test.go",
+      "language": "go",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_token_type_test.go",
+      "language": "go",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_transaction_binding_test.go",
+      "language": "go",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_transaction_test.go",
+      "language": "go",
+      "sizeLines": 354,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_utils.go",
+      "language": "go",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/oauth_utils_test.go",
+      "language": "go",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/panic_recovery_test.go",
+      "language": "go",
+      "sizeLines": 123,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/redirect.go",
+      "language": "go",
+      "sizeLines": 130,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/redirect_test.go",
+      "language": "go",
+      "sizeLines": 470,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/sse.go",
+      "language": "go",
+      "sizeLines": 926,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/sse_closed_notification_test.go",
+      "language": "go",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/sse_coverage_test.go",
+      "language": "go",
+      "sizeLines": 521,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/sse_lifecycle_test.go",
+      "language": "go",
+      "sizeLines": 230,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/sse_oauth_test.go",
+      "language": "go",
+      "sizeLines": 376,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/sse_test.go",
+      "language": "go",
+      "sizeLines": 1965,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/stderr_buffer_test.go",
+      "language": "go",
+      "sizeLines": 124,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/stdio.go",
+      "language": "go",
+      "sizeLines": 816,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/stdio_coverage_test.go",
+      "language": "go",
+      "sizeLines": 730,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/stdio_idempotent_test.go",
+      "language": "go",
+      "sizeLines": 133,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/stdio_test.go",
+      "language": "go",
+      "sizeLines": 1271,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/stdio_unix_test.go",
+      "language": "go",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/streamable_http.go",
+      "language": "go",
+      "sizeLines": 1711,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/streamable_http_bodyclose_test.go",
+      "language": "go",
+      "sizeLines": 209,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/streamable_http_get_bodyclose_test.go",
+      "language": "go",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/streamable_http_oauth_test.go",
+      "language": "go",
+      "sizeLines": 491,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/streamable_http_resume_test.go",
+      "language": "go",
+      "sizeLines": 230,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/streamable_http_retry_interval_test.go",
+      "language": "go",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/streamable_http_sampling_test.go",
+      "language": "go",
+      "sizeLines": 488,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/streamable_http_session_end_test.go",
+      "language": "go",
+      "sizeLines": 598,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/streamable_http_session_publish_test.go",
+      "language": "go",
+      "sizeLines": 123,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/streamable_http_start_after_close_test.go",
+      "language": "go",
+      "sizeLines": 229,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/streamable_http_test.go",
+      "language": "go",
+      "sizeLines": 2044,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/utils.go",
+      "language": "go",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/transport/utils_test.go",
+      "language": "go",
+      "sizeLines": 140,
+      "fileCategory": "code"
+    },
+    {
+      "path": "client/version_retry_test.go",
+      "language": "go",
+      "sizeLines": 318,
+      "fileCategory": "code"
+    },
+    {
+      "path": "conformance/server/expected-failures.yml",
+      "language": "yaml",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": "e2e/protocol_2026_07_28_test.go",
+      "language": "go",
+      "sizeLines": 301,
+      "fileCategory": "code"
+    },
+    {
+      "path": "e2e/resumability_http_test.go",
+      "language": "go",
+      "sizeLines": 805,
+      "fileCategory": "code"
+    },
+    {
+      "path": "e2e/sampling_http_test.go",
+      "language": "go",
+      "sizeLines": 549,
+      "fileCategory": "code"
+    },
+    {
+      "path": "e2e/scoped_request_resumability_test.go",
+      "language": "go",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "e2e/subscription_shutdown_test.go",
+      "language": "go",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/conformance/main.go",
+      "language": "go",
+      "sizeLines": 274,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/custom_context/main.go",
+      "language": "go",
+      "sizeLines": 165,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/dynamic_path/main.go",
+      "language": "go",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/elicitation/main.go",
+      "language": "go",
+      "sizeLines": 354,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/everything/id.go",
+      "language": "go",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/everything/main.go",
+      "language": "go",
+      "sizeLines": 605,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/filesystem_stdio_client/main.go",
+      "language": "go",
+      "sizeLines": 163,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/in_process/main.go",
+      "language": "go",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/inprocess_sampling/README.md",
+      "language": "markdown",
+      "sizeLines": 38,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "examples/inprocess_sampling/main.go",
+      "language": "go",
+      "sizeLines": 166,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/multi_round_trip/main.go",
+      "language": "go",
+      "sizeLines": 159,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/oauth_client/README.md",
+      "language": "markdown",
+      "sizeLines": 58,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "examples/oauth_client/main.go",
+      "language": "go",
+      "sizeLines": 220,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/roots_client/main.go",
+      "language": "go",
+      "sizeLines": 163,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/roots_http_client/main.go",
+      "language": "go",
+      "sizeLines": 149,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/roots_http_server/main.go",
+      "language": "go",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/roots_server/main.go",
+      "language": "go",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/sampling_client/README.md",
+      "language": "markdown",
+      "sizeLines": 86,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "examples/sampling_client/main.go",
+      "language": "go",
+      "sizeLines": 210,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/sampling_http_client/README.md",
+      "language": "markdown",
+      "sizeLines": 94,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "examples/sampling_http_client/main.go",
+      "language": "go",
+      "sizeLines": 116,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/sampling_http_server/README.md",
+      "language": "markdown",
+      "sizeLines": 137,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "examples/sampling_http_server/main.go",
+      "language": "go",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/sampling_server/README.md",
+      "language": "markdown",
+      "sizeLines": 51,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "examples/sampling_server/main.go",
+      "language": "go",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/simple_client/main.go",
+      "language": "go",
+      "sizeLines": 199,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/structured_input_and_output/README.md",
+      "language": "markdown",
+      "sizeLines": 74,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "examples/structured_input_and_output/main.go",
+      "language": "go",
+      "sizeLines": 152,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/task_tool/main.go",
+      "language": "go",
+      "sizeLines": 291,
+      "fileCategory": "code"
+    },
+    {
+      "path": "examples/typed_tools/main.go",
+      "language": "go",
+      "sizeLines": 122,
+      "fileCategory": "code"
+    },
+    {
+      "path": "go.mod",
+      "language": "mod",
+      "sizeLines": 22,
+      "fileCategory": "config"
+    },
+    {
+      "path": "go.sum",
+      "language": "sum",
+      "sizeLines": 40,
+      "fileCategory": "config"
+    },
+    {
+      "path": "mcp/array_fallback_test.go",
+      "language": "go",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/base_metadata_test.go",
+      "language": "go",
+      "sizeLines": 221,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/call_tool_result_parse_test.go",
+      "language": "go",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/consts.go",
+      "language": "go",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/content_benchmark_test.go",
+      "language": "go",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/content_pointers_test.go",
+      "language": "go",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/discover.go",
+      "language": "go",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/elicitation_test.go",
+      "language": "go",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/elicitation_validation_test.go",
+      "language": "go",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/empty_result_arrays_test.go",
+      "language": "go",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/error_pointer_classification_test.go",
+      "language": "go",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/error_unmarshal_test.go",
+      "language": "go",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/errors.go",
+      "language": "go",
+      "sizeLines": 250,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/errors_additional_test.go",
+      "language": "go",
+      "sizeLines": 218,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/errors_test.go",
+      "language": "go",
+      "sizeLines": 232,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/headers.go",
+      "language": "go",
+      "sizeLines": 693,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/headers_test.go",
+      "language": "go",
+      "sizeLines": 479,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/icons_test.go",
+      "language": "go",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/meta.go",
+      "language": "go",
+      "sizeLines": 197,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/meta_map_ownership_test.go",
+      "language": "go",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/mrtr.go",
+      "language": "go",
+      "sizeLines": 302,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/mrtr_test.go",
+      "language": "go",
+      "sizeLines": 235,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/notification_params_reuse_test.go",
+      "language": "go",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/output_schema_replacement_test.go",
+      "language": "go",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/primitive_item_required_test.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/prompts.go",
+      "language": "go",
+      "sizeLines": 213,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/prompts_test.go",
+      "language": "go",
+      "sizeLines": 298,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/quoted_schema_test.go",
+      "language": "go",
+      "sizeLines": 705,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/request_id_number.go",
+      "language": "go",
+      "sizeLines": 159,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/request_id_precision_test.go",
+      "language": "go",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/resources.go",
+      "language": "go",
+      "sizeLines": 176,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/resources_test.go",
+      "language": "go",
+      "sizeLines": 452,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/result.go",
+      "language": "go",
+      "sizeLines": 165,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/sampling_result_shape_test.go",
+      "language": "go",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/schema_cache.go",
+      "language": "go",
+      "sizeLines": 428,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/schema_cache_identity_test.go",
+      "language": "go",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/schema_cache_test.go",
+      "language": "go",
+      "sizeLines": 413,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/schema_type_array_regression_test.go",
+      "language": "go",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/struct_schema.go",
+      "language": "go",
+      "sizeLines": 651,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/struct_schema_test.go",
+      "language": "go",
+      "sizeLines": 203,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/structured_result_serialization_test.go",
+      "language": "go",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/task_result_content_array_test.go",
+      "language": "go",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/task_result_structured_precision_test.go",
+      "language": "go",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/task_status_parsing_test.go",
+      "language": "go",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/tasks.go",
+      "language": "go",
+      "sizeLines": 208,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/tasks_test.go",
+      "language": "go",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/testdata/schema_cache/first/models.go",
+      "language": "go",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/testdata/schema_cache/second/models.go",
+      "language": "go",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/tool_result_reuse_test.go",
+      "language": "go",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/tool_schema_keywords_test.go",
+      "language": "go",
+      "sizeLines": 160,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/tool_schema_roundtrip_regression_test.go",
+      "language": "go",
+      "sizeLines": 351,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/tools.go",
+      "language": "go",
+      "sizeLines": 1860,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/tools_additional_test.go",
+      "language": "go",
+      "sizeLines": 465,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/tools_annotations_test.go",
+      "language": "go",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/tools_defer_loading_test.go",
+      "language": "go",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/tools_int_slice_precision_test.go",
+      "language": "go",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/tools_properties_test.go",
+      "language": "go",
+      "sizeLines": 388,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/tools_property_order_test.go",
+      "language": "go",
+      "sizeLines": 582,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/tools_raw_arguments_test.go",
+      "language": "go",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/tools_schema_additional_fields_test.go",
+      "language": "go",
+      "sizeLines": 168,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/tools_test.go",
+      "language": "go",
+      "sizeLines": 2799,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/typed_tools.go",
+      "language": "go",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/typed_tools_additional_test.go",
+      "language": "go",
+      "sizeLines": 329,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/typed_tools_test.go",
+      "language": "go",
+      "sizeLines": 304,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/types.go",
+      "language": "go",
+      "sizeLines": 2016,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/types_test.go",
+      "language": "go",
+      "sizeLines": 780,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/unique_required_test.go",
+      "language": "go",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/utils.go",
+      "language": "go",
+      "sizeLines": 1418,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/utils_additional_test.go",
+      "language": "go",
+      "sizeLines": 1112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/utils_envelope_test.go",
+      "language": "go",
+      "sizeLines": 122,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/utils_helpers_test.go",
+      "language": "go",
+      "sizeLines": 210,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/utils_integer_test.go",
+      "language": "go",
+      "sizeLines": 206,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/utils_task_result_test.go",
+      "language": "go",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/utils_test.go",
+      "language": "go",
+      "sizeLines": 840,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/version.go",
+      "language": "go",
+      "sizeLines": 113,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcp/version_test.go",
+      "language": "go",
+      "sizeLines": 246,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcptest/mcptest.go",
+      "language": "go",
+      "sizeLines": 274,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcptest/mcptest_sampling_elicitation_test.go",
+      "language": "go",
+      "sizeLines": 287,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mcptest/mcptest_test.go",
+      "language": "go",
+      "sizeLines": 609,
+      "fileCategory": "code"
+    },
+    {
+      "path": "otel/README.md",
+      "language": "markdown",
+      "sizeLines": 36,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "otel/client_test.go",
+      "language": "go",
+      "sizeLines": 177,
+      "fileCategory": "code"
+    },
+    {
+      "path": "otel/example/README.md",
+      "language": "markdown",
+      "sizeLines": 59,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "otel/example/main.go",
+      "language": "go",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "otel/go.mod",
+      "language": "mod",
+      "sizeLines": 34,
+      "fileCategory": "config"
+    },
+    {
+      "path": "otel/go.sum",
+      "language": "sum",
+      "sizeLines": 64,
+      "fileCategory": "config"
+    },
+    {
+      "path": "otel/logger.go",
+      "language": "go",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "otel/logger_test.go",
+      "language": "go",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "otel/meta_carrier.go",
+      "language": "go",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "otel/meta_carrier_test.go",
+      "language": "go",
+      "sizeLines": 300,
+      "fileCategory": "code"
+    },
+    {
+      "path": "otel/options.go",
+      "language": "go",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "otel/server_test.go",
+      "language": "go",
+      "sizeLines": 207,
+      "fileCategory": "code"
+    },
+    {
+      "path": "otel/tracer.go",
+      "language": "go",
+      "sizeLines": 113,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/check_conformance.py",
+      "language": "python",
+      "sizeLines": 195,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/test_check_conformance.py",
+      "language": "python",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/atomic_registry_replacement_test.go",
+      "language": "go",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/client_info_store.go",
+      "language": "go",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/client_info_store_test.go",
+      "language": "go",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/completion.go",
+      "language": "go",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/conformance_test.go",
+      "language": "go",
+      "sizeLines": 242,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/constants.go",
+      "language": "go",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/ctx.go",
+      "language": "go",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/discover.go",
+      "language": "go",
+      "sizeLines": 122,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/elicitation.go",
+      "language": "go",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/elicitation_test.go",
+      "language": "go",
+      "sizeLines": 311,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/empty_results_test.go",
+      "language": "go",
+      "sizeLines": 230,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/errors.go",
+      "language": "go",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/event_store.go",
+      "language": "go",
+      "sizeLines": 147,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/event_store_replay_copy_test.go",
+      "language": "go",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/handle_message_bench_test.go",
+      "language": "go",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/handle_message_parse_test.go",
+      "language": "go",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/handler_errors.go",
+      "language": "go",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/header_params_shapes_test.go",
+      "language": "go",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/helpers_test.go",
+      "language": "go",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/hooks.go",
+      "language": "go",
+      "sizeLines": 864,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/http_cors.go",
+      "language": "go",
+      "sizeLines": 227,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/http_cors_test.go",
+      "language": "go",
+      "sizeLines": 422,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/http_localhost.go",
+      "language": "go",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/http_localhost_test.go",
+      "language": "go",
+      "sizeLines": 510,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/http_transport_options.go",
+      "language": "go",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/inflight_request.go",
+      "language": "go",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/inflight_request_test.go",
+      "language": "go",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/inprocess_session.go",
+      "language": "go",
+      "sizeLines": 233,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/inprocess_session_test.go",
+      "language": "go",
+      "sizeLines": 203,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/input_validation.go",
+      "language": "go",
+      "sizeLines": 310,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/input_validation_test.go",
+      "language": "go",
+      "sizeLines": 1182,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/internal/gen/README.md",
+      "language": "markdown",
+      "sizeLines": 24,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "server/internal/gen/data.go",
+      "language": "go",
+      "sizeLines": 221,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/internal/gen/hooks.go.tmpl",
+      "language": "tmpl",
+      "sizeLines": 301,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/internal/gen/main.go",
+      "language": "go",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/internal/gen/request_handler.go.tmpl",
+      "language": "tmpl",
+      "sizeLines": 256,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/jsonrpc_error.go",
+      "language": "go",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/jsonrpc_strict.go",
+      "language": "go",
+      "sizeLines": 143,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/jsonrpc_strict_test.go",
+      "language": "go",
+      "sizeLines": 165,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/logger.go",
+      "language": "go",
+      "sizeLines": 122,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/logger_test.go",
+      "language": "go",
+      "sizeLines": 177,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/mrtr.go",
+      "language": "go",
+      "sizeLines": 370,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/mrtr_test.go",
+      "language": "go",
+      "sizeLines": 352,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/nil_result_test.go",
+      "language": "go",
+      "sizeLines": 192,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/output_validation.go",
+      "language": "go",
+      "sizeLines": 174,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/output_validation_test.go",
+      "language": "go",
+      "sizeLines": 512,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/pagination_empty_tiebreak_test.go",
+      "language": "go",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/pagination_legacy_cursor_test.go",
+      "language": "go",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/pagination_positive_overflow_test.go",
+      "language": "go",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/param_headers_bench_test.go",
+      "language": "go",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/param_headers_test.go",
+      "language": "go",
+      "sizeLines": 439,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/protected_resource.go",
+      "language": "go",
+      "sizeLines": 192,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/protected_resource_escaped_path_test.go",
+      "language": "go",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/protected_resource_test.go",
+      "language": "go",
+      "sizeLines": 352,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/protocol.go",
+      "language": "go",
+      "sizeLines": 126,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/request_error_test.go",
+      "language": "go",
+      "sizeLines": 213,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/request_handler.go",
+      "language": "go",
+      "sizeLines": 740,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/request_id_precision_test.go",
+      "language": "go",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/request_id_transport_test.go",
+      "language": "go",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/resource_errors.go",
+      "language": "go",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/resource_subscribe_test.go",
+      "language": "go",
+      "sizeLines": 320,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/resource_template_match_test.go",
+      "language": "go",
+      "sizeLines": 121,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/resource_test.go",
+      "language": "go",
+      "sizeLines": 253,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/response.go",
+      "language": "go",
+      "sizeLines": 389,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/roots.go",
+      "language": "go",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/roots_test.go",
+      "language": "go",
+      "sizeLines": 240,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/sampling.go",
+      "language": "go",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/sampling_test.go",
+      "language": "go",
+      "sizeLines": 154,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/schema_type_array_test.go",
+      "language": "go",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/server.go",
+      "language": "go",
+      "sizeLines": 3283,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/server_additional_test.go",
+      "language": "go",
+      "sizeLines": 1151,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/server_race_test.go",
+      "language": "go",
+      "sizeLines": 203,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/server_test.go",
+      "language": "go",
+      "sizeLines": 5049,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/servertest/doc.go",
+      "language": "go",
+      "sizeLines": 3,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/servertest/sse.go",
+      "language": "go",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/servertest/streamable.go",
+      "language": "go",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/session.go",
+      "language": "go",
+      "sizeLines": 907,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/session_hook_panic_test.go",
+      "language": "go",
+      "sizeLines": 230,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/session_resource_helpers_test.go",
+      "language": "go",
+      "sizeLines": 764,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/session_resource_templates_test.go",
+      "language": "go",
+      "sizeLines": 563,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/session_test.go",
+      "language": "go",
+      "sizeLines": 1958,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/sse.go",
+      "language": "go",
+      "sizeLines": 1021,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/sse_body_limit_test.go",
+      "language": "go",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/sse_full_queue_test.go",
+      "language": "go",
+      "sizeLines": 251,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/sse_panic_test.go",
+      "language": "go",
+      "sizeLines": 133,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/sse_test.go",
+      "language": "go",
+      "sizeLines": 1824,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/stdio.go",
+      "language": "go",
+      "sizeLines": 936,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/stdio_invalid_id_test.go",
+      "language": "go",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/stdio_panic_test.go",
+      "language": "go",
+      "sizeLines": 184,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/stdio_test.go",
+      "language": "go",
+      "sizeLines": 1016,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http.go",
+      "language": "go",
+      "sizeLines": 2573,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_bench_test.go",
+      "language": "go",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_body_limit_test.go",
+      "language": "go",
+      "sizeLines": 141,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_client_info_test.go",
+      "language": "go",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_elicitation_test.go",
+      "language": "go",
+      "sizeLines": 242,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_envelope_test.go",
+      "language": "go",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_handle.go",
+      "language": "go",
+      "sizeLines": 228,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_handle_test.go",
+      "language": "go",
+      "sizeLines": 313,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_modern.go",
+      "language": "go",
+      "sizeLines": 221,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_modern_test.go",
+      "language": "go",
+      "sizeLines": 822,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_notification_drop_test.go",
+      "language": "go",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_overlapping_post_test.go",
+      "language": "go",
+      "sizeLines": 386,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_request_scoped_notification_test.go",
+      "language": "go",
+      "sizeLines": 233,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_resume.go",
+      "language": "go",
+      "sizeLines": 516,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_roots_post_test.go",
+      "language": "go",
+      "sizeLines": 352,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_sampling_error_label_test.go",
+      "language": "go",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_sampling_test.go",
+      "language": "go",
+      "sizeLines": 253,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_shutdown_test.go",
+      "language": "go",
+      "sizeLines": 157,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_test.go",
+      "language": "go",
+      "sizeLines": 3328,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/streamable_http_touch_test.go",
+      "language": "go",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/strict_input_schema_default_test.go",
+      "language": "go",
+      "sizeLines": 199,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/structured_handler_error_test.go",
+      "language": "go",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/subscriptions.go",
+      "language": "go",
+      "sizeLines": 244,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/subscriptions_test.go",
+      "language": "go",
+      "sizeLines": 426,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/task_cancel_result_test.go",
+      "language": "go",
+      "sizeLines": 186,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/task_hook_ordering_test.go",
+      "language": "go",
+      "sizeLines": 177,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/task_hook_reentrancy_test.go",
+      "language": "go",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/task_hooks.go",
+      "language": "go",
+      "sizeLines": 141,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/task_hooks_test.go",
+      "language": "go",
+      "sizeLines": 361,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/task_limit_test.go",
+      "language": "go",
+      "sizeLines": 269,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/task_panic_test.go",
+      "language": "go",
+      "sizeLines": 334,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/task_raw_structured_test.go",
+      "language": "go",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/task_response_format_test.go",
+      "language": "go",
+      "sizeLines": 120,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/task_result_content_array_test.go",
+      "language": "go",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/task_session_tool_test.go",
+      "language": "go",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/task_test.go",
+      "language": "go",
+      "sizeLines": 1795,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/task_tool_test.go",
+      "language": "go",
+      "sizeLines": 1024,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/testdata/conformance/cacheable_results.txtar",
+      "language": "txtar",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/testdata/conformance/discover.txtar",
+      "language": "txtar",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/testdata/conformance/legacy_unchanged.txtar",
+      "language": "txtar",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/testdata/conformance/missing_capabilities.txtar",
+      "language": "txtar",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/testdata/conformance/mrtr.txtar",
+      "language": "txtar",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/testdata/conformance/removed_methods.txtar",
+      "language": "txtar",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/testdata/conformance/resource_not_found.txtar",
+      "language": "txtar",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/testdata/conformance/unsupported_version.txtar",
+      "language": "txtar",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/tool_filter_call_test.go",
+      "language": "go",
+      "sizeLines": 740,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/tool_middleware_registration_reentrancy_test.go",
+      "language": "go",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/tracing.go",
+      "language": "go",
+      "sizeLines": 135,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/tracing_test.go",
+      "language": "go",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/version_test.go",
+      "language": "go",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "testdata/mockstdio_server.go",
+      "language": "go",
+      "sizeLines": 173,
+      "fileCategory": "code"
+    },
+    {
+      "path": "testdata/mockstdio_stderr_flood_server.go",
+      "language": "go",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "testdata/mockstdio_stderr_server.go",
+      "language": "go",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tracing/tracing.go",
+      "language": "go",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tracing/tracing_test.go",
+      "language": "go",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "www/README.md",
+      "language": "markdown",
+      "sizeLines": 1,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/clients/advanced-sampling.mdx",
+      "language": "markdown",
+      "sizeLines": 607,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/clients/basics.mdx",
+      "language": "markdown",
+      "sizeLines": 747,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/clients/index.mdx",
+      "language": "markdown",
+      "sizeLines": 444,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/clients/operations.mdx",
+      "language": "markdown",
+      "sizeLines": 1064,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/clients/transports.mdx",
+      "language": "markdown",
+      "sizeLines": 1226,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/core-concepts.mdx",
+      "language": "markdown",
+      "sizeLines": 263,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/getting-started.mdx",
+      "language": "markdown",
+      "sizeLines": 160,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/index.mdx",
+      "language": "markdown",
+      "sizeLines": 16,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/protocol-2026-07-28.mdx",
+      "language": "markdown",
+      "sizeLines": 281,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/quick-start.mdx",
+      "language": "markdown",
+      "sizeLines": 300,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/servers/advanced-sampling.mdx",
+      "language": "markdown",
+      "sizeLines": 501,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/servers/advanced.mdx",
+      "language": "markdown",
+      "sizeLines": 1082,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/servers/basics.mdx",
+      "language": "markdown",
+      "sizeLines": 373,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/servers/completions.mdx",
+      "language": "markdown",
+      "sizeLines": 174,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/servers/elicitation.mdx",
+      "language": "markdown",
+      "sizeLines": 412,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/servers/index.mdx",
+      "language": "markdown",
+      "sizeLines": 151,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/servers/middleware.mdx",
+      "language": "markdown",
+      "sizeLines": 194,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/servers/prompts.mdx",
+      "language": "markdown",
+      "sizeLines": 666,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/servers/resources.mdx",
+      "language": "markdown",
+      "sizeLines": 835,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/servers/tasks.mdx",
+      "language": "markdown",
+      "sizeLines": 365,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/servers/tools.mdx",
+      "language": "markdown",
+      "sizeLines": 1329,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/transports/http.mdx",
+      "language": "markdown",
+      "sizeLines": 1256,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/transports/index.mdx",
+      "language": "markdown",
+      "sizeLines": 271,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/transports/inprocess.mdx",
+      "language": "markdown",
+      "sizeLines": 623,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/transports/sse.mdx",
+      "language": "markdown",
+      "sizeLines": 425,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/pages/transports/stdio.mdx",
+      "language": "markdown",
+      "sizeLines": 725,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "www/docs/styles.css",
+      "language": "css",
+      "sizeLines": 5,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "www/package.json",
+      "language": "json",
+      "sizeLines": 20,
+      "fileCategory": "config"
+    },
+    {
+      "path": "www/tsconfig.json",
+      "language": "json",
+      "sizeLines": 24,
+      "fileCategory": "config"
+    },
+    {
+      "path": "www/vocs.config.ts",
+      "language": "typescript",
+      "sizeLines": 144,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 447,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "large",
+  "failures": [],
+  "stats": {
+    "filesScanned": 447,
+    "byCategory": {
+      "docs": 57,
+      "config": 10,
+      "infra": 5,
+      "code": 374,
+      "markup": 1
+    },
+    "byLanguage": {
+      "markdown": 57,
+      "yaml": 8,
+      "json": 3,
+      "go": 361,
+      "mod": 2,
+      "sum": 2,
+      "python": 2,
+      "tmpl": 2,
+      "txtar": 8,
+      "css": 1,
+      "typescript": 1
+    }
+  }
+}

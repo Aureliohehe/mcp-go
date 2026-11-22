@@ -1,0 +1,445 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 11,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 11,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 11
+    }
+  },
+  "results": [
+    {
+      "path": ".kit/prompts/code-audit.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 328,
+      "nonEmptyLines": 301,
+      "sections": [
+        {
+          "heading": "Scope",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "Steps",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "Guidelines",
+          "level": 2,
+          "line": 302
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": ".kit/prompts/commit-push.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 30,
+      "nonEmptyLines": 24,
+      "sections": [
+        {
+          "heading": "Steps",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Guidelines",
+          "level": 2,
+          "line": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": ".kit/prompts/create-pr.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 47,
+      "nonEmptyLines": 41,
+      "sections": [
+        {
+          "heading": "Steps",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Guidelines",
+          "level": 2,
+          "line": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": ".kit/prompts/feature-request.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 86,
+      "nonEmptyLines": 66,
+      "sections": [
+        {
+          "heading": "Feature Request Template",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Steps",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "Guidelines",
+          "level": 2,
+          "line": 65
+        },
+        {
+          "heading": "Example",
+          "level": 2,
+          "line": 74
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": ".kit/prompts/file-issue.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 100,
+      "nonEmptyLines": 78,
+      "sections": [
+        {
+          "heading": "Issue Templates Available",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Steps",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "Template Field Guide",
+          "level": 2,
+          "line": 59
+        },
+        {
+          "heading": "Bug Report (`bug_report`)",
+          "level": 3,
+          "line": 61
+        },
+        {
+          "heading": "Feature Request (`feature_request`)",
+          "level": 3,
+          "line": 69
+        },
+        {
+          "heading": "Documentation (`documentation`)",
+          "level": 3,
+          "line": 75
+        },
+        {
+          "heading": "Guidelines",
+          "level": 2,
+          "line": 81
+        },
+        {
+          "heading": "Example Usage",
+          "level": 2,
+          "line": 91
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": ".kit/prompts/fix-issue.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 61,
+      "nonEmptyLines": 49,
+      "sections": [
+        {
+          "heading": "Steps",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Guidelines",
+          "level": 2,
+          "line": 54
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": ".kit/prompts/new-prompt.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 84,
+      "nonEmptyLines": 62,
+      "sections": [
+        {
+          "heading": "What a prompt template is",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "File format",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "Argument placeholders",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "⚠️ Critical: code fences and inline code preserve placeholders verbatim",
+          "level": 3,
+          "line": 40
+        },
+        {
+          "heading": "Workarounds for \"I want it to look like code AND substitute\"",
+          "level": 3,
+          "line": 49
+        },
+        {
+          "heading": "Steps",
+          "level": 2,
+          "line": 59
+        },
+        {
+          "heading": "Guidelines",
+          "level": 2,
+          "line": 78
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": ".kit/prompts/release-tagger.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 70,
+      "nonEmptyLines": 49,
+      "sections": [
+        {
+          "heading": "Release Tagging Workflow",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "Steps",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Guidelines",
+          "level": 2,
+          "line": 44
+        },
+        {
+          "heading": "Example Tag Message Format",
+          "level": 2,
+          "line": 53
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": ".kit/prompts/resolve-reviews.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 99,
+      "nonEmptyLines": 62,
+      "sections": [
+        {
+          "heading": "Identify the PR",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Fetch the findings",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "Triage each finding — verify before fixing",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "Fix, validate, push",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "Poll for the re-review",
+          "level": 2,
+          "line": 59
+        },
+        {
+          "heading": "Check for new findings and loop",
+          "level": 2,
+          "line": 71
+        },
+        {
+          "heading": "Report",
+          "level": 2,
+          "line": 85
+        },
+        {
+          "heading": "Guidelines",
+          "level": 2,
+          "line": 92
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": ".kit/prompts/review-pr.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 245,
+      "nonEmptyLines": 175,
+      "sections": [
+        {
+          "heading": "Step 1 — Fetch the PR",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "Step 2 — Static security scan (added lines only)",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "Step 3 — Baseline + PR build / test / lint (Go)",
+          "level": 2,
+          "line": 66
+        },
+        {
+          "heading": "Step 4 — Self-review checklist (Go-flavored)",
+          "level": 2,
+          "line": 108
+        },
+        {
+          "heading": "Step 5 — Independent reviewer subagent",
+          "level": 2,
+          "line": 128
+        },
+        {
+          "heading": "Step 6 — Compose the verdict",
+          "level": 2,
+          "line": 197
+        },
+        {
+          "heading": "Step 7 — Inline comments (optional)",
+          "level": 2,
+          "line": 230
+        },
+        {
+          "heading": "Guidelines",
+          "level": 2,
+          "line": 238
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": ".kit/prompts/update-docs.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 52,
+      "nonEmptyLines": 40,
+      "sections": [
+        {
+          "heading": "Steps",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Guidelines",
+          "level": 2,
+          "line": 45
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    }
+  ]
+}

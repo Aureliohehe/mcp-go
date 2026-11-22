@@ -1,0 +1,51 @@
+目录文件数 {
+  client: 111,
+  e2e: 5,
+  examples: 30,
+  mcp: 76,
+  testdata: 3,
+  tracing: 2,
+  mcptest: 3,
+  server: 140,
+  otel: 13,
+  '.github': 10,
+  '(root)': 8,
+  '.kit': 11,
+  www: 31,
+  '.ua': 1,
+  conformance: 1,
+  scripts: 2
+}
+主要跨目录依赖 [
+  [ 'server → mcp', 7844 ],
+  [ 'client → mcp', 5624 ],
+  [ 'client → server', 1990 ],
+  [ 'examples → server', 1860 ],
+  [ 'examples → mcp', 1628 ],
+  [ 'examples → client', 862 ],
+  [ 'e2e → server', 626 ],
+  [ 'mcptest → server', 375 ],
+  [ 'e2e → mcp', 370 ],
+  [ 'testdata → mcp', 222 ],
+  [ 'mcptest → mcp', 222 ],
+  [ 'e2e → client', 222 ]
+]
+[
+  [ 'MCP 协议与数据模型', 74, [ [Array], [Array], [Array], [Array] ] ],
+  [ '客户端运行时', 34, [ [Array], [Array], [Array], [Array] ] ],
+  [
+    '服务端运行时',
+    79,
+    [ [Array], [Array], [Array], [Array], [Array], [Array] ]
+  ],
+  [
+    '连接传输与认证',
+    118,
+    [ [Array], [Array], [Array], [Array], [Array], [Array] ]
+  ],
+  [ '追踪与可观测性', 17, [ [Array], [Array] ] ],
+  [ '集成测试与测试工具', 25, [ [Array], [Array], [Array], [Array] ] ],
+  [ '可运行示例', 32, [ [Array], [Array], [Array], [Array] ] ],
+  [ '文档与站点', 34, [ [Array], [Array], [Array], [Array], [Array] ] ],
+  [ '构建、生成与交付', 34, [ [Array], [Array], [Array], [Array], [Array] ] ]
+]

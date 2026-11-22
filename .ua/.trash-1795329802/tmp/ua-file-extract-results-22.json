@@ -1,0 +1,639 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 5,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 5
+    }
+  },
+  "results": [
+    {
+      "path": "www/docs/pages/transports/http.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 1256,
+      "nonEmptyLines": 1019,
+      "sections": [
+        {
+          "heading": "StreamableHTTP Transport",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Use Cases",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Implementation",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "Basic StreamableHTTP Server",
+          "level": 3,
+          "line": 26
+        },
+        {
+          "heading": "Advanced StreamableHTTP Configuration",
+          "level": 3,
+          "line": 229
+        },
+        {
+          "heading": "Endpoints",
+          "level": 2,
+          "line": 341
+        },
+        {
+          "heading": "Standard MCP Endpoints",
+          "level": 3,
+          "line": 343
+        },
+        {
+          "heading": "Custom Endpoints",
+          "level": 3,
+          "line": 359
+        },
+        {
+          "heading": "Request/Response Patterns",
+          "level": 3,
+          "line": 423
+        },
+        {
+          "heading": "Standard MCP Request",
+          "level": 4,
+          "line": 425
+        },
+        {
+          "heading": "Standard MCP Response",
+          "level": 4,
+          "line": 446
+        },
+        {
+          "heading": "Error Response",
+          "level": 4,
+          "line": 463
+        },
+        {
+          "heading": "Session Management",
+          "level": 2,
+          "line": 479
+        },
+        {
+          "heading": "Session Idle TTL",
+          "level": 3,
+          "line": 481
+        },
+        {
+          "heading": "Stream Resumability",
+          "level": 3,
+          "line": 493
+        },
+        {
+          "heading": "Stateful vs Stateless",
+          "level": 3,
+          "line": 507
+        },
+        {
+          "heading": "Stateless Design (Recommended)",
+          "level": 4,
+          "line": 509
+        },
+        {
+          "heading": "Stateful Design (When Needed)",
+          "level": 4,
+          "line": 534
+        },
+        {
+          "heading": "Authentication and Authorization",
+          "level": 3,
+          "line": 611
+        },
+        {
+          "heading": "OAuth Protected Resource Metadata (RFC 9728)",
+          "level": 3,
+          "line": 682
+        },
+        {
+          "heading": "Option A: Auto-mounted via a server option",
+          "level": 4,
+          "line": 692
+        },
+        {
+          "heading": "Option B: Standalone handler for custom routing",
+          "level": 4,
+          "line": 727
+        },
+        {
+          "heading": "Path-qualified resources (RFC 9728 §3.1)",
+          "level": 4,
+          "line": 744
+        },
+        {
+          "heading": "Handler behavior",
+          "level": 4,
+          "line": 764
+        },
+        {
+          "heading": "DNS Rebinding Protection",
+          "level": 3,
+          "line": 776
+        },
+        {
+          "heading": "Cross-Origin Resource Sharing (CORS)",
+          "level": 3,
+          "line": 840
+        },
+        {
+          "heading": "Request Headers",
+          "level": 3,
+          "line": 880
+        },
+        {
+          "heading": "Accessing Headers in Handlers",
+          "level": 4,
+          "line": 884
+        },
+        {
+          "heading": "Sampling Support",
+          "level": 2,
+          "line": 917
+        },
+        {
+          "heading": "Requirements for Sampling",
+          "level": 3,
+          "line": 939
+        },
+        {
+          "heading": "Server-Side Implementation",
+          "level": 3,
+          "line": 957
+        },
+        {
+          "heading": "How It Works",
+          "level": 3,
+          "line": 1010
+        },
+        {
+          "heading": "Limitations",
+          "level": 3,
+          "line": 1017
+        },
+        {
+          "heading": "Example with Approval Flow",
+          "level": 3,
+          "line": 1023
+        },
+        {
+          "heading": "Embedding in Non-net/http Frameworks",
+          "level": 2,
+          "line": 1071
+        },
+        {
+          "heading": "When to Use Which",
+          "level": 3,
+          "line": 1086
+        },
+        {
+          "heading": "API Surface",
+          "level": 3,
+          "line": 1102
+        },
+        {
+          "heading": "Streaming-Capability Contract",
+          "level": 3,
+          "line": 1127
+        },
+        {
+          "heading": "Adapter Example: fasthttp",
+          "level": 3,
+          "line": 1142
+        },
+        {
+          "heading": "Behavior Notes",
+          "level": 3,
+          "line": 1223
+        },
+        {
+          "heading": "Next Steps",
+          "level": 2,
+          "line": 1252
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 41
+      }
+    },
+    {
+      "path": "www/docs/pages/transports/index.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 272,
+      "nonEmptyLines": 223,
+      "sections": [
+        {
+          "heading": "Transport Options",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Overview",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Transport Comparison",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "Quick Example",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "Choosing the Right Transport",
+          "level": 2,
+          "line": 87
+        },
+        {
+          "heading": "STDIO Transport",
+          "level": 3,
+          "line": 89
+        },
+        {
+          "heading": "SSE Transport",
+          "level": 3,
+          "line": 102
+        },
+        {
+          "heading": "StreamableHTTP Transport",
+          "level": 3,
+          "line": 115
+        },
+        {
+          "heading": "In-Process Transport",
+          "level": 3,
+          "line": 128
+        },
+        {
+          "heading": "Transport Configuration",
+          "level": 2,
+          "line": 143
+        },
+        {
+          "heading": "Environment-Based Selection",
+          "level": 3,
+          "line": 145
+        },
+        {
+          "heading": "Multi-Transport Server",
+          "level": 3,
+          "line": 176
+        },
+        {
+          "heading": "Performance Considerations",
+          "level": 2,
+          "line": 226
+        },
+        {
+          "heading": "Latency Comparison",
+          "level": 3,
+          "line": 228
+        },
+        {
+          "heading": "Throughput Comparison",
+          "level": 3,
+          "line": 233
+        },
+        {
+          "heading": "Memory Usage",
+          "level": 3,
+          "line": 238
+        },
+        {
+          "heading": "Security Considerations",
+          "level": 2,
+          "line": 243
+        },
+        {
+          "heading": "STDIO Transport",
+          "level": 3,
+          "line": 245
+        },
+        {
+          "heading": "Network Transports (SSE/HTTP)",
+          "level": 3,
+          "line": 250
+        },
+        {
+          "heading": "Next Steps",
+          "level": 2,
+          "line": 265
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 20
+      }
+    },
+    {
+      "path": "www/docs/pages/transports/inprocess.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 624,
+      "nonEmptyLines": 526,
+      "sections": [
+        {
+          "heading": "In-Process Transport",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Use Cases",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Implementation",
+          "level": 2,
+          "line": 20
+        },
+        {
+          "heading": "Basic In-Process Server",
+          "level": 3,
+          "line": 22
+        },
+        {
+          "heading": "Embedded Application Integration",
+          "level": 3,
+          "line": 133
+        },
+        {
+          "heading": "Sampling Support",
+          "level": 2,
+          "line": 272
+        },
+        {
+          "heading": "Enabling Sampling",
+          "level": 3,
+          "line": 276
+        },
+        {
+          "heading": "Real LLM Integration",
+          "level": 3,
+          "line": 448
+        },
+        {
+          "heading": "OpenAI Integration",
+          "level": 4,
+          "line": 452
+        },
+        {
+          "heading": "Sampling Request Parameters",
+          "level": 3,
+          "line": 558
+        },
+        {
+          "heading": "Error Handling",
+          "level": 3,
+          "line": 594
+        },
+        {
+          "heading": "Next Steps",
+          "level": 2,
+          "line": 619
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "www/docs/pages/transports/sse.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 426,
+      "nonEmptyLines": 343,
+      "sections": [
+        {
+          "heading": "SSE Transport",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Use Cases",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Implementation",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "Basic SSE Server",
+          "level": 3,
+          "line": 24
+        },
+        {
+          "heading": "Advanced SSE Configuration",
+          "level": 3,
+          "line": 200
+        },
+        {
+          "heading": "Configuration",
+          "level": 2,
+          "line": 266
+        },
+        {
+          "heading": "SSE Server Options",
+          "level": 3,
+          "line": 268
+        },
+        {
+          "heading": "SSE Client Timeout Options",
+          "level": 3,
+          "line": 327
+        },
+        {
+          "heading": "Real-Time Notifications",
+          "level": 2,
+          "line": 345
+        },
+        {
+          "heading": "Session Management",
+          "level": 3,
+          "line": 369
+        },
+        {
+          "heading": "Request Headers",
+          "level": 3,
+          "line": 381
+        },
+        {
+          "heading": "Accessing Headers in Handlers",
+          "level": 4,
+          "line": 385
+        },
+        {
+          "heading": "Next Steps",
+          "level": 2,
+          "line": 422
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "www/docs/pages/transports/stdio.mdx",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 726,
+      "nonEmptyLines": 580,
+      "sections": [
+        {
+          "heading": "STDIO Transport",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Use Cases",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Implementation",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "Basic STDIO Server",
+          "level": 3,
+          "line": 24
+        },
+        {
+          "heading": "Advanced STDIO Server",
+          "level": 3,
+          "line": 189
+        },
+        {
+          "heading": "Client Integration",
+          "level": 2,
+          "line": 277
+        },
+        {
+          "heading": "How LLM Applications Connect",
+          "level": 3,
+          "line": 279
+        },
+        {
+          "heading": "Claude Desktop Integration",
+          "level": 3,
+          "line": 287
+        },
+        {
+          "heading": "Custom Client Integration",
+          "level": 3,
+          "line": 308
+        },
+        {
+          "heading": "Customizing Subprocess Execution",
+          "level": 4,
+          "line": 379
+        },
+        {
+          "heading": "Debugging",
+          "level": 2,
+          "line": 431
+        },
+        {
+          "heading": "Command Line Testing",
+          "level": 3,
+          "line": 433
+        },
+        {
+          "heading": "Interactive Testing Script",
+          "level": 3,
+          "line": 451
+        },
+        {
+          "heading": "Debug Logging",
+          "level": 3,
+          "line": 484
+        },
+        {
+          "heading": "MCP Inspector Integration",
+          "level": 3,
+          "line": 524
+        },
+        {
+          "heading": "Error Handling",
+          "level": 2,
+          "line": 542
+        },
+        {
+          "heading": "Robust Error Handling",
+          "level": 3,
+          "line": 544
+        },
+        {
+          "heading": "Process Management",
+          "level": 3,
+          "line": 592
+        },
+        {
+          "heading": "Performance Optimization",
+          "level": 2,
+          "line": 637
+        },
+        {
+          "heading": "Efficient Resource Usage",
+          "level": 3,
+          "line": 639
+        },
+        {
+          "heading": "Memory Management",
+          "level": 3,
+          "line": 679
+        },
+        {
+          "heading": "Next Steps",
+          "level": 2,
+          "line": 722
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 22
+      }
+    }
+  ]
+}

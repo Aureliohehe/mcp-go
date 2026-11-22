@@ -1,0 +1,43 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 1,
+  "filesSkipped": [
+    "otel/go.mod",
+    "otel/go.sum"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 1,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 1
+    }
+  },
+  "results": [
+    {
+      "path": "otel/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 36,
+      "nonEmptyLines": 27,
+      "sections": [
+        {
+          "heading": "mcp-go OpenTelemetry adapter",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+[
+  {"order":1,"title":"从一个进程内示例开始","description":"先用 README 了解 mcp-go 能构建什么，再读进程内示例。示例在同一个 Go 进程中注册 dummy_tool，启动客户端，完成协议初始化，最后列出并调用工具。","nodeIds":["README.md","examples/in_process/main.go"]},
+  {"order":2,"title":"认识协议与工具定义","description":"从协议消息和初始化结构体读起，再看 NewTool 如何用选项构造工具描述和参数模式。工具定义构成客户端与服务端都能理解的契约。","nodeIds":["mcp/types.go","mcp/tools.go"]},
+  {"order":3,"title":"跟踪客户端请求","description":"从 Client.Initialize 比较现代发现流程与传统握手，再沿 CallTool 跟踪请求元数据、多轮交互和结果解析。","nodeIds":["client/client.go"]},
+  {"order":4,"title":"跟踪服务端派发","description":"对照 MCPServer 的工具注册入口和生成的 HandleMessage，理解 JSON-RPC 请求如何完成解析、校验、方法派发以及返回结果。","nodeIds":["server/server.go","server/request_handler.go"]},
+  {"order":5,"title":"跨越 HTTP 传输边界","description":"将客户端的 Streamable HTTP 请求与服务端的 HTTP 方法路由对应起来。观察协议协商、消息往返和流式响应各在哪一侧处理。","nodeIds":["client/transport/streamable_http.go","server/streamable_http.go"]},
+  {"order":6,"title":"验证客户端到服务端的行为","description":"阅读面向 2026-07-28 协议的端到端测试，看看测试如何启动两端并沿公开接口验证能力发现和请求行为。","nodeIds":["e2e/protocol_2026_07_28_test.go"]}
+]

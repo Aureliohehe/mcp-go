@@ -1,0 +1,75 @@
+{
+  "nodes": [
+    {
+      "id": "file:server/testdata/conformance/resource_not_found.txtar",
+      "type": "file",
+      "name": "resource_not_found.txtar",
+      "filePath": "server/testdata/conformance/resource_not_found.txtar",
+      "summary": "保存资源不存在时的协议一致性测试样本。",
+      "tags": [
+        "协议一致性",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:server/testdata/conformance/unsupported_version.txtar",
+      "type": "file",
+      "name": "unsupported_version.txtar",
+      "filePath": "server/testdata/conformance/unsupported_version.txtar",
+      "summary": "保存协议版本不受支持时的测试交互与预期错误。",
+      "tags": [
+        "协议一致性",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:www/docs/styles.css",
+      "type": "file",
+      "name": "styles.css",
+      "filePath": "www/docs/styles.css",
+      "summary": "定义文档网站的自定义样式。",
+      "tags": [
+        "文档网站",
+        "样式"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:www/vocs.config.ts",
+      "type": "file",
+      "name": "vocs.config.ts",
+      "filePath": "www/vocs.config.ts",
+      "summary": "配置 Vocs 文档网站的信息、导航及侧栏结构。",
+      "tags": [
+        "文档网站",
+        "实现"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:server/conformance_test.go",
+      "target": "file:server/testdata/conformance/resource_not_found.txtar",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:server/conformance_test.go",
+      "target": "file:server/testdata/conformance/unsupported_version.txtar",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:www/vocs.config.ts",
+      "target": "file:www/docs/styles.css",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

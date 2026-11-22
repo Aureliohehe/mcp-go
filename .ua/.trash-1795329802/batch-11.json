@@ -1,0 +1,5465 @@
+{
+  "nodes": [
+    {
+      "id": "file:client/transport/utils_test.go",
+      "type": "file",
+      "name": "utils_test.go",
+      "filePath": "client/transport/utils_test.go",
+      "summary": "验证传输层 JSON-RPC 成功和错误响应构造函数。",
+      "tags": [
+        "客户端传输",
+        "测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:client/transport/utils_test.go:TestNewJSONRPCErrorResponse",
+      "type": "function",
+      "name": "TestNewJSONRPCErrorResponse",
+      "filePath": "client/transport/utils_test.go",
+      "lineRange": [
+        12,
+        80
+      ],
+      "summary": "执行测试 TestNewJSONRPCErrorResponse。",
+      "tags": [
+        "客户端传输",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:client/transport/utils_test.go:TestNewJSONRPCResultResponse",
+      "type": "function",
+      "name": "TestNewJSONRPCResultResponse",
+      "filePath": "client/transport/utils_test.go",
+      "lineRange": [
+        82,
+        140
+      ],
+      "summary": "执行测试 TestNewJSONRPCResultResponse。",
+      "tags": [
+        "客户端传输",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:client/version_retry_test.go",
+      "type": "file",
+      "name": "version_retry_test.go",
+      "filePath": "client/version_retry_test.go",
+      "summary": "验证协议版本不受支持时客户端重试兼容版本的路径。",
+      "tags": [
+        "项目维护",
+        "测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:client/version_retry_test.go:versionRejectingServer",
+      "type": "class",
+      "name": "versionRejectingServer",
+      "filePath": "client/version_retry_test.go",
+      "lineRange": [
+        23,
+        34
+      ],
+      "summary": "定义 versionRejectingServer 的数据结构，包含 supported、rejections、omitData、retryError、discoverResult 等字段。",
+      "tags": [
+        "项目维护",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:client/version_retry_test.go:versionRejectingServer.ServeHTTP",
+      "type": "function",
+      "name": "versionRejectingServer.ServeHTTP",
+      "filePath": "client/version_retry_test.go",
+      "lineRange": [
+        42,
+        127
+      ],
+      "summary": "执行 versionRejectingServer.ServeHTTP，调用 w.WriteHeader、io.ReadAll、json.Unmarshal。",
+      "tags": [
+        "项目维护",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:client/version_retry_test.go:newClientAgainst",
+      "type": "function",
+      "name": "newClientAgainst",
+      "filePath": "client/version_retry_test.go",
+      "lineRange": [
+        135,
+        146
+      ],
+      "summary": "构造 newClientAgainst，调用 httptest.NewServer、transport.NewStreamableHTTP、NewClient。",
+      "tags": [
+        "项目维护",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:client/version_retry_test.go:TestInitializeRetriesAnAdvertisedRejectedVersion",
+      "type": "function",
+      "name": "TestInitializeRetriesAnAdvertisedRejectedVersion",
+      "filePath": "client/version_retry_test.go",
+      "lineRange": [
+        148,
+        175
+      ],
+      "summary": "执行测试 TestInitializeRetriesAnAdvertisedRejectedVersion。",
+      "tags": [
+        "项目维护",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:client/version_retry_test.go:TestInitializeStopsAfterRepeatedSameVersionRejection",
+      "type": "function",
+      "name": "TestInitializeStopsAfterRepeatedSameVersionRejection",
+      "filePath": "client/version_retry_test.go",
+      "lineRange": [
+        177,
+        191
+      ],
+      "summary": "执行测试 TestInitializeStopsAfterRepeatedSameVersionRejection。",
+      "tags": [
+        "项目维护",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:client/version_retry_test.go:TestInitializeRetriesWithADifferentAdvertisedVersion",
+      "type": "function",
+      "name": "TestInitializeRetriesWithADifferentAdvertisedVersion",
+      "filePath": "client/version_retry_test.go",
+      "lineRange": [
+        193,
+        209
+      ],
+      "summary": "执行测试 TestInitializeRetriesWithADifferentAdvertisedVersion。",
+      "tags": [
+        "项目维护",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:client/version_retry_test.go:TestInitializeDoesNotFallBackAfterModernVersionError",
+      "type": "function",
+      "name": "TestInitializeDoesNotFallBackAfterModernVersionError",
+      "filePath": "client/version_retry_test.go",
+      "lineRange": [
+        211,
+        241
+      ],
+      "summary": "执行测试 TestInitializeDoesNotFallBackAfterModernVersionError。",
+      "tags": [
+        "项目维护",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:client/version_retry_test.go:TestInitializeReportsNoCommonVersion",
+      "type": "function",
+      "name": "TestInitializeReportsNoCommonVersion",
+      "filePath": "client/version_retry_test.go",
+      "lineRange": [
+        245,
+        252
+      ],
+      "summary": "执行测试 TestInitializeReportsNoCommonVersion。",
+      "tags": [
+        "项目维护",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:client/version_retry_test.go:TestInitializeFallsBackOnUnsupportedVersionWithoutData",
+      "type": "function",
+      "name": "TestInitializeFallsBackOnUnsupportedVersionWithoutData",
+      "filePath": "client/version_retry_test.go",
+      "lineRange": [
+        256,
+        265
+      ],
+      "summary": "执行测试 TestInitializeFallsBackOnUnsupportedVersionWithoutData。",
+      "tags": [
+        "项目维护",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:client/version_retry_test.go:TestInitializeDoesNotFallBackOnEmptyAdvertisedVersions",
+      "type": "function",
+      "name": "TestInitializeDoesNotFallBackOnEmptyAdvertisedVersions",
+      "filePath": "client/version_retry_test.go",
+      "lineRange": [
+        267,
+        280
+      ],
+      "summary": "执行测试 TestInitializeDoesNotFallBackOnEmptyAdvertisedVersions。",
+      "tags": [
+        "项目维护",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:client/version_retry_test.go:TestInitializeFallsBackOnNullAdvertisedVersions",
+      "type": "function",
+      "name": "TestInitializeFallsBackOnNullAdvertisedVersions",
+      "filePath": "client/version_retry_test.go",
+      "lineRange": [
+        282,
+        292
+      ],
+      "summary": "执行测试 TestInitializeFallsBackOnNullAdvertisedVersions。",
+      "tags": [
+        "项目维护",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:client/version_retry_test.go:TestInitializeReportsNoUsableModernDiscoverVersion",
+      "type": "function",
+      "name": "TestInitializeReportsNoUsableModernDiscoverVersion",
+      "filePath": "client/version_retry_test.go",
+      "lineRange": [
+        295,
+        318
+      ],
+      "summary": "执行测试 TestInitializeReportsNoUsableModernDiscoverVersion。",
+      "tags": [
+        "项目维护",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:e2e/protocol_2026_07_28_test.go",
+      "type": "file",
+      "name": "protocol_2026_07_28_test.go",
+      "filePath": "e2e/protocol_2026_07_28_test.go",
+      "summary": "通过客户端与服务端联调验证新版 MCP 的发现、订阅和多轮请求等协议行为。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:e2e/protocol_2026_07_28_test.go:elicitOnce.Elicit",
+      "type": "function",
+      "name": "elicitOnce.Elicit",
+      "filePath": "e2e/protocol_2026_07_28_test.go",
+      "lineRange": [
+        24,
+        32
+      ],
+      "summary": "执行 elicitOnce.Elicit，调用 e.calls.Add。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:e2e/protocol_2026_07_28_test.go:newGreetServer",
+      "type": "function",
+      "name": "newGreetServer",
+      "filePath": "e2e/protocol_2026_07_28_test.go",
+      "lineRange": [
+        36,
+        76
+      ],
+      "summary": "构造 newGreetServer，调用 server.WithToolCapabilities、server.WithResourceCapabilities、server.WithElicitation。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:e2e/protocol_2026_07_28_test.go:startHTTPClient",
+      "type": "function",
+      "name": "startHTTPClient",
+      "filePath": "e2e/protocol_2026_07_28_test.go",
+      "lineRange": [
+        80,
+        96
+      ],
+      "summary": "启动 startHTTPClient，调用 transport.NewStreamableHTTP、client.NewClient、c.Start。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_NegotiatesViaDiscover",
+      "type": "function",
+      "name": "TestE2E_ModernProtocol_NegotiatesViaDiscover",
+      "filePath": "e2e/protocol_2026_07_28_test.go",
+      "lineRange": [
+        98,
+        111
+      ],
+      "summary": "执行测试 TestE2E_ModernProtocol_NegotiatesViaDiscover。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_ListAndCallTools",
+      "type": "function",
+      "name": "TestE2E_ModernProtocol_ListAndCallTools",
+      "filePath": "e2e/protocol_2026_07_28_test.go",
+      "lineRange": [
+        113,
+        140
+      ],
+      "summary": "执行测试 TestE2E_ModernProtocol_ListAndCallTools。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_MultiRoundTripIsTransparent",
+      "type": "function",
+      "name": "TestE2E_ModernProtocol_MultiRoundTripIsTransparent",
+      "filePath": "e2e/protocol_2026_07_28_test.go",
+      "lineRange": [
+        142,
+        162
+      ],
+      "summary": "执行测试 TestE2E_ModernProtocol_MultiRoundTripIsTransparent。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_NoSessionState",
+      "type": "function",
+      "name": "TestE2E_ModernProtocol_NoSessionState",
+      "filePath": "e2e/protocol_2026_07_28_test.go",
+      "lineRange": [
+        164,
+        190
+      ],
+      "summary": "执行测试 TestE2E_ModernProtocol_NoSessionState。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:e2e/protocol_2026_07_28_test.go:TestE2E_LegacyClientAgainstModernServer",
+      "type": "function",
+      "name": "TestE2E_LegacyClientAgainstModernServer",
+      "filePath": "e2e/protocol_2026_07_28_test.go",
+      "lineRange": [
+        192,
+        227
+      ],
+      "summary": "执行测试 TestE2E_LegacyClientAgainstModernServer。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernClientAgainstLegacyOnlyServer",
+      "type": "function",
+      "name": "TestE2E_ModernClientAgainstLegacyOnlyServer",
+      "filePath": "e2e/protocol_2026_07_28_test.go",
+      "lineRange": [
+        229,
+        274
+      ],
+      "summary": "执行测试 TestE2E_ModernClientAgainstLegacyOnlyServer。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_InProcess",
+      "type": "function",
+      "name": "TestE2E_ModernProtocol_InProcess",
+      "filePath": "e2e/protocol_2026_07_28_test.go",
+      "lineRange": [
+        276,
+        301
+      ],
+      "summary": "执行测试 TestE2E_ModernProtocol_InProcess。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:e2e/sampling_http_test.go",
+      "type": "file",
+      "name": "sampling_http_test.go",
+      "filePath": "e2e/sampling_http_test.go",
+      "summary": "端到端验证基于 Streamable HTTP 的服务端采样请求可由客户端处理。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:e2e/sampling_http_test.go:TestSamplingHandler",
+      "type": "class",
+      "name": "TestSamplingHandler",
+      "filePath": "e2e/sampling_http_test.go",
+      "lineRange": [
+        22,
+        25
+      ],
+      "summary": "定义 TestSamplingHandler 的数据结构，包含 responses、mutex 等字段。",
+      "tags": [
+        "端到端测试",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:e2e/sampling_http_test.go:NewTestSamplingHandler",
+      "type": "function",
+      "name": "NewTestSamplingHandler",
+      "filePath": "e2e/sampling_http_test.go",
+      "lineRange": [
+        27,
+        31
+      ],
+      "summary": "构造 NewTestSamplingHandler。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:e2e/sampling_http_test.go:TestSamplingHandler.SetResponse",
+      "type": "function",
+      "name": "TestSamplingHandler.SetResponse",
+      "filePath": "e2e/sampling_http_test.go",
+      "lineRange": [
+        33,
+        37
+      ],
+      "summary": "设置 TestSamplingHandler.SetResponse，调用 h.mutex.Lock、h.mutex.Unlock。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:e2e/sampling_http_test.go:TestSamplingHandler.CreateMessage",
+      "type": "function",
+      "name": "TestSamplingHandler.CreateMessage",
+      "filePath": "e2e/sampling_http_test.go",
+      "lineRange": [
+        39,
+        80
+      ],
+      "summary": "执行 TestSamplingHandler.CreateMessage，调用 log.Printf、h.mutex.RLock、h.mutex.RUnlock。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:e2e/sampling_http_test.go:TestSamplingHTTPE2E",
+      "type": "function",
+      "name": "TestSamplingHTTPE2E",
+      "filePath": "e2e/sampling_http_test.go",
+      "lineRange": [
+        92,
+        392
+      ],
+      "summary": "执行测试 TestSamplingHTTPE2E。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:e2e/sampling_http_test.go:TestSamplingHTTPBasic",
+      "type": "function",
+      "name": "TestSamplingHTTPBasic",
+      "filePath": "e2e/sampling_http_test.go",
+      "lineRange": [
+        395,
+        539
+      ],
+      "summary": "执行测试 TestSamplingHTTPBasic。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:e2e/sampling_http_test.go:TestMain",
+      "type": "function",
+      "name": "TestMain",
+      "filePath": "e2e/sampling_http_test.go",
+      "lineRange": [
+        542,
+        549
+      ],
+      "summary": "执行测试 TestMain。",
+      "tags": [
+        "端到端测试",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:examples/multi_round_trip/main.go",
+      "type": "file",
+      "name": "main.go",
+      "filePath": "examples/multi_round_trip/main.go",
+      "summary": "演示 MCP 工具暂停执行以请求客户端输入，再带上输入结果恢复同一逻辑请求。",
+      "tags": [
+        "使用示例",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:examples/multi_round_trip/main.go:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "examples/multi_round_trip/main.go",
+      "lineRange": [
+        36,
+        78
+      ],
+      "summary": "执行 main，调用 context.Background、newServer、client.NewClient。",
+      "tags": [
+        "使用示例",
+        "函数"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:examples/multi_round_trip/main.go:newServer",
+      "type": "function",
+      "name": "newServer",
+      "filePath": "examples/multi_round_trip/main.go",
+      "lineRange": [
+        80,
+        98
+      ],
+      "summary": "构造 newServer，调用 server.NewMCPServer、server.WithToolCapabilities、server.WithElicitation。",
+      "tags": [
+        "使用示例",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:examples/multi_round_trip/main.go:deploy",
+      "type": "function",
+      "name": "deploy",
+      "filePath": "examples/multi_round_trip/main.go",
+      "lineRange": [
+        101,
+        141
+      ],
+      "summary": "执行 deploy，调用 request.GetString、server.ElicitationResponse、mcp.NewToolResultText。",
+      "tags": [
+        "使用示例",
+        "函数"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:examples/multi_round_trip/main.go:autoApprover.Elicit",
+      "type": "function",
+      "name": "autoApprover.Elicit",
+      "filePath": "examples/multi_round_trip/main.go",
+      "lineRange": [
+        146,
+        159
+      ],
+      "summary": "执行 autoApprover.Elicit，调用 fmt.Printf、fmt.Println。",
+      "tags": [
+        "使用示例",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:examples/roots_client/main.go",
+      "type": "file",
+      "name": "main.go",
+      "filePath": "examples/roots_client/main.go",
+      "summary": "演示客户端向服务端公开根目录并处理根目录列表请求。",
+      "tags": [
+        "使用示例",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:examples/roots_client/main.go:MockRootsHandler",
+      "type": "class",
+      "name": "MockRootsHandler",
+      "filePath": "examples/roots_client/main.go",
+      "lineRange": [
+        30,
+        30
+      ],
+      "summary": "定义 MockRootsHandler 的接口或方法集合，包括 ListRoots。",
+      "tags": [
+        "使用示例",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:examples/roots_client/main.go:MockRootsHandler.ListRoots",
+      "type": "function",
+      "name": "MockRootsHandler.ListRoots",
+      "filePath": "examples/roots_client/main.go",
+      "lineRange": [
+        33,
+        54
+      ],
+      "summary": "列出 MockRootsHandler.ListRoots，调用 os.UserHomeDir、log.Printf、filepath.ToSlash。",
+      "tags": [
+        "使用示例",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:examples/roots_client/main.go:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "examples/roots_client/main.go",
+      "lineRange": [
+        62,
+        163
+      ],
+      "summary": "执行 main，调用 log.Fatal、transport.NewStdio、client.NewClient。",
+      "tags": [
+        "使用示例",
+        "函数"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:examples/roots_http_client/main.go",
+      "type": "file",
+      "name": "main.go",
+      "filePath": "examples/roots_http_client/main.go",
+      "summary": "演示通过 HTTP 连接使用客户端根目录能力。",
+      "tags": [
+        "使用示例",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:examples/roots_http_client/main.go:MockRootsHandler",
+      "type": "class",
+      "name": "MockRootsHandler",
+      "filePath": "examples/roots_http_client/main.go",
+      "lineRange": [
+        30,
+        30
+      ],
+      "summary": "定义 MockRootsHandler 的接口或方法集合，包括 ListRoots。",
+      "tags": [
+        "使用示例",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:examples/roots_http_client/main.go:MockRootsHandler.ListRoots",
+      "type": "function",
+      "name": "MockRootsHandler.ListRoots",
+      "filePath": "examples/roots_http_client/main.go",
+      "lineRange": [
+        33,
+        54
+      ],
+      "summary": "列出 MockRootsHandler.ListRoots，调用 os.UserHomeDir、log.Printf、filepath.ToSlash。",
+      "tags": [
+        "使用示例",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:examples/roots_http_client/main.go:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "examples/roots_http_client/main.go",
+      "lineRange": [
+        59,
+        149
+      ],
+      "summary": "执行 main，调用 transport.NewStreamableHTTP、transport.WithContinuousListening、log.Fatalf。",
+      "tags": [
+        "使用示例",
+        "函数"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:examples/sampling_client/main.go",
+      "type": "file",
+      "name": "main.go",
+      "filePath": "examples/sampling_client/main.go",
+      "summary": "演示客户端如何为服务端提供模型采样处理器。",
+      "tags": [
+        "使用示例",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:examples/sampling_client/main.go:MockSamplingHandler",
+      "type": "class",
+      "name": "MockSamplingHandler",
+      "filePath": "examples/sampling_client/main.go",
+      "lineRange": [
+        18,
+        18
+      ],
+      "summary": "定义 MockSamplingHandler 的接口或方法集合，包括 CreateMessage。",
+      "tags": [
+        "使用示例",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:examples/sampling_client/main.go:MockSamplingHandler.CreateMessage",
+      "type": "function",
+      "name": "MockSamplingHandler.CreateMessage",
+      "filePath": "examples/sampling_client/main.go",
+      "lineRange": [
+        20,
+        69
+      ],
+      "summary": "执行 MockSamplingHandler.CreateMessage，调用 fmt.Sprintf、log.Printf。",
+      "tags": [
+        "使用示例",
+        "函数"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:examples/sampling_client/main.go:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "examples/sampling_client/main.go",
+      "lineRange": [
+        71,
+        210
+      ],
+      "summary": "执行 main，调用 log.Fatal、transport.NewStdio、client.NewClient。",
+      "tags": [
+        "使用示例",
+        "函数"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:examples/sampling_http_client/main.go",
+      "type": "file",
+      "name": "main.go",
+      "filePath": "examples/sampling_http_client/main.go",
+      "summary": "演示 Streamable HTTP 客户端如何处理服务端采样请求。",
+      "tags": [
+        "使用示例",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:examples/sampling_http_client/main.go:MockSamplingHandler",
+      "type": "class",
+      "name": "MockSamplingHandler",
+      "filePath": "examples/sampling_http_client/main.go",
+      "lineRange": [
+        18,
+        18
+      ],
+      "summary": "定义 MockSamplingHandler 的接口或方法集合，包括 CreateMessage。",
+      "tags": [
+        "使用示例",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:examples/sampling_http_client/main.go:MockSamplingHandler.CreateMessage",
+      "type": "function",
+      "name": "MockSamplingHandler.CreateMessage",
+      "filePath": "examples/sampling_http_client/main.go",
+      "lineRange": [
+        20,
+        51
+      ],
+      "summary": "执行 MockSamplingHandler.CreateMessage，调用 fmt.Sprintf、log.Printf。",
+      "tags": [
+        "使用示例",
+        "函数"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:examples/sampling_http_client/main.go:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "examples/sampling_http_client/main.go",
+      "lineRange": [
+        53,
+        116
+      ],
+      "summary": "执行 main，调用 transport.NewStreamableHTTP、log.Fatalf、httpTransport.Close。",
+      "tags": [
+        "使用示例",
+        "函数"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:examples/simple_client/main.go",
+      "type": "file",
+      "name": "main.go",
+      "filePath": "examples/simple_client/main.go",
+      "summary": "演示启动本地 stdio 服务端、初始化客户端并调用工具。",
+      "tags": [
+        "使用示例",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:examples/simple_client/main.go:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "examples/simple_client/main.go",
+      "lineRange": [
+        17,
+        161
+      ],
+      "summary": "执行 main，调用 flag.String、flag.Parse、fmt.Println。",
+      "tags": [
+        "使用示例",
+        "函数"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:examples/simple_client/main.go:parseCommand",
+      "type": "function",
+      "name": "parseCommand",
+      "filePath": "examples/simple_client/main.go",
+      "lineRange": [
+        164,
+        199
+      ],
+      "summary": "解析 parseCommand。",
+      "tags": [
+        "使用示例",
+        "函数"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mcp/base_metadata_test.go",
+      "type": "file",
+      "name": "base_metadata_test.go",
+      "filePath": "mcp/base_metadata_test.go",
+      "summary": "验证 MCP 实体基础元数据的 JSON 表示。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:mcp/base_metadata_test.go:TestToolTitleMarshaling",
+      "type": "function",
+      "name": "TestToolTitleMarshaling",
+      "filePath": "mcp/base_metadata_test.go",
+      "lineRange": [
+        13,
+        42
+      ],
+      "summary": "执行测试 TestToolTitleMarshaling。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/base_metadata_test.go:TestPromptTitleMarshaling",
+      "type": "function",
+      "name": "TestPromptTitleMarshaling",
+      "filePath": "mcp/base_metadata_test.go",
+      "lineRange": [
+        45,
+        68
+      ],
+      "summary": "执行测试 TestPromptTitleMarshaling。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/base_metadata_test.go:TestPromptArgumentTitle",
+      "type": "function",
+      "name": "TestPromptArgumentTitle",
+      "filePath": "mcp/base_metadata_test.go",
+      "lineRange": [
+        72,
+        92
+      ],
+      "summary": "执行测试 TestPromptArgumentTitle。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/base_metadata_test.go:TestResourceTitleAndSize",
+      "type": "function",
+      "name": "TestResourceTitleAndSize",
+      "filePath": "mcp/base_metadata_test.go",
+      "lineRange": [
+        95,
+        161
+      ],
+      "summary": "执行测试 TestResourceTitleAndSize。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/base_metadata_test.go:TestResourceTemplateTitle",
+      "type": "function",
+      "name": "TestResourceTemplateTitle",
+      "filePath": "mcp/base_metadata_test.go",
+      "lineRange": [
+        164,
+        178
+      ],
+      "summary": "执行测试 TestResourceTemplateTitle。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/base_metadata_test.go:TestIconTheme",
+      "type": "function",
+      "name": "TestIconTheme",
+      "filePath": "mcp/base_metadata_test.go",
+      "lineRange": [
+        181,
+        221
+      ],
+      "summary": "执行测试 TestIconTheme。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mcp/call_tool_result_parse_test.go",
+      "type": "file",
+      "name": "call_tool_result_parse_test.go",
+      "filePath": "mcp/call_tool_result_parse_test.go",
+      "summary": "验证不同工具调用结果形态的解析。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/call_tool_result_parse_test.go:TestParseCallToolResult_ContentAlternatives",
+      "type": "function",
+      "name": "TestParseCallToolResult_ContentAlternatives",
+      "filePath": "mcp/call_tool_result_parse_test.go",
+      "lineRange": [
+        11,
+        43
+      ],
+      "summary": "执行测试 TestParseCallToolResult_ContentAlternatives。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mcp/consts.go",
+      "type": "file",
+      "name": "consts.go",
+      "filePath": "mcp/consts.go",
+      "summary": "集中定义 MCP 方法、通知和协议错误码等公共常量。",
+      "tags": [
+        "协议模型",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:mcp/content_benchmark_test.go",
+      "type": "file",
+      "name": "content_benchmark_test.go",
+      "filePath": "mcp/content_benchmark_test.go",
+      "summary": "测量 MCP 内容对象处理的性能与分配开销。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/content_benchmark_test.go:BenchmarkUnmarshalContent",
+      "type": "function",
+      "name": "BenchmarkUnmarshalContent",
+      "filePath": "mcp/content_benchmark_test.go",
+      "lineRange": [
+        7,
+        38
+      ],
+      "summary": "运行基准测试 BenchmarkUnmarshalContent。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mcp/content_pointers_test.go",
+      "type": "file",
+      "name": "content_pointers_test.go",
+      "filePath": "mcp/content_pointers_test.go",
+      "summary": "验证内容接口接受指针具体值并保持 JSON 形态。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/content_pointers_test.go:TestContentPointers",
+      "type": "function",
+      "name": "TestContentPointers",
+      "filePath": "mcp/content_pointers_test.go",
+      "lineRange": [
+        9,
+        19
+      ],
+      "summary": "执行测试 TestContentPointers。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:mcp/discover.go",
+      "type": "file",
+      "name": "discover.go",
+      "filePath": "mcp/discover.go",
+      "summary": "定义统一发现、订阅监听和订阅确认的请求、结果及过滤类型。",
+      "tags": [
+        "协议模型",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:mcp/discover.go:DiscoverRequest",
+      "type": "class",
+      "name": "DiscoverRequest",
+      "filePath": "mcp/discover.go",
+      "lineRange": [
+        12,
+        16
+      ],
+      "summary": "定义 DiscoverRequest 的数据结构，包含 Header、Params 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/discover.go:DiscoverParams",
+      "type": "class",
+      "name": "DiscoverParams",
+      "filePath": "mcp/discover.go",
+      "lineRange": [
+        21,
+        24
+      ],
+      "summary": "定义 DiscoverParams 的数据结构，包含 Meta 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/discover.go:DiscoverResult",
+      "type": "class",
+      "name": "DiscoverResult",
+      "filePath": "mcp/discover.go",
+      "lineRange": [
+        27,
+        40
+      ],
+      "summary": "定义 DiscoverResult 的数据结构，包含 SupportedVersions、Capabilities、Instructions 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/discover.go:SubscriptionFilter",
+      "type": "class",
+      "name": "SubscriptionFilter",
+      "filePath": "mcp/discover.go",
+      "lineRange": [
+        45,
+        55
+      ],
+      "summary": "定义 SubscriptionFilter 的数据结构，包含 ToolsListChanged、PromptsListChanged、ResourcesListChanged、ResourceSubscriptions 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/discover.go:SubscriptionsListenRequest",
+      "type": "class",
+      "name": "SubscriptionsListenRequest",
+      "filePath": "mcp/discover.go",
+      "lineRange": [
+        69,
+        73
+      ],
+      "summary": "定义 SubscriptionsListenRequest 的数据结构，包含 Header、Params 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/discover.go:SubscriptionsListenParams",
+      "type": "class",
+      "name": "SubscriptionsListenParams",
+      "filePath": "mcp/discover.go",
+      "lineRange": [
+        77,
+        82
+      ],
+      "summary": "定义 SubscriptionsListenParams 的数据结构，包含 Notifications、Meta 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/discover.go:SubscriptionsListenResult",
+      "type": "class",
+      "name": "SubscriptionsListenResult",
+      "filePath": "mcp/discover.go",
+      "lineRange": [
+        86,
+        88
+      ],
+      "summary": "定义 SubscriptionsListenResult 类型。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/discover.go:SubscriptionsAcknowledgedNotification",
+      "type": "class",
+      "name": "SubscriptionsAcknowledgedNotification",
+      "filePath": "mcp/discover.go",
+      "lineRange": [
+        93,
+        96
+      ],
+      "summary": "定义 SubscriptionsAcknowledgedNotification 的数据结构，包含 Params 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/discover.go:SubscriptionsAcknowledgedParams",
+      "type": "class",
+      "name": "SubscriptionsAcknowledgedParams",
+      "filePath": "mcp/discover.go",
+      "lineRange": [
+        100,
+        106
+      ],
+      "summary": "定义 SubscriptionsAcknowledgedParams 的数据结构，包含 Notifications、Meta 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/discover.go:SubscriptionFilter.IsEmpty",
+      "type": "function",
+      "name": "SubscriptionFilter.IsEmpty",
+      "filePath": "mcp/discover.go",
+      "lineRange": [
+        58,
+        63
+      ],
+      "summary": "判断 SubscriptionFilter.IsEmpty。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:mcp/elicitation_test.go",
+      "type": "file",
+      "name": "elicitation_test.go",
+      "filePath": "mcp/elicitation_test.go",
+      "summary": "验证 MCP 用户输入收集请求与结果的类型和 JSON 表达。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/elicitation_test.go:TestElicitationParamsSerialization",
+      "type": "function",
+      "name": "TestElicitationParamsSerialization",
+      "filePath": "mcp/elicitation_test.go",
+      "lineRange": [
+        11,
+        70
+      ],
+      "summary": "执行测试 TestElicitationParamsSerialization。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/elicitation_test.go:TestElicitationCapabilitySerialization",
+      "type": "function",
+      "name": "TestElicitationCapabilitySerialization",
+      "filePath": "mcp/elicitation_test.go",
+      "lineRange": [
+        72,
+        94
+      ],
+      "summary": "执行测试 TestElicitationCapabilitySerialization。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:mcp/errors.go",
+      "type": "file",
+      "name": "errors.go",
+      "filePath": "mcp/errors.go",
+      "summary": "定义协议错误及其类型判断，并将部分错误映射到结构化 JSON-RPC 错误。",
+      "tags": [
+        "协议模型",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:mcp/errors.go:URLElicitationRequiredError",
+      "type": "class",
+      "name": "URLElicitationRequiredError",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        40,
+        42
+      ],
+      "summary": "定义 URLElicitationRequiredError 的数据结构，包含 Elicitations 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/errors.go:UnsupportedProtocolVersionError",
+      "type": "class",
+      "name": "UnsupportedProtocolVersionError",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        63,
+        68
+      ],
+      "summary": "定义 UnsupportedProtocolVersionError 的数据结构，包含 Version、Supported 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/errors.go:UnsupportedProtocolVersionData",
+      "type": "class",
+      "name": "UnsupportedProtocolVersionData",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        79,
+        84
+      ],
+      "summary": "定义 UnsupportedProtocolVersionData 的数据结构，包含 Supported、Requested 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/errors.go:HeaderMismatchError",
+      "type": "class",
+      "name": "HeaderMismatchError",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        104,
+        109
+      ],
+      "summary": "定义 HeaderMismatchError 的数据结构，包含 Header、Reason 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/errors.go:MissingRequiredClientCapabilityError",
+      "type": "class",
+      "name": "MissingRequiredClientCapabilityError",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        126,
+        129
+      ],
+      "summary": "定义 MissingRequiredClientCapabilityError 的数据结构，包含 Capability 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/errors.go:URLElicitationRequiredError.Error",
+      "type": "function",
+      "name": "URLElicitationRequiredError.Error",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        44,
+        46
+      ],
+      "summary": "执行 URLElicitationRequiredError.Error，调用 fmt.Sprintf。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/errors.go:URLElicitationRequiredError.JSONRPCError",
+      "type": "function",
+      "name": "URLElicitationRequiredError.JSONRPCError",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        48,
+        59
+      ],
+      "summary": "执行 URLElicitationRequiredError.JSONRPCError，调用 e.Error。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/errors.go:UnsupportedProtocolVersionError.Error",
+      "type": "function",
+      "name": "UnsupportedProtocolVersionError.Error",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        70,
+        75
+      ],
+      "summary": "执行 UnsupportedProtocolVersionError.Error，调用 fmt.Sprintf。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/errors.go:UnsupportedProtocolVersionError.JSONRPCError",
+      "type": "function",
+      "name": "UnsupportedProtocolVersionError.JSONRPCError",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        87,
+        99
+      ],
+      "summary": "执行 UnsupportedProtocolVersionError.JSONRPCError，调用 e.Error。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/errors.go:HeaderMismatchError.Error",
+      "type": "function",
+      "name": "HeaderMismatchError.Error",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        111,
+        116
+      ],
+      "summary": "执行 HeaderMismatchError.Error，调用 fmt.Sprintf。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/errors.go:HeaderMismatchError.Is",
+      "type": "function",
+      "name": "HeaderMismatchError.Is",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        119,
+        122
+      ],
+      "summary": "判断 HeaderMismatchError.Is。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/errors.go:MissingRequiredClientCapabilityError.Error",
+      "type": "function",
+      "name": "MissingRequiredClientCapabilityError.Error",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        131,
+        133
+      ],
+      "summary": "执行 MissingRequiredClientCapabilityError.Error，调用 fmt.Sprintf。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/errors.go:MissingRequiredClientCapabilityError.Is",
+      "type": "function",
+      "name": "MissingRequiredClientCapabilityError.Is",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        136,
+        139
+      ],
+      "summary": "判断 MissingRequiredClientCapabilityError.Is。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/errors.go:URLElicitationRequiredError.Is",
+      "type": "function",
+      "name": "URLElicitationRequiredError.Is",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        142,
+        145
+      ],
+      "summary": "判断 URLElicitationRequiredError.Is。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/errors.go:UnsupportedProtocolVersionError.Is",
+      "type": "function",
+      "name": "UnsupportedProtocolVersionError.Is",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        148,
+        151
+      ],
+      "summary": "判断 UnsupportedProtocolVersionError.Is。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/errors.go:IsUnsupportedProtocolVersion",
+      "type": "function",
+      "name": "IsUnsupportedProtocolVersion",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        154,
+        158
+      ],
+      "summary": "判断 IsUnsupportedProtocolVersion。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/errors.go:IsHeaderMismatch",
+      "type": "function",
+      "name": "IsHeaderMismatch",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        161,
+        165
+      ],
+      "summary": "判断 IsHeaderMismatch。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/errors.go:IsMissingRequiredClientCapability",
+      "type": "function",
+      "name": "IsMissingRequiredClientCapability",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        169,
+        173
+      ],
+      "summary": "判断 IsMissingRequiredClientCapability。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/errors.go:JSONRPCErrorDetails.AsError",
+      "type": "function",
+      "name": "JSONRPCErrorDetails.AsError",
+      "filePath": "mcp/errors.go",
+      "lineRange": [
+        178,
+        250
+      ],
+      "summary": "执行 JSONRPCErrorDetails.AsError，调用 json.Marshal、json.Unmarshal、err.Error。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mcp/errors_test.go",
+      "type": "file",
+      "name": "errors_test.go",
+      "filePath": "mcp/errors_test.go",
+      "summary": "验证 MCP 协议错误分类、比较及 JSON-RPC 表达。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:mcp/errors_test.go:TestJSONRPCErrorDetails_AsError",
+      "type": "function",
+      "name": "TestJSONRPCErrorDetails_AsError",
+      "filePath": "mcp/errors_test.go",
+      "lineRange": [
+        10,
+        100
+      ],
+      "summary": "执行测试 TestJSONRPCErrorDetails_AsError。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/errors_test.go:TestJSONRPCErrorDetails_AsError_WithPointer",
+      "type": "function",
+      "name": "TestJSONRPCErrorDetails_AsError_WithPointer",
+      "filePath": "mcp/errors_test.go",
+      "lineRange": [
+        102,
+        113
+      ],
+      "summary": "执行测试 TestJSONRPCErrorDetails_AsError_WithPointer。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/errors_test.go:TestSentinelErrors",
+      "type": "function",
+      "name": "TestSentinelErrors",
+      "filePath": "mcp/errors_test.go",
+      "lineRange": [
+        115,
+        151
+      ],
+      "summary": "执行测试 TestSentinelErrors。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/errors_test.go:TestErrorChaining",
+      "type": "function",
+      "name": "TestErrorChaining",
+      "filePath": "mcp/errors_test.go",
+      "lineRange": [
+        153,
+        170
+      ],
+      "summary": "执行测试 TestErrorChaining。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/errors_test.go:TestURLElicitationRequiredError",
+      "type": "function",
+      "name": "TestURLElicitationRequiredError",
+      "filePath": "mcp/errors_test.go",
+      "lineRange": [
+        172,
+        203
+      ],
+      "summary": "执行测试 TestURLElicitationRequiredError。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/errors_test.go:TestJSONRPCErrorDetails_AsError_URLElicitationRequired",
+      "type": "function",
+      "name": "TestJSONRPCErrorDetails_AsError_URLElicitationRequired",
+      "filePath": "mcp/errors_test.go",
+      "lineRange": [
+        205,
+        232
+      ],
+      "summary": "执行测试 TestJSONRPCErrorDetails_AsError_URLElicitationRequired。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:mcp/icons_test.go",
+      "type": "file",
+      "name": "icons_test.go",
+      "filePath": "mcp/icons_test.go",
+      "summary": "验证 MCP 图标字段在各实体上的 JSON 兼容性。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/icons_test.go:TestIconJSONMarshaling",
+      "type": "function",
+      "name": "TestIconJSONMarshaling",
+      "filePath": "mcp/icons_test.go",
+      "lineRange": [
+        11,
+        63
+      ],
+      "summary": "执行测试 TestIconJSONMarshaling。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mcp/mrtr.go",
+      "type": "file",
+      "name": "mrtr.go",
+      "filePath": "mcp/mrtr.go",
+      "summary": "定义多轮交互的输入请求、输入响应和续接状态，并按方法解码不同输入变体。",
+      "tags": [
+        "协议模型",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:mcp/mrtr.go:InputRequest",
+      "type": "class",
+      "name": "InputRequest",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        21,
+        34
+      ],
+      "summary": "定义 InputRequest 的数据结构，包含 Method、Elicitation、Sampling、Roots 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/mrtr.go:ListRootsParams",
+      "type": "class",
+      "name": "ListRootsParams",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        38,
+        38
+      ],
+      "summary": "定义 ListRootsParams 类型。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/mrtr.go:InputResponse",
+      "type": "class",
+      "name": "InputResponse",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        118,
+        129
+      ],
+      "summary": "定义 InputResponse 的数据结构，包含 Elicitation、Sampling、Roots、raw 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/mrtr.go:MultiRoundTripResult",
+      "type": "class",
+      "name": "MultiRoundTripResult",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        231,
+        239
+      ],
+      "summary": "定义 MultiRoundTripResult 的数据结构，包含 InputRequests、RequestState 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/mrtr.go:InputRequiredResult",
+      "type": "class",
+      "name": "InputRequiredResult",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        247,
+        250
+      ],
+      "summary": "定义 InputRequiredResult 的接口或方法集合，包括 NeedsInput。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mcp/mrtr.go:MultiRoundTripParams",
+      "type": "class",
+      "name": "MultiRoundTripParams",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        269,
+        278
+      ],
+      "summary": "定义 MultiRoundTripParams 的数据结构，包含 InputResponses、RequestState 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/mrtr.go:NewElicitationInputRequest",
+      "type": "function",
+      "name": "NewElicitationInputRequest",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        42,
+        44
+      ],
+      "summary": "构造 NewElicitationInputRequest。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/mrtr.go:NewSamplingInputRequest",
+      "type": "function",
+      "name": "NewSamplingInputRequest",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        48,
+        50
+      ],
+      "summary": "构造 NewSamplingInputRequest。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/mrtr.go:NewRootsInputRequest",
+      "type": "function",
+      "name": "NewRootsInputRequest",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        54,
+        56
+      ],
+      "summary": "构造 NewRootsInputRequest。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/mrtr.go:InputRequest.MarshalJSON",
+      "type": "function",
+      "name": "InputRequest.MarshalJSON",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        60,
+        79
+      ],
+      "summary": "序列化 InputRequest.MarshalJSON，调用 json.Marshal。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/mrtr.go:InputRequest.UnmarshalJSON",
+      "type": "function",
+      "name": "InputRequest.UnmarshalJSON",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        82,
+        114
+      ],
+      "summary": "反序列化 InputRequest.UnmarshalJSON，调用 json.Unmarshal。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/mrtr.go:NewElicitationInputResponse",
+      "type": "function",
+      "name": "NewElicitationInputResponse",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        133,
+        135
+      ],
+      "summary": "构造 NewElicitationInputResponse。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/mrtr.go:NewSamplingInputResponse",
+      "type": "function",
+      "name": "NewSamplingInputResponse",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        139,
+        141
+      ],
+      "summary": "构造 NewSamplingInputResponse。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/mrtr.go:NewRootsInputResponse",
+      "type": "function",
+      "name": "NewRootsInputResponse",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        144,
+        146
+      ],
+      "summary": "构造 NewRootsInputResponse。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/mrtr.go:InputResponse.MarshalJSON",
+      "type": "function",
+      "name": "InputResponse.MarshalJSON",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        149,
+        162
+      ],
+      "summary": "序列化 InputResponse.MarshalJSON，调用 json.Marshal。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/mrtr.go:InputResponse.UnmarshalJSON",
+      "type": "function",
+      "name": "InputResponse.UnmarshalJSON",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        168,
+        171
+      ],
+      "summary": "反序列化 InputResponse.UnmarshalJSON，调用 json.RawMessage。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/mrtr.go:InputResponse.DecodeFor",
+      "type": "function",
+      "name": "InputResponse.DecodeFor",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        175,
+        202
+      ],
+      "summary": "解码 InputResponse.DecodeFor，调用 json.Unmarshal。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/mrtr.go:InputResponses.DecodeFor",
+      "type": "function",
+      "name": "InputResponses.DecodeFor",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        214,
+        226
+      ],
+      "summary": "解码 InputResponses.DecodeFor，调用 response.DecodeFor。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/mrtr.go:NewInputRequiredResult",
+      "type": "function",
+      "name": "NewInputRequiredResult",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        255,
+        263
+      ],
+      "summary": "构造 NewInputRequiredResult。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/mrtr.go:InputRequiredResult.NeedsInput",
+      "type": "function",
+      "name": "InputRequiredResult.NeedsInput",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        282,
+        284
+      ],
+      "summary": "执行 InputRequiredResult.NeedsInput。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/mrtr.go:CallToolResult.NeedsInput",
+      "type": "function",
+      "name": "CallToolResult.NeedsInput",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        288,
+        290
+      ],
+      "summary": "执行 CallToolResult.NeedsInput。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/mrtr.go:GetPromptResult.NeedsInput",
+      "type": "function",
+      "name": "GetPromptResult.NeedsInput",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        294,
+        296
+      ],
+      "summary": "执行 GetPromptResult.NeedsInput。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/mrtr.go:ReadResourceResult.NeedsInput",
+      "type": "function",
+      "name": "ReadResourceResult.NeedsInput",
+      "filePath": "mcp/mrtr.go",
+      "lineRange": [
+        300,
+        302
+      ],
+      "summary": "执行 ReadResourceResult.NeedsInput。",
+      "tags": [
+        "协议模型",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:mcp/primitive_item_required_test.go",
+      "type": "file",
+      "name": "primitive_item_required_test.go",
+      "filePath": "mcp/primitive_item_required_test.go",
+      "summary": "验证基本类型数组元素的工具输入模式生成。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/primitive_item_required_test.go:TestPrimitiveItemRequired",
+      "type": "function",
+      "name": "TestPrimitiveItemRequired",
+      "filePath": "mcp/primitive_item_required_test.go",
+      "lineRange": [
+        9,
+        16
+      ],
+      "summary": "执行测试 TestPrimitiveItemRequired。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:mcp/prompts_test.go",
+      "type": "file",
+      "name": "prompts_test.go",
+      "filePath": "mcp/prompts_test.go",
+      "summary": "验证提示词参数、消息和结果的构造与序列化。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:mcp/prompts_test.go:TestNewPrompt",
+      "type": "function",
+      "name": "TestNewPrompt",
+      "filePath": "mcp/prompts_test.go",
+      "lineRange": [
+        11,
+        94
+      ],
+      "summary": "执行测试 TestNewPrompt。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/prompts_test.go:TestPromptGetName",
+      "type": "function",
+      "name": "TestPromptGetName",
+      "filePath": "mcp/prompts_test.go",
+      "lineRange": [
+        96,
+        101
+      ],
+      "summary": "执行测试 TestPromptGetName。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/prompts_test.go:TestPromptJSONMarshaling",
+      "type": "function",
+      "name": "TestPromptJSONMarshaling",
+      "filePath": "mcp/prompts_test.go",
+      "lineRange": [
+        103,
+        154
+      ],
+      "summary": "执行测试 TestPromptJSONMarshaling。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/prompts_test.go:TestWithArgument",
+      "type": "function",
+      "name": "TestWithArgument",
+      "filePath": "mcp/prompts_test.go",
+      "lineRange": [
+        156,
+        193
+      ],
+      "summary": "执行测试 TestWithArgument。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/prompts_test.go:TestArgumentDescription",
+      "type": "function",
+      "name": "TestArgumentDescription",
+      "filePath": "mcp/prompts_test.go",
+      "lineRange": [
+        195,
+        201
+      ],
+      "summary": "执行测试 TestArgumentDescription。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/prompts_test.go:TestRequiredArgument",
+      "type": "function",
+      "name": "TestRequiredArgument",
+      "filePath": "mcp/prompts_test.go",
+      "lineRange": [
+        203,
+        209
+      ],
+      "summary": "执行测试 TestRequiredArgument。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/prompts_test.go:TestWithPromptDescription",
+      "type": "function",
+      "name": "TestWithPromptDescription",
+      "filePath": "mcp/prompts_test.go",
+      "lineRange": [
+        211,
+        217
+      ],
+      "summary": "执行测试 TestWithPromptDescription。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/prompts_test.go:TestPromptMessageCreation",
+      "type": "function",
+      "name": "TestPromptMessageCreation",
+      "filePath": "mcp/prompts_test.go",
+      "lineRange": [
+        219,
+        250
+      ],
+      "summary": "执行测试 TestPromptMessageCreation。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/prompts_test.go:TestPromptJSONStructure",
+      "type": "function",
+      "name": "TestPromptJSONStructure",
+      "filePath": "mcp/prompts_test.go",
+      "lineRange": [
+        252,
+        287
+      ],
+      "summary": "执行测试 TestPromptJSONStructure。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/prompts_test.go:TestWithPromptIcons",
+      "type": "function",
+      "name": "TestWithPromptIcons",
+      "filePath": "mcp/prompts_test.go",
+      "lineRange": [
+        289,
+        298
+      ],
+      "summary": "执行测试 TestWithPromptIcons。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:mcp/quoted_schema_test.go",
+      "type": "file",
+      "name": "quoted_schema_test.go",
+      "filePath": "mcp/quoted_schema_test.go",
+      "summary": "验证带引号或转义的 JSON Schema 处理。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:mcp/quoted_schema_test.go:quotedSchemaFields",
+      "type": "class",
+      "name": "quotedSchemaFields",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        19,
+        41
+      ],
+      "summary": "定义 quotedSchemaFields 的数据结构，包含 Bool、Int、Int8、Int16、Int32 等字段。",
+      "tags": [
+        "协议模型",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:quotedSchemaMarshaler.MarshalJSON",
+      "type": "function",
+      "name": "quotedSchemaMarshaler.MarshalJSON",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        17,
+        17
+      ],
+      "summary": "序列化 quotedSchemaMarshaler.MarshalJSON。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedFieldTypes",
+      "type": "function",
+      "name": "TestSchemaFor_QuotedFieldTypes",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        43,
+        74
+      ],
+      "summary": "执行测试 TestSchemaFor_QuotedFieldTypes。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:TestToolSchema_QuotedFields",
+      "type": "function",
+      "name": "TestToolSchema_QuotedFields",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        76,
+        111
+      ],
+      "summary": "执行测试 TestToolSchema_QuotedFields。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedFieldShadowing",
+      "type": "function",
+      "name": "TestSchemaFor_QuotedFieldShadowing",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        113,
+        130
+      ],
+      "summary": "执行测试 TestSchemaFor_QuotedFieldShadowing。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedRootContainers",
+      "type": "function",
+      "name": "TestSchemaFor_QuotedRootContainers",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        132,
+        159
+      ],
+      "summary": "执行测试 TestSchemaFor_QuotedRootContainers。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedFieldDominance",
+      "type": "function",
+      "name": "TestSchemaFor_QuotedFieldDominance",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        161,
+        210
+      ],
+      "summary": "执行测试 TestSchemaFor_QuotedFieldDominance。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedFieldEnums",
+      "type": "function",
+      "name": "TestSchemaFor_QuotedFieldEnums",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        212,
+        237
+      ],
+      "summary": "执行测试 TestSchemaFor_QuotedFieldEnums。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedFallbackContainers",
+      "type": "function",
+      "name": "TestSchemaFor_QuotedFallbackContainers",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        239,
+        286
+      ],
+      "summary": "执行测试 TestSchemaFor_QuotedFallbackContainers。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedFallbackFieldSelection",
+      "type": "function",
+      "name": "TestSchemaFor_QuotedFallbackFieldSelection",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        288,
+        371
+      ],
+      "summary": "执行测试 TestSchemaFor_QuotedFallbackFieldSelection。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:quotedEnumMarshaler.MarshalJSON",
+      "type": "function",
+      "name": "quotedEnumMarshaler.MarshalJSON",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        379,
+        379
+      ],
+      "summary": "序列化 quotedEnumMarshaler.MarshalJSON，调用 json.Marshal。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedStringEnums",
+      "type": "function",
+      "name": "TestSchemaFor_QuotedStringEnums",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        381,
+        459
+      ],
+      "summary": "执行测试 TestSchemaFor_QuotedStringEnums。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedRecursiveEmbedding",
+      "type": "function",
+      "name": "TestSchemaFor_QuotedRecursiveEmbedding",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        461,
+        507
+      ],
+      "summary": "执行测试 TestSchemaFor_QuotedRecursiveEmbedding。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:quotedNativeMarshaler.MarshalJSON",
+      "type": "function",
+      "name": "quotedNativeMarshaler.MarshalJSON",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        523,
+        527
+      ],
+      "summary": "序列化 quotedNativeMarshaler.MarshalJSON，调用 json.Marshal。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedNativeFieldSelection",
+      "type": "function",
+      "name": "TestSchemaFor_QuotedNativeFieldSelection",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        529,
+        635
+      ],
+      "summary": "执行测试 TestSchemaFor_QuotedNativeFieldSelection。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedSelectedAnnotations",
+      "type": "function",
+      "name": "TestSchemaFor_QuotedSelectedAnnotations",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        637,
+        658
+      ],
+      "summary": "执行测试 TestSchemaFor_QuotedSelectedAnnotations。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:quotedPointerJSONStruct.MarshalJSON",
+      "type": "function",
+      "name": "quotedPointerJSONStruct.MarshalJSON",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        664,
+        668
+      ],
+      "summary": "序列化 quotedPointerJSONStruct.MarshalJSON，调用 json.Marshal。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:quotedTextStruct.MarshalText",
+      "type": "function",
+      "name": "quotedTextStruct.MarshalText",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        674,
+        674
+      ],
+      "summary": "序列化 quotedTextStruct.MarshalText。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedCustomStructEncoding",
+      "type": "function",
+      "name": "TestSchemaFor_QuotedCustomStructEncoding",
+      "filePath": "mcp/quoted_schema_test.go",
+      "lineRange": [
+        676,
+        705
+      ],
+      "summary": "执行测试 TestSchemaFor_QuotedCustomStructEncoding。",
+      "tags": [
+        "协议模型",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:mcptest/mcptest.go",
+      "type": "file",
+      "name": "mcptest.go",
+      "filePath": "mcptest/mcptest.go",
+      "summary": "提供 MCP 测试服务端封装，可注册工具、提示词和资源并启动配对客户端。",
+      "tags": [
+        "测试辅助",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:mcptest/mcptest.go:Server",
+      "type": "class",
+      "name": "Server",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        20,
+        47
+      ],
+      "summary": "定义 Server 的数据结构，包含 name、tools、prompts、resources、resourceTemplates 等字段。",
+      "tags": [
+        "测试辅助",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:NewServer",
+      "type": "function",
+      "name": "NewServer",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        52,
+        61
+      ],
+      "summary": "构造 NewServer，调用 NewUnstartedServer、server.AddTools、server.Start。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:NewUnstartedServer",
+      "type": "function",
+      "name": "NewUnstartedServer",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        65,
+        76
+      ],
+      "summary": "构造 NewUnstartedServer，调用 io.Pipe。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:Server.AddTools",
+      "type": "function",
+      "name": "Server.AddTools",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        79,
+        81
+      ],
+      "summary": "添加 Server.AddTools。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:Server.AddTool",
+      "type": "function",
+      "name": "Server.AddTool",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        84,
+        89
+      ],
+      "summary": "添加 Server.AddTool。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:Server.AddPrompt",
+      "type": "function",
+      "name": "Server.AddPrompt",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        92,
+        97
+      ],
+      "summary": "添加 Server.AddPrompt。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:Server.AddPrompts",
+      "type": "function",
+      "name": "Server.AddPrompts",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        100,
+        102
+      ],
+      "summary": "添加 Server.AddPrompts。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:Server.AddResource",
+      "type": "function",
+      "name": "Server.AddResource",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        105,
+        110
+      ],
+      "summary": "添加 Server.AddResource。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:Server.AddResources",
+      "type": "function",
+      "name": "Server.AddResources",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        113,
+        115
+      ],
+      "summary": "添加 Server.AddResources。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:Server.AddResourceTemplate",
+      "type": "function",
+      "name": "Server.AddResourceTemplate",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        118,
+        123
+      ],
+      "summary": "添加 Server.AddResourceTemplate。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:Server.AddResourceTemplates",
+      "type": "function",
+      "name": "Server.AddResourceTemplates",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        126,
+        128
+      ],
+      "summary": "添加 Server.AddResourceTemplates。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:Server.AddServerOptions",
+      "type": "function",
+      "name": "Server.AddServerOptions",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        133,
+        135
+      ],
+      "summary": "添加 Server.AddServerOptions。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:Server.SetClientInfo",
+      "type": "function",
+      "name": "Server.SetClientInfo",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        138,
+        140
+      ],
+      "summary": "设置 Server.SetClientInfo。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:Server.SetSamplingHandler",
+      "type": "function",
+      "name": "Server.SetSamplingHandler",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        146,
+        148
+      ],
+      "summary": "设置 Server.SetSamplingHandler。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:Server.SetElicitationHandler",
+      "type": "function",
+      "name": "Server.SetElicitationHandler",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        154,
+        156
+      ],
+      "summary": "设置 Server.SetElicitationHandler。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:Server.SetRootsHandler",
+      "type": "function",
+      "name": "Server.SetRootsHandler",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        161,
+        163
+      ],
+      "summary": "设置 Server.SetRootsHandler。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:Server.Start",
+      "type": "function",
+      "name": "Server.Start",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        167,
+        243
+      ],
+      "summary": "启动 Server.Start，调用 s.wg.Add、context.WithCancel、func() {\n\t\tdefer s.wg.Done()\n\n\t\t// Tools under test may still call server.RequestSampling,\n\t\t// server.RequestElicitation, and server.RequestRoots directly.\n\t\t// Protocol version 2026-07-28\n\t\t// replaced that pattern with multi round-trip requests, but the\n\t\t// harness runs over stdio, which is genuinely bidirectional, so the\n\t\t// old pattern is kept working here.\n\t\tserverOpts := append([]server.ServerOption{\n\t\t\tserver.WithLegacyServerInitiatedRequests(),\n\t\t}, s.serverOpts...)\n\n\t\tmcpServer := server.NewMCPServer(s.name, \"1.0.0\", serverOpts...)\n\n\t\tmcpServer.AddTools(s.tools...)\n\t\tmcpServer.AddPrompts(s.prompts...)\n\t\tmcpServer.AddResources(s.resources...)\n\t\tmcpServer.AddResourceTemplates(s.resourceTemplates...)\n\n\t\t// Automatically enable sampling on the server when the test supplies a\n\t\t// sampling handler, so tools can call server.RequestSampling without\n\t\t// any additional server-side setup.\n\t\tif samplingHandler != nil {\n\t\t\tmcpServer.EnableSampling()\n\t\t}\n\n\t\tlogger := log.New(&s.logBuffer, \"\", 0)\n\n\t\tstdioServer := server.NewStdioServer(mcpServer)\n\t\tstdioServer.SetErrorLogger(logger)\n\n\t\tif err := stdioServer.Listen(ctx, s.serverReader, s.serverWriter); err != nil {\n\t\t\tlogger.Println(\"StdioServer.Listen failed:\", err)\n\t\t}\n\t}。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:Server.Close",
+      "type": "function",
+      "name": "Server.Close",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        246,
+        268
+      ],
+      "summary": "关闭 Server.Close，调用 s.transport.Close、s.cancel、s.wg.Wait。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mcptest/mcptest.go:Server.Client",
+      "type": "function",
+      "name": "Server.Client",
+      "filePath": "mcptest/mcptest.go",
+      "lineRange": [
+        272,
+        274
+      ],
+      "summary": "执行 Server.Client。",
+      "tags": [
+        "测试辅助",
+        "函数"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:client/transport/utils_test.go",
+      "target": "function:client/transport/utils_test.go:TestNewJSONRPCErrorResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:client/transport/utils_test.go",
+      "target": "function:client/transport/utils_test.go:TestNewJSONRPCResultResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:client/transport/utils_test.go",
+      "target": "file:mcp/types.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:client/transport/utils_test.go",
+      "target": "file:mcp/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:client/transport/utils.go",
+      "target": "file:client/transport/utils_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "class:client/version_retry_test.go:versionRejectingServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "function:client/version_retry_test.go:versionRejectingServer.ServeHTTP",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "function:client/version_retry_test.go:newClientAgainst",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "function:client/version_retry_test.go:TestInitializeRetriesAnAdvertisedRejectedVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "function:client/version_retry_test.go:TestInitializeStopsAfterRepeatedSameVersionRejection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "function:client/version_retry_test.go:TestInitializeRetriesWithADifferentAdvertisedVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "function:client/version_retry_test.go:TestInitializeDoesNotFallBackAfterModernVersionError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "function:client/version_retry_test.go:TestInitializeReportsNoCommonVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "function:client/version_retry_test.go:TestInitializeFallsBackOnUnsupportedVersionWithoutData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "function:client/version_retry_test.go:TestInitializeDoesNotFallBackOnEmptyAdvertisedVersions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "function:client/version_retry_test.go:TestInitializeFallsBackOnNullAdvertisedVersions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "function:client/version_retry_test.go:TestInitializeReportsNoUsableModernDiscoverVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:client/version_retry_test.go:TestInitializeRetriesAnAdvertisedRejectedVersion",
+      "target": "function:client/version_retry_test.go:newClientAgainst",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:client/version_retry_test.go:TestInitializeStopsAfterRepeatedSameVersionRejection",
+      "target": "function:client/version_retry_test.go:newClientAgainst",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:client/version_retry_test.go:TestInitializeRetriesWithADifferentAdvertisedVersion",
+      "target": "function:client/version_retry_test.go:newClientAgainst",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:client/version_retry_test.go:TestInitializeDoesNotFallBackAfterModernVersionError",
+      "target": "function:client/version_retry_test.go:newClientAgainst",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:client/version_retry_test.go:TestInitializeDoesNotFallBackOnEmptyAdvertisedVersions",
+      "target": "function:client/version_retry_test.go:newClientAgainst",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:client/version_retry_test.go:TestInitializeReportsNoUsableModernDiscoverVersion",
+      "target": "function:client/version_retry_test.go:newClientAgainst",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "file:client/transport/streamable_http.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "file:mcp/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "file:mcp/meta.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "file:mcp/types.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:client/version_retry_test.go",
+      "target": "file:mcp/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "function:e2e/protocol_2026_07_28_test.go:elicitOnce.Elicit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "function:e2e/protocol_2026_07_28_test.go:newGreetServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "function:e2e/protocol_2026_07_28_test.go:startHTTPClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_NegotiatesViaDiscover",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_ListAndCallTools",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_MultiRoundTripIsTransparent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_NoSessionState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "function:e2e/protocol_2026_07_28_test.go:TestE2E_LegacyClientAgainstModernServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernClientAgainstLegacyOnlyServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_InProcess",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_NegotiatesViaDiscover",
+      "target": "function:e2e/protocol_2026_07_28_test.go:newGreetServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_NegotiatesViaDiscover",
+      "target": "function:e2e/protocol_2026_07_28_test.go:startHTTPClient",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_ListAndCallTools",
+      "target": "function:e2e/protocol_2026_07_28_test.go:newGreetServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_ListAndCallTools",
+      "target": "function:e2e/protocol_2026_07_28_test.go:startHTTPClient",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_MultiRoundTripIsTransparent",
+      "target": "function:e2e/protocol_2026_07_28_test.go:newGreetServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_MultiRoundTripIsTransparent",
+      "target": "function:e2e/protocol_2026_07_28_test.go:startHTTPClient",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_NoSessionState",
+      "target": "function:e2e/protocol_2026_07_28_test.go:newGreetServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:e2e/protocol_2026_07_28_test.go:TestE2E_LegacyClientAgainstModernServer",
+      "target": "function:e2e/protocol_2026_07_28_test.go:newGreetServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernClientAgainstLegacyOnlyServer",
+      "target": "function:e2e/protocol_2026_07_28_test.go:newGreetServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernClientAgainstLegacyOnlyServer",
+      "target": "function:e2e/protocol_2026_07_28_test.go:startHTTPClient",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:e2e/protocol_2026_07_28_test.go:TestE2E_ModernProtocol_InProcess",
+      "target": "function:e2e/protocol_2026_07_28_test.go:newGreetServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "file:client/client.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "file:client/transport/inprocess.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "file:client/transport/streamable_http.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "file:mcp/consts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "file:mcp/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "file:mcp/result.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "file:mcp/tools.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "file:mcp/types.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "file:mcp/utils.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "file:mcp/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "file:server/mrtr.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "file:server/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "file:server/streamable_http.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/protocol_2026_07_28_test.go",
+      "target": "file:server/streamable_http_modern.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "class:e2e/sampling_http_test.go:TestSamplingHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "function:e2e/sampling_http_test.go:NewTestSamplingHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "function:e2e/sampling_http_test.go:TestSamplingHandler.SetResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "function:e2e/sampling_http_test.go:TestSamplingHandler.CreateMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "function:e2e/sampling_http_test.go:TestSamplingHTTPE2E",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "function:e2e/sampling_http_test.go:TestSamplingHTTPBasic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "function:e2e/sampling_http_test.go:TestMain",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:e2e/sampling_http_test.go:TestSamplingHTTPE2E",
+      "target": "function:e2e/sampling_http_test.go:NewTestSamplingHandler",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "file:client/client.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "file:client/sampling.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "file:client/transport/streamable_http.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "file:mcp/prompts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "file:mcp/tools.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "file:mcp/types.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "file:mcp/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "file:server/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "file:server/session.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:e2e/sampling_http_test.go",
+      "target": "file:server/streamable_http.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/multi_round_trip/main.go",
+      "target": "function:examples/multi_round_trip/main.go:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:examples/multi_round_trip/main.go",
+      "target": "function:examples/multi_round_trip/main.go:newServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:examples/multi_round_trip/main.go",
+      "target": "function:examples/multi_round_trip/main.go:deploy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:examples/multi_round_trip/main.go",
+      "target": "function:examples/multi_round_trip/main.go:autoApprover.Elicit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:examples/multi_round_trip/main.go:main",
+      "target": "function:examples/multi_round_trip/main.go:newServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:examples/multi_round_trip/main.go",
+      "target": "file:client/client.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/multi_round_trip/main.go",
+      "target": "file:client/transport/inprocess.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/multi_round_trip/main.go",
+      "target": "file:mcp/consts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/multi_round_trip/main.go",
+      "target": "file:mcp/tools.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/multi_round_trip/main.go",
+      "target": "file:mcp/types.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/multi_round_trip/main.go",
+      "target": "file:mcp/utils.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/multi_round_trip/main.go",
+      "target": "file:server/mrtr.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/multi_round_trip/main.go",
+      "target": "file:server/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/roots_client/main.go",
+      "target": "class:examples/roots_client/main.go:MockRootsHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:examples/roots_client/main.go",
+      "target": "class:examples/roots_client/main.go:MockRootsHandler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:examples/roots_client/main.go",
+      "target": "function:examples/roots_client/main.go:MockRootsHandler.ListRoots",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:examples/roots_client/main.go",
+      "target": "function:examples/roots_client/main.go:MockRootsHandler.ListRoots",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:examples/roots_client/main.go",
+      "target": "function:examples/roots_client/main.go:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:examples/roots_client/main.go",
+      "target": "file:client/client.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/roots_client/main.go",
+      "target": "file:client/roots.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/roots_client/main.go",
+      "target": "file:client/transport/stdio.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/roots_client/main.go",
+      "target": "file:mcp/tools.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/roots_client/main.go",
+      "target": "file:mcp/types.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/roots_client/main.go",
+      "target": "file:mcp/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/roots_http_client/main.go",
+      "target": "class:examples/roots_http_client/main.go:MockRootsHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:examples/roots_http_client/main.go",
+      "target": "class:examples/roots_http_client/main.go:MockRootsHandler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:examples/roots_http_client/main.go",
+      "target": "function:examples/roots_http_client/main.go:MockRootsHandler.ListRoots",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:examples/roots_http_client/main.go",
+      "target": "function:examples/roots_http_client/main.go:MockRootsHandler.ListRoots",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:examples/roots_http_client/main.go",
+      "target": "function:examples/roots_http_client/main.go:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:examples/roots_http_client/main.go",
+      "target": "file:client/client.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/roots_http_client/main.go",
+      "target": "file:client/roots.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/roots_http_client/main.go",
+      "target": "file:client/transport/streamable_http.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/roots_http_client/main.go",
+      "target": "file:mcp/tools.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/roots_http_client/main.go",
+      "target": "file:mcp/types.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/roots_http_client/main.go",
+      "target": "file:mcp/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/sampling_client/main.go",
+      "target": "class:examples/sampling_client/main.go:MockSamplingHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:examples/sampling_client/main.go",
+      "target": "class:examples/sampling_client/main.go:MockSamplingHandler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:examples/sampling_client/main.go",
+      "target": "function:examples/sampling_client/main.go:MockSamplingHandler.CreateMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:examples/sampling_client/main.go",
+      "target": "function:examples/sampling_client/main.go:MockSamplingHandler.CreateMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:examples/sampling_client/main.go",
+      "target": "function:examples/sampling_client/main.go:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:examples/sampling_client/main.go",
+      "target": "file:client/client.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/sampling_client/main.go",
+      "target": "file:client/transport/stdio.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/sampling_client/main.go",
+      "target": "file:mcp/prompts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/sampling_client/main.go",
+      "target": "file:mcp/tools.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/sampling_client/main.go",
+      "target": "file:mcp/types.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/sampling_client/main.go",
+      "target": "file:mcp/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/sampling_http_client/main.go",
+      "target": "class:examples/sampling_http_client/main.go:MockSamplingHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:examples/sampling_http_client/main.go",
+      "target": "class:examples/sampling_http_client/main.go:MockSamplingHandler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:examples/sampling_http_client/main.go",
+      "target": "function:examples/sampling_http_client/main.go:MockSamplingHandler.CreateMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:examples/sampling_http_client/main.go",
+      "target": "function:examples/sampling_http_client/main.go:MockSamplingHandler.CreateMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:examples/sampling_http_client/main.go",
+      "target": "function:examples/sampling_http_client/main.go:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:examples/sampling_http_client/main.go",
+      "target": "file:client/client.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/sampling_http_client/main.go",
+      "target": "file:client/sampling.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/sampling_http_client/main.go",
+      "target": "file:client/transport/streamable_http.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/sampling_http_client/main.go",
+      "target": "file:mcp/prompts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/sampling_http_client/main.go",
+      "target": "file:mcp/types.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/sampling_http_client/main.go",
+      "target": "file:mcp/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/simple_client/main.go",
+      "target": "function:examples/simple_client/main.go:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:examples/simple_client/main.go",
+      "target": "function:examples/simple_client/main.go:parseCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:examples/simple_client/main.go:main",
+      "target": "function:examples/simple_client/main.go:parseCommand",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:examples/simple_client/main.go",
+      "target": "file:client/client.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/simple_client/main.go",
+      "target": "file:client/stdio.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/simple_client/main.go",
+      "target": "file:client/transport/stdio.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/simple_client/main.go",
+      "target": "file:client/transport/streamable_http.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/simple_client/main.go",
+      "target": "file:mcp/tools.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/simple_client/main.go",
+      "target": "file:mcp/types.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:examples/simple_client/main.go",
+      "target": "file:mcp/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:mcp/base_metadata_test.go",
+      "target": "function:mcp/base_metadata_test.go:TestToolTitleMarshaling",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/base_metadata_test.go",
+      "target": "function:mcp/base_metadata_test.go:TestPromptTitleMarshaling",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/base_metadata_test.go",
+      "target": "function:mcp/base_metadata_test.go:TestPromptArgumentTitle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/base_metadata_test.go",
+      "target": "function:mcp/base_metadata_test.go:TestResourceTitleAndSize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/base_metadata_test.go",
+      "target": "function:mcp/base_metadata_test.go:TestResourceTemplateTitle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/base_metadata_test.go",
+      "target": "function:mcp/base_metadata_test.go:TestIconTheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/call_tool_result_parse_test.go",
+      "target": "function:mcp/call_tool_result_parse_test.go:TestParseCallToolResult_ContentAlternatives",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/content_benchmark_test.go",
+      "target": "function:mcp/content_benchmark_test.go:BenchmarkUnmarshalContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/content_pointers_test.go",
+      "target": "function:mcp/content_pointers_test.go:TestContentPointers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:DiscoverRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:DiscoverRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:DiscoverParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:DiscoverParams",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:DiscoverResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:DiscoverResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:SubscriptionFilter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:SubscriptionFilter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:SubscriptionsListenRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:SubscriptionsListenRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:SubscriptionsListenParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:SubscriptionsListenParams",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:SubscriptionsListenResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:SubscriptionsListenResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:SubscriptionsAcknowledgedNotification",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:SubscriptionsAcknowledgedNotification",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:SubscriptionsAcknowledgedParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "class:mcp/discover.go:SubscriptionsAcknowledgedParams",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "function:mcp/discover.go:SubscriptionFilter.IsEmpty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/discover.go",
+      "target": "function:mcp/discover.go:SubscriptionFilter.IsEmpty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/elicitation_test.go",
+      "target": "function:mcp/elicitation_test.go:TestElicitationParamsSerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/elicitation_test.go",
+      "target": "function:mcp/elicitation_test.go:TestElicitationCapabilitySerialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "class:mcp/errors.go:URLElicitationRequiredError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "class:mcp/errors.go:URLElicitationRequiredError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "class:mcp/errors.go:UnsupportedProtocolVersionError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "class:mcp/errors.go:UnsupportedProtocolVersionError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "class:mcp/errors.go:UnsupportedProtocolVersionData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "class:mcp/errors.go:UnsupportedProtocolVersionData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "class:mcp/errors.go:HeaderMismatchError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "class:mcp/errors.go:HeaderMismatchError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "class:mcp/errors.go:MissingRequiredClientCapabilityError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "class:mcp/errors.go:MissingRequiredClientCapabilityError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:URLElicitationRequiredError.Error",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:URLElicitationRequiredError.Error",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:URLElicitationRequiredError.JSONRPCError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:URLElicitationRequiredError.JSONRPCError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:UnsupportedProtocolVersionError.Error",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:UnsupportedProtocolVersionError.Error",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:UnsupportedProtocolVersionError.JSONRPCError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:UnsupportedProtocolVersionError.JSONRPCError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:HeaderMismatchError.Error",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:HeaderMismatchError.Error",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:HeaderMismatchError.Is",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:HeaderMismatchError.Is",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:MissingRequiredClientCapabilityError.Error",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:MissingRequiredClientCapabilityError.Error",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:MissingRequiredClientCapabilityError.Is",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:MissingRequiredClientCapabilityError.Is",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:URLElicitationRequiredError.Is",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:URLElicitationRequiredError.Is",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:UnsupportedProtocolVersionError.Is",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:UnsupportedProtocolVersionError.Is",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:IsUnsupportedProtocolVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:IsUnsupportedProtocolVersion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:IsHeaderMismatch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:IsHeaderMismatch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:IsMissingRequiredClientCapability",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:IsMissingRequiredClientCapability",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:JSONRPCErrorDetails.AsError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "function:mcp/errors.go:JSONRPCErrorDetails.AsError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/errors_test.go",
+      "target": "function:mcp/errors_test.go:TestJSONRPCErrorDetails_AsError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors_test.go",
+      "target": "function:mcp/errors_test.go:TestJSONRPCErrorDetails_AsError_WithPointer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors_test.go",
+      "target": "function:mcp/errors_test.go:TestSentinelErrors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors_test.go",
+      "target": "function:mcp/errors_test.go:TestErrorChaining",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors_test.go",
+      "target": "function:mcp/errors_test.go:TestURLElicitationRequiredError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors_test.go",
+      "target": "function:mcp/errors_test.go:TestJSONRPCErrorDetails_AsError_URLElicitationRequired",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/errors.go",
+      "target": "file:mcp/errors_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:mcp/icons_test.go",
+      "target": "function:mcp/icons_test.go:TestIconJSONMarshaling",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "class:mcp/mrtr.go:InputRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "class:mcp/mrtr.go:InputRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "class:mcp/mrtr.go:ListRootsParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "class:mcp/mrtr.go:ListRootsParams",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "class:mcp/mrtr.go:InputResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "class:mcp/mrtr.go:InputResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "class:mcp/mrtr.go:MultiRoundTripResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "class:mcp/mrtr.go:MultiRoundTripResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "class:mcp/mrtr.go:InputRequiredResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "class:mcp/mrtr.go:InputRequiredResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "class:mcp/mrtr.go:MultiRoundTripParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "class:mcp/mrtr.go:MultiRoundTripParams",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:NewElicitationInputRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:NewElicitationInputRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:NewSamplingInputRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:NewSamplingInputRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:NewRootsInputRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:NewRootsInputRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:InputRequest.MarshalJSON",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:InputRequest.MarshalJSON",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:InputRequest.UnmarshalJSON",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:InputRequest.UnmarshalJSON",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:NewElicitationInputResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:NewElicitationInputResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:NewSamplingInputResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:NewSamplingInputResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:NewRootsInputResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:NewRootsInputResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:InputResponse.MarshalJSON",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:InputResponse.MarshalJSON",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:InputResponse.UnmarshalJSON",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:InputResponse.UnmarshalJSON",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:InputResponse.DecodeFor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:InputResponse.DecodeFor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:InputResponses.DecodeFor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:InputResponses.DecodeFor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:NewInputRequiredResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:NewInputRequiredResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:InputRequiredResult.NeedsInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:InputRequiredResult.NeedsInput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:CallToolResult.NeedsInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:CallToolResult.NeedsInput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:GetPromptResult.NeedsInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:GetPromptResult.NeedsInput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:ReadResourceResult.NeedsInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/mrtr.go",
+      "target": "function:mcp/mrtr.go:ReadResourceResult.NeedsInput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcp/primitive_item_required_test.go",
+      "target": "function:mcp/primitive_item_required_test.go:TestPrimitiveItemRequired",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/prompts_test.go",
+      "target": "function:mcp/prompts_test.go:TestNewPrompt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/prompts_test.go",
+      "target": "function:mcp/prompts_test.go:TestPromptGetName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/prompts_test.go",
+      "target": "function:mcp/prompts_test.go:TestPromptJSONMarshaling",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/prompts_test.go",
+      "target": "function:mcp/prompts_test.go:TestWithArgument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/prompts_test.go",
+      "target": "function:mcp/prompts_test.go:TestArgumentDescription",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/prompts_test.go",
+      "target": "function:mcp/prompts_test.go:TestRequiredArgument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/prompts_test.go",
+      "target": "function:mcp/prompts_test.go:TestWithPromptDescription",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/prompts_test.go",
+      "target": "function:mcp/prompts_test.go:TestPromptMessageCreation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/prompts_test.go",
+      "target": "function:mcp/prompts_test.go:TestPromptJSONStructure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/prompts_test.go",
+      "target": "function:mcp/prompts_test.go:TestWithPromptIcons",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/prompts.go",
+      "target": "file:mcp/prompts_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "class:mcp/quoted_schema_test.go:quotedSchemaFields",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:quotedSchemaMarshaler.MarshalJSON",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedFieldTypes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:TestToolSchema_QuotedFields",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedFieldShadowing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedRootContainers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedFieldDominance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedFieldEnums",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedFallbackContainers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedFallbackFieldSelection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:quotedEnumMarshaler.MarshalJSON",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedStringEnums",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedRecursiveEmbedding",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:quotedNativeMarshaler.MarshalJSON",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedNativeFieldSelection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedSelectedAnnotations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:quotedPointerJSONStruct.MarshalJSON",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:quotedTextStruct.MarshalText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcp/quoted_schema_test.go",
+      "target": "function:mcp/quoted_schema_test.go:TestSchemaFor_QuotedCustomStructEncoding",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "class:mcptest/mcptest.go:Server",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "class:mcptest/mcptest.go:Server",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:NewServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:NewServer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:NewUnstartedServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:NewUnstartedServer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddTools",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddTools",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddTool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddPrompt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddPrompt",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddPrompts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddPrompts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddResource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddResource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddResources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddResources",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddResourceTemplate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddResourceTemplate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddResourceTemplates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddResourceTemplates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddServerOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.AddServerOptions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.SetClientInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.SetClientInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.SetSamplingHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.SetSamplingHandler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.SetElicitationHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.SetElicitationHandler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.SetRootsHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.SetRootsHandler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.Start",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.Start",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.Close",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.Client",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "function:mcptest/mcptest.go:Server.Client",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:mcptest/mcptest.go:NewServer",
+      "target": "function:mcptest/mcptest.go:NewUnstartedServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "file:client/client.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "file:client/elicitation.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "file:client/roots.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "file:client/sampling.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "file:client/transport/interface.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "file:client/transport/stdio.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "file:mcp/prompts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "file:mcp/tools.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "file:mcp/types.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "file:mcp/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "file:server/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:mcptest/mcptest.go",
+      "target": "file:server/stdio.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

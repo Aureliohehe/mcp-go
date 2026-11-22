@@ -1,0 +1,60 @@
+{
+  "issues": [],
+  "warnings": [
+    "Orphan node: file:server/constants.go",
+    "Orphan node: file:server/ctx.go",
+    "Orphan node: file:server/http_transport_options.go",
+    "Orphan node: file:server/servertest/doc.go",
+    "Orphan node: pipeline:.github/workflows/conformance.yml",
+    "Orphan node: pipeline:.github/workflows/release.yml",
+    "Orphan node: document:.github/ISSUE_TEMPLATE/bug_report.md",
+    "Orphan node: config:.github/ISSUE_TEMPLATE/config.yml",
+    "Orphan node: document:.github/ISSUE_TEMPLATE/documentation-improvement.md",
+    "Orphan node: document:.github/ISSUE_TEMPLATE/feature-request.md",
+    "Orphan node: document:AGENTS.md",
+    "Orphan node: document:CODE_OF_CONDUCT.md",
+    "Orphan node: document:CONTRIBUTING.md",
+    "Orphan node: document:SECURITY.md",
+    "Orphan node: document:.kit/prompts/code-audit.md",
+    "Orphan node: document:.kit/prompts/commit-push.md",
+    "Orphan node: document:.kit/prompts/create-pr.md",
+    "Orphan node: document:.kit/prompts/feature-request.md",
+    "Orphan node: document:.kit/prompts/file-issue.md",
+    "Orphan node: document:.kit/prompts/fix-issue.md",
+    "Orphan node: document:.kit/prompts/new-prompt.md",
+    "Orphan node: document:.kit/prompts/release-tagger.md",
+    "Orphan node: document:.kit/prompts/resolve-reviews.md",
+    "Orphan node: document:.kit/prompts/review-pr.md",
+    "Orphan node: document:.kit/prompts/update-docs.md",
+    "Orphan node: document:.github/pull_request_template.md",
+    "Orphan node: config:.ua/config.json"
+  ],
+  "stats": {
+    "totalNodes": 3929,
+    "totalEdges": 8566,
+    "totalLayers": 9,
+    "tourSteps": 6,
+    "nodeTypes": {
+      "file": 375,
+      "class": 363,
+      "function": 3119,
+      "pipeline": 5,
+      "document": 57,
+      "config": 10
+    },
+    "edgeTypes": {
+      "imports": 838,
+      "contains": 3482,
+      "exports": 2398,
+      "calls": 1677,
+      "tested_by": 62,
+      "configures": 5,
+      "depends_on": 10,
+      "deploys": 1,
+      "documents": 78,
+      "related": 7,
+      "reads_from": 8
+    },
+    "warnings": 27
+  }
+}

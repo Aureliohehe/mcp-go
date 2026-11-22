@@ -1,0 +1,1835 @@
+{
+  "nodes": [
+    {
+      "id": "file:otel/client_test.go",
+      "type": "file",
+      "name": "client_test.go",
+      "filePath": "otel/client_test.go",
+      "summary": "验证客户端请求生成 OpenTelemetry 跨度并传播追踪上下文。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:otel/client_test.go:headerCapturingTransport.SendRequest",
+      "type": "function",
+      "name": "headerCapturingTransport.SendRequest",
+      "filePath": "otel/client_test.go",
+      "lineRange": [
+        28,
+        31
+      ],
+      "summary": "发送 headerCapturingTransport.SendRequest，调用 request.Header.Clone、h.Interface.SendRequest。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/client_test.go:TestClientTracing_EmitsClientSpan",
+      "type": "function",
+      "name": "TestClientTracing_EmitsClientSpan",
+      "filePath": "otel/client_test.go",
+      "lineRange": [
+        42,
+        69
+      ],
+      "summary": "执行测试 TestClientTracing_EmitsClientSpan。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/client_test.go:TestClientTracing_InjectsTraceparent",
+      "type": "function",
+      "name": "TestClientTracing_InjectsTraceparent",
+      "filePath": "otel/client_test.go",
+      "lineRange": [
+        71,
+        85
+      ],
+      "summary": "执行测试 TestClientTracing_InjectsTraceparent。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/client_test.go:TestClientTracing_ErrorResponseMarksSpanErrored",
+      "type": "function",
+      "name": "TestClientTracing_ErrorResponseMarksSpanErrored",
+      "filePath": "otel/client_test.go",
+      "lineRange": [
+        87,
+        107
+      ],
+      "summary": "执行测试 TestClientTracing_ErrorResponseMarksSpanErrored。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/client_test.go:TestClientTracing_NoOptionDoesNotInjectTraceparent",
+      "type": "function",
+      "name": "TestClientTracing_NoOptionDoesNotInjectTraceparent",
+      "filePath": "otel/client_test.go",
+      "lineRange": [
+        109,
+        123
+      ],
+      "summary": "执行测试 TestClientTracing_NoOptionDoesNotInjectTraceparent。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/client_test.go:TestRoundTrip_TraceparentSpansClientAndServer",
+      "type": "function",
+      "name": "TestRoundTrip_TraceparentSpansClientAndServer",
+      "filePath": "otel/client_test.go",
+      "lineRange": [
+        125,
+        177
+      ],
+      "summary": "执行测试 TestRoundTrip_TraceparentSpansClientAndServer。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:otel/example/main.go",
+      "type": "file",
+      "name": "main.go",
+      "filePath": "otel/example/main.go",
+      "summary": "演示如何配置 OpenTelemetry 提供器并在 MCP 服务中启用追踪和日志。",
+      "tags": [
+        "可观测性",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:otel/example/main.go:stderrPrinter",
+      "type": "class",
+      "name": "stderrPrinter",
+      "filePath": "otel/example/main.go",
+      "lineRange": [
+        81,
+        81
+      ],
+      "summary": "定义 stderrPrinter 的接口或方法集合，包括 OnStart、OnEnd、Shutdown、ForceFlush。",
+      "tags": [
+        "可观测性",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/example/main.go:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "otel/example/main.go",
+      "lineRange": [
+        23,
+        79
+      ],
+      "summary": "执行 main，调用 sdktrace.NewTracerProvider、sdktrace.WithSpanProcessor、otel.SetTracerProvider。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:otel/example/main.go:stderrPrinter.OnStart",
+      "type": "function",
+      "name": "stderrPrinter.OnStart",
+      "filePath": "otel/example/main.go",
+      "lineRange": [
+        83,
+        83
+      ],
+      "summary": "执行 stderrPrinter.OnStart。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/example/main.go:stderrPrinter.OnEnd",
+      "type": "function",
+      "name": "stderrPrinter.OnEnd",
+      "filePath": "otel/example/main.go",
+      "lineRange": [
+        85,
+        90
+      ],
+      "summary": "执行 stderrPrinter.OnEnd，调用 s.SpanContext、s.Parent().SpanID().String、s.Parent().SpanID。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/example/main.go:stderrPrinter.Shutdown",
+      "type": "function",
+      "name": "stderrPrinter.Shutdown",
+      "filePath": "otel/example/main.go",
+      "lineRange": [
+        92,
+        92
+      ],
+      "summary": "执行 stderrPrinter.Shutdown。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/example/main.go:stderrPrinter.ForceFlush",
+      "type": "function",
+      "name": "stderrPrinter.ForceFlush",
+      "filePath": "otel/example/main.go",
+      "lineRange": [
+        93,
+        93
+      ],
+      "summary": "执行 stderrPrinter.ForceFlush。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:otel/logger.go",
+      "type": "file",
+      "name": "logger.go",
+      "filePath": "otel/logger.go",
+      "summary": "将 Go slog 日志转发至 OpenTelemetry，并提供 MCP 服务端日志配置选项。",
+      "tags": [
+        "可观测性",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:otel/logger.go:NewSlogLogger",
+      "type": "function",
+      "name": "NewSlogLogger",
+      "filePath": "otel/logger.go",
+      "lineRange": [
+        21,
+        27
+      ],
+      "summary": "构造 NewSlogLogger，调用 otelslog.WithLoggerProvider、slog.New、otelslog.NewHandler。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/logger.go:WithServerLogging",
+      "type": "function",
+      "name": "WithServerLogging",
+      "filePath": "otel/logger.go",
+      "lineRange": [
+        53,
+        55
+      ],
+      "summary": "应用配置 WithServerLogging，调用 server.WithLogger、NewSlogLogger。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:otel/logger_test.go",
+      "type": "file",
+      "name": "logger_test.go",
+      "filePath": "otel/logger_test.go",
+      "summary": "验证 MCP 服务端日志与 OpenTelemetry 日志适配器的连接。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:otel/logger_test.go:captureExporter",
+      "type": "class",
+      "name": "captureExporter",
+      "filePath": "otel/logger_test.go",
+      "lineRange": [
+        19,
+        22
+      ],
+      "summary": "定义 captureExporter 的数据结构，包含 mu、records 等字段。",
+      "tags": [
+        "可观测性",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/logger_test.go:captureExporter.Export",
+      "type": "function",
+      "name": "captureExporter.Export",
+      "filePath": "otel/logger_test.go",
+      "lineRange": [
+        24,
+        31
+      ],
+      "summary": "执行 captureExporter.Export，调用 e.mu.Lock、e.mu.Unlock、r.Clone。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/logger_test.go:captureExporter.Shutdown",
+      "type": "function",
+      "name": "captureExporter.Shutdown",
+      "filePath": "otel/logger_test.go",
+      "lineRange": [
+        33,
+        33
+      ],
+      "summary": "执行 captureExporter.Shutdown。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/logger_test.go:captureExporter.ForceFlush",
+      "type": "function",
+      "name": "captureExporter.ForceFlush",
+      "filePath": "otel/logger_test.go",
+      "lineRange": [
+        34,
+        34
+      ],
+      "summary": "执行 captureExporter.ForceFlush。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/logger_test.go:TestNewSlogLogger_NilProviderUsesGlobal",
+      "type": "function",
+      "name": "TestNewSlogLogger_NilProviderUsesGlobal",
+      "filePath": "otel/logger_test.go",
+      "lineRange": [
+        53,
+        66
+      ],
+      "summary": "执行测试 TestNewSlogLogger_NilProviderUsesGlobal。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/logger_test.go:TestNewSlogLogger_RoutesRecordsToProvider",
+      "type": "function",
+      "name": "TestNewSlogLogger_RoutesRecordsToProvider",
+      "filePath": "otel/logger_test.go",
+      "lineRange": [
+        68,
+        94
+      ],
+      "summary": "执行测试 TestNewSlogLogger_RoutesRecordsToProvider。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:otel/meta_carrier.go",
+      "type": "file",
+      "name": "meta_carrier.go",
+      "filePath": "otel/meta_carrier.go",
+      "summary": "将 MCP 元数据适配为文本映射载体，以注入和提取 OpenTelemetry 追踪上下文。",
+      "tags": [
+        "可观测性",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:otel/meta_carrier.go:otelMetaPropagator",
+      "type": "class",
+      "name": "otelMetaPropagator",
+      "filePath": "otel/meta_carrier.go",
+      "lineRange": [
+        27,
+        29
+      ],
+      "summary": "定义 otelMetaPropagator 的数据结构，包含 p 等字段。",
+      "tags": [
+        "可观测性",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:otel/meta_carrier.go:metaCarrier",
+      "type": "class",
+      "name": "metaCarrier",
+      "filePath": "otel/meta_carrier.go",
+      "lineRange": [
+        53,
+        55
+      ],
+      "summary": "定义 metaCarrier 的数据结构，包含 meta 等字段。",
+      "tags": [
+        "可观测性",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/meta_carrier.go:NewMetaPropagator",
+      "type": "function",
+      "name": "NewMetaPropagator",
+      "filePath": "otel/meta_carrier.go",
+      "lineRange": [
+        14,
+        16
+      ],
+      "summary": "构造 NewMetaPropagator，调用 WrapMetaPropagator。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/meta_carrier.go:WrapMetaPropagator",
+      "type": "function",
+      "name": "WrapMetaPropagator",
+      "filePath": "otel/meta_carrier.go",
+      "lineRange": [
+        20,
+        25
+      ],
+      "summary": "封装 WrapMetaPropagator，调用 tracing.NoopMetaPropagator。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/meta_carrier.go:otelMetaPropagator.InjectMeta",
+      "type": "function",
+      "name": "otelMetaPropagator.InjectMeta",
+      "filePath": "otel/meta_carrier.go",
+      "lineRange": [
+        31,
+        43
+      ],
+      "summary": "注入 otelMetaPropagator.InjectMeta，调用 o.p.Inject。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/meta_carrier.go:otelMetaPropagator.ExtractMeta",
+      "type": "function",
+      "name": "otelMetaPropagator.ExtractMeta",
+      "filePath": "otel/meta_carrier.go",
+      "lineRange": [
+        45,
+        50
+      ],
+      "summary": "提取 otelMetaPropagator.ExtractMeta，调用 o.p.Extract。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/meta_carrier.go:metaCarrier.Get",
+      "type": "function",
+      "name": "metaCarrier.Get",
+      "filePath": "otel/meta_carrier.go",
+      "lineRange": [
+        57,
+        67
+      ],
+      "summary": "读取 metaCarrier.Get。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/meta_carrier.go:metaCarrier.Set",
+      "type": "function",
+      "name": "metaCarrier.Set",
+      "filePath": "otel/meta_carrier.go",
+      "lineRange": [
+        69,
+        74
+      ],
+      "summary": "设置 metaCarrier.Set。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/meta_carrier.go:metaCarrier.Keys",
+      "type": "function",
+      "name": "metaCarrier.Keys",
+      "filePath": "otel/meta_carrier.go",
+      "lineRange": [
+        76,
+        82
+      ],
+      "summary": "执行 metaCarrier.Keys。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:otel/meta_carrier_test.go",
+      "type": "file",
+      "name": "meta_carrier_test.go",
+      "filePath": "otel/meta_carrier_test.go",
+      "summary": "验证追踪元数据注入、提取和载体字段读写行为。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:otel/meta_carrier_test.go:paramsCapturingTransport.SendRequest",
+      "type": "function",
+      "name": "paramsCapturingTransport.SendRequest",
+      "filePath": "otel/meta_carrier_test.go",
+      "lineRange": [
+        27,
+        33
+      ],
+      "summary": "发送 paramsCapturingTransport.SendRequest，调用 json.Marshal、p.Interface.SendRequest。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/meta_carrier_test.go:startTracedClient",
+      "type": "function",
+      "name": "startTracedClient",
+      "filePath": "otel/meta_carrier_test.go",
+      "lineRange": [
+        37,
+        51
+      ],
+      "summary": "启动 startTracedClient，调用 transport.NewInProcessTransport、client.NewClient、c.Start。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/meta_carrier_test.go:TestMetaPropagator_InjectCreatesTraceparent",
+      "type": "function",
+      "name": "TestMetaPropagator_InjectCreatesTraceparent",
+      "filePath": "otel/meta_carrier_test.go",
+      "lineRange": [
+        55,
+        70
+      ],
+      "summary": "执行测试 TestMetaPropagator_InjectCreatesTraceparent。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/meta_carrier_test.go:TestMetaPropagator_ExtractPopulatesContext",
+      "type": "function",
+      "name": "TestMetaPropagator_ExtractPopulatesContext",
+      "filePath": "otel/meta_carrier_test.go",
+      "lineRange": [
+        74,
+        99
+      ],
+      "summary": "执行测试 TestMetaPropagator_ExtractPopulatesContext。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/meta_carrier_test.go:TestMetaPropagator_NilEdgeCases",
+      "type": "function",
+      "name": "TestMetaPropagator_NilEdgeCases",
+      "filePath": "otel/meta_carrier_test.go",
+      "lineRange": [
+        102,
+        133
+      ],
+      "summary": "执行测试 TestMetaPropagator_NilEdgeCases。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:otel/meta_carrier_test.go:TestClientMetaPropagator_CallToolInjectsMeta",
+      "type": "function",
+      "name": "TestClientMetaPropagator_CallToolInjectsMeta",
+      "filePath": "otel/meta_carrier_test.go",
+      "lineRange": [
+        137,
+        168
+      ],
+      "summary": "执行测试 TestClientMetaPropagator_CallToolInjectsMeta。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:otel/meta_carrier_test.go:TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+      "type": "function",
+      "name": "TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+      "filePath": "otel/meta_carrier_test.go",
+      "lineRange": [
+        172,
+        196
+      ],
+      "summary": "执行测试 TestClientMetaPropagator_NoTracerDoesNotInjectMeta。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/meta_carrier_test.go:TestServerMetaPropagator_ExtractsInboundTraceparent",
+      "type": "function",
+      "name": "TestServerMetaPropagator_ExtractsInboundTraceparent",
+      "filePath": "otel/meta_carrier_test.go",
+      "lineRange": [
+        200,
+        234
+      ],
+      "summary": "执行测试 TestServerMetaPropagator_ExtractsInboundTraceparent。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:otel/meta_carrier_test.go:TestServerMetaPropagator_RoundTrip",
+      "type": "function",
+      "name": "TestServerMetaPropagator_RoundTrip",
+      "filePath": "otel/meta_carrier_test.go",
+      "lineRange": [
+        238,
+        264
+      ],
+      "summary": "执行测试 TestServerMetaPropagator_RoundTrip。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/meta_carrier_test.go:splitTraceparent",
+      "type": "function",
+      "name": "splitTraceparent",
+      "filePath": "otel/meta_carrier_test.go",
+      "lineRange": [
+        275,
+        286
+      ],
+      "summary": "执行 splitTraceparent。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/meta_carrier_test.go:TestMetaPropagator_InjectWithoutSpanLeavesNilMeta",
+      "type": "function",
+      "name": "TestMetaPropagator_InjectWithoutSpanLeavesNilMeta",
+      "filePath": "otel/meta_carrier_test.go",
+      "lineRange": [
+        292,
+        300
+      ],
+      "summary": "执行测试 TestMetaPropagator_InjectWithoutSpanLeavesNilMeta。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:otel/options.go",
+      "type": "file",
+      "name": "options.go",
+      "filePath": "otel/options.go",
+      "summary": "提供客户端和服务端配置选项，用于接入 OpenTelemetry 追踪器及传播器。",
+      "tags": [
+        "可观测性",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:otel/options.go:WithServerTracing",
+      "type": "function",
+      "name": "WithServerTracing",
+      "filePath": "otel/options.go",
+      "lineRange": [
+        13,
+        22
+      ],
+      "summary": "应用配置 WithServerTracing，调用 NewTracer、NewPropagator、NewMetaPropagator。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/options.go:WithServerTracingPropagator",
+      "type": "function",
+      "name": "WithServerTracingPropagator",
+      "filePath": "otel/options.go",
+      "lineRange": [
+        26,
+        35
+      ],
+      "summary": "应用配置 WithServerTracingPropagator，调用 NewTracer、WrapPropagator、WrapMetaPropagator。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/options.go:WithServerMetaPropagator",
+      "type": "function",
+      "name": "WithServerMetaPropagator",
+      "filePath": "otel/options.go",
+      "lineRange": [
+        39,
+        42
+      ],
+      "summary": "应用配置 WithServerMetaPropagator，调用 WrapMetaPropagator、server.WithMetaPropagator。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/options.go:WithClientTracing",
+      "type": "function",
+      "name": "WithClientTracing",
+      "filePath": "otel/options.go",
+      "lineRange": [
+        46,
+        55
+      ],
+      "summary": "应用配置 WithClientTracing，调用 NewTracer、NewPropagator、NewMetaPropagator。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/options.go:WithClientTracingPropagator",
+      "type": "function",
+      "name": "WithClientTracingPropagator",
+      "filePath": "otel/options.go",
+      "lineRange": [
+        59,
+        68
+      ],
+      "summary": "应用配置 WithClientTracingPropagator，调用 NewTracer、WrapPropagator、WrapMetaPropagator。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/options.go:WithClientMetaPropagator",
+      "type": "function",
+      "name": "WithClientMetaPropagator",
+      "filePath": "otel/options.go",
+      "lineRange": [
+        72,
+        75
+      ],
+      "summary": "应用配置 WithClientMetaPropagator，调用 WrapMetaPropagator、client.WithMetaPropagator。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:otel/server_test.go",
+      "type": "file",
+      "name": "server_test.go",
+      "filePath": "otel/server_test.go",
+      "summary": "验证服务端跨度、错误记录及 OpenTelemetry 追踪上下文传播。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:otel/server_test.go:TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+      "type": "function",
+      "name": "TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+      "filePath": "otel/server_test.go",
+      "lineRange": [
+        70,
+        104
+      ],
+      "summary": "执行测试 TestServerTracing_ToolsCallEmitsParentAndChildSpans。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:otel/server_test.go:TestServerTracing_ToolsListEmitsServerSpan",
+      "type": "function",
+      "name": "TestServerTracing_ToolsListEmitsServerSpan",
+      "filePath": "otel/server_test.go",
+      "lineRange": [
+        106,
+        127
+      ],
+      "summary": "执行测试 TestServerTracing_ToolsListEmitsServerSpan。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/server_test.go:TestServerTracing_InitializeEmitsServerSpan",
+      "type": "function",
+      "name": "TestServerTracing_InitializeEmitsServerSpan",
+      "filePath": "otel/server_test.go",
+      "lineRange": [
+        129,
+        140
+      ],
+      "summary": "执行测试 TestServerTracing_InitializeEmitsServerSpan。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/server_test.go:TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+      "type": "function",
+      "name": "TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+      "filePath": "otel/server_test.go",
+      "lineRange": [
+        142,
+        165
+      ],
+      "summary": "执行测试 TestServerTracing_ToolHandlerErrorMarksBothSpansErrored。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/server_test.go:TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+      "type": "function",
+      "name": "TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+      "filePath": "otel/server_test.go",
+      "lineRange": [
+        167,
+        190
+      ],
+      "summary": "执行测试 TestServerTracing_ToolErrorResultMarksBothSpansErrored。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/server_test.go:TestServerTracing_UnknownMethodMarksParentErrored",
+      "type": "function",
+      "name": "TestServerTracing_UnknownMethodMarksParentErrored",
+      "filePath": "otel/server_test.go",
+      "lineRange": [
+        192,
+        207
+      ],
+      "summary": "执行测试 TestServerTracing_UnknownMethodMarksParentErrored。",
+      "tags": [
+        "可观测性",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:otel/tracer.go",
+      "type": "file",
+      "name": "tracer.go",
+      "filePath": "otel/tracer.go",
+      "summary": "将 OpenTelemetry 追踪器、跨度和 HTTP 传播器适配到 MCP 公共追踪接口。",
+      "tags": [
+        "可观测性",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:otel/tracer.go:otelSpan",
+      "type": "class",
+      "name": "otelSpan",
+      "filePath": "otel/tracer.go",
+      "lineRange": [
+        55,
+        57
+      ],
+      "summary": "定义 otelSpan 的数据结构，包含 span 等字段。",
+      "tags": [
+        "可观测性",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:otel/tracer.go:otelPropagator",
+      "type": "class",
+      "name": "otelPropagator",
+      "filePath": "otel/tracer.go",
+      "lineRange": [
+        71,
+        73
+      ],
+      "summary": "定义 otelPropagator 的数据结构，包含 p 等字段。",
+      "tags": [
+        "可观测性",
+        "类型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/tracer.go:NewTracer",
+      "type": "function",
+      "name": "NewTracer",
+      "filePath": "otel/tracer.go",
+      "lineRange": [
+        21,
+        26
+      ],
+      "summary": "构造 NewTracer，调用 tracing.NoopTracer。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/tracer.go:NewPropagator",
+      "type": "function",
+      "name": "NewPropagator",
+      "filePath": "otel/tracer.go",
+      "lineRange": [
+        29,
+        31
+      ],
+      "summary": "构造 NewPropagator，调用 WrapPropagator。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/tracer.go:WrapPropagator",
+      "type": "function",
+      "name": "WrapPropagator",
+      "filePath": "otel/tracer.go",
+      "lineRange": [
+        34,
+        39
+      ],
+      "summary": "封装 WrapPropagator，调用 tracing.NoopPropagator。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/tracer.go:otelTracer.Start",
+      "type": "function",
+      "name": "otelTracer.Start",
+      "filePath": "otel/tracer.go",
+      "lineRange": [
+        45,
+        53
+      ],
+      "summary": "启动 otelTracer.Start，调用 trace.WithSpanKind、toOTelKind、trace.WithAttributes。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/tracer.go:otelSpan.SetAttributes",
+      "type": "function",
+      "name": "otelSpan.SetAttributes",
+      "filePath": "otel/tracer.go",
+      "lineRange": [
+        59,
+        61
+      ],
+      "summary": "设置 otelSpan.SetAttributes，调用 s.span.SetAttributes、toOTelAttrs。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/tracer.go:otelSpan.RecordError",
+      "type": "function",
+      "name": "otelSpan.RecordError",
+      "filePath": "otel/tracer.go",
+      "lineRange": [
+        63,
+        63
+      ],
+      "summary": "执行 otelSpan.RecordError，调用 s.span.RecordError。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/tracer.go:otelSpan.SetStatus",
+      "type": "function",
+      "name": "otelSpan.SetStatus",
+      "filePath": "otel/tracer.go",
+      "lineRange": [
+        65,
+        67
+      ],
+      "summary": "设置 otelSpan.SetStatus，调用 s.span.SetStatus、toOTelStatus。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/tracer.go:otelSpan.End",
+      "type": "function",
+      "name": "otelSpan.End",
+      "filePath": "otel/tracer.go",
+      "lineRange": [
+        69,
+        69
+      ],
+      "summary": "执行 otelSpan.End，调用 s.span.End。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/tracer.go:otelPropagator.Inject",
+      "type": "function",
+      "name": "otelPropagator.Inject",
+      "filePath": "otel/tracer.go",
+      "lineRange": [
+        75,
+        77
+      ],
+      "summary": "注入 otelPropagator.Inject，调用 o.p.Inject、propagation.HeaderCarrier。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/tracer.go:otelPropagator.Extract",
+      "type": "function",
+      "name": "otelPropagator.Extract",
+      "filePath": "otel/tracer.go",
+      "lineRange": [
+        79,
+        81
+      ],
+      "summary": "提取 otelPropagator.Extract，调用 o.p.Extract、propagation.HeaderCarrier。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/tracer.go:toOTelKind",
+      "type": "function",
+      "name": "toOTelKind",
+      "filePath": "otel/tracer.go",
+      "lineRange": [
+        83,
+        94
+      ],
+      "summary": "执行 toOTelKind。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:otel/tracer.go:toOTelStatus",
+      "type": "function",
+      "name": "toOTelStatus",
+      "filePath": "otel/tracer.go",
+      "lineRange": [
+        96,
+        105
+      ],
+      "summary": "执行 toOTelStatus。",
+      "tags": [
+        "可观测性",
+        "函数"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:otel/client_test.go",
+      "target": "function:otel/client_test.go:headerCapturingTransport.SendRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/client_test.go",
+      "target": "function:otel/client_test.go:TestClientTracing_EmitsClientSpan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/client_test.go",
+      "target": "function:otel/client_test.go:TestClientTracing_InjectsTraceparent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/client_test.go",
+      "target": "function:otel/client_test.go:TestClientTracing_ErrorResponseMarksSpanErrored",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/client_test.go",
+      "target": "function:otel/client_test.go:TestClientTracing_NoOptionDoesNotInjectTraceparent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/client_test.go",
+      "target": "function:otel/client_test.go:TestRoundTrip_TraceparentSpansClientAndServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/client_test.go",
+      "target": "file:otel/options.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:otel/example/main.go",
+      "target": "class:otel/example/main.go:stderrPrinter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/example/main.go",
+      "target": "function:otel/example/main.go:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/example/main.go",
+      "target": "function:otel/example/main.go:stderrPrinter.OnStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/example/main.go",
+      "target": "function:otel/example/main.go:stderrPrinter.OnEnd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/example/main.go",
+      "target": "function:otel/example/main.go:stderrPrinter.Shutdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/example/main.go",
+      "target": "function:otel/example/main.go:stderrPrinter.ForceFlush",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/example/main.go",
+      "target": "file:otel/options.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:otel/logger.go",
+      "target": "function:otel/logger.go:NewSlogLogger",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/logger.go",
+      "target": "function:otel/logger.go:NewSlogLogger",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:otel/logger.go",
+      "target": "function:otel/logger.go:WithServerLogging",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/logger.go",
+      "target": "function:otel/logger.go:WithServerLogging",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:otel/logger.go:WithServerLogging",
+      "target": "function:otel/logger.go:NewSlogLogger",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:otel/logger_test.go",
+      "target": "class:otel/logger_test.go:captureExporter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/logger_test.go",
+      "target": "function:otel/logger_test.go:captureExporter.Export",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/logger_test.go",
+      "target": "function:otel/logger_test.go:captureExporter.Shutdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/logger_test.go",
+      "target": "function:otel/logger_test.go:captureExporter.ForceFlush",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/logger_test.go",
+      "target": "function:otel/logger_test.go:TestNewSlogLogger_NilProviderUsesGlobal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/logger_test.go",
+      "target": "function:otel/logger_test.go:TestNewSlogLogger_RoutesRecordsToProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/logger_test.go",
+      "target": "file:otel/logger.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:otel/logger.go",
+      "target": "file:otel/logger_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:otel/meta_carrier.go",
+      "target": "class:otel/meta_carrier.go:otelMetaPropagator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier.go",
+      "target": "class:otel/meta_carrier.go:metaCarrier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier.go",
+      "target": "function:otel/meta_carrier.go:NewMetaPropagator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier.go",
+      "target": "function:otel/meta_carrier.go:NewMetaPropagator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:otel/meta_carrier.go",
+      "target": "function:otel/meta_carrier.go:WrapMetaPropagator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier.go",
+      "target": "function:otel/meta_carrier.go:WrapMetaPropagator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:otel/meta_carrier.go",
+      "target": "function:otel/meta_carrier.go:otelMetaPropagator.InjectMeta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier.go",
+      "target": "function:otel/meta_carrier.go:otelMetaPropagator.ExtractMeta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier.go",
+      "target": "function:otel/meta_carrier.go:metaCarrier.Get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier.go",
+      "target": "function:otel/meta_carrier.go:metaCarrier.Set",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier.go",
+      "target": "function:otel/meta_carrier.go:metaCarrier.Keys",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:otel/meta_carrier.go:NewMetaPropagator",
+      "target": "function:otel/meta_carrier.go:WrapMetaPropagator",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:otel/meta_carrier_test.go",
+      "target": "function:otel/meta_carrier_test.go:paramsCapturingTransport.SendRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier_test.go",
+      "target": "function:otel/meta_carrier_test.go:startTracedClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier_test.go",
+      "target": "function:otel/meta_carrier_test.go:TestMetaPropagator_InjectCreatesTraceparent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier_test.go",
+      "target": "function:otel/meta_carrier_test.go:TestMetaPropagator_ExtractPopulatesContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier_test.go",
+      "target": "function:otel/meta_carrier_test.go:TestMetaPropagator_NilEdgeCases",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier_test.go",
+      "target": "function:otel/meta_carrier_test.go:TestClientMetaPropagator_CallToolInjectsMeta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier_test.go",
+      "target": "function:otel/meta_carrier_test.go:TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier_test.go",
+      "target": "function:otel/meta_carrier_test.go:TestServerMetaPropagator_ExtractsInboundTraceparent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier_test.go",
+      "target": "function:otel/meta_carrier_test.go:TestServerMetaPropagator_RoundTrip",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier_test.go",
+      "target": "function:otel/meta_carrier_test.go:splitTraceparent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/meta_carrier_test.go",
+      "target": "function:otel/meta_carrier_test.go:TestMetaPropagator_InjectWithoutSpanLeavesNilMeta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:otel/meta_carrier_test.go:TestClientMetaPropagator_CallToolInjectsMeta",
+      "target": "function:otel/meta_carrier_test.go:startTracedClient",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:otel/meta_carrier_test.go:TestClientMetaPropagator_NoTracerDoesNotInjectMeta",
+      "target": "function:otel/meta_carrier_test.go:startTracedClient",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:otel/meta_carrier_test.go:TestServerMetaPropagator_RoundTrip",
+      "target": "function:otel/meta_carrier_test.go:startTracedClient",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:otel/meta_carrier_test.go",
+      "target": "file:otel/meta_carrier.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:otel/meta_carrier_test.go",
+      "target": "file:otel/options.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:otel/meta_carrier.go",
+      "target": "file:otel/meta_carrier_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:otel/options.go",
+      "target": "function:otel/options.go:WithServerTracing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/options.go",
+      "target": "function:otel/options.go:WithServerTracing",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:otel/options.go",
+      "target": "function:otel/options.go:WithServerTracingPropagator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/options.go",
+      "target": "function:otel/options.go:WithServerTracingPropagator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:otel/options.go",
+      "target": "function:otel/options.go:WithServerMetaPropagator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/options.go",
+      "target": "function:otel/options.go:WithServerMetaPropagator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:otel/options.go",
+      "target": "function:otel/options.go:WithClientTracing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/options.go",
+      "target": "function:otel/options.go:WithClientTracing",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:otel/options.go",
+      "target": "function:otel/options.go:WithClientTracingPropagator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/options.go",
+      "target": "function:otel/options.go:WithClientTracingPropagator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:otel/options.go",
+      "target": "function:otel/options.go:WithClientMetaPropagator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/options.go",
+      "target": "function:otel/options.go:WithClientMetaPropagator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:otel/server_test.go",
+      "target": "function:otel/server_test.go:TestServerTracing_ToolsCallEmitsParentAndChildSpans",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/server_test.go",
+      "target": "function:otel/server_test.go:TestServerTracing_ToolsListEmitsServerSpan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/server_test.go",
+      "target": "function:otel/server_test.go:TestServerTracing_InitializeEmitsServerSpan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/server_test.go",
+      "target": "function:otel/server_test.go:TestServerTracing_ToolHandlerErrorMarksBothSpansErrored",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/server_test.go",
+      "target": "function:otel/server_test.go:TestServerTracing_ToolErrorResultMarksBothSpansErrored",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/server_test.go",
+      "target": "function:otel/server_test.go:TestServerTracing_UnknownMethodMarksParentErrored",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/server_test.go",
+      "target": "file:otel/options.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "class:otel/tracer.go:otelSpan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "class:otel/tracer.go:otelPropagator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "function:otel/tracer.go:NewTracer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "function:otel/tracer.go:NewTracer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "function:otel/tracer.go:NewPropagator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "function:otel/tracer.go:NewPropagator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "function:otel/tracer.go:WrapPropagator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "function:otel/tracer.go:WrapPropagator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "function:otel/tracer.go:otelTracer.Start",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "function:otel/tracer.go:otelSpan.SetAttributes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "function:otel/tracer.go:otelSpan.RecordError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "function:otel/tracer.go:otelSpan.SetStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "function:otel/tracer.go:otelSpan.End",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "function:otel/tracer.go:otelPropagator.Inject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "function:otel/tracer.go:otelPropagator.Extract",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "function:otel/tracer.go:toOTelKind",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:otel/tracer.go",
+      "target": "function:otel/tracer.go:toOTelStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:otel/tracer.go:NewPropagator",
+      "target": "function:otel/tracer.go:WrapPropagator",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:otel/tracer.go:otelTracer.Start",
+      "target": "function:otel/tracer.go:toOTelKind",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:otel/tracer.go:otelSpan.SetStatus",
+      "target": "function:otel/tracer.go:toOTelStatus",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

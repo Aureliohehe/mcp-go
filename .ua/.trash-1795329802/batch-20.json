@@ -1,0 +1,169 @@
+{
+  "nodes": [
+    {
+      "id": "document:www/docs/pages/core-concepts.mdx",
+      "type": "document",
+      "name": "core-concepts.mdx",
+      "filePath": "www/docs/pages/core-concepts.mdx",
+      "summary": "解释 MCP 的资源、工具、提示词、传输及能力协商，说明客户端与服务端的职责划分。",
+      "tags": [
+        "协议概念",
+        "mcp",
+        "项目导览"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/getting-started.mdx",
+      "type": "document",
+      "name": "getting-started.mdx",
+      "filePath": "www/docs/pages/getting-started.mdx",
+      "summary": "从安装 Go 库开始，带读者编写并启动第一个 MCP 服务端，再通过客户端与其交互。",
+      "tags": [
+        "入门",
+        "服务端",
+        "代码示例"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:www/docs/pages/index.mdx",
+      "type": "document",
+      "name": "index.mdx",
+      "filePath": "www/docs/pages/index.mdx",
+      "summary": "文档站首页，使用 Vocs 组件介绍 mcp-go 的用途并提供入门文档和 GitHub 入口。",
+      "tags": [
+        "文档站",
+        "项目导览",
+        "vocs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:www/docs/pages/protocol-2026-07-28.mdx",
+      "type": "document",
+      "name": "protocol-2026-07-28.mdx",
+      "filePath": "www/docs/pages/protocol-2026-07-28.mdx",
+      "summary": "解释 2026-07-28 协议修订在版本选择、缓存提示、多轮请求与订阅等方面的变化，以及客户端和服务端的迁移方法。",
+      "tags": [
+        "协议版本",
+        "兼容性",
+        "迁移指南"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:www/docs/pages/quick-start.mdx",
+      "type": "document",
+      "name": "quick-start.mdx",
+      "filePath": "www/docs/pages/quick-start.mdx",
+      "summary": "通过 Hello World 工具演示创建服务端与两种客户端，并介绍用 MCP Inspector 检查连接和工具调用。",
+      "tags": [
+        "入门",
+        "工具",
+        "代码示例"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:www/docs/pages/core-concepts.mdx",
+      "target": "file:mcp/types.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/core-concepts.mdx",
+      "target": "file:server/server.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/core-concepts.mdx",
+      "target": "file:client/client.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/getting-started.mdx",
+      "target": "file:server/server.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/getting-started.mdx",
+      "target": "file:server/stdio.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/getting-started.mdx",
+      "target": "file:client/client.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/index.mdx",
+      "target": "document:www/docs/pages/getting-started.mdx",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/protocol-2026-07-28.mdx",
+      "target": "file:mcp/version.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/protocol-2026-07-28.mdx",
+      "target": "file:mcp/discover.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/protocol-2026-07-28.mdx",
+      "target": "file:client/protocol.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/protocol-2026-07-28.mdx",
+      "target": "file:server/mrtr.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/quick-start.mdx",
+      "target": "file:server/server.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/quick-start.mdx",
+      "target": "file:client/client.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:www/docs/pages/quick-start.mdx",
+      "target": "file:client/http.go",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}
